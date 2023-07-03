@@ -33,6 +33,14 @@ _____________________________
 > M.S. in Energy Resources Engineering, Inha university (2020. 9) \
 > **Contact**: namhwa.kim@inha.edu
 
+<font size = 3> __Bop Duana Afrireksa | Ph.D. candidate__ (2018.9~)</font> 
+> **Research interest**: \
+> CO2 injectivity optimization, \
+> SAGD infill well performance optimization, \
+> Reservoir modeling \
+> **Education**: 
+> B.Eng in Petroleum Engineering, Islamic University of Riau (2017.9)\
+> **Contact**: afrireksa@inha.edu
 
 <font size = 3> __Yenny Andrea Rincon Cuenca | Master's degree__ (2022.2~)</font> 
 > **Research interest**: \
