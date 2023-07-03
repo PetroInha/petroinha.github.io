@@ -5,8 +5,7 @@
 layout: home
 ---
 
-## Greeting
-
+## Welcome!
 | ![space-1.jpg](https://github.com/Inha-ERE/cure.github.io/blob/main/homepage.avif?raw=true) | 
 
 Welcome to the Center for Unconventional Resources and Energy (CURE) at Inha University, a visionary institution at the forefront of energy innovation. In a world grappling with escalating energy demands and the urgent need for sustainable solutions, our center stands as a beacon of progress, continuously pushing the boundaries of conventional thinking and delving into the vast potential of unconventional resources.

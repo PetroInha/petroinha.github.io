@@ -1,29 +1,16 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Welcome to CURE!"
 date:   2023-07-03 16:03:50 +0900
 categories: jekyll update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-Jekyll requires blog post files to be named according to the following format:
+| ![space-1.jpg](https://github.com/Inha-ERE/cure.github.io/blob/main/dr_shin.PNG?raw=true) | 
+|:--:| 
+| Dr. Hyundon Shin (PI) |
 
-`YEAR-MONTH-DAY-title.MARKUP`
+Welcome to the Center for Unconventional Resources and Energy (CURE), a visionary institution at the forefront of energy innovation. In a world grappling with escalating energy demands and the urgent need for sustainable solutions, our center stands as a beacon of progress, continuously pushing the boundaries of conventional thinking and delving into the vast potential of unconventional resources.
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+At CURE, we are acutely aware of the limitations and environmental challenges associated with traditional energy sources. Our mission is to spearhead a transformative shift in energy approaches by harnessing the untapped power of unconventional resources. Through pioneering research, advanced technologies, and strategic collaborations, we are dedicated to revolutionizing the way we generate and utilize energy.
 
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+In addition to our relentless pursuit of unconventional resources, we are passionately committed to achieving net-zero emissions by 2050. To address this imperative, our research interests have expanded to include subsurface simulation and modeling for Carbon Capture, Utilization, and Storage (CCUS). If you are eager to delve deeper into our work, we invite you to explore [our comprehensive research topics](), where we explore innovative strategies and technologies that are propelling us toward a sustainable and low-carbon future.

@@ -13,16 +13,19 @@ permalink: /Members/
 # Rsearcher
 
 <font size = 5>**Dr. Nguyen Le Viet** | Post-doc </font> 
-> **Research interest**: _________
-> **Education**: 
-> B.S. _________
-> M.S. _________ 
-> **Contact**: _________
+> **Research interest**: \
+> **Education**: \
+> B.S. \
+> M.S.  \
+> **Contact**: 
 
 # Students
 
 <font size = 5>**Namhwa Kim** | Ph.D. candidate (2020.9~)</font> 
-> **Research interest**: Machine learning based SAGD performance prediction, Machine learning based CO2 injection optimization, Reservoir modeling
+> **Research interest**: \
+> [Machine learning based SAGD performance prediction](https://www.sciencedirect.com/science/article/pii/S2949891023006449?via%3Dihub), \
+> Machine learning based CO2 injection optimization, \
+> Reservoir modeling
 > **Education**: 
 > B.S. in Energy Resources Engineering, Inha university (2018. 9)
 > M.S. in Energy Resources Engineering, Inha university (2020. 9) 
