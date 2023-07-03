@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Introduction
-permalink: /Introduction/
+permalink: /0_Introduction/
 ---
 
 ## Center for Unconventional Resources and Energy

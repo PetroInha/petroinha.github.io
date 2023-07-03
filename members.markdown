@@ -4,14 +4,14 @@ title: Members
 permalink: /Members/
 ---
 
-# Principal Investigator (PI)
+<font size = 7> Principal Investigator (PI) </font> 
 
 | ![space-1.jpg](https://github.com/Inha-ERE/cure.github.io/blob/main/dr_shin.PNG?raw=true) | 
 |:--:| 
 | Dr. Hyundon Shin (PI) |
 _____________________________
 
-# Rsearcher
+<font size = 7> Rsearcher </font> 
 
 <font size = 3>__Dr. Nguyen Le Viet | Post-doc__ </font> 
 > **Research interest**: \
@@ -21,7 +21,7 @@ _____________________________
 > **Contact**: 
 _____________________________
 
-# Students
+<font size = 7> Students </font>  
 
 <font size = 3> __Namhwa Kim | Ph.D. candidate__ (2020.9~)</font> 
 > **Research interest**: \
