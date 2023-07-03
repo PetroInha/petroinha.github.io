@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Media
-permalink: /5_Media/
+permalink: /Media/
 ---
 
 ### [2023.06.01 | 해자協, 2차 CCUS 컨퍼런스 개최](http://www.todayenergy.kr/news/articleView.html?idxno=261114)
