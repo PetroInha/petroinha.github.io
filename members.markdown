@@ -21,12 +21,42 @@ permalink: /Members/
 
 # Students
 
-<font size = 5>**Namhwa Kim** | Ph.D. candidate (2020.9~)</font> 
+<font size = 5> Namhwa Kim | Ph.D. candidate (2020.9~)</font> 
 > **Research interest**: \
 > [Machine learning based SAGD performance prediction](https://www.sciencedirect.com/science/article/pii/S2949891023006449?via%3Dihub), \
 > Machine learning based CO2 injection optimization, \
-> Reservoir modeling
+> Reservoir modeling \
 > **Education**: 
 > B.S. in Energy Resources Engineering, Inha university (2018. 9)
 > M.S. in Energy Resources Engineering, Inha university (2020. 9) 
 > **Contact**: namhwa.kim@inha.edu
+
+
+<font size = 5> Yenny Andrea Rincon Cuenca | Master's degree (2022.2~)</font> 
+> **Research interest**: \
+> Prediction of a storage efficiency factor for estimating volumetric CO2 storage capacity \
+> **Education**: 
+> B.S. in Petroleum Engineering, Fundación Universidad de America (University of America foundation) (2010.9)
+> **Contact**: andrea6753@inha.edu 
+
+<font size = 5> Heesung Kong | Master's degree (2022.9~)</font> 
+> **Research interest**: \
+> Machine learning based optimization of ES-SAGD operation \
+> **Education**: 
+> B.S. in Energy Resources Engineering, Inha University (2022. 8)
+> **Contact**: 
+
+<font size = 5> Hyunmin Kim | Master's degree (2023.3~)</font> 
+> **Research interest**: \
+> Machine learning based CO2 capacity prediction \
+> **Education**: 
+> B.S. in Energy Resources Engineering, Inha University (2023. 2)
+> **Contact**: hyun_0210@inha.edu
+
+<font size = 5> Jinhyeon Baek | Master's degree (2023.3~)</font> 
+> **Research interest**: \
+> SAGD operation optimization for thermal communication \
+> **Education**: 
+> B.S. in Energy Resources Engineering, Inha University (2023. 2)
+> **Contact**: jhyeon_0310@inha.edu
+
