@@ -13,12 +13,15 @@ permalink: /Members/
 
 # Rsearcher 
 
-<font size = 4> Dr. Nguyen Le Viet | Post-doc </font> 
+<font size = 4> Dr. Viet Nguyen-Le | Post-doc </font> 
 > **Research interest**: \
+> Modeling of hydraulic fracturing and shale gas performance, \
+> Enhancing shale gas recovery by CO2 injection and CO2 storage in various reservoir types,\
+> History matching and optimization of thermal processes (SAGD, ES-SAGD, SAGP, Wind-down, In-situ combustion). \
 > **Education**: \
-> B.S. \
-> M.S.  \
-> **Contact**: 
+> B.S. in Petroleum Engineering, Bach Khoa University (HCMUT), HCMC-Vietnam (2010. 9 - 2015. 4) \
+> Ph.D. in Petroleum Engineering, Inha University (2016. 3-2022.02) \
+> **Contact**: viet.nguyen-le@inha.ac.kr
 
 
 # Students
@@ -48,12 +51,21 @@ permalink: /Members/
 > B.S. in Petroleum Engineering, Fundación Universidad de America (University of America foundation) (2010.9)\
 > **Contact**: andrea6753@inha.edu 
 
+
+<font size = 4> Kwanhee Park | Master's degree (2022.3~)</font> 
+> **Research interest**: \
+> Reinforcement learning based CO2 injection optimization \
+> **Education**: 
+> B.S. in Energy Resources Engineering, Inha university (2022. 3) \
+> **Contact**: jhyeon_0310@inha.edu
+
+
 <font size = 4> Heesung Kong | Master's degree (2022.9~)</font> 
 > **Research interest**: \
 > Machine learning based optimization of ES-SAGD operation \
 > **Education**: 
 > B.S. in Energy Resources Engineering, Inha University (2022. 8)\
-> **Contact**: 
+> **Contact**: kwanhee.park@inha.edu
 
 <font size = 4> Hyunmin Kim | Master's degree (2023.3~)</font> 
 > **Research interest**: \
