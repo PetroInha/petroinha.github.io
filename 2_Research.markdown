@@ -4,4 +4,12 @@ title: Research
 permalink: /Research/
 ---
 
-# TBD
+#### Research Topic 1 
+blah blah blah
+
+#### Research Topic 2 
+blah blah blah
+
+#### Research Topic 3 
+blah blah blah
+
