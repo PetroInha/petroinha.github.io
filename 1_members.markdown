@@ -10,7 +10,6 @@ permalink: /Members/
 |:--:| 
 | Dr. Hyundon Shin (PI) |
 
-
 # Rsearcher 
 
 <font size = 4> Dr. Viet Nguyen-Le | Post-doc </font> 
@@ -80,4 +79,12 @@ permalink: /Members/
 > **Education**: 
 > B.S. in Energy Resources Engineering, Inha University (2023. 2) \
 > **Contact**: jhyeon_0310@inha.edu
-
+ 
+# Alumni
+<font size = 4> Dr. Min Kim | Post-doc at Ehwa Univ. </font> 
+> **Research interest**: \
+> Deep-learning applications in SAGD optimization \
+> **Education**: 
+> B.S. in Energy Resources Engineering, Inha University (2023. 2) \
+> **Contact**: 
+ 
