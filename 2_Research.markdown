@@ -5,7 +5,8 @@ permalink: /Research/
 ---
 
 
-![Research@CURE](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/ResearchTopics.png?raw=true) | 
+![Research@CURE](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/ResearchTopics.png?raw=true) 
+
 ---
 ## Research Road Map
 * **Reservoir characteristics**
