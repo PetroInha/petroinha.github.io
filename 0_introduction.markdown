@@ -6,7 +6,7 @@ permalink: /Introduction/
 
 ## Center for Unconventional Resources and Energy
 
-| ![Project Investigator](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/dr_shin.PNG?raw=true) | 
+| ![Project Investigator](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/CURE_Logo.png?raw=true) | 
 |:--:| 
 | Dr. Hyundon Shin (PI) |
 

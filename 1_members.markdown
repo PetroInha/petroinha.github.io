@@ -6,9 +6,8 @@ permalink: /Members/
 
 # Principal Investigator (PI)  
 
-| ![Principal Investigator](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/dr_shin.PNG?raw=true) | 
-|:--:| 
-| Dr. Hyundon Shin (PI) |
+![Principal Investigator](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/dr_shin.PNG?raw=true)
+
 
 # Rsearcher 
 
