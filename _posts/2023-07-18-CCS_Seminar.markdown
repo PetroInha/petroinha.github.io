@@ -5,7 +5,7 @@ date:   2023-07-19 16:03:50 +0900
 categories: Seminar
 ---
 
-| ![Seminar_photo.jpg](https://github.com/Inha-ERE/cure.github.io/blob/main/miscellaneous_images/CCS_Seminar_2.jpg?raw=true) | 
+| ![Seminar_photo.jpg](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/CCS_Seminar_2.jpg?raw=true) | 
 |:--:| 
 | Seminar Presented by Dr. Soek-ki Moon |
 
@@ -38,9 +38,9 @@ The audience responded with thunderous applause and genuine enthusiasm for this 
 
 #ZEUS #RenewableEnergy #CCUS #Sustainability
 
-| ![Seminar_photo.jpg](https://github.com/Inha-ERE/cure.github.io/blob/main/miscellaneous_images/CCS_Seminar_1.jpg?raw=true) | 
+| ![Seminar_photo.jpg](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/CCS_Seminar_1.jpg?raw=true) | 
 |:--:| 
-| ![Seminar_photo.jpg](https://github.com/Inha-ERE/cure.github.io/blob/main/miscellaneous_images/CCS_Seminar_3.jpg?raw=true) |
+| ![Seminar_photo.jpg](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/CCS_Seminar_3.jpg?raw=true) |
 |:--:| 
 | Photos after the Seminar |
 
