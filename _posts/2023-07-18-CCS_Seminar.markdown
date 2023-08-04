@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Inha ERE Seminar - July 18th, Dr. Seok-ki Moon: Intoruduction to Proejct ZEUS "
+title:  "GeoEnergy Seminar: Proejct ZEUS (talked by Dr. Seok-ki Moon) "
 date:   2023-07-19 16:03:50 +0900
 categories: Seminar
 ---
