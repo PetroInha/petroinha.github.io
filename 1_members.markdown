@@ -14,9 +14,9 @@ permalink: /Members/
 
 # Researchers {#researcher-id}
 
-| Profile  | Position |Research Interest  | Education |
-| :------:|:-------:|:--------| :---------|
-|<img src = '_images/Dooly.png' width = 100 height = 100)> <br> Dr. Viet Nguyen-Le  | Post-doc (2022.2~) | Modeling of hydraulic fracturing and shale gas performance, <br> Enhancing shale gas recovery by CO2 injection and CO2 storage in various reservoir types, <br> History matching and optimization of thermal processes (SAGD, ES-SAGD, SAGP, Wind-down, In-situ combustion).|- B.S. in Petroleum Engineering, Bach Khoa University (HCMUT), HCMC-Vietnam <br>(2010. 9 - 2015. 4) <br><br> - Ph.D. in Petroleum Engineering, Inha University <br>(2016. 3-2022.02)|
+| Profile  | Position |Research Interest  |
+| :------:|:-------:|:--------|
+|<img src = '_images/Dooly.png' width = 100 height = 100)> <br> Dr. Viet Nguyen-Le  | Post-doc (2022.2~) | Modeling of hydraulic fracturing and shale gas performance, <br> Enhancing shale gas recovery by CO2 injection and CO2 storage in various reservoir types, <br> History matching and optimization of thermal processes (SAGD, ES-SAGD, SAGP, Wind-down, In-situ combustion).|
 
 ---
 

@@ -3,8 +3,8 @@ layout: page
 title: Publication
 permalink: /Publication/
 ---
-
-## Peer-reviewed
+[Peer-reviewed](#peer-review-id) [Conference](#conference-id) 
+## Peer-reviewed {peer-review-id}
 1. Musayev, K., Shin, H., & Nguyen-Le, V. (2023). Optimization of CO2 injection and brine production well placement using a genetic algorithm and artificial neural network-based proxy model. *International Journal of Greenhouse Gas Control*, 127, 103915.
 2. Kim, N., Shin, H., & Lee, K. (2023). Feature engineering process on well log data for machine learning-based SAGD performance prediction. *Geoenergy Science and Engineering*, 212057.
 3. Kim, M., Kwon, S., Ji, M., Shin, H., & Min, B. (2023). Multi-lateral horizontal well with dual-tubing system to improve CO2 storage security and reduce CCS cost. *Applied Energy*, 330, 120368.
@@ -26,7 +26,7 @@ permalink: /Publication/
 19. Lee, K., Jung, S., Shin, H., & Choe, J. (2014). Uncertainty quantification of channelized reservoir using ensemble smoother with selective measurement data. Energy Exploration & Exploitation, 32(5), 805-816.
 20. 
 
-## Conference
+## Conference {#conference-id}
 1. Kim, M., MIN, B., & Shin, H. (2021, December). Multi-lateral horizontal well with dual-tubing system for reducing the CCS cost and improving CO2 storage security. In AGU Fall Meeting Abstracts (Vol. 2021, pp. GC15A-0658).
 2. Kim, M., & Shin, H. (2018, October). Application of a dual tubing CO2 injection-water production system using a horizontal well for improving CO2 storage capacity: A case study in Pohang basin, offshore South Korea. In 14th Greenhouse Gas Control Technologies Conference Melbourne (pp. 21-26).
 3. Kim, G. D., Choi, J., Lee, K., Shin, H., & Choe, J. (2018, June). Reservoir Characterization Using Ensemble Smoother With Selected Measurement Data for Each Well. In ISOPE International Ocean and Polar Engineering Conference (pp. ISOPE-I). ISOPE.
