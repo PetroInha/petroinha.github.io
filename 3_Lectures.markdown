@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Lectures by Dr. Shin & Dr. Jo
+title: Lectures
 permalink: /Lectures/
 ---
 
