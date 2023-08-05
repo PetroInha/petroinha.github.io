@@ -81,8 +81,73 @@ permalink: /Members/
 > B.S. in Energy Resources Engineering, Inha University (2023. 2) \
 > **Contact**: jhyeon_0310@inha.edu
   
+---
 
 # Undergraduate Interns {#undergraduate-id}
+<table>
+    <tr>
+        <td>이름</td>
+        <td>소속</td>
+        <td>연구주제 </td>
+    </tr>
+    <tr>
+        <td>전희진</td>
+        <td>인하대학교 에너지자원공학과 4학년</td>
+        <td>TBU </td>
+    </tr>
+    <tr>
+        <td>조지원</td>
+        <td>인하대학교 에너지자원공학과 4학년</td>
+        <td>블루수소 경제성 평가 </td>
+    </tr>
+    <tr>
+        <td>이형규</td>
+        <td>인하대학교 에너지자원공학과 4학년</td>
+        <td>TBU </td>
+    </tr>
+    <tr>
+        <td>안주영</td>
+        <td>인하대학교 에너지자원공학과 4학년</td>
+        <td>TBU </td>
+    </tr>
+    <tr>
+        <td>강승우</td>
+        <td>인하대학교 에너지자원공학과 4학년</td>
+        <td>CO2 지중 저장층 모델링 </td>
+    </tr>
+    <tr>
+        <td>성준</td>
+        <td>인하대학교 에너지자원공학과 4학년</td>
+        <td>CO2 지중 저장층 모델링 </td>
+    </tr>
+    <tr>
+        <td>한솔</td>
+        <td>인하대학교 에너지자원공학과 3학년</td>
+        <td>TBU </td>
+    </tr>
+    <tr>
+        <td>유경원</td>
+        <td>인하대학교 에너지자원공학과 2학년</td>
+        <td>탄소저감 기술 트랜드 리뷰 </td>
+    </tr>
+    <tr>
+        <td>박은실</td>
+        <td>인하대학교 에너지자원공학과 2학년</td>
+        <td>파이썬기반 CO2 EOS 및 VLP 구축 </td>
+    </tr>
+    <tr>
+        <td>남규현</td>
+        <td>인하대학교 에너지자원공학과 2학년</td>
+        <td>파이썬기반 CO2 EOS 및 VLP 구축 </td>
+    </tr>
+    <tr>
+        <td>어진우</td>
+        <td>인하대학교 에너지자원공학과 2학년</td>
+        <td>파이썬기반 CO2 EOS 및 VLP 구축</td>
+    </tr>
+</table>
+
+
 | 이름 | 소속  | 연구주제 |
 | :------------ |:---------------| :-----|
 | 전희진 | 인하대학교 에너지자원공학과 4학년 | TBU |
@@ -98,6 +163,9 @@ permalink: /Members/
 | 어진우 | 인하대학교 에너지자원공학과 2학년 | [파이썬기반 CO2 EOS 및 VLP 구축](https://github.com/PetroInha/Inha_CO2_VLP)  |
 
 **※학부연구생 상시지원가능** - 문의: namhwa.kim@inha.edu
+
+
+---
  
 # Alumni {#alumni-id}
 <font size = 4> Dr. Min Kim | Researcher at KNOC </font> 
