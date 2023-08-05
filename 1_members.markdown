@@ -14,7 +14,7 @@ permalink: /Members/
 
 # Researchers {#researcher-id}
 
-<font size = 4> Dr. Viet Nguyen-Le | Post-doc </font> 
+<font size = 4> Dr. Viet Nguyen-Le | Post-doc (2022.2~) </font> 
 > **Research interest**: \
 > Modeling of hydraulic fracturing and shale gas performance, \
 > Enhancing shale gas recovery by CO2 injection and CO2 storage in various reservoir types,\
@@ -84,69 +84,6 @@ permalink: /Members/
 ---
 
 # Undergraduate Interns {#undergraduate-id}
-<table>
-    <tr>
-        <td>이름</td>
-        <td>소속</td>
-        <td>연구주제 </td>
-    </tr>
-    <tr>
-        <td>전희진</td>
-        <td>인하대학교 에너지자원공학과 4학년</td>
-        <td>TBU </td>
-    </tr>
-    <tr>
-        <td>조지원</td>
-        <td>인하대학교 에너지자원공학과 4학년</td>
-        <td>블루수소 경제성 평가 </td>
-    </tr>
-    <tr>
-        <td>이형규</td>
-        <td>인하대학교 에너지자원공학과 4학년</td>
-        <td>TBU </td>
-    </tr>
-    <tr>
-        <td>안주영</td>
-        <td>인하대학교 에너지자원공학과 4학년</td>
-        <td>TBU </td>
-    </tr>
-    <tr>
-        <td>강승우</td>
-        <td>인하대학교 에너지자원공학과 4학년</td>
-        <td>CO2 지중 저장층 모델링 </td>
-    </tr>
-    <tr>
-        <td>성준</td>
-        <td>인하대학교 에너지자원공학과 4학년</td>
-        <td>CO2 지중 저장층 모델링 </td>
-    </tr>
-    <tr>
-        <td>한솔</td>
-        <td>인하대학교 에너지자원공학과 3학년</td>
-        <td>TBU </td>
-    </tr>
-    <tr>
-        <td>유경원</td>
-        <td>인하대학교 에너지자원공학과 2학년</td>
-        <td>탄소저감 기술 트랜드 리뷰 </td>
-    </tr>
-    <tr>
-        <td>박은실</td>
-        <td>인하대학교 에너지자원공학과 2학년</td>
-        <td>파이썬기반 CO2 EOS 및 VLP 구축 </td>
-    </tr>
-    <tr>
-        <td>남규현</td>
-        <td>인하대학교 에너지자원공학과 2학년</td>
-        <td>파이썬기반 CO2 EOS 및 VLP 구축 </td>
-    </tr>
-    <tr>
-        <td>어진우</td>
-        <td>인하대학교 에너지자원공학과 2학년</td>
-        <td>파이썬기반 CO2 EOS 및 VLP 구축</td>
-    </tr>
-</table>
-
 
 | 이름 | 소속  | 연구주제 |
 | :------------ |:---------------| :-----|
@@ -165,12 +102,10 @@ permalink: /Members/
 **※학부연구생 상시지원가능** - 문의: namhwa.kim@inha.edu
 
 
----
- 
+--- 
 # Alumni {#alumni-id}
-<font size = 4> Dr. Min Kim | Researcher at KNOC </font> 
-> **Research interest**: \
-> Deep-learning applications in SAGD optimization \
-> **Education**: \
-> Ph.D. in Energy Resources Engineering, Inha University (2021. 2) 
-> **GoogleScholar**: https://scholar.google.co.kr/citations?user=-aINUeYAAAAJ&hl=ko
+
+| 이름  | 학위   | 졸업연도 | 소속                | 연구주제 |
+| :-----|:------|:--------- |:------------------| :----------------|
+| 김민  | Ph.D. |2021.2     | 前 Post-Doc at Ehwa Univ.  <br> 現 한국석유공사 연구원 | Heavy Oil Recovery, EOR, Machine Learning | 
+|Viet Nguyen-Le|Ph.D.|2022.2 | Post-Doc at Inha Univ.| Shale Gas, EGR, SAGD|
