@@ -4,7 +4,7 @@ title: Research
 permalink: /Research/
 ---
 
-[Road Map](#road-map-id) [CCUS](#ccus-id) [Unconventional](#oil-sand-id)
+[Road Map](#road-map-id) | [CCUS](#ccus-id) | [Unconventional](#oil-sand-id)
 
 ![Research@CURE](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/ResearchTopics.png?raw=true) 
 

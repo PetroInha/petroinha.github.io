@@ -3,8 +3,11 @@ layout: page
 title: Publication
 permalink: /Publication/
 ---
-[Peer-reviewed](#peer-review-id) [Conference](#conference-id) 
+
+[Peer-reviewed](#peer-review-id) | [Conference](#conference-id) 
+
 ## Peer-reviewed {peer-review-id}
+
 1. Musayev, K., Shin, H., & Nguyen-Le, V. (2023). Optimization of CO2 injection and brine production well placement using a genetic algorithm and artificial neural network-based proxy model. *International Journal of Greenhouse Gas Control*, 127, 103915.
 2. Kim, N., Shin, H., & Lee, K. (2023). Feature engineering process on well log data for machine learning-based SAGD performance prediction. *Geoenergy Science and Engineering*, 212057.
 3. Kim, M., Kwon, S., Ji, M., Shin, H., & Min, B. (2023). Multi-lateral horizontal well with dual-tubing system to improve CO2 storage security and reduce CCS cost. *Applied Energy*, 330, 120368.
