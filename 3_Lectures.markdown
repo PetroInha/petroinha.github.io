@@ -1,10 +1,8 @@
 ---
 layout: page
-title: Lectures
+title: Lectures by Dr. Shin & Dr. Jo
 permalink: /Lectures/
 ---
-
-## Lectures by Dr. Shin & Dr. Jo
 
 #### 1. 신재생에너지 (Renewable Energy)
 에너지와 환경을 고려한 지속가능 에너지원으로 신재생에너지를 소개한다. 에너지원의 구성 현황과 전망을 포함하여 다양한 신재생에너지원의 특성과 전망, 화석연료, 원자력, 태양광, 수력, 지열에너지, 수소에너지 등을 포함한다.
