@@ -4,7 +4,8 @@ title: Members
 permalink: /Members/
 ---
 
-[Principal Investigator](#principal-id) | [Researchers](#researcher-id) | [Graduates](#graduate-id) | [Undergraduate](#undergraduate-id) | [Alumni](#alumni-id)
+[Principal Investigator](#principal-id) | [Researchers](#researcher-id) | [Graduates](#graduate-id)
+[Undergraduate](#undergraduate-id) | [Alumni](#alumni-id)
 
 # Principal Investigator (PI) {#principal-id}
 
