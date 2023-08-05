@@ -14,72 +14,24 @@ permalink: /Members/
 
 # Researchers {#researcher-id}
 
-<font size = 4> Dr. Viet Nguyen-Le | Post-doc (2022.2~) </font> 
-> **Research interest**: \
-> Modeling of hydraulic fracturing and shale gas performance, \
-> Enhancing shale gas recovery by CO2 injection and CO2 storage in various reservoir types,\
-> History matching and optimization of thermal processes (SAGD, ES-SAGD, SAGP, Wind-down, In-situ combustion). \
-> **Education**: \
-> B.S. in Petroleum Engineering, Bach Khoa University (HCMUT), HCMC-Vietnam (2010. 9 - 2015. 4) \
-> Ph.D. in Petroleum Engineering, Inha University (2016. 3-2022.02) \
-> **Contact**: viet.nguyen-le@inha.ac.kr
+| Profile  | Position |Research Interest  | Education |
+| :------:|:-------:|:--------| :---------|
+|<img src = '_images/Dooly.png' width = 100 height = 100)> <br> Dr. Viet Nguyen-Le  | Post-doc (2022.2~) | Modeling of hydraulic fracturing and shale gas performance, <br> Enhancing shale gas recovery by CO2 injection and CO2 storage in various reservoir types, <br> History matching and optimization of thermal processes (SAGD, ES-SAGD, SAGP, Wind-down, In-situ combustion).|- B.S. in Petroleum Engineering, Bach Khoa University (HCMUT), HCMC-Vietnam <br>(2010. 9 - 2015. 4) <br><br> - Ph.D. in Petroleum Engineering, Inha University <br>(2016. 3-2022.02)|
 
 ---
 
 # Graduate Students {#graduate-id}
-<font size = 4> Namhwa Kim | Ph.D. candidate (2020.9~)</font> 
-> **Research interest**: \
-> [Machine learning based SAGD performance prediction](https://www.sciencedirect.com/science/article/pii/S2949891023006449?via%3Dihub), \
-> Machine learning based CO2 injection optimization, \
-> Reservoir modeling \
-> **Education**: 
-> B.S. in Energy Resources Engineering, Inha university (2018. 9)\
-> M.S. in Energy Resources Engineering, Inha university (2020. 9) \
-> **Contact**: namhwa.kim@inha.edu
 
-<font size = 4> Bop Duana Afrireksa | Ph.D. candidate (2018.9~)</font> 
-> **Research interest**: \
-> CO2 injectivity optimization, \
-> SAGD infill well performance optimization, \
-> Reservoir modeling \
-> **Education**: 
-> B.Eng in Petroleum Engineering, Islamic University of Riau (2017.9)\
-> **Contact**: afrireksa@inha.edu
+| Profile  | Position |Research Interest             |
+| :------:|:-------:|:-----------------|
+|<img src = '_images/Dooly.png' width = 100 height = 100)> <br> 김남화  |  Ph.D. candidate <br>(2020.9~) | [Machine learning based SAGD performance prediction](https://www.sciencedirect.com/science/article/pii/S2949891023006449?via%3Dihub), <br> Machine learning based CO2 injection optimization, <br>  Reservoir modeling |
+|<img src = '_images/Dooly.png' width = 100 height = 100)> <br> Bop Duana Afrireksa |  Ph.D. candidate <br>(2018.9~) | CO2 injectivity optimization, <br> SAGD infill well performance optimization, <br>  Reservoir modeling |
+|<img src = '_images/Dooly.png' width = 100 height = 100)> <br> Yenny Andrea Rincon Cuenca  |  Master's degree <br>(2022.2~) | Prediction of a storage efficiency factor for estimating volumetric CO2 storage capacity, <br> Machine learning based CO2 injection optimization, <br>  Reservoir modeling |
+|<img src = '_images/Dooly.png' width = 100 height = 100)> <br> 박관희 |  Master's degree <br>(2022.3~) | Reinforcement learning based CO2 injection optimization |
+|<img src = '_images/Dooly.png' width = 100 height = 100)> <br> 공희성 |  Master's degree <br>(2022.9~) | Machine learning based optimization of ES-SAGD operation |
+|<img src = '_images/Dooly.png' width = 100 height = 100)> <br> 김현민 |  Master's degree <br>(2023.3~) | Machine learning based CO2 capacity prediction |
+|<img src = '_images/Dooly.png' width = 100 height = 100)> <br> 백진현 |  Master's degree <br>(2023.3~) | SAGD operation optimization for thermal communication |
 
-<font size = 4> Yenny Andrea Rincon Cuenca | Master's degree (2022.2~)</font> 
-> **Research interest**: \
-> Prediction of a storage efficiency factor for estimating volumetric CO2 storage capacity \
-> **Education**: 
-> B.S. in Petroleum Engineering, Fundación Universidad de America (University of America foundation) (2010.9)\
-> **Contact**: andrea6753@inha.edu 
-
-<font size = 4> Kwanhee Park | Master's degree (2022.3~)</font> 
-> **Research interest**: \
-> Reinforcement learning based CO2 injection optimization \
-> **Education**: 
-> B.S. in Energy Resources Engineering, Inha university (2022. 3) \
-> **Contact**: jhyeon_0310@inha.edu
-
-<font size = 4> Heesung Kong | Master's degree (2022.9~)</font> 
-> **Research interest**: \
-> Machine learning based optimization of ES-SAGD operation \
-> **Education**: 
-> B.S. in Energy Resources Engineering, Inha University (2022. 8)\
-> **Contact**: kwanhee.park@inha.edu
-
-<font size = 4> Hyunmin Kim | Master's degree (2023.3~)</font> 
-> **Research interest**: \
-> Machine learning based CO2 capacity prediction \
-> **Education**: 
-> B.S. in Energy Resources Engineering, Inha University (2023. 2)\
-> **Contact**: hyun_0210@inha.edu
-
-<font size = 4> Jinhyeon Baek | Master's degree (2023.3~)</font> 
-> **Research interest**: \
-> SAGD operation optimization for thermal communication \
-> **Education**: 
-> B.S. in Energy Resources Engineering, Inha University (2023. 2) \
-> **Contact**: jhyeon_0310@inha.edu
   
 ---
 
@@ -107,5 +59,5 @@ permalink: /Members/
 
 | 이름  | 학위   | 졸업연도 | 소속                | 연구주제 |
 | :-----|:------|:--------- |:------------------| :----------------|
-| 김민  | Ph.D. |2021.2     | 前 Post-Doc at Ehwa Univ.  <br> 現 한국석유공사 연구원 | Heavy Oil Recovery, EOR, Machine Learning | 
+| 김민  | Ph.D. |2021.2     | 前 Post-Doc at Ehwa Univ.  <br> 現 한국석유공사 연구원 | Heavy Oil Recovery, EOR, <br> Machine Learning | 
 |Viet Nguyen-Le|Ph.D.|2022.2 | Post-Doc at Inha Univ.| Shale Gas, EGR, SAGD|
