@@ -4,12 +4,15 @@ title: Members
 permalink: /Members/
 ---
 
-# Principal Investigator (PI)  
+[Principal Investigator](#principal-id) | [Researchers](#researcher-id) | [Graduates](#graduate-id) | [Undergraduate](#undergraduate-id) | [Alumni](#alumni-id)
+
+# Principal Investigator (PI) {#principal-id}
 
 ![Principal Investigator](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/dr_shin.PNG?raw=true)
 
+---
 
-# Rsearcher 
+# Researchers {#researcher-id}
 
 <font size = 4> Dr. Viet Nguyen-Le | Post-doc </font> 
 > **Research interest**: \
@@ -21,8 +24,9 @@ permalink: /Members/
 > Ph.D. in Petroleum Engineering, Inha University (2016. 3-2022.02) \
 > **Contact**: viet.nguyen-le@inha.ac.kr
 
+---
 
-# Students
+# Graduate Students {#graduate-id}
 <font size = 4> Namhwa Kim | Ph.D. candidate (2020.9~)</font> 
 > **Research interest**: \
 > [Machine learning based SAGD performance prediction](https://www.sciencedirect.com/science/article/pii/S2949891023006449?via%3Dihub), \
@@ -49,14 +53,12 @@ permalink: /Members/
 > B.S. in Petroleum Engineering, Fundación Universidad de America (University of America foundation) (2010.9)\
 > **Contact**: andrea6753@inha.edu 
 
-
 <font size = 4> Kwanhee Park | Master's degree (2022.3~)</font> 
 > **Research interest**: \
 > Reinforcement learning based CO2 injection optimization \
 > **Education**: 
 > B.S. in Energy Resources Engineering, Inha university (2022. 3) \
 > **Contact**: jhyeon_0310@inha.edu
-
 
 <font size = 4> Heesung Kong | Master's degree (2022.9~)</font> 
 > **Research interest**: \
@@ -78,12 +80,29 @@ permalink: /Members/
 > **Education**: 
 > B.S. in Energy Resources Engineering, Inha University (2023. 2) \
 > **Contact**: jhyeon_0310@inha.edu
+  
+
+# Undergraduate Interns {#undergraduate-id}
+| 이름 | 소속  | 연구주제 |
+| :------------ |:---------------| :-----|
+| 전희진 | 인하대학교 에너지자원공학과 4학년 | TBU |
+| 조지원 | 인하대학교 에너지자원공학과 4학년 | 블루수소 경제성 평가 |
+| 이형규 | 인하대학교 에너지자원공학과 4학년 | TBU |
+| 안주영 | 인하대학교 에너지자원공학과 4학년 | TBU |
+| 강승우 | 인하대학교 에너지자원공학과 4학년 | [CO2 지중 저장층 모델링](https://github.com/PetroInha/Inha_CO2_geostats) |
+| 성준   | 인하대학교 에너지자원공학과 4학년 |  [CO2 지중 저장층 모델링](https://github.com/PetroInha/Inha_CO2_geostats) |
+| 한솔   | 인하대학교 에너지자원공학과 3학년 | TBU |
+| 유경원 | 인하대학교 에너지자원공학과 2학년 | 탄소저감 기술 트랜드 리뷰 |
+| 박은실 | 인하대학교 에너지자원공학과 2학년 | [파이썬기반 CO2 EOS 및 VLP 구축](https://github.com/PetroInha/Inha_CO2_VLP) |
+| 남규현 | 인하대학교 에너지자원공학과 2학년 | [파이썬기반 CO2 EOS 및 VLP 구축](https://github.com/PetroInha/Inha_CO2_VLP)  |
+| 어진우 | 인하대학교 에너지자원공학과 2학년 | [파이썬기반 CO2 EOS 및 VLP 구축](https://github.com/PetroInha/Inha_CO2_VLP)  |
+
+**※학부연구생 상시지원가능** - 문의: namhwa.kim@inha.edu
  
-# Alumni
-<font size = 4> Dr. Min Kim | Post-doc at Ehwa Univ. </font> 
+# Alumni {#alumni-id}
+<font size = 4> Dr. Min Kim | Researcher at KNOC </font> 
 > **Research interest**: \
 > Deep-learning applications in SAGD optimization \
-> **Education**: 
-> B.S. in Energy Resources Engineering, Inha University (2023. 2) \
-> **Contact**: 
- 
+> **Education**: \
+> Ph.D. in Energy Resources Engineering, Inha University (2021. 2) 
+> **GoogleScholar**: https://scholar.google.co.kr/citations?user=-aINUeYAAAAJ&hl=ko
