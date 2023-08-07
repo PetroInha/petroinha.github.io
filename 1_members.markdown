@@ -4,13 +4,17 @@ title: Members
 permalink: /Members/
 ---
 
-[Principal Investigator](#principal-id) | [Researchers](#researcher-id) | [Graduates](#graduate-id)
-[Undergraduate](#undergraduate-id) | [Alumni](#alumni-id)
+[Principal Investigator](#principal-id) | [CO-PI](#co-pi-id)|[Researchers](#researcher-id) | 
+[Graduates](#graduate-id) | [Undergraduate](#undergraduate-id) | [Alumni](#alumni-id)
 
 # Principal Investigator (PI) {#principal-id}
 
 ![Principal Investigator](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/dr_shin.PNG?raw=true)
+---
 
+# CO-PI {#co-pi-id}
+
+![CO-PI](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/dr_jo.PNG?raw=true)
 ---
 
 # Researchers {#researcher-id}
