@@ -9,12 +9,14 @@ permalink: /Members/
 
 # Principal Investigator (PI) {#principal-id}
 
-![Principal Investigator](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/dr_shin.PNG?raw=true)
+![Principal Investigator](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/dr_shin.png?raw=true)
+
 ---
 
 # CO-PI {#co-pi-id}
 
 ![CO-PI](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/dr_jo.PNG?raw=true)
+
 ---
 
 # Researchers {#researcher-id}
