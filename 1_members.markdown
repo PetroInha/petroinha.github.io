@@ -38,7 +38,7 @@ permalink: /Members/
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_park.jpg?raw=true" width="127" height="150" /> <br> 박관희 |  Master's degree <br>(2022.3~) | Reinforcement learning based CO2 injection optimization |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_kong.jpg?raw=true" width="127" height="150" /> <br> 공희성 |  Master's degree <br>(2022.9~) | Machine learning based optimization of ES-SAGD operation |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_baek.png?raw=true" width="127" height="150" /> <br> 백인욱 |  Master's degree <br>(2023.3~) | Optimization of CO2 storage capacity in shale gas reservoir |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_kim_2.PNG?raw=true" width="127" height="150" /> <br> 김현민 |  Master's degree <br>(2023.3~) | Machine learning based CO2 capacity prediction |
+|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_kim_2.jpg?raw=true" width="127" height="150" /> <br> 김현민 |  Master's degree <br>(2023.3~) | Machine learning based CO2 capacity prediction |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_baek_2.jpg?raw=true" width="127" height="150" /> <br> 백진현 |  Master's degree <br>(2023.3~) | SAGD operation optimization for thermal communication |
 
   
