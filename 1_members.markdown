@@ -23,7 +23,7 @@ permalink: /Members/
 
 | Profile  | Position |Research Interest  |
 | :------:|:-------:|:--------|
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Dooly.PNG?raw=true" width="150" height="150" /> <br> Dr. Viet Nguyen-Le  | Post-doc (2022.2~) | Modeling of hydraulic fracturing and shale gas performance, <br> Enhancing shale gas recovery by CO2 injection and CO2 storage in various reservoir types, <br> History matching and optimization of thermal processes <br> (SAGD, ES-SAGD, SAGP, Wind-down, In-situ combustion).|
+|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_viet.jpg?raw=true" width="127" height="150" /> <br> Dr. Viet Nguyen-Le  | Post-doc (2022.2~) | Modeling of hydraulic fracturing and shale gas performance, <br> Enhancing shale gas recovery by CO2 injection and CO2 storage in various reservoir types, <br> History matching and optimization of thermal processes <br> (SAGD, ES-SAGD, SAGP, Wind-down, In-situ combustion).|
 
 ---
 
@@ -31,13 +31,14 @@ permalink: /Members/
 
 | Profile  | Program |Research Interest    |
 | :------:|:-------:|:-----------------|
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Dooly.PNG?raw=true" width="100" height="100" /> <br> 김남화  |  Ph.D. candidate <br>(2020.9~) | [Machine learning based SAGD performance prediction](https://www.sciencedirect.com/science/article/pii/S2949891023006449?via%3Dihub), <br> Machine learning based CO2 injection optimization, <br>  Reservoir modeling |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Dooly.PNG?raw=true" width="100" height="100" /> <br> Bop Duana Afrireksa |  Ph.D. candidate <br>(2018.9~) | CO2 injectivity optimization, <br> SAGD infill well performance optimization, <br>  Reservoir modeling |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Dooly.PNG?raw=true" width="100" height="100" /> <br> Yenny Andrea Rincon Cuenca  |  Master's degree <br>(2022.2~) | Prediction of a storage efficiency factor for estimating volumetric CO2 storage capacity, <br> Machine learning based CO2 injection optimization, <br>  Reservoir modeling |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Dooly.PNG?raw=true" width="100" height="100" /> <br> 박관희 |  Master's degree <br>(2022.3~) | Reinforcement learning based CO2 injection optimization |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Dooly.PNG?raw=true" width="100" height="100" /> <br> 공희성 |  Master's degree <br>(2022.9~) | Machine learning based optimization of ES-SAGD operation |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Dooly.PNG?raw=true" width="100" height="100" /> <br> 김현민 |  Master's degree <br>(2023.3~) | Machine learning based CO2 capacity prediction |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Dooly.PNG?raw=true" width="100" height="100" /> <br> 백진현 |  Master's degree <br>(2023.3~) | SAGD operation optimization for thermal communication |
+|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_kim.jpg?raw=true" width="77" height="100" /> <br> 김남화  |  Ph.D. candidate <br>(2020.9~) | [Machine learning based SAGD performance prediction](https://www.sciencedirect.com/science/article/pii/S2949891023006449?via%3Dihub), <br> Machine learning based CO2 injection optimization, <br>  Reservoir modeling |
+|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Dooly.PNG?raw=true" width="77" height="100" /> <br> Bop Duana Afrireksa |  Ph.D. candidate <br>(2018.9~) | CO2 injectivity optimization, <br> SAGD infill well performance optimization, <br>  Reservoir modeling |
+|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Dooly.PNG?raw=true" width="77" height="100" /> <br> 김광현 |  Ph.D. student <br> (Part time) | Oil sand SAGD production prediction and optimization, <br> Geological model characterization, <br>  Machine learning based well-log analytic  |
+|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Dooly.PNG?raw=true" width="77" height="100" /> <br> Yenny Andrea Rincon Cuenca  |  Master's degree <br>(2022.2~) | Prediction of a storage efficiency factor for estimating volumetric CO2 storage capacity, <br> Machine learning based CO2 injection optimization, <br>  Reservoir modeling |
+|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_park.jpg?raw=true" width="77" height="100" /> <br> 박관희 |  Master's degree <br>(2022.3~) | Reinforcement learning based CO2 injection optimization |
+|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_kong.jpg?raw=true" width="77" height="100" /> <br> 공희성 |  Master's degree <br>(2022.9~) | Machine learning based optimization of ES-SAGD operation |
+|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Dooly.PNG?raw=true" width="77" height="100" /> <br> 김현민 |  Master's degree <br>(2023.3~) | Machine learning based CO2 capacity prediction |
+|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Dooly.PNG?raw=true" width="77" height="100" /> <br> 백진현 |  Master's degree <br>(2023.3~) | SAGD operation optimization for thermal communication |
 
   
 ---
@@ -46,13 +47,13 @@ permalink: /Members/
 
 | 이름 | 소속  | 연구주제 |
 | :------------ |:---------------| :-----|
-| 전희진 | 인하대학교 에너지자원공학과 4학년 | TBU |
+| 전희진 | 인하대학교 에너지자원공학과 4학년 | CCS 비용 분석을 통한 경제적인 방법 고찰 |
 | 조지원 | 인하대학교 에너지자원공학과 4학년 | 블루수소 경제성 평가 |
-| 이형규 | 인하대학교 에너지자원공학과 4학년 | TBU |
-| 안주영 | 인하대학교 에너지자원공학과 4학년 | TBU |
+| 이형규 | 인하대학교 에너지자원공학과 4학년 | 수소경제 실현을 위한 수소운반체 - LOHC와 암모니아 |
+| 안주영 | 인하대학교 에너지자원공학과 4학년 | 탄소중립 효율성 비교 및 국내 적용 가능성 평가 |
 | 강승우 | 인하대학교 에너지자원공학과 4학년 | [CO2 지중 저장층 모델링](https://github.com/PetroInha/Inha_CO2_geostats) |
 | 성준   | 인하대학교 에너지자원공학과 4학년 |  [CO2 지중 저장층 모델링](https://github.com/PetroInha/Inha_CO2_geostats) |
-| 한솔   | 인하대학교 에너지자원공학과 3학년 | TBU |
+| 한솔   | 인하대학교 에너지자원공학과 3학년 | 미국 에너지소비현황 분석 및 ‘Net zero’에 도달하기 위한 매니페스토 |
 | 유경원 | 인하대학교 에너지자원공학과 2학년 | 탄소저감 기술 트랜드 리뷰 |
 | 박은실 | 인하대학교 에너지자원공학과 2학년 | [파이썬기반 CO2 EOS 및 VLP 구축](https://github.com/PetroInha/Inha_CO2_VLP) |
 | 남규현 | 인하대학교 에너지자원공학과 2학년 | [파이썬기반 CO2 EOS 및 VLP 구축](https://github.com/PetroInha/Inha_CO2_VLP)  |
