@@ -23,7 +23,7 @@ permalink: /Members/
 
 | Profile  | Position |Research Interest  |
 | :------:|:-------:|:--------|
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_viet.jpg?raw=true" width="127" height="150" /> <br> Dr. Viet Nguyen-Le  | Post-doc (2022.2~) | Modeling of hydraulic fracturing and shale gas performance, <br> Enhancing shale gas recovery by CO2 injection and CO2 storage in various reservoir types, <br> History matching and optimization of thermal processes <br> (SAGD, ES-SAGD, SAGP, Wind-down, In-situ combustion).|
+|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_viet.jpg?raw=true" width="212" height="250" /> <br> Dr. Viet Nguyen-Le  | Post-doc (2022.2~) | Modeling of hydraulic fracturing and shale gas performance, <br> Enhancing shale gas recovery by CO2 injection and CO2 storage in various reservoir types, <br> History matching and optimization of thermal processes <br> (SAGD, ES-SAGD, SAGP, Wind-down, In-situ combustion).|
 
 ---
 
