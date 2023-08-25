@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GeoEnergy Seminar: Digital Transformation (김경수 박사님) "
+title:  "GeoEnergy Seminar: Digital Transformation (김경수 박사) "
 date:   2023-08-04 16:03:50 +0900
 categories: Seminar
 ---

@@ -68,5 +68,5 @@ permalink: /Members/
 
 | 이름  | 학위   | 졸업연도 | 소속                | 연구주제 |
 | :-----|:------|:--------- |:------------------| :----------------|
-| 김민  | Ph.D. |2021.2     | 前 Post-Doc at Ehwa Univ.  <br> 現 한국석유공사 연구원 | Heavy Oil Recovery, EOR, <br> Machine Learning | 
+| 김민  | Ph.D. |2021.2     | 前 Post-Doc at Ewha Univ.  <br> 現 한국석유공사 연구원 | Heavy Oil Recovery, EOR, <br> Machine Learning, CCUS | 
 |Viet Nguyen-Le|Ph.D.|2022.2 | Post-Doc at Inha Univ.| Shale Gas, EGR, SAGD|
