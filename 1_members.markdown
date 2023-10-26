@@ -68,5 +68,17 @@ permalink: /Members/
 
 | 이름  | 학위   | 졸업연도 | 소속                | 연구주제 |
 | :-----|:------|:--------- |:------------------| :----------------|
-| 김민  | Ph.D. |2021.2     | 前 Post-Doc at Ewha Univ.  <br> 現 한국석유공사 연구원 | Heavy Oil Recovery, EOR, <br> Machine Learning, CCUS, <br> and [More](https://scholar.google.co.kr/citations?user=-aINUeYAAAAJ&hl=ko) | 
 |Viet Nguyen-Le|Ph.D.|2022.2 | Post-Doc at Inha Univ.| Shale Gas, EGR, SAGD|
+| 김민  | Ph.D. |2020.8     | 前 Post-Doc at Ewha Univ.  <br> 現 한국석유공사 연구원 | Heavy Oil Recovery, EOR, <br> Machine Learning, CCUS, <br> and [More](https://scholar.google.co.kr/citations?user=-aINUeYAAAAJ&hl=ko) | 
+| 신현수 | Master's |2020.2 | 포스코인터네셔널 | Shale Gas DCA|
+| 양형서 | Master's |2020.2 | 한국과학기술기획평가원| Shale Gas, EGR, SAGD|
+| 이준용 | Master's |2019.2 | 한국석유공사| Oil Sand, SAGD |
+| 전창혁 | Master's |2019.2 | 포스코인터네셔널| 포항분지 CCS |
+| 윤지수 | Master's |2018.8 | 前 정보통신기획평가원 | Oil Sand, SAGD |
+| 김가람 | Master's |2018.8 | 한국수자원공사| Oil Sand, SAGD |
+| 손국희 | Master's |2018.2 | 중소기업기술정보진흥원| Oil Sand, SAGD |
+| 이정빈 | Master's |2016.2 | (TBU) | Oil Sand, SAGD |
+| 강은규 | Master's |2016.2 | (TBU) | Oil Sand, SAGD |
+| 유윤상 | Master's |2016.2 | 한국건설생활환경시험연구원| CCS |
+| 최봉혁 | Master's |2015.2 | 인하대 연구진흥팀| Oil Sand, SAGD |
+| 김정호 | Master's |2015.2 | LG 에너지솔루션 | Oil Sand, SAGD |
