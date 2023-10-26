@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GeoEnergy Seminar: Geological Modeling (김광현 연구원님) "
+title:  "Seminar - Geological Modeling (김광현 연구원) "
 date:   2023-08-21 10:30:00 +0900
 categories: Seminar
 ---

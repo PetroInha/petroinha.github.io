@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GeoEnergy Seminar: Proejct ZEUS (talked by Dr. Seok-ki Moon) "
+title:  "Seminar - Proejct ZEUS (문석기 연구원) "
 date:   2023-07-19 16:03:50 +0900
 categories: Seminar
 ---
