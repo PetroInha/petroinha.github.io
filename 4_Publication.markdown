@@ -7,7 +7,13 @@ permalink: /Publication/
 [Peer-reviewed](#peer-review-id) | [Conference](#conference-id) 
 
 ## Peer-reviewed {#peer-review-id}
-
+1. Choi, B., Kim, N., & Shin, H. (2024). Optimization of Well-Pair Spacing and Well Configuration for the SAGD Process in the Oilsands Reservoirs. Journal of the Korean Society of Mineral and Energy Resources Engineers, 61(3), 199-207.
+1. Kim, H., Kim, N., Shin, H., & Jo, H. (2024). [Machine Learning-based 4-D Seismic Data Integration and Characterization of Channelized Anticline Aquifer for Geological Carbon Sequestration](). Journal of the Korean Society of Mineral and Energy Resources Engineers, 61(1), 1-14.
+1. Kim, M. J., Jo, H., Park, H., & Cho, Y. (2024). [Sequential binary classification of lithofacies from well log data and its uncertainty quantification](https://library.seg.org/doi/abs/10.1190/int-2024-0019.1). Interpretation, 12(4), 1-53.
+1. Kim, J., Kim, D., Jo, W., Kim, J., Jo, H., & Choe, J. (2024). [Physics-Informed Sampling Scheme for Efficient Well Placement Optimization](https://asmedigitalcollection.asme.org/energyresources/article-abstract/doi/10.1115/1.4066103/1201905/Physics-Informed-Sampling-Scheme-for-Efficient?redirectedFrom=fulltext). Journal of Energy Resources Technology, 1-22.
+1. Lee, Y., Kim, D., Jo, H., & Choe, J. (2024). [Application of Latent Variable Evolution for Channel Reservoir Characterization using Generative Adversarial Networks and Particle Swarm Optimization](https://www.sciencedirect.com/science/article/pii/S2949891024003865?casa_token=gKJ0LLiIbccAAAAA:nU7gA6OlDERBN7DVfz5XwNbIu397_37CUrWIFmSTaai-aT_T82GaDOa3-L8Lq1Xe8ELjAtuWRA). Geoenergy Science and Engineering, 213016.
+1. Kim, D., King, M., Jo, H., & Choe, J. (2024). [Fast and Reliable History Matching of Channel Reservoirs Using Initial Models Selected by Streamline and Deep Learning](https://asmedigitalcollection.asme.org/energyresources/article-abstract/doi/10.1115/1.4065652/1200685/Fast-and-Reliable-History-Matching-of-Channel?redirectedFrom=fulltext). Journal of Energy Resources Technology, 1-20.
+1. Hernandez-Mejia, J. L., Pisel, J., Jo, H., & Pyrcz, M. J. (2023). [Dynamic time warping for well injection and production history connectivity characterization](https://idp.springer.com/authorize/casa?redirect_uri=https://link.springer.com/article/10.1007/s10596-022-10188-w&casa_token=vMbezizbu7AAAAAA:1mzJ8gIUUwRO6TgWJYJc9cezsqbjinOwRBqqTLqsEWjLx_NxcaCLJs5RbxBN8yvIjr7RcH6Vy4xaUvVZUg). Computational Geosciences, 27(1), 159-178.
 1. Musayev, K., Shin, H., & Nguyen-Le, V. (2023). Optimization of CO2 injection and brine production well placement using a genetic algorithm and artificial neural network-based proxy model. *International Journal of Greenhouse Gas Control*, 127, 103915.
 2. Kim, N., Shin, H., & Lee, K. (2023). Feature engineering process on well log data for machine learning-based SAGD performance prediction. *Geoenergy Science and Engineering*, 212057.
 3. Kim, M., Kwon, S., Ji, M., Shin, H., & Min, B. (2023). Multi-lateral horizontal well with dual-tubing system to improve CO2 storage security and reduce CCS cost. *Applied Energy*, 330, 120368.
@@ -30,6 +36,7 @@ permalink: /Publication/
 20. 
 
 ## Conference {#conference-id}
+1. Pan, W., Chen, J., Mohamed, S., Jo, H., Santos, J. E., & Pyrcz, M. J. (2023, October). [Efficient subsurface modeling with sequential patch generative adversarial neural networks](https://onepetro.org/SPEATCE/proceedings-abstract/23ATCE/2-23ATCE/536092). In SPE Annual Technical Conference and Exhibition? (p. D021S028R002). SPE.
 1. Kim, M., MIN, B., & Shin, H. (2021, December). Multi-lateral horizontal well with dual-tubing system for reducing the CCS cost and improving CO2 storage security. In AGU Fall Meeting Abstracts (Vol. 2021, pp. GC15A-0658).
 2. Kim, M., & Shin, H. (2018, October). Application of a dual tubing CO2 injection-water production system using a horizontal well for improving CO2 storage capacity: A case study in Pohang basin, offshore South Korea. In 14th Greenhouse Gas Control Technologies Conference Melbourne (pp. 21-26).
 3. Kim, G. D., Choi, J., Lee, K., Shin, H., & Choe, J. (2018, June). Reservoir Characterization Using Ensemble Smoother With Selected Measurement Data for Each Well. In ISOPE International Ocean and Polar Engineering Conference (pp. ISOPE-I). ISOPE.
