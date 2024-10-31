@@ -34,7 +34,6 @@ permalink: /Members/
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_kim.jpg?raw=true" width="127" height="150" /> <br> 김남화  |  Ph.D. candidate <br>(2020.9~) | [Machine learning based SAGD performance prediction](https://www.sciencedirect.com/science/article/pii/S2949891023006449?via%3Dihub), <br> Machine learning based CO2 injection optimization, <br>  Reservoir modeling |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_bop.jpg?raw=true" width="127" height="150" /> <br> Bop Duana Afrireksa |  Ph.D. candidate <br>(2018.9~) | CO2 injectivity optimization, <br> SAGD infill well performance optimization, <br>  Reservoir modeling |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/no_profile.jpg?raw=true" width="127" height="150" /> <br> 김광현 |  Ph.D. student <br> (Part time) | Oil sand SAGD production prediction and optimization, <br> Geological model characterization, <br>  Machine learning based well-log analytic  |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_Ye.jpg?raw=true" width="127" height="150" /> <br> Yenny Andrea Rincon Cuenca  |  Master's degree <br>(2022.2~) | Prediction of a storage efficiency factor for estimating volumetric CO2 storage capacity, <br> Machine learning based CO2 injection optimization, <br>  Reservoir modeling |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_kong.jpg?raw=true" width="127" height="150" /> <br> 공희성 |  Master's degree <br>(2022.9~) | Machine learning based optimization of ES-SAGD operation |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_baek.png?raw=true" width="127" height="150" /> <br> 백인욱 |  Master's degree <br>(2023.3~) | Optimization of CO2 storage capacity in shale gas reservoir |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_kim_2.jpg?raw=true" width="127" height="150" /> <br> 김현민 |  Master's degree <br>(2023.3~) | Machine learning based CO2 capacity prediction |
@@ -50,6 +49,7 @@ permalink: /Members/
 
 | 이름 | 소속  | 연구주제 |
 | :------------ |:---------------| :-----|
+| 김동희 | 인하대학교 4학년 | 시추공정 모사 시뮬레이션 |
 | 설정환 | 인하대학교 4학년 | 염수대 리튬추출 |
 | 어진우 | 인하대학교 4학년 | 국내 CCS value chain |
 | 이용훈 | 인하대학교 4학년 | CCS |
