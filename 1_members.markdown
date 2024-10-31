@@ -40,8 +40,9 @@ permalink: /Members/
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_baek_2.jpg?raw=true" width="127" height="150" /> <br> 백진현 |  Master's degree <br>(2023.3~) | SAGD operation optimization for thermal communication |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_ESPark.png?raw=true" width="127" height="150" /> <br> 박은실 |  Master's degree <br>(2024.9~) | InSAR-based CCS monitoring and history matching |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_SWKang.png?raw=true" width="127" height="150" /> <br> 강승우 |  Master's degree <br>(2024.9~) | Time series analysis on carbon market  |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Dooly.PNG?raw=true" width="127" height="150" /> <br> 이영진 |  Master's degree <br>(2024.9~) | ES-SAGD productivity assesmsent experiment |
-
+|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Dooly.PNG?raw=true" width="127" height="150" /> <br> 이영진 |  Master's degree <br>(2024.9~) | ES-SAGD productivity assessment experiment |
+|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Dooly.PNG?raw=true" width="127" height="150" /> <br> 설정환 |  Master's degree <br>(2025.3~) | Lithium extraction from subsurface brine |
+|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_DHKim.png?raw=true" width="127" height="150" /> <br> 이영진 |  Master's degree <br>(2025.9~) | Drilling operation simulation |
   
 ---
 
