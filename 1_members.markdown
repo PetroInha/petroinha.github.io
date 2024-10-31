@@ -42,7 +42,7 @@ permalink: /Members/
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_SWKang.png?raw=true" width="127" height="150" /> <br> 강승우 |  Master's degree <br>(2024.9~) | Time series analysis on carbon market  |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Dooly.PNG?raw=true" width="127" height="150" /> <br> 이영진 |  Master's degree <br>(2024.9~) | ES-SAGD productivity assessment experiment |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Dooly.PNG?raw=true" width="127" height="150" /> <br> 설정환 |  Master's degree <br>(2025.3~) | Lithium extraction from subsurface brine |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_DHKim.png?raw=true" width="127" height="150" /> <br> 이영진 |  Master's degree <br>(2025.9~) | Drilling operation simulation |
+|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_DHKim.png?raw=true" width="127" height="150" /> <br> 김동희 |  Master's degree <br>(2025.9~) | Drilling operation simulation |
   
 ---
 
@@ -50,10 +50,8 @@ permalink: /Members/
 
 | 이름 | 소속  | 연구주제 |
 | :------------ |:---------------| :-----|
-| 김동희 | 인하대학교 4학년 | 시추공정 모사 시뮬레이션 |
-| 설정환 | 인하대학교 4학년 | 염수대 리튬추출 |
 | 어진우 | 인하대학교 4학년 | 국내 CCS value chain |
-| 이용훈 | 인하대학교 4학년 | CCS |
+| 이용훈 | 인하대학교 4학년 | 수소에너지 개발 |
 | 황유선 | 인하대학교 4학년 | 에너지가격 시계열 분석 |
 | 박진호 | 인하대학교 4학년 | 에너지가격 시계열 분석 |
 | 김보희 | 인하대학교 3학년 | InSAR 기반 CO2 지중장 모니터링 |
