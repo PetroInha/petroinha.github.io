@@ -39,7 +39,6 @@ permalink: /Members/
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_kim_2.jpg?raw=true" width="127" height="150" /> <br> 김현민 |  Master's degree <br>(2023.3~) | Machine learning based CO2 capacity prediction |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_baek_2.jpg?raw=true" width="127" height="150" /> <br> 백진현 |  Master's degree <br>(2023.3~) | SAGD operation optimization for thermal communication |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_ESPark.png?raw=true" width="127" height="150" /> <br> 박은실 |  Master's degree <br>(2024.9~) | InSAR-based CCS monitoring and history matching |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_SWKang.png?raw=true" width="127" height="150" /> <br> 강승우 |  Master's degree <br>(2024.9~) | Time series analysis on carbon market  |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Dooly.PNG?raw=true" width="127" height="150" /> <br> 이영진 |  Master's degree <br>(2024.9~) | ES-SAGD productivity assessment experiment |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Dooly.PNG?raw=true" width="127" height="150" /> <br> 설정환 |  Master's degree <br>(2025.3~) | Lithium extraction from subsurface brine |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_DHKim.png?raw=true" width="127" height="150" /> <br> 김동희 |  Master's degree <br>(2025.9~) | Drilling operation simulation |
@@ -83,3 +82,4 @@ permalink: /Members/
 | 한솔 | Bachelor's |2024.8 | 포스코인터네셔널 | Mineral exporation |
 | 조지원 | Bachelor's |2024.8 | 지멘스 코리아 | Blue hydrogen |
 | 성준 | Bachelor's |2024.2 | 효성중공업 | Geological modeling |
+| 전희진 | Bachelor's |2023.8 | (TBU) | Geological modeling |
