@@ -12,3 +12,5 @@ categories: jekyll update
 | ![image_３](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/2024winter_３.jpg?raw=true)  |
 |:--:| 
 | ![image_４](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/2024winter_４.jpg?raw=true)  |
+|:--:| 
+|Group photos| 
