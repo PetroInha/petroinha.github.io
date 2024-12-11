@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Summer 2024 Workshop at 가평"
+title:  "Winter 2024 Workshop at 을왕리"
 date:   2023-12-11 12:00:00 +0900
 categories: jekyll update
 ---
