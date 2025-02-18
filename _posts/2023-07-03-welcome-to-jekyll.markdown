@@ -5,7 +5,7 @@ date:   2023-07-03 16:03:50 +0900
 categories: jekyll update
 ---
 
-| ![Principal Investigator](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/dr_shin?raw=true) | 
+|![lab logo](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/dr_shin.png?raw=true)| 
 |:--:| 
 | Dr. Hyundon Shin (PI) |
 
