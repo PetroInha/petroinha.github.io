@@ -34,10 +34,6 @@ permalink: /Members/
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_kim.jpg?raw=true" width="127" height="150" /> <br> 김남화  |  Ph.D. candidate <br>(2020.9~) | [Machine learning based SAGD performance prediction](https://www.sciencedirect.com/science/article/pii/S2949891023006449?via%3Dihub), <br> Machine learning based CO2 injection optimization, <br>  Reservoir modeling |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_bop.jpg?raw=true" width="127" height="150" /> <br> Bop Duana Afrireksa |  Ph.D. candidate <br>(2018.9~) | CO2 injectivity optimization, <br> SAGD infill well performance optimization, <br>  Reservoir modeling |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_KHKim.png?raw=true" width="127" height="150" /> <br> 김광현 |  Ph.D. student <br> (Part time) | Oil sand SAGD production prediction and optimization, <br> Geological model characterization, <br>  Machine learning based well-log analytic  |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_kong.jpg?raw=true" width="127" height="150" /> <br> 공희성 |  Master's degree <br>(2022.9~) | Machine learning based optimization of ES-SAGD operation |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_baek.png?raw=true" width="127" height="150" /> <br> 백인욱 |  Master's degree <br>(2023.3~) | Optimization of CO2 storage capacity in shale gas reservoir |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_kim_2.jpg?raw=true" width="127" height="150" /> <br> 김현민 |  Master's degree <br>(2023.3~) | Machine learning based CO2 capacity prediction |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_baek_2.jpg?raw=true" width="127" height="150" /> <br> 백진현 |  Master's degree <br>(2023.3~) | SAGD operation optimization for thermal communication |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_ESPark.png?raw=true" width="127" height="150" /> <br> 박은실 |  Master's degree <br>(2024.9~) | InSAR-based CCS monitoring and history matching |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_YJKim.png?raw=true" width="127" height="150" /> <br> 이영진 |  Master's degree <br>(2024.9~) | ES-SAGD productivity assessment experiment |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_JHSeol.png?raw=true" width="127" height="150" /> <br> 설정환 |  Master's degree <br>(2025.3~) | Lithium extraction from subsurface brine |
@@ -51,6 +47,7 @@ permalink: /Members/
 | :------------ |:---------------| :-----|
 | 어진우 | 인하대학교 4학년 | Structure modeling |
 | 이용훈 | 인하대학교 4학년 | 수소에너지 개발 |
+| 박승현 | 인하대학교 4학년 | CCS |
 | 김윤아 | 인하대학교 3학년 | TBD |
 
 
