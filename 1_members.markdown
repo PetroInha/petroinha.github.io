@@ -49,11 +49,9 @@ permalink: /Members/
 
 | 이름 | 소속  | 연구주제 |
 | :------------ |:---------------| :-----|
-| 어진우 | 인하대학교 4학년 | 국내 CCS value chain |
+| 어진우 | 인하대학교 4학년 | Structure modeling |
 | 이용훈 | 인하대학교 4학년 | 수소에너지 개발 |
-| 황유선 | 인하대학교 4학년 | 에너지가격 시계열 분석 |
-| 박진호 | 인하대학교 4학년 | 에너지가격 시계열 분석 |
-| 김보희 | 인하대학교 2학년 | InSAR 기반 CO2 지중장 모니터링 |
+| 김윤아 | 인하대학교 3학년 | TBD |
 
 
 **※학부연구생 상시모집중** - 문의: honggeun.jo@inha.ac.kr
@@ -64,9 +62,13 @@ permalink: /Members/
 
 | 이름  | 학위   | 졸업연도 | 소속                | 연구주제 |
 | :-----|:------|:--------- |:------------------| :----------------|
-|Viet Nguyen-Le|Ph.D.|2022.2 | Geological Survey of Canada | Shale Gas, EGR, SAGD|
+| Viet Nguyen-Le|Ph.D.|2022.2 | Geological Survey of Canada | Shale Gas, EGR, SAGD, <br> and [More](https://scholar.google.com/citations?user=48-9_CgAAAAJ&hl=en&oi=ao)|
 | 김민  | Ph.D. |2020.8     | 現 한국석유공사 연구원 | Heavy Oil Recovery, EOR, <br> Machine Learning, CCUS, <br> and [More](https://scholar.google.co.kr/citations?user=-aINUeYAAAAJ&hl=ko) | 
-|Yenny Andrea Rincon Cuenca | Master's | 2024.8 | Ecopetrol |
+| 공희성 | Master's |2025.3 | TBD | ES-SAGD |
+| 백인욱 | Master's |2025.3 | TBD | CO2-EGR |
+| 김현민 | Master's |2025.3 | TBD | [4D seismic in CCS](https://pubs.geoscienceworld.org/gsw/lithosphere/article/2024/4/lithosphere_2024_209/650382/Uncertainty-Quantification-Based-on-Deep-Learning) |
+| 백진현 | Master's |2025.3 | TBD | Oil Sand, SAGD |
+| Yenny Andrea Rincon Cuenca | Master's | 2024.8 | Ecopetrol | CCS modeling|
 | 신현수 | Master's |2020.2 | 포스코인터네셔널 | Shale Gas DCA|
 | 양형서 | Master's |2020.2 | 한국석유공사| Shale Gas, EGR, SAGD|
 | 이준용 | Master's |2019.2 | 한국석유공사| Oil Sand, SAGD |
