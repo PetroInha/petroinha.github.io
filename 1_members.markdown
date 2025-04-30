@@ -48,7 +48,6 @@ permalink: /Members/
 | 어진우 | 인하대학교 4학년 | Structure modeling |
 | 이용훈 | 인하대학교 4학년 | 수소에너지 개발 |
 | 박승현 | 인하대학교 4학년 | CCS |
-| 김윤아 | 인하대학교 3학년 | TBD |
 
 
 **※학부연구생 상시모집중** - 문의: honggeun.jo@inha.ac.kr
