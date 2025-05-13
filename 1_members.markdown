@@ -60,6 +60,7 @@ permalink: /Members/
 | :-----|:------|:--------- |:------------------| :----------------|
 | Viet Nguyen-Le|Ph.D.|2022.2 | Geological Survey of Canada | Shale Gas, EGR, SAGD, <br> and [More](https://scholar.google.com/citations?user=48-9_CgAAAAJ&hl=en&oi=ao)|
 | 김민  | Ph.D. |2020.8     | 現 한국석유공사 연구원 | Heavy Oil Recovery, EOR, <br> Machine Learning, CCUS, <br> and [More](https://scholar.google.co.kr/citations?user=-aINUeYAAAAJ&hl=ko) | 
+| 박관희 | Master's |2025.8 | TBD | TBD |
 | 공희성 | Master's |2025.3 | TBD | ES-SAGD |
 | 백인욱 | Master's |2025.3 | TBD | CO2-EGR |
 | 김현민 | Master's |2025.3 | TBD | [4D seismic in CCS](https://pubs.geoscienceworld.org/gsw/lithosphere/article/2024/4/lithosphere_2024_209/650382/Uncertainty-Quantification-Based-on-Deep-Learning) |
