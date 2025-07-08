@@ -47,7 +47,8 @@ permalink: /Members/
 | :------------ |:---------------| :-----|
 | 어진우 | 인하대학교 4학년 | Structure modeling |
 | 이용훈 | 인하대학교 4학년 | 수소에너지 개발 |
-| 박승현 | 인하대학교 4학년 | CCS |
+| 최유미 | 인하대학교 4학년 | ML 기반 예측모델 개발 |
+| 강태구 | 인하대학교 4학년 | ML 기반 예측모델 개발 |
 
 
 **※학부연구생 상시모집중** - 문의: honggeun.jo@inha.ac.kr
@@ -63,8 +64,8 @@ permalink: /Members/
 | 박관희 | Master's |2025.8 | TBD | TBD |
 | 공희성 | Master's |2025.3 | TBD | ES-SAGD |
 | 백인욱 | Master's |2025.3 | TBD | CO2-EGR |
-| 김현민 | Master's |2025.3 | TBD | [4D seismic in CCS](https://pubs.geoscienceworld.org/gsw/lithosphere/article/2024/4/lithosphere_2024_209/650382/Uncertainty-Quantification-Based-on-Deep-Learning) |
 | 백진현 | Master's |2025.3 | TBD | Oil Sand, SAGD |
+| 김현민 | Master's |2025.3 | 삼성중공업 | [4D seismic in CCS](https://pubs.geoscienceworld.org/gsw/lithosphere/article/2024/4/lithosphere_2024_209/650382/Uncertainty-Quantification-Based-on-Deep-Learning) |
 | Yenny Andrea Rincon Cuenca | Master's | 2024.8 | Ecopetrol | CCS modeling|
 | 신현수 | Master's |2020.2 | 포스코인터네셔널 | Shale Gas DCA|
 | 양형서 | Master's |2020.2 | 한국석유공사| Shale Gas, EGR, SAGD|
@@ -78,6 +79,7 @@ permalink: /Members/
 | 유윤상 | Master's |2016.2 | 한국건설생활환경시험연구원| CCS |
 | 최봉혁 | Master's |2015.2 | 인하대 연구진흥팀| Oil Sand, SAGD |
 | 김정호 | Master's |2015.2 | LG 에너지솔루션 | Oil Sand, SAGD |
+| 고메스 | Bachelor's |2024.8 | 현대건설 신재생에너지사업부 | Renewables |
 | 한솔 | Bachelor's |2024.8 | 포스코인터네셔널 | Mineral exporation |
 | 조지원 | Bachelor's |2024.8 | 지멘스 코리아 | Blue hydrogen |
 | 성준 | Bachelor's |2024.2 | 효성중공업 | Geological modeling |
