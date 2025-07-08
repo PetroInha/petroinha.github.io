@@ -87,6 +87,8 @@ permalink: /Members/
 | 김정호 | Master's |2015.2 | LG 에너지솔루션 | Oil Sand, SAGD |
 
 # Alumni (Bachelor's) {#alumni-id-bachelor}
+| 이름  | 학위   | 졸업연도 | 소속                | 연구주제 |
+| :-----|:------|:--------- |:------------------| :----------------|
 | 고메스 | Bachelor's |2024.8 | 현대건설 신재생에너지사업부 | Renewables |
 | 한솔 | Bachelor's |2024.8 | 포스코인터네셔널 | Mineral exporation |
 | 조지원 | Bachelor's |2024.8 | 지멘스 코리아 | Blue hydrogen |
