@@ -5,6 +5,53 @@ permalink: /Media/
 ---
 
 
+[기고문](#기고문) | [인터뷰](#인터뷰) | [사보](#사보)
+
+# 기고문 {#기고문}
+
+### [2024.06.14 | [인터뷰] 메이저 석유개발사 출신 신현돈 교수](http://weekly.chosun.com/news/articleView.html?idxno=35276)
+
+### [2024.05.08 | 국가자원안보, 시스템 구축은 시작일 뿐 실천이 중요하다](http://www.e-platform.net/news/articleView.html?idxno=85229)
+
+
+### [2024.03.12 | [EE칼럼] 기후변화와 국가 에너지자원 그리고 개인](https://m.ekn.kr/view.php?key=20240312024012752)
+
+
+### [2023.07.07 | 포스코인터 “2035년까지 126만톤 청정수소 공급 인프라 구축”](https://www.edaily.co.kr/news/read?newsId=02138566635672224&mediaCodeNo=257&OutLnkChk=Y)
+
+### [2023.06.01 | 해자協, 2차 CCUS 컨퍼런스 개최](http://www.todayenergy.kr/news/articleView.html?idxno=261114)
+
+
+### [2023.03.23 | [비즈 칼럼] 누가 탄소중립과 에너지 안보를 준비하는가](https://www.joongang.co.kr/article/25149227)
+
+
+### [2023.02.23 | 10년간 멈춘 공기업 자원개발…투자액 4분의1 토막](https://www.sedaily.com/NewsView/29LV3IZULC)
+
+
+### [2022.12.15 | 비전통 오일 저류층 모델링/시뮬레이션 워크샵 열려](https://www.google.com/search?q=https://www.e-platform.net/news/articleView.html%3Fidxno%3D76225)
+
+
+### [2022.12.14 | 자원안보, 그냥 말로만 되는 것이 아니다\!](http://www.e-platform.net/news/articleView.html?idxno=76189)
+
+### [2022.10.10 | [칼럼] 자원안보 시작과 끝은 해외자원개발 정상화](http://www.e2news.com/news/articleView.html?idxno=246428)
+
+### [2022.06.27 | [칼럼] 과거가 현재를 지배하는 자원개발, 미래를 준비하라](http://www.e2news.com/news/articleView.html?idxno=243222)
+
+### [2022.03.23 | 수소 생산·CCS 등 탄소저감 차원에서도 석유 가스 개발 필요](http://www.e-platform.net/news/articleView.html?idxno=72293)
+
+### [2022.03.17 | 이명박 정권 이후 자원개발 정책 멈춰…이후 정부들 '금기시'](http://www.e-platform.net/news/articleView.html?idxno=72225)
+
+### [2021.11.09 | 탄소중립과 석유가스의 역할 변화](https://www.petroleum.or.kr/kor/board/column?viewMode=view&ca=&sel_search=&txt_search=&page=6&idx=26)
+
+
+### [2020.08.26 | 다시 보는 전공 적합書 | 에너지자원공학과, 에너지·자원 바로 알고 깊게 이해하기](https://naeiledu.co.kr/28881)
+
+### [2018.06.18 | [인터뷰] 신현돈 인하대 교수 “알래스카, 전략적 접근해야”](https://www.google.com/search?q=https://www.energy-news.co.kr/news/articleView.html%3Fidxno%3D56839)
+
+---
+
+# 인터뷰 {#인터뷰}
+
 ### [2023.07.07 | 포스코인터 “2035년까지 126만톤 청정수소 공급 인프라 구축”](https://www.edaily.co.kr/news/read?newsId=02138566635672224&mediaCodeNo=257&OutLnkChk=Y "click to get the article")
 ![image](https://image.edaily.co.kr/images/photo/files/NP/S/2023/07/PS23070700524.jpg?raw=true)
 __
@@ -26,3 +73,10 @@ __
 >[에너지플랫폼뉴스 정상필 기자] 인하대학교 신현돈 교수가 비전통오일 저류층 모델링/시뮬레이션 워크샵을 개최했다.\
 >오일샌드로 대표되는 비전통오일의 생산량 증산을 위한 핵심 기술인 저류층 모델링/시뮬레이션은 저류층 지질모델 기술과 시뮬레이션 기술을 통해 최적화 생산설계를 달성하고 생산효율을 획기적으로 향상 시키기 위해 활용되는 기법이다...\
 >![Alt text](https://cdn.e-platform.net/news/photo/202212/76225_54259_4154.jpg?raw=true)
+
+---
+# [사보](#사보)
+
+### [석유사랑 2025 5,6월 호 | 한반도 자원 삼국지, ‘광개토 프로젝트’에 에너지 주권을 걸다](https://www.knoc.co.kr/upload/EBOOK/sabo/207/sub/sub8.html)
+
+### [석유사랑 2024 11,12월 호 | 동해 심해 탐사 파트너 slb와 Seadrill](https://www.knoc.co.kr/upload/EBOOK/sabo/204/sub/sub2_5.html)
