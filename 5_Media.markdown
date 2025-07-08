@@ -3,9 +3,15 @@ layout: page
 title: Media
 permalink: /Media/
 ---
-1. [석유사랑 2025 5,6월 호 | 한반도 자원 삼국지, ‘광개토 프로젝트’에 에너지 주권을 걸다](https://www.knoc.co.kr/upload/EBOOK/sabo/207/sub/sub8.html)
 
-1. [석유사랑 2024 11,12월 호 | 동해 심해 탐사 파트너 slb와 Seadrill](https://www.knoc.co.kr/upload/EBOOK/sabo/204/sub/sub2_5.html)
+1. [한국석유공사 사보 2025 | 한반도 자원 삼국지, ‘광개토 프로젝트’에 에너지 주권을 걸다](https://www.knoc.co.kr/upload/EBOOK/sabo/207/sub/sub8.html)
+
+1. [2025.05.19 | [인터뷰] 신현돈 인하대 교수 “알래스카, 전략적 접근해야”](https://www.energy-news.co.kr/news/articleView.html?idxno=213802)
+> ...알래스카 LNG 사업에 대해 단기적으로는 국내 비축량을 확보하고 해외 도입선을 다변화하는 정책이 필요하며, 장기적으로는 탄소중립에 기반한 가스전 개발과 CCS(탄소 포집·저장) 연계 사업 및 수소에너지 사업에 지속적인 투자가 이루어져야 한다고 강조...
+
+1. [2025.04.04 | 천연가스산업의 특성으로 바라본 알래스카 LNG 사업](https://www.e-platform.net/news/articleView.html?idxno=92472)
+
+1. [한국석유공사 사보 2024 | 동해 심해 탐사 파트너 slb와 Seadrill](https://www.knoc.co.kr/upload/EBOOK/sabo/204/sub/sub2_5.html)
 
 1. [2024.06.14 | [인터뷰] 메이저 석유개발사 출신 신현돈 교수](http://weekly.chosun.com/news/articleView.html?idxno=35276)
 
