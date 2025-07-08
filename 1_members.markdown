@@ -5,8 +5,8 @@ permalink: /Members/
 ---
 
 [Principal Investigator](#principal-id) | [CO-PI](#co-pi-id)|[Researchers](#researcher-id) | 
-[Graduates](#graduate-id) | [Undergraduate](#undergraduate-id) | [Alumni-PhD](#alumni-id-PhD)
-| [Alumni-master](#alumni-id-master) | [Alumni-Bachelor](#alumni-id-bachelor) | |
+[Graduates](#graduate-id) | [Undergraduate](#undergraduate-id) | [Alumni-PhD](#alumni-id-PhD) |
+[Alumni-master](#alumni-id-master) | [Alumni-Bachelor](#alumni-id-bachelor) | |
 
 # Principal Investigator (PI) {#principal-id}
 
@@ -65,6 +65,7 @@ permalink: /Members/
 
 
 # Alumni (Master's) {#alumni-id-master}
+
 | 이름  | 학위   | 졸업연도 | 소속                | 연구주제 |
 | :-----|:------|:--------- |:------------------| :----------------|
 | 박관희 | Master's |2025.8 | TBD | TBD |
@@ -87,6 +88,7 @@ permalink: /Members/
 | 김정호 | Master's |2015.2 | LG 에너지솔루션 | Oil Sand, SAGD |
 
 # Alumni (Bachelor's) {#alumni-id-bachelor}
+
 | 이름  | 학위   | 졸업연도 | 소속                | 연구주제 |
 | :-----|:------|:--------- |:------------------| :----------------|
 | 고메스 | Bachelor's |2024.8 | 현대건설 신재생에너지사업부 | Renewables |
