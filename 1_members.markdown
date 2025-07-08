@@ -5,7 +5,8 @@ permalink: /Members/
 ---
 
 [Principal Investigator](#principal-id) | [CO-PI](#co-pi-id)|[Researchers](#researcher-id) | 
-[Graduates](#graduate-id) | [Undergraduate](#undergraduate-id) | [Alumni](#alumni-id)
+[Graduates](#graduate-id) | [Undergraduate](#undergraduate-id) | [Alumni-PhD](#alumni-id-PhD)
+| [Alumni-master](#alumni-id-master) | [Alumni-Bachelor](#alumni-id-bachelor) | |
 
 # Principal Investigator (PI) {#principal-id}
 
@@ -55,12 +56,17 @@ permalink: /Members/
 
 
 --- 
-# Alumni {#alumni-id}
+# Alumni (PhD) {#alumni-id-PhD}
 
 | 이름  | 학위   | 졸업연도 | 소속                | 연구주제 |
 | :-----|:------|:--------- |:------------------| :----------------|
 | Viet Nguyen-Le|Ph.D.|2022.2 | Geological Survey of Canada | Shale Gas, EGR, SAGD, <br> and [More](https://scholar.google.com/citations?user=48-9_CgAAAAJ&hl=en&oi=ao)|
 | 김민  | Ph.D. |2020.8     | 現 한국석유공사 연구원 | Heavy Oil Recovery, EOR, <br> Machine Learning, CCUS, <br> and [More](https://scholar.google.co.kr/citations?user=-aINUeYAAAAJ&hl=ko) | 
+
+
+# Alumni (Master's) {#alumni-id-master}
+| 이름  | 학위   | 졸업연도 | 소속                | 연구주제 |
+| :-----|:------|:--------- |:------------------| :----------------|
 | 박관희 | Master's |2025.8 | TBD | TBD |
 | 공희성 | Master's |2025.3 | TBD | ES-SAGD |
 | 백인욱 | Master's |2025.3 | TBD | CO2-EGR |
@@ -79,6 +85,8 @@ permalink: /Members/
 | 유윤상 | Master's |2016.2 | 한국건설생활환경시험연구원| CCS |
 | 최봉혁 | Master's |2015.2 | 인하대 연구진흥팀| Oil Sand, SAGD |
 | 김정호 | Master's |2015.2 | LG 에너지솔루션 | Oil Sand, SAGD |
+
+# Alumni (Bachelor's) {#alumni-id-bachelor}
 | 고메스 | Bachelor's |2024.8 | 현대건설 신재생에너지사업부 | Renewables |
 | 한솔 | Bachelor's |2024.8 | 포스코인터네셔널 | Mineral exporation |
 | 조지원 | Bachelor's |2024.8 | 지멘스 코리아 | Blue hydrogen |
