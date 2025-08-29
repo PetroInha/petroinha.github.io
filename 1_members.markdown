@@ -38,7 +38,8 @@ permalink: /Members/
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_ESPark.png?raw=true" width="127" height="150" /> <br> 박은실 |  Master's degree <br>(2024.9~) | InSAR-based CCS monitoring and history matching |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_YJKim.png?raw=true" width="127" height="150" /> <br> 이영진 |  Master's degree <br>(2024.9~) | ES-SAGD productivity assessment experiment |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_JHSeol.png?raw=true" width="127" height="150" /> <br> 설정환 |  Master's degree <br>(2025.3~) | Lithium extraction from subsurface brine |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_DHKim.png?raw=true" width="127" height="150" /> <br> 김동희 |  Master's degree <br>(2025.9~) | Drilling operation simulation |
+|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_DHKim.png?raw=true" width="127" height="150" /> <br> 김동희 |  Master's degree <br>(2025.9~) | Drilling operation simulation |\
+|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Dooly.PNG?raw=true" width="127" height="150" /> <br> Atiana Ismodes |  Master's degree <br>(2025.9~) | TBU |
   
 ---
 
