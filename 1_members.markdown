@@ -68,10 +68,9 @@ permalink: /Members/
 
 | 이름  | 학위   | 졸업연도 | 소속                | 연구주제 |
 | :-----|:------|:--------- |:------------------| :----------------|
-| 박관희 | Master's |2025.8 | TBD | TBD |
-| 공희성 | Master's |2025.3 | TBD | ES-SAGD |
-| 백인욱 | Master's |2025.3 | TBD | CO2-EGR |
-| 백진현 | Master's |2025.3 | TBD | Oil Sand, SAGD |
+| 공희성 | Master's |2025.3 | 한국석유공사 | ES-SAGD |
+| 백인욱 | Master's |2025.3 | 국토교통과학기술진흥원 | CO2-EGR |
+| 백진현 | Master's |2025.3 | 인하대 연구조교 | Oil Sand, SAGD |
 | 김현민 | Master's |2025.3 | 삼성중공업 | [4D seismic in CCS](https://pubs.geoscienceworld.org/gsw/lithosphere/article/2024/4/lithosphere_2024_209/650382/Uncertainty-Quantification-Based-on-Deep-Learning) |
 | Yenny Andrea Rincon Cuenca | Master's | 2024.8 | Ecopetrol | CCS modeling|
 | 신현수 | Master's |2020.2 | 포스코인터네셔널 | Shale Gas DCA|
@@ -81,8 +80,8 @@ permalink: /Members/
 | 윤지수 | Master's |2018.8 | 前 정보통신기획평가원 | Oil Sand, SAGD |
 | 김가람 | Master's |2018.8 | 한국수자원공사| Oil Sand, SAGD |
 | 손국희 | Master's |2018.2 | 중소기업기술정보진흥원| Oil Sand, SAGD |
-| 이정빈 | Master's |2016.2 | (TBU) | Oil Sand, SAGD |
-| 강은규 | Master's |2016.2 | (TBU) | Oil Sand, SAGD |
+| 이정빈 | Master's |2016.2 | - | Oil Sand, SAGD |
+| 강은규 | Master's |2016.2 | - | Oil Sand, SAGD |
 | 유윤상 | Master's |2016.2 | 한국건설생활환경시험연구원| CCS |
 | 최봉혁 | Master's |2015.2 | 인하대 연구진흥팀| Oil Sand, SAGD |
 | 김정호 | Master's |2015.2 | LG 에너지솔루션 | Oil Sand, SAGD |
