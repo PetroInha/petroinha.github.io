@@ -1,17 +1,15 @@
 ---
 layout: post
 title:  "Pyrcz 교수님 방한"
-date:   2025-7-14 15:00:00 +0900
+date:   2025-7-20 15:00:00 +0900
 categories: jekyll update
 ---
 
-| ![image_1](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/Pyrcz_1.jpg?raw=true) | 
+| ![image_1](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/Pyrcz_3.jpg?raw=true) | 
 |:--:| 
 | ![image_2](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/Pyrcz_2.jpg?raw=true) | 
 |:--:| 
-| ![image_3](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/Pyrcz_3.jpg?raw=true) | 
-|:--:| 
-| ![image_4](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/Pyrcz_4.jpg?raw=true) | 
+| ![image_3](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/Pyrcz_1.jpg?raw=true) | 
 
 미국 텍사스 주립대학교의 Pyrcz 교수님이 드디어 방한하셨습니다 🇺🇸✈️🇰🇷!
 인하대학교, 한국지질자원연구원, 그리고 한국석유공사를 차례로 방문하시며
@@ -23,4 +21,4 @@ categories: jekyll update
 
 “이번 만남은 시작일 뿐!” — 다음 만남은 아마도 텍사스 BBQ 냄새가 풍기는 곳에서일지도 모르겠습니다 😉🔥.
 
-| ![image_5](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/Pyrcz_5.jpg?raw=true) | 
+| ![image_4](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/Pyrcz_4.jpg?raw=true) | 
