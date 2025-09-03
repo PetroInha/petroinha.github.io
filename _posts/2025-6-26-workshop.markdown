@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "연구실 탁구 친선경기"
+title:  "Summer 2025 Workshop"
 date:   2025-6-26 15:00:00 +0900
 categories: jekyll update
 ---

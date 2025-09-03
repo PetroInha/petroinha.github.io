@@ -38,8 +38,9 @@ permalink: /Members/
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_ESPark.png?raw=true" width="127" height="150" /> <br> 박은실 |  Master's degree <br>(2024.9~) | [InSAR-based CCS monitoring and history matching](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5226149) |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_YJKim.png?raw=true" width="127" height="150" /> <br> 이영진 |  Master's degree <br>(2024.9~) | ES-SAGD productivity assessment experiment |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_JHSeol.png?raw=true" width="127" height="150" /> <br> 설정환 |  Master's degree <br>(2025.3~) | Lithium extraction from subsurface brine |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_DHKim.png?raw=true" width="127" height="150" /> <br> 김동희 |  Master's degree <br>(2025.9~) | Drilling operation simulation, Digital rock, Undeground Hydrogen Stoage |\
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Dooly.PNG?raw=true" width="127" height="150" /> <br> Aitiana Sanchez |  Master's degree <br>(2025.9~) | Integrating Digital Rock into CCS |
+|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_DHKim.png?raw=true" width="127" height="150" /> <br> 김동희 |  Master's degree <br>(2025.9~) | Drilling operation simulation, Digital rock, Undeground Hydrogen Stoage |
+|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_Aitiana.jpg?raw=true" width="127" height="150" /> <br> Aitiana Sanchez |  Master's degree <br>(2025.9~) | Integrating Digital Rock into CCS |
+|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_jinwoo.PNG?raw=true" width="127" height="150" /> <br> Jinwoo Eo |  Master's degree <br>(2026.3~) | Structure modeling, Digital Rock, LBM |
   
 ---
 
@@ -47,10 +48,9 @@ permalink: /Members/
 
 | 이름 | 소속  | 연구주제 |
 | :------------ |:---------------| :-----|
-| 어진우 | 인하대학교 4학년 | Structure modeling, Digital rock |
 | 이용훈 | 인하대학교 4학년 | 수소에너지 개발 |
 | 최유미 | 인하대학교 4학년 | ML 기반 예측모델 개발 |
-| 강태구 | 인하대학교 4학년 | ML 기반 예측모델 개발 |
+| _강태구_ | 인하대학교 4학년 | ML 기반 예측모델 개발 |
 
 
 **※학부연구생 상시모집중** - 문의: honggeun.jo@inha.ac.kr
