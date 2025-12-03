@@ -9,7 +9,7 @@ categories: jekyll update
 |:--:| 
 | ![image_1](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/inha-slb.jpg?raw=true) | 
 
-기사전문: ![https://www.e-platform.net/news/articleView.html?idxno=98276](https://www.e-platform.net/news/articleView.html?idxno=98276)
+기사전문: [https://www.e-platform.net/news/articleView.html?idxno=98276](https://www.e-platform.net/news/articleView.html?idxno=98276)
 
 # 🔥 인하대 × SLB 비전통에너지 워크숍 후기
 ## “오일샌드? CCS? 수소? 이게 바로 에너지전공의 진짜 월드다!”
