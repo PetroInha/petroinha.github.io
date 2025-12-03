@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "추계연합자원학술대회 우수논문발표상 수상 - 박은실 연구원"
-date:   2025-11-11 15:00:00 +0900
+date:   2025-11-6 15:00:00 +0900
 categories: jekyll update
 ---
 
