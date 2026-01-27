@@ -12,6 +12,14 @@ Welcome to the Center for Unconventional Resources and Energy (CURE) at Inha Uni
 ---
 
 🎥 **손에잡히는경제 플러스 인터뷰 - 신현돈 교수님**  
-[![CURE Logo](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/sonkyungjae.JPG?raw=true)](https://www.youtube.com/watch?v=PauuAnJeHu0)
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=PauuAnJeHu0">
+    <img src="https://github.com/Inha-ERE/cure.github.io/blob/main/_images/sonkyungjae.JPG?raw=true" alt="CURE Logo">
+  </a>
+</p>
 
+<p align="center">
+  🎥 <strong>Recently Broadcasted Video</strong><br>
+  Click the image above to watch on YouTube
+</p>
 ---
