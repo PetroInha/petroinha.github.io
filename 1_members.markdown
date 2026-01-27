@@ -41,6 +41,7 @@ permalink: /Members/
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_DHKim.png?raw=true" width="127" height="150" /> <br> 김동희 |  Master's degree <br>(2025.9~) | Drilling operation simulation, Digital rock, Undeground Hydrogen Stoage |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_Aitiana.jpg?raw=true" width="127" height="150" /> <br> Aitiana Sanchez |  Master's degree <br>(2025.9~) | Integrating Digital Rock into CCS |
 |<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_jinwoo.PNG?raw=true" width="127" height="150" /> <br> Jinwoo Eo |  Master's degree <br>(2026.3~) | Structure modeling, Digital Rock, LBM |
+|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_jinwoo.PNG?raw=true" width="127" height="150" /> <br> 이용훈 |  Master's degree <br>(2026.3~) | TBD |
   
 ---
 
@@ -48,8 +49,10 @@ permalink: /Members/
 
 | 이름 | 소속  | 연구주제 |
 | :------------ |:---------------| :-----|
-| 이용훈 | 인하대학교 4학년 | 수소에너지 개발 |
-| 최유미 | 인하대학교 4학년 | ML 기반 예측모델 개발 |
+| 장대현 | 인하대학교 2학년 | REE |
+| 정지혜 | 인하대학교 3학년 | SAGD |
+| 조정민 | 인하대학교 4학년 | CCS |
+| _최유미_ | 인하대학교 4학년 | ML 기반 예측모델 개발 |
 | _강태구_ | 인하대학교 4학년 | ML 기반 예측모델 개발 |
 
 
