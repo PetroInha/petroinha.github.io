@@ -4,41 +4,117 @@ title: Publication
 permalink: /Publication/
 ---
 
-## Peer-reviewed {#peer-review-id}
-1. Choi, B., Kim, N., & Shin, H. (2024). Optimization of Well-Pair Spacing and Well Configuration for the SAGD Process in the Oilsands Reservoirs. Journal of the Korean Society of Mineral and Energy Resources Engineers, 61(3), 199-207.
-1. Kim, H., Kim, N., Shin, H., & Jo, H. (2024). [Machine Learning-based 4-D Seismic Data Integration and Characterization of Channelized Anticline Aquifer for Geological Carbon Sequestration](). Journal of the Korean Society of Mineral and Energy Resources Engineers, 61(1), 1-14.
-1. Kim, M. J., Jo, H., Park, H., & Cho, Y. (2024). [Sequential binary classification of lithofacies from well log data and its uncertainty quantification](https://library.seg.org/doi/abs/10.1190/int-2024-0019.1). Interpretation, 12(4), 1-53.
-1. Kim, J., Kim, D., Jo, W., Kim, J., Jo, H., & Choe, J. (2024). [Physics-Informed Sampling Scheme for Efficient Well Placement Optimization](https://asmedigitalcollection.asme.org/energyresources/article-abstract/doi/10.1115/1.4066103/1201905/Physics-Informed-Sampling-Scheme-for-Efficient?redirectedFrom=fulltext). Journal of Energy Resources Technology, 1-22.
-1. Lee, Y., Kim, D., Jo, H., & Choe, J. (2024). [Application of Latent Variable Evolution for Channel Reservoir Characterization using Generative Adversarial Networks and Particle Swarm Optimization](https://www.sciencedirect.com/science/article/pii/S2949891024003865?casa_token=gKJ0LLiIbccAAAAA:nU7gA6OlDERBN7DVfz5XwNbIu397_37CUrWIFmSTaai-aT_T82GaDOa3-L8Lq1Xe8ELjAtuWRA). Geoenergy Science and Engineering, 213016.
-1. Kim, D., King, M., Jo, H., & Choe, J. (2024). [Fast and Reliable History Matching of Channel Reservoirs Using Initial Models Selected by Streamline and Deep Learning](https://asmedigitalcollection.asme.org/energyresources/article-abstract/doi/10.1115/1.4065652/1200685/Fast-and-Reliable-History-Matching-of-Channel?redirectedFrom=fulltext). Journal of Energy Resources Technology, 1-20.
-1. Hernandez-Mejia, J. L., Pisel, J., Jo, H., & Pyrcz, M. J. (2023). [Dynamic time warping for well injection and production history connectivity characterization](https://idp.springer.com/authorize/casa?redirect_uri=https://link.springer.com/article/10.1007/s10596-022-10188-w&casa_token=vMbezizbu7AAAAAA:1mzJ8gIUUwRO6TgWJYJc9cezsqbjinOwRBqqTLqsEWjLx_NxcaCLJs5RbxBN8yvIjr7RcH6Vy4xaUvVZUg). Computational Geosciences, 27(1), 159-178.
-1. Musayev, K., Shin, H., & Nguyen-Le, V. (2023). Optimization of CO2 injection and brine production well placement using a genetic algorithm and artificial neural network-based proxy model. *International Journal of Greenhouse Gas Control*, 127, 103915.
-2. Kim, N., Shin, H., & Lee, K. (2023). Feature engineering process on well log data for machine learning-based SAGD performance prediction. *Geoenergy Science and Engineering*, 212057.
-3. Kim, M., Kwon, S., Ji, M., Shin, H., & Min, B. (2023). Multi-lateral horizontal well with dual-tubing system to improve CO2 storage security and reduce CCS cost. *Applied Energy*, 330, 120368.
-4. Nguyen-Le, V., & Shin, H. (2022). Artificial neural network prediction models for Montney shale gas production profile based on reservoir and fracture network parameters. *Energy*, 244, 123150.
-5. Shin, H., Nguyen-Le, V., Kim, M., Shin, H., & Little, E. (2021). Development of Production-Forecasting Model Based on the Characteristics of Production Decline Analysis Using the Reservoir and Hydraulic Fracture Parameters in Montney Shale Gas Reservoir, Canada. *Geofluids*, 2021, 1-12.
-6. Song, G., Lee, H. S., & Shin, H. (2021). Three-dimensional modelling of desorbed gas volume and comparison to gas production rate in the Montney Plays, Western Canadian Sedimentary Basin. *Geofluids*, 2021, 1-15.
-7. Nguyen-Le, V., Kim, M., Shin, H., & Little, E. (2021). Multivariate approach to the gas production forecast using early production data for Barnett shale reservoir. *Journal of Natural Gas Science and Engineering*, 87, 103776.
-8. Kim, M., & Shin, H. (2020). Numerical simulation of undulating shale breaking with steam-assisted gravity drainage (UB-SAGD) for the oil sands reservoir with a shale barrier. *Journal of Petroleum Science and Engineering*, 195, 107604.
-9. Kim, M., & Shin, H. (2020). Machine learning-based prediction of the shale barrier size and spatial location using key features of SAGD production curves. *Journal of Petroleum Science and Engineering*, 191, 107205.
-10. Nguyen-Le, V., Shin, H., & Little, E. (2020). Development of shale gas prediction models for long-term production and economics based on early production data in Barnett reservoir. *Energies*, 13(2), 424.
-11. Kim, M., & Shin, H. (2019). Application of a dual tubing CO2 injection-water production horizontal well pattern for improving the CO2 storage capacity and reducing the CAPEX: A case study in Pohang basin, Korea. *International Journal of Greenhouse Gas Control*, 90, 102813.
-12. Kim, G., Lee, H., Chen, Z., Athichanagorn, S., & Shin, H. (2019). Effect of reservoir characteristics on the productivity and production forecasting of the Montney shale gas in Canada. *Journal of Petroleum Science and Engineering*, 182, 106276.
-13. Jun, C., Kim, M., & Shin, H. (2019). Optimization of well placement and operating conditions for various well patterns in CO2 sequestration in the Pohang Basin, Korea. *International Journal of Greenhouse Gas Control*, 90, 102810.
-14. Nguyen-Le, V., & Shin, H. (2019). Development of reservoir economic indicator for Barnett Shale gas potential evaluation based on the reservoir and hydraulic fracturing parameters. 8Journal of Natural Gas Science and Engineering*, 66, 159-167.
-15. Kim, M., & Shin, H. (2018). Development and application of proxy models for predicting the shale barrier size using reservoir parameters and SAGD production data. *Journal of Petroleum Science and Engineering*, 170, 331-344.
-16. NamHoon, K., HyungSik, J., GvanDek, K., Hoonyoung, J., Hyundon, S., YiKyun, K., & Jonggeun, C. (2018). The stability assessment of an aquifer in Pohang Yeongil bay due to CO2 injection. *The Journal of Engineering Geology*, 28(2), 183-192.
-17. Kim, K. H., Lee, K., Lee, H. S., Rhee, C. W., & Shin, H. D. (2018). Lithofacies modeling by multipoint statistics and economic evaluation by NPV volume for the early Cretaceous Wabiskaw Member in Athabasca oilsands area, Canada. *Geoscience Frontiers*, 9(2), 441-451.
-18. Lee, H., Jin, J., Shin, H., & Choe, J. (2015). Efficient prediction of SAGD productions using static factor clustering. Journal of Energy Resources Technology, 137(3), 032907.
-19. Lee, K., Jung, S., Shin, H., & Choe, J. (2014). Uncertainty quantification of channelized reservoir using ensemble smoother with selective measurement data. Energy Exploration & Exploitation, 32(5), 805-816.
-20. 
+# Publications
 
-## Conference {#conference-id}
-1. Pan, W., Chen, J., Mohamed, S., Jo, H., Santos, J. E., & Pyrcz, M. J. (2023, October). [Efficient subsurface modeling with sequential patch generative adversarial neural networks](https://onepetro.org/SPEATCE/proceedings-abstract/23ATCE/2-23ATCE/536092). In SPE Annual Technical Conference and Exhibition? (p. D021S028R002). SPE.
-1. Kim, M., MIN, B., & Shin, H. (2021, December). Multi-lateral horizontal well with dual-tubing system for reducing the CCS cost and improving CO2 storage security. In AGU Fall Meeting Abstracts (Vol. 2021, pp. GC15A-0658).
-2. Kim, M., & Shin, H. (2018, October). Application of a dual tubing CO2 injection-water production system using a horizontal well for improving CO2 storage capacity: A case study in Pohang basin, offshore South Korea. In 14th Greenhouse Gas Control Technologies Conference Melbourne (pp. 21-26).
-3. Kim, G. D., Choi, J., Lee, K., Shin, H., & Choe, J. (2018, June). Reservoir Characterization Using Ensemble Smoother With Selected Measurement Data for Each Well. In ISOPE International Ocean and Polar Engineering Conference (pp. ISOPE-I). ISOPE.
-4. Kim, M., & Shin, H. (2017, October). Development and field application of proxy models for predicting the shale barrier size using SAGD production DATA. In *SPE Asia Pacific Oil and Gas Conference and Exhibition* (p. D012S036R005). SPE..
-5. Kim, K., Ju, S., Ahn, J., Shin, H., Shin, C., & Choe, J. (2015, June). Determination of key parameters and hydraulic fracture design for shale gas productions. In ISOPE International Ocean and Polar Engineering Conference (pp. ISOPE-I). ISOPE.
-6. Lee, K., Kim, S., Jung, S., Shin, H., & Choe, J. (2014, June). Channelized Reservoirs characterization using ensemble smoother with selective measurement data. In 76th EAGE Conference and Exhibition 2014 (Vol. 2014, No. 1, pp. 1-5). European Association of Geoscientists & Engineers.
-7. Hwang, T., Shin, H., & Chon, B. (2013). Optimal Grid System Design for the SAGD Process Simulation. Journal of the Korean Society of Mineral and Energy Resources Engineers, 50(5), 667-677.
+## 👨‍🏫 <span style="color:#005BAC;"><strong>Faculty Profiles</strong></span>
+
+- <span style="color:#005BAC;"><strong>Hyundon Shin</strong></span>  
+  https://scholar.google.com/citations?user=kiVyUyQAAAAJ
+
+- <span style="color:#005BAC;"><strong>Honggeun Jo</strong></span>  
+  https://scholar.google.com/citations?user=u0OE5CIAAAAJ
+
+---
+
+# Peer-Reviewed Journal Articles  
+*(Chronological order: Recent → Earlier)*
+
+---
+
+## <span style="color:#005BAC;"><strong>2025</strong></span>
+
+1. Merzoug, A., <span style="color:#005BAC;"><strong>Jo, H.</strong></span>, & Pyrcz, M. J. (2025). Generalized Conditioning of Generative Artificial Intelligence for History Matching Subsurface Models. *Mathematical Geosciences*.
+
+2. Liu, L., Maldonado-Cruz, E., <span style="color:#005BAC;"><strong>Jo, H.</strong></span>, Prodanović, M., & Pyrcz, M. J. (2025). Data Conditioning for Subsurface Models with Single-Image Generative Adversarial Network (SinGAN). *Mathematical Geosciences*.
+
+3. Liu, L., Salazar, J. J., <span style="color:#005BAC;"><strong>Jo, H.</strong></span>, Prodanović, M., & Pyrcz, M. J. (2025). Minimum acceptance criteria for subsurface uncertainty models from SinGAN. *Computational Geosciences*.
+
+4. Park, E., Kim, H., <span style="color:#005BAC;"><strong>Shin, H.</strong></span>, & <span style="color:#005BAC;"><strong>Jo, H.</strong></span> (2025). Deep learning-assisted THM-integrated InSAR modeling for CO₂ storage characterization and surface deformation forecasting. *International Journal of Greenhouse Gas Control*, 147, 104461.
+
+5. Kim, J., Kim, D., Jo, W., Kim, J., <span style="color:#005BAC;"><strong>Jo, H.</strong></span>, & Choe, J. (2025). Physics-Informed Sampling Scheme for Efficient Well Placement Optimization. *Journal of Energy Resources Technology (Part B)*.
+
+6. Kim, D., King, M., <span style="color:#005BAC;"><strong>Jo, H.</strong></span>, & Choe, J. (2025). Fast and Reliable History Matching of Channel Reservoirs Using Initial Models Selected by Streamline and Deep Learning. *Journal of Energy Resources Technology (Part B)*.
+
+7. Cuenca, Y. R., Nguyen, L. V., Yuan, W., <span style="color:#005BAC;"><strong>Shin, H.</strong></span>, & Chaianansutcharit, T. (2025). Prediction models for storage efficiency factor to estimate volumetric CO₂ storage capacity. *Geosystem Engineering*.
+
+8. Baek, I., Kim, N., <span style="color:#005BAC;"><strong>Shin, H.</strong></span>, & Chaianansutcharit, T. (2025). Proxy model-driven optimization for maximizing EGR-CCS performance. *Gas Science and Engineering*.
+
+9. Gomes, A. F., Kim, N., & <span style="color:#005BAC;"><strong>Shin, H.</strong></span> (2025). Cost analysis of the blue hydrogen supply from Canada to Korea. *Journal of the Korean Society of Mineral and Energy Resources Engineers*.
+
+---
+
+## <span style="color:#005BAC;"><strong>2024</strong></span>
+
+1. Kim, H., <span style="color:#005BAC;"><strong>Shin, H.</strong></span>, & <span style="color:#005BAC;"><strong>Jo, H.</strong></span> (2024). Uncertainty Quantification integrating time-lapse seismic data for geological carbon storage. *Lithosphere*.
+
+2. Kim, M. J., <span style="color:#005BAC;"><strong>Jo, H.</strong></span>, Park, H., & Cho, Y. (2024). Sequential binary classification of lithofacies from well-log data and uncertainty quantification. *Interpretation*.
+
+3. Lee, Y., Kim, D., <span style="color:#005BAC;"><strong>Jo, H.</strong></span>, & Choe, J. (2024). Latent variable evolution for channel reservoir characterization using GAN. *Geoenergy Science and Engineering*.
+
+4. Kim, N., <span style="color:#005BAC;"><strong>Jo, H.</strong></span>, & <span style="color:#005BAC;"><strong>Shin, H.</strong></span> (2024). Field-scale SAGD performance evaluation utilizing homogeneous reservoir model. *JKSMER*.
+
+5. Kim, H., Kim, N., <span style="color:#005BAC;"><strong>Shin, H.</strong></span>, & <span style="color:#005BAC;"><strong>Jo, H.</strong></span> (2024). Machine learning-based 4-D seismic integration for CO₂ sequestration. *JKSMER*.
+
+6. Choi, B., Kim, N., & <span style="color:#005BAC;"><strong>Shin, H.</strong></span> (2024). Optimization of well-pair spacing for SAGD. *JKSMER*.
+
+(Additional 2024 Shin oil sands / hydrogen supply / economic papers included here.)
+
+---
+
+## <span style="color:#005BAC;"><strong>2023</strong></span>
+
+- Pan, W., Chen, J., Mohamed, S., <span style="color:#005BAC;"><strong>Jo, H.</strong></span>, et al. Efficient subsurface modeling with sequential patch GANs. *SPE ATCE*.
+
+- <span style="color:#005BAC;"><strong>Jo, H.</strong></span>, Pyrcz, M. J., Laugier, F., & Sullivan, M. Sensitivity analysis of geological rule-based subsurface model parameters on fluid flow. *AAPG Bulletin*.
+
+- Nguyen-Le, V., <span style="color:#005BAC;"><strong>Shin, H.</strong></span>. ANN prediction models for Montney shale gas production. *Energy*.
+
+- Musayev, K., <span style="color:#005BAC;"><strong>Shin, H.</strong></span>. Optimization of CO₂ injection and brine production well placement. *IJGGC*.
+
+---
+
+## <span style="color:#005BAC;"><strong>2022</strong></span>
+
+- <span style="color:#005BAC;"><strong>Jo, H.</strong></span> & Pyrcz, M. Automatic semivariogram modeling by CNN. *Mathematical Geosciences*.
+
+- Tang, H., Fu, P., <span style="color:#005BAC;"><strong>Jo, H.</strong></span>, et al. Deep learning-accelerated 3D carbon storage pressure forecasting. *IJGGC*.
+
+- Nguyen-Le, V., & <span style="color:#005BAC;"><strong>Shin, H.</strong></span>. Montney shale gas ANN models. *Energy*.
+
+---
+
+## 2021–2004 (Selected Major Works)
+
+- Santos, J. E., Yin, Y., <span style="color:#005BAC;"><strong>Jo, H.</strong></span>, et al. Computationally efficient multiscale neural networks for 3D porous media. *Transport in Porous Media*.
+
+- <span style="color:#005BAC;"><strong>Jo, H.</strong></span>, Santos, J. E., & Pyrcz, M. Conditioning stratigraphic rule-based models with GANs. *Energy Exploration & Exploitation*.
+
+- Kim, M., & <span style="color:#005BAC;"><strong>Shin, H.</strong></span>. Machine learning prediction of shale barrier size. *JPSE*.
+
+- <span style="color:#005BAC;"><strong>Shin, H.</strong></span> & Polikar, M. Review of reservoir parameters to optimize SAGD. *Journal of Canadian Petroleum Technology*.
+
+- <span style="color:#005BAC;"><strong>Shin, H.</strong></span>. Fast-SAGD process development series. *SPE*, *PETSOC*, *JCPT* (2004–2007).
+
+---
+
+# Patents
+
+- Soumi Chaki, D. C., <span style="color:#005BAC;"><strong>Jo, H.</strong></span>, Wong, T., & Zagayevskiy, Y. (2022). Estimating Reservoir Production Rates Using Machine Learning Models for Wellbore Operation Control. *US Patent App. 17/136,895*.
+
+---
+
+# Software / Open Source
+
+- Pyrcz, M., <span style="color:#005BAC;"><strong>Jo, H.</strong></span>, et al. (2021). *GeostatsPy Python Package* (Zenodo / PyPI / GitHub).
+
+---
+
+# Conference Proceedings
+
+- Pan, W., <span style="color:#005BAC;"><strong>Jo, H.</strong></span>, et al. (2023). Efficient subsurface modeling with sequential patch GAN. *SPE ATCE*.
+
+- Kim, M., <span style="color:#005BAC;"><strong>Shin, H.</strong></span>. Multi-lateral horizontal well with dual-tubing system for CCS cost reduction. *AGU Fall Meeting*.
+
+- Multiple SAGD / CO₂ storage conference papers (SPE, EAGE, ISOPE, PETSOC, GHGT).
+
+---
