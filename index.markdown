@@ -42,7 +42,6 @@ We are seeking highly motivated MS/PhD students and research interns who want to
 
 Students at CURE publish internationally, develop advanced computational expertise, and grow into global researchers.
 
-📩 Send CV, transcript, and statement of interest to  
-**hyundon.shin@inha.ac.kr (PI)**  
-or  
-**honggeun.jo@inha.ac.kr (Co-PI)**
+📩 Send CV, transcript, and statement of interest to  **hyundon.shin@inha.ac.kr (PI)**  or  **honggeun.jo@inha.ac.kr (Co-PI)**
+
+---
