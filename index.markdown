@@ -22,28 +22,6 @@ At CURE (Center for Unconventional Resources & Energy), we integrate:
 - <span style="color:#005BAC;"><strong>CCS</strong></span> & <span style="color:#005BAC;"><strong>Underground Hydrogen Storage</strong></span>
 
 <span style="color:#005BAC;"><strong>We don’t just model the subsurface — we engineer intelligence into it.</strong></span>
-
----
-
-## 🔬 <span style="color:#005BAC;"><strong>Research Thrusts</strong></span>
-
-- CO₂ Storage Integrity & Risk  
-- AI-driven Geological Modeling  
-- Digital Rock Physics (imaging → flow → mechanics)  
-- Subsurface Uncertainty & Optimization  
-
----
-
-## 🚀 <span style="color:#005BAC;"><strong>Join the CURE Lab</strong></span>  
-### <span style="color:#005BAC;">Seeking Future Leaders</span>
-
-We are looking for **highly motivated MS/PhD students and research interns** who want to work on:
-
-- <span style="color:#005BAC;"><strong>AI + Geoenergy</strong></span>  
-- <span style="color:#005BAC;"><strong>CCS & Hydrogen Storage</strong></span>  
-- <span style="color:#005BAC;"><strong>Digital Subsurface Modeling</strong></span>
-
-At CURE, you will build strong computational skills, publish internationally, and grow into a globally competitive researcher.
 <!-- CURE Keyword Chips (outlined + hover) -->
 <style>
   .cure-chips { display:flex; flex-wrap:wrap; gap:10px; margin:12px 0 6px 0; }
@@ -73,6 +51,28 @@ At CURE, you will build strong computational skills, publish internationally, an
   <span class="cure-chip">#GenAI</span>
   <span class="cure-chip">#UQ</span>
 </div>
+---
+
+## 🔬 <span style="color:#005BAC;"><strong>Research Thrusts</strong></span>
+
+- CO₂ Storage Integrity & Risk  
+- AI-driven Geological Modeling  
+- Digital Rock Physics (imaging → flow → mechanics)  
+- Subsurface Uncertainty & Optimization  
+
+---
+
+## 🚀 <span style="color:#005BAC;"><strong>Join the CURE Lab</strong></span>  
+### <span style="color:#005BAC;">Seeking Future Leaders</span>
+
+We are looking for **highly motivated MS/PhD students and research interns** who want to work on:
+
+- <span style="color:#005BAC;"><strong>AI + Geoenergy</strong></span>  
+- <span style="color:#005BAC;"><strong>CCS & Hydrogen</strong></span>  
+- <span style="color:#005BAC;"><strong>Digital Rock Modeling</strong></span>
+
+At CURE, you will build strong computational skills, publish internationally, and grow into a globally competitive researcher.
+
 ---
 
 ## ✉️ <span style="color:#005BAC;"><strong>How to Apply (지원 방법)</strong></span>
