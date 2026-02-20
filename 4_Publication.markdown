@@ -4,8 +4,6 @@ title: Publication
 permalink: /Publication/
 ---
 
-[Peer-reviewed](#peer-review-id) | [Conference](#conference-id) 
-
 ## Peer-reviewed {#peer-review-id}
 1. Choi, B., Kim, N., & Shin, H. (2024). Optimization of Well-Pair Spacing and Well Configuration for the SAGD Process in the Oilsands Reservoirs. Journal of the Korean Society of Mineral and Energy Resources Engineers, 61(3), 199-207.
 1. Kim, H., Kim, N., Shin, H., & Jo, H. (2024). [Machine Learning-based 4-D Seismic Data Integration and Characterization of Channelized Anticline Aquifer for Geological Carbon Sequestration](). Journal of the Korean Society of Mineral and Energy Resources Engineers, 61(1), 1-14.
