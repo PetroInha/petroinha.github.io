@@ -5,7 +5,7 @@
 layout: home
 ---
 
-# <span style="color:#005BAC;"><strong>CURE @ Inha</strong></span>  
+# <span style="color:#005BAC;"><strong>CURE@Inha</strong></span>  
 #### Engineering the subsurface for a net-zero future.
 
 CURE (Center for Unconventional Resources & Energy) advances  

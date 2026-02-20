@@ -5,8 +5,8 @@ permalink: /Members/
 ---
 
 [Principal Investigator](#principal-id) | [CO-PI](#co-pi-id)|[Researchers](#researcher-id) | 
-[Graduates](#graduate-id) | [Undergraduate](#undergraduate-id) | [Alumni-PhD](#alumni-id-PhD) |
-[Alumni-master](#alumni-id-master) | [Alumni-Bachelor](#alumni-id-bachelor) | |
+[Graduates](#graduate-id) | [Undergraduate](#undergraduate-id) | [Alumni](#alumni-id-PhD) |
+
 
 # Principal Investigator (PI) {#principal-id}
 
