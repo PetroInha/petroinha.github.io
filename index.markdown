@@ -4,27 +4,26 @@
 
 layout: home
 ---
-
 # <span style="color:#005BAC;"><strong>CURE@Inha</strong></span>  
-#### Engineering the subsurface for a net-zero future.
+### <span style="color:#005BAC;">AI-Powered Subsurface Intelligence</span>
 
-CURE (Center for Unconventional Resources & Energy) advances  
-<span style="color:#005BAC;"><strong>AI-powered subsurface intelligence</strong></span>  
-for the global energy transition.
+Engineering the subsurface for a net-zero future.
 
-We integrate:
+CURE advances  
+<span style="color:#005BAC;"><strong>intelligent geoenergy systems</strong></span>  
+through the integration of:
 
-- <span style="color:#005BAC;">Reservoir Physics & Simulation</span>  
-- <span style="color:#005BAC;">Digital Rock & Multiscale Imaging</span>  
-- <span style="color:#005BAC;">Generative AI & Uncertainty Quantification</span>  
-- <span style="color:#005BAC;">CCS & Underground Hydrogen Storage</span>  
+- Reservoir Physics & Simulation  
+- Digital Rock & Multiscale Imaging  
+- Generative AI & Uncertainty Quantification  
+- CCS & Underground Hydrogen Storage  
 
-We do not just model or simulate reservoirs.  
-<span style="color:#005BAC;"><strong>We build intelligent geoenergy systems for the energy transition.</strong></span>
+We don’t just model reservoirs.  
+<span style="color:#005BAC;"><strong>We build the intelligence behind the energy transition.</strong></span>
 
 ---
 
-## 🔬 <span style="color:#005BAC;">Research Focus</span>
+## 🔬 <span style="color:#005BAC;">Research</span>
 
 - Carbon Storage Integrity  
 - AI-driven Geological Modeling  
@@ -33,16 +32,15 @@ We do not just model or simulate reservoirs.
 
 ---
 
-## 🚀 <span style="color:#005BAC;">Join CURE Lab</span>
+## 🚀 <span style="color:#005BAC;">Join CURE</span>
 
-We are seeking highly motivated MS/PhD students and research interns who want to lead the future of:
+We seek ambitious MS/PhD students and research interns in:
 
 - <span style="color:#005BAC;">AI + Geoenergy</span>  
 - <span style="color:#005BAC;">CCS & Hydrogen Storage</span>  
 - <span style="color:#005BAC;">Digital Subsurface Modeling</span>  
 
-Students at CURE publish internationally, develop advanced computational expertise, and grow into global researchers.
-
-📩 Send CV, transcript, and statement of interest to  **hyundon.shin@inha.ac.kr (PI)**  or  **honggeun.jo@inha.ac.kr (Co-PI)**
+📩 **hyundon.shin@inha.ac.kr (PI)**  
+📩 **honggeun.jo@inha.ac.kr (Co-PI)**
 
 ---
