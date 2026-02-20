@@ -13,7 +13,7 @@ bridging laboratory-scale physics to field-scale implementation.
 ---
 
 ## 🌊 <span style="color:#005BAC;">Nano-Scale Shale Integrity Modeling for Offshore CCS</span>  
-*(2025–2026, 산업통상자원부 CCUS 국제공동연구)*  
+*(2025–2029, 산업통상자원부 CCUS 국제공동연구)*  
 
 📍 Project ID: 2410014001 / 2480001381 :contentReference[oaicite:1]{index=1} :contentReference[oaicite:2]{index=2}  
 
@@ -33,45 +33,24 @@ in the East Sea continental shelf shale formations.
 
 ---
 
-## 🧪 <span style="color:#005BAC;">CO₂ Storage Efficiency Enhancement Technology</span>  
-*(2023–2025, 산업통상자원부 에특)*  
+## 🌐 <span style="color:#005BAC;">Integrated CCS Network Optimization & Cross-Border Transport</span>  
+*(2025–2029, 산업통상자원부 CCUS 국제공동연구)*  
 
-📍 Project ID: 1415186782 / 2410009597 :contentReference[oaicite:3]{index=3} :contentReference[oaicite:4]{index=4}  
-
-**Goal**  
-Improve storage efficiency by **+25% capacity** and **+10% injectivity**  
-through physico-chemical stimulation and optimized injection systems.
-
-**Core Innovations**
-- Nanoparticle & surfactant-assisted CO₂ injection  
-- Injection/Brine-production coupled system  
-- Machine learning–based injection scenario optimization  
-- Field-scale pilot testbed validation  
-
-**Impact**
-- Cost reduction for large-scale CCS deployment  
-- Next-generation injection technologies for global application  
-
----
-
-## 🤖 <span style="color:#005BAC;">Generative AI for Geological Media Characterization</span>  
-*(2025–2030, 과기정통부 개인기초연구)*  
-
-📍 Project ID: 2710090755 :contentReference[oaicite:5]{index=5}  
+📍 Project ID: 2410014000 :contentReference[oaicite:7]{index=7}  
 
 **Goal**  
-Develop generative AI–driven multi-modal geological modeling framework  
-integrating sedimentary process simulation and dynamic data assimilation.
+Develop optimized CO₂ transport-storage network linking  
+Yeosu–Gwangyang industrial complex to overseas storage (Indonesia, Australia).
 
 **Core Innovations**
-- Sequential depositional modeling (process-based)  
-- Multi-scale data integration (core, log, seismic, InSAR)  
-- Generative AI for realistic 3D reservoir realization  
-- Uncertainty quantification for CCS & oil/gas exploration  
+- Multi-source CO₂ hub (GCP) architecture  
+- Pipeline & shipping network optimization (+20% efficiency)  
+- Impurity management & injection safety  
+- LCA-based system optimization  
 
 **Impact**
-- First-mover AI-based geological modeling framework  
-- Breakthrough in subsurface uncertainty reduction  
+- Cross-border CCS business model  
+- Strategic infrastructure for Asia-Pacific carbon market  
 
 ---
 
@@ -96,27 +75,70 @@ Digital Rock Physics + Generative AI + Multi-physics simulation.
 
 ---
 
-## 🌐 <span style="color:#005BAC;">Integrated CCS Network Optimization & Cross-Border Transport</span>  
-*(2025–2026, 산업통상자원부 CCUS 국제공동연구)*  
-
-📍 Project ID: 2410014000 :contentReference[oaicite:7]{index=7}  
+## 🧬 <span style="color:#005BAC;">생성형 AI를 활용한 저류층 모델</span>  
+*(2025–2028, 한국가스공사 가스연구원)*  
 
 **Goal**  
-Develop optimized CO₂ transport-storage network linking  
-Yeosu–Gwangyang industrial complex to overseas storage (Indonesia, Australia).
+Develop a next-generation **process-consistent generative reservoir modeling framework**  
+that enables realistic large-scale 3D geological realizations  
+conditioned to well, seismic, and dynamic production data.
 
 **Core Innovations**
-- Multi-source CO₂ hub (GCP) architecture  
-- Pipeline & shipping network optimization (+20% efficiency)  
-- Impurity management & injection safety  
-- LCA-based system optimization  
+- 3D Large-Scale Generative Foundation Model
+- Geological Process-Based Modeling 
+- Data Conditioning via Well & Seismic Integration
+- AI-driven uncertainty quantification
 
 **Impact**
-- Cross-border CCS business model  
-- Strategic infrastructure for Asia-Pacific carbon market  
+- Significant reduction in geological modeling uncertainty  
+- Faster and more reliable history matching & forecasting  
+- Scalable framework for CCS, gas storage, and subsurface resource development  
+- Establishment of AI-native reservoir modeling platform for KOGAS
 
 ---
 
+
+## 🧪 <span style="color:#005BAC;">CO₂ Storage Efficiency Enhancement Technology</span>  
+*(2023–2025, 산업통상자원부 에특)*  
+
+📍 Project ID: 1415186782 / 2410009597 :contentReference[oaicite:3]{index=3} :contentReference[oaicite:4]{index=4}  
+
+**Goal**  
+Improve storage efficiency by **+25% capacity** and **+10% injectivity**  
+through physico-chemical stimulation and optimized injection systems.
+
+**Core Innovations**
+- Nanoparticle & surfactant-assisted CO₂ injection  
+- Injection/Brine-production coupled system  
+- Machine learning–based injection scenario optimization  
+- Field-scale pilot testbed validation  
+
+**Impact**
+- Cost reduction for large-scale CCS deployment  
+- Next-generation injection technologies for global application  
+
+---
+
+## 🤖 <span style="color:#005BAC;">Generative AI for Geological Media Characterization</span>  
+*(2025–2026, 과기정통부 개인기초연구)*  
+
+📍 Project ID: 2710090755 :contentReference[oaicite:5]{index=5}  
+
+**Goal**  
+Develop generative AI–driven multi-modal geological modeling framework  
+integrating sedimentary process simulation and dynamic data assimilation.
+
+**Core Innovations**
+- Sequential depositional modeling (process-based)  
+- Multi-scale data integration (core, log, seismic, InSAR)  
+- Generative AI for realistic 3D reservoir realization  
+- Uncertainty quantification for CCS & oil/gas exploration  
+
+**Impact**
+- First-mover AI-based geological modeling framework  
+- Breakthrough in subsurface uncertainty reduction  
+
+---
 ## 🔥 <span style="color:#005BAC;">Low-Carbon High-Yield Unconventional Oil Recovery</span>  
 *(2025, 국토교통부 R&D)*  
 
@@ -135,26 +157,6 @@ for environmentally friendly unconventional oil production.
 **Impact**
 - 10%+ GHG reduction  
 - 80% localization of key plant components  
-
----
-
-## 🛰 <span style="color:#005BAC;">Digital Oilfield Telemetry & Smart Management</span>  
-*(2015–2017, 산업통상자원부 R&D)*  
-
-📍 Project ID: 1415142437 :contentReference[oaicite:9]{index=9}  
-
-**Goal**  
-Develop integrated remote monitoring & automation system  
-for oil and gas production sites.
-
-**Core Innovations**
-- SCADA-based digital oilfield integration  
-- AI-driven production control algorithms  
-- Web-based real-time field monitoring  
-
-**Impact**
-- Foundation for smart oilfield automation  
-- ICT–E&P convergence platform  
 
 ---
 
