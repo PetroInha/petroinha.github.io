@@ -90,11 +90,48 @@ bridging nano-scale physics to field-scale deployment.
 
 ## 🎯 <span style="color:#005BAC;">Strategic Focus</span>
 
-<div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:15px;">
-<span style="background:#E8F2FF; color:#005BAC; padding:8px 14px; border-radius:999px;">AI-Powered Subsurface</span>
-<span style="background:#E8F2FF; color:#005BAC; padding:8px 14px; border-radius:999px;">Nano → Field Scale Integration</span>
-<span style="background:#E8F2FF; color:#005BAC; padding:8px 14px; border-radius:999px;">CCS Commercialization</span>
-<span style="background:#E8F2FF; color:#005BAC; padding:8px 14px; border-radius:999px;">Digital Geoenergy Systems</span>
-</div>
+<style>
+.focus-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 18px;
+  justify-content: flex-start;
+}
 
+.focus-chip {
+  background: #E8F2FF;
+  color: #005BAC;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.focus-chip:hover {
+  background: #005BAC;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .focus-container {
+    justify-content: center;
+  }
+  .focus-chip {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+}
+</style>
+
+<div class="focus-container">
+  <div class="focus-chip">AI-Powered Subsurface</div>
+  <div class="focus-chip">Nano → Field Scale Integration</div>
+  <div class="focus-chip">CCS Commercialization</div>
+  <div class="focus-chip">Digital Geoenergy Systems</div>
+</div>
 ---
