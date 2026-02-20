@@ -6,13 +6,13 @@ permalink: /Publication/
 
 # Publications
 
-## 👨‍🏫 <span style="color:#005BAC;"><strong>Faculty Profiles</strong></span>
+## 👨‍🏫 <span style="color:#005BAC;"><strong>PIs' Profiles</strong></span>
 
 - <span style="color:#005BAC;"><strong>Hyundon Shin</strong></span>  
-  https://scholar.google.com/citations?user=kiVyUyQAAAAJ
+  [google scholar](https://scholar.google.com/citations?user=kiVyUyQAAAAJ)
 
 - <span style="color:#005BAC;"><strong>Honggeun Jo</strong></span>  
-  https://scholar.google.com/citations?user=u0OE5CIAAAAJ
+  [google scholar](https://scholar.google.com/citations?user=u0OE5CIAAAAJ)
 
 ---
 
