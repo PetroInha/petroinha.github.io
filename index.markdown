@@ -4,9 +4,6 @@
 
 layout: home
 ---
-
-![CURE Logo](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/LabLogoCURE.svg?raw=true)
-
 # CURE Lab  
 ### AI-Powered Subsurface Intelligence
 
@@ -19,8 +16,7 @@ At the Center for Unconventional Resources & Energy (CURE), we integrate:
 - Generative AI & Uncertainty Quantification  
 - CCS & Underground Hydrogen Storage  
 
-We do not just model reservoirs.  
-We build intelligent geoenergy systems for the energy transition.
+We do not just model reservoirs. We build intelligent geoenergy systems for the energy transition.
 
 ---
 
@@ -43,21 +39,4 @@ We are seeking highly motivated MS/PhD students and research interns who want to
 
 Students at CURE publish internationally, develop advanced computational expertise, and grow into global researchers.
 
-📩 Send CV, transcript, and statement of interest to ![honggeun.jo@inha.ac.kr](honggeun.jo@inha.ac.kr)
-
----
-
-🎥 **손에잡히는경제 플러스 인터뷰 - 신현돈 교수님**  
-
-<p align="center">
-  <a href="https://www.youtube.com/watch?v=PauuAnJeHu0">
-    <img src="https://github.com/Inha-ERE/cure.github.io/blob/main/_images/sonkyungjae.JPG?raw=true" alt="Interview Thumbnail">
-  </a>
-</p>
-
-<p align="center">
-  🎥 <strong>Recently Broadcasted Video</strong><br>
-  Click the image above to watch on YouTube
-</p>
-
----
+📩 Send CV, transcript, and statement of interest to **honggeun.jo@inha.ac.kr**
