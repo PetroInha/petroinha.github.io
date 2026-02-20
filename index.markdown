@@ -4,18 +4,21 @@
 
 layout: home
 ---
-### <span style="color:#005BAC;">AI-Powered Subsurface Intelligence</span>
+### <span style="color:#005BAC;"><strong>CURE @ Inha</strong></span>  
+#### Engineering the subsurface for a net-zero future.
 
-<span style="color:#005BAC;"><strong>Engineering the subsurface for a net-zero future.</strong></span>
+CURE (Center for Unconventional Resources & Energy) advances  
+<span style="color:#005BAC;"><strong>AI-powered subsurface intelligence</strong></span>  
+for the global energy transition.
 
-At the Center for Unconventional Resources & Energy (CURE), we integrate:
+We integrate:
 
 - <span style="color:#005BAC;">Reservoir Physics & Simulation</span>  
 - <span style="color:#005BAC;">Digital Rock & Multiscale Imaging</span>  
 - <span style="color:#005BAC;">Generative AI & Uncertainty Quantification</span>  
 - <span style="color:#005BAC;">CCS & Underground Hydrogen Storage</span>  
 
-We do not just model reservoirs.  
+We do not just model or simulate reservoirs.  
 <span style="color:#005BAC;"><strong>We build intelligent geoenergy systems for the energy transition.</strong></span>
 
 ---
