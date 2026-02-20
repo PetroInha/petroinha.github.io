@@ -4,6 +4,8 @@
 
 layout: home
 ---
+
+
 # <span style="color:#005BAC;"><strong>CURE@Inha</strong></span>  
 ### <span style="color:#005BAC;">AI-Powered Subsurface Intelligence</span>
 
