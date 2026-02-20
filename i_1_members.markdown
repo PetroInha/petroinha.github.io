@@ -99,7 +99,7 @@ We cultivate future leaders in **AI-powered subsurface engineering and carbon-ne
 <div class="section-grid">
 
 <div class="profile-card">
-<img src="https://github.com/Inha-ERE/cure.github.io/blob/main/_images/hd_shin.jpg?raw=true">
+<img src="https://github.com/Inha-ERE/cure.github.io/blob/main/_images/hd_shin.JPG?raw=true">
 <div class="profile-info">
 <h3>Prof. Hyundon Shin</h3>
 <p><strong>Professor, Dept. of Energy Resources Engineering</strong></p>
@@ -163,6 +163,41 @@ We cultivate future leaders in **AI-powered subsurface engineering and carbon-ne
 <p>Digital Rock Integration in CCS</p>
 </div>
 
+<div class="member-card">
+<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_YJKim.png?raw=true">
+<h4>이영진</h4>
+<p>M.S. (2024~)</p>
+<p>ES-SAGD Optimization</p>
+</div>
+
+<div class="member-card">
+<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_JHSeol.png?raw=true">
+<h4>설정환</h4>
+<p>M.S. (2025~)</p>
+<p>Lithum production, CCS injectivity</p>
+</div>
+
+<div class="member-card">
+<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_jinwoo.png?raw=true">
+<h4>어진우</h4>
+<p>M.S. (2026~)</p>
+<p>Generative model for digital rock</p>
+</div>
+
+<div class="member-card">
+<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_jinwoo.png?raw=true">
+<h4>이용훈</h4>
+<p>M.S. (2026~)</p>
+<p>SAGD simulation and experiment</p>
+</div>
+
+<div class="member-card">
+<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_jinwoo.png?raw=true">
+<h4>이용훈</h4>
+<p>Ph.D. Candiate (part-time)</p>
+<p>Geological model characterization</p>
+</div>
+
 </div>
 
 ---
@@ -177,47 +212,324 @@ We cultivate future leaders in **AI-powered subsurface engineering and carbon-ne
 <span style="background:#E8F2FF; color:#808080; padding:8px 14px; border-radius:999px;">강태구 · ML</span>
 </div>
 
-<p style="margin-top:15px;"><strong>※ Undergraduate Research Positions Open</strong> – honggeun.jo@inha.ac.kr</p>
+<p style="margin-top:15px;"><strong>※ 학부연구생 상시모집중</strong> – honggeun.jo@inha.ac.kr</p>
 
-**※학부연구생 상시모집중** - 문의: honggeun.jo@inha.ac.kr
+---
 
---- 
-# Alumni (PhD) {#alumni-id-PhD}
+# 🎓 Alumni
 
-| 이름  | 학위   | 졸업연도 | 소속                | 연구주제 |
-| :-----|:------|:--------- |:------------------| :----------------|
-| Viet Nguyen-Le|Ph.D.|2022.2 | Geological Survey of Canada | Shale Gas, EGR, SAGD, <br> and [More](https://scholar.google.com/citations?user=48-9_CgAAAAJ&hl=en&oi=ao)|
-| 김민  | Ph.D. |2020.8     | 現 한국석유공사 연구원 | Heavy Oil Recovery, EOR, <br> Machine Learning, CCUS, <br> and [More](https://scholar.google.co.kr/citations?user=-aINUeYAAAAJ&hl=ko) | 
+<style>
+.alumni-section {
+  margin-top:40px;
+}
 
+.alumni-title {
+  font-size:22px;
+  font-weight:600;
+  color:#005BAC;
+  margin-bottom:20px;
+}
 
-# Alumni (Master's) {#alumni-id-master}
+.alumni-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+  gap:22px;
+}
 
-| 이름  | 학위   | 졸업연도 | 소속                | 연구주제 |
-| :-----|:------|:--------- |:------------------| :----------------|
-| 공희성 | Master's |2025.3 | 한국석유공사 | ES-SAGD |
-| 백인욱 | Master's |2025.3 | 국토교통과학기술진흥원 | CO2-EGR |
-| 백진현 | Master's |2025.3 | 인하대 연구조교 | Oil Sand, SAGD |
-| 김현민 | Master's |2025.3 | 삼성중공업 | [4D seismic in CCS](https://pubs.geoscienceworld.org/gsw/lithosphere/article/2024/4/lithosphere_2024_209/650382/Uncertainty-Quantification-Based-on-Deep-Learning) |
-| Yenny Andrea Rincon Cuenca | Master's | 2024.8 | Ecopetrol | CCS modeling|
-| 신현수 | Master's |2020.2 | 포스코인터네셔널 | Shale Gas DCA|
-| 양형서 | Master's |2020.2 | 한국석유공사| Shale Gas, EGR, SAGD|
-| 이준용 | Master's |2019.2 | 한국석유공사| Oil Sand, SAGD |
-| 전창혁 | Master's |2019.2 | 포스코인터네셔널| 포항분지 CCS |
-| 윤지수 | Master's |2018.8 | 前 정보통신기획평가원 | Oil Sand, SAGD |
-| 김가람 | Master's |2018.8 | 한국수자원공사| Oil Sand, SAGD |
-| 손국희 | Master's |2018.2 | 중소기업기술정보진흥원| Oil Sand, SAGD |
-| 이정빈 | Master's |2016.2 | - | Oil Sand, SAGD |
-| 강은규 | Master's |2016.2 | - | Oil Sand, SAGD |
-| 유윤상 | Master's |2016.2 | 한국건설생활환경시험연구원| CCS |
-| 최봉혁 | Master's |2015.2 | 인하대 연구진흥팀| Oil Sand, SAGD |
-| 김정호 | Master's |2015.2 | LG 에너지솔루션 | Oil Sand, SAGD |
+.alumni-card {
+  background:white;
+  border-radius:18px;
+  padding:20px;
+  box-shadow:0 10px 24px rgba(0,0,0,0.08);
+  border-top:4px solid #005BAC;
+  transition:0.2s ease;
+}
 
-# Alumni (Bachelor's) {#alumni-id-bachelor}
+.alumni-card:hover {
+  transform:translateY(-4px);
+}
 
-| 이름  | 학위   | 졸업연도 | 소속                | 연구주제 |
-| :-----|:------|:--------- |:------------------| :----------------|
-| 고메스 | Bachelor's |2024.8 | 현대건설 신재생에너지사업부 | Renewables |
-| 한솔 | Bachelor's |2024.8 | 포스코인터네셔널 | Mineral exporation |
-| 조지원 | Bachelor's |2024.8 | 지멘스 코리아 | Blue hydrogen |
-| 성준 | Bachelor's |2024.2 | 효성중공업 | Geological modeling |
-| 전희진 | Bachelor's |2023.8 | (TBU) | Geological modeling |
+.alumni-card h4 {
+  margin:0 0 6px 0;
+  color:#005BAC;
+}
+
+.alumni-meta {
+  font-size:13px;
+  color:#666;
+  margin-bottom:8px;
+}
+
+.alumni-affil {
+  font-weight:500;
+  margin-bottom:8px;
+}
+
+.alumni-topic {
+  font-size:13px;
+  color:#444;
+}
+
+@media (max-width:768px){
+  .alumni-card{
+    padding:18px;
+  }
+}
+</style>
+
+<!-- ====================== -->
+<div class="alumni-section">
+<div class="alumni-title">Ph.D. Alumni</div>
+
+<div class="alumni-grid">
+
+<div class="alumni-card">
+<h4>Viet Nguyen-Le</h4>
+<div class="alumni-meta">Ph.D. · 2022.2</div>
+<div class="alumni-affil">Geological Survey of Canada</div>
+<div class="alumni-topic">
+Shale Gas · EGR · SAGD  
+<br><a href="https://scholar.google.com/citations?user=48-9_CgAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar →</a>
+</div>
+</div>
+
+<div class="alumni-card">
+<h4>김민</h4>
+<div class="alumni-meta">Ph.D. · 2020.8</div>
+<div class="alumni-affil">한국석유공사</div>
+<div class="alumni-topic">
+Heavy Oil Recovery · EOR · ML · CCUS  
+<br><a href="https://scholar.google.co.kr/citations?user=-aINUeYAAAAJ&hl=ko" target="_blank">Google Scholar →</a>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- ====================== -->
+<div class="alumni-section">
+<div class="alumni-title">Master's Alumni</div>
+
+<div class="alumni-grid">
+
+<div class="alumni-card">
+<h4>공희성</h4>
+<div class="alumni-meta">Master's · 2025.3</div>
+<div class="alumni-affil">한국석유공사</div>
+<div class="alumni-topic">ES-SAGD</div>
+</div>
+
+<div class="alumni-card">
+<h4>백인욱</h4>
+<div class="alumni-meta">Master's · 2025.3</div>
+<div class="alumni-affil">국토교통과학기술진흥원</div>
+<div class="alumni-topic">CO₂-EGR</div>
+</div>
+
+<div class="alumni-card">
+<h4>김현민</h4>
+<div class="alumni-meta">Master's · 2025.3</div>
+<div class="alumni-affil">삼성중공업</div>
+<div class="alumni-topic">
+4D Seismic in CCS  
+<br><a href="https://pubs.geoscienceworld.org/gsw/lithosphere/article/2024/4/lithosphere_2024_209/650382/Uncertainty-Quantification-Based-on-Deep-Learning" target="_blank">Publication →</a>
+</div>
+</div>
+
+<div class="alumni-card">
+<h4>Yenny Andrea Rincon Cuenca</h4>
+<div class="alumni-meta">Master's · 2024.8</div>
+<div class="alumni-affil">Ecopetrol</div>
+<div class="alumni-topic">CCS Modeling</div>
+</div>
+
+<div class="alumni-card">
+<h4>신현수</h4>
+<div class="alumni-meta">Master's · 2020.2</div>
+<div class="alumni-affil">포스코인터네셔널</div>
+<div class="alumni-topic">Shale Gas DCA</div>
+</div>
+
+<div class="alumni-card">
+<h4>양형서</h4>
+<div class="alumni-meta">Master's · 2020.2</div>
+<div class="alumni-affil">한국석유공사</div>
+<div class="alumni-topic">Shale Gas · EGR · SAGD</div>
+</div>
+
+<div class="alumni-card">
+<h4>이준용</h4>
+<div class="alumni-meta">Master's · 2019.2</div>
+<div class="alumni-affil">한국석유공사</div>
+<div class="alumni-topic">Oil Sand · SAGD</div>
+</div>
+
+<div class="alumni-card">
+<h4>전창혁</h4>
+<div class="alumni-meta">Master's · 2019.2</div>
+<div class="alumni-affil">포스코인터네셔널</div>
+<div class="alumni-topic">포항분지 CCS</div>
+</div>
+
+<div class="alumni-card">
+<h4>윤지수</h4>
+<div class="alumni-meta">Master's · 2018.8</div>
+<div class="alumni-affil">前 정보통신기획평가원</div>
+<div class="alumni-topic">Oil Sand · SAGD</div>
+</div>
+
+<div class="alumni-card">
+<h4>김가람</h4>
+<div class="alumni-meta">Master's · 2018.8</div>
+<div class="alumni-affil">한국수자원공사</div>
+<div class="alumni-topic">Oil Sand · SAGD</div>
+</div>
+
+<div class="alumni-card">
+<h4>손국희</h4>
+<div class="alumni-meta">Master's · 2018.2</div>
+<div class="alumni-affil">중소기업기술정보진흥원</div>
+<div class="alumni-topic">Oil Sand · SAGD</div>
+</div>
+
+<div class="alumni-card">
+<h4>김정호</h4>
+<div class="alumni-meta">Master's · 2015.2</div>
+<div class="alumni-affil">LG 에너지솔루션</div>
+<div class="alumni-topic">Oil Sand · SAGD</div>
+</div>
+
+</div>
+</div>
+
+<!-- ====================== -->
+<div class="alumni-section">
+<div class="alumni-title">Bachelor's Alumni</div>
+
+<div class="alumni-grid">
+
+<div class="alumni-card">
+<h4>고메스</h4>
+<div class="alumni-meta">Bachelor's · 2024.8</div>
+<div class="alumni-affil">현대건설 신재생에너지사업부</div>
+<div class="alumni-topic">Renewables</div>
+</div>
+
+<div class="alumni-card">
+<h4>한솔</h4>
+<div class="alumni-meta">Bachelor's · 2024.8</div>
+<div class="alumni-affil">포스코인터네셔널</div>
+<div class="alumni-topic">Mineral Exploration</div>
+</div>
+
+<div class="alumni-card">
+<h4>조지원</h4>
+<div class="alumni-meta">Bachelor's · 2024.8</div>
+<div class="alumni-affil">지멘스 코리아</div>
+<div class="alumni-topic">Blue Hydrogen</div>
+</div>
+
+<div class="alumni-card">
+<h4>성준</h4>
+<div class="alumni-meta">Bachelor's · 2024.2</div>
+<div class="alumni-affil">효성중공업</div>
+<div class="alumni-topic">Geological Modeling</div>
+</div>
+
+<div class="alumni-card">
+<h4>전희진</h4>
+<div class="alumni-meta">Bachelor's · 2023.8</div>
+<div class="alumni-affil">(TBU)</div>
+<div class="alumni-topic">Geological Modeling</div>
+</div>
+
+</div>
+</div>
+<!-- ====================== -->
+<!-- Alumni Impact Metrics - Startup Version -->
+<style>
+.metric-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:22px;
+  margin:40px 0 50px 0;
+}
+
+.metric-card{
+  background:white;
+  border-radius:20px;
+  padding:30px;
+  text-align:center;
+  box-shadow:0 10px 24px rgba(0,0,0,0.08);
+  transition:all 0.35s ease;
+  border-top:4px solid #005BAC;
+}
+
+.metric-card:hover{
+  transform:translateY(-6px) scale(1.03);
+  box-shadow:0 18px 38px rgba(0,0,0,0.15);
+}
+
+.metric-highlight{
+  background:linear-gradient(135deg,#005BAC,#0088FF);
+  color:white;
+  border-top:none;
+}
+
+.metric-number{
+  font-size:38px;
+  font-weight:700;
+  margin:0;
+}
+
+.metric-label{
+  margin-top:8px;
+  font-weight:500;
+  opacity:0.9;
+}
+</style>
+
+<div class="metric-grid">
+
+<div class="metric-card metric-highlight">
+  <h1 class="metric-number" data-target="95">0</h1>
+  <p class="metric-label">Industry Placement Rate (%)</p>
+</div>
+
+<div class="metric-card">
+  <h1 class="metric-number" data-target="50">0</h1>
+  <p class="metric-label">Graduated Students</p>
+</div>
+
+<div class="metric-card">
+  <h1 class="metric-number" data-target="20">0</h1>
+  <p class="metric-label">Energy Companies</p>
+</div>
+
+<div class="metric-card">
+  <h1 class="metric-number" data-target="10">0</h1>
+  <p class="metric-label">Years of Industry Collaboration</p>
+</div>
+
+</div>
+
+<script>
+const counters = document.querySelectorAll('.metric-number');
+const speed = 200;
+
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+    const increment = target / speed;
+
+    if(count < target){
+      counter.innerText = Math.ceil(count + increment);
+      setTimeout(updateCount, 10);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  updateCount();
+});
+</script>
