@@ -1,11 +1,9 @@
 ---
 layout: home
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 ---
 
 <style>
-/* ====== Scroll Reveal Core ====== */
+/* Scroll reveal (fade-up on scroll) */
 .reveal{
   opacity:0;
   transform:translateY(18px);
@@ -18,28 +16,24 @@ layout: home
 .reveal.delay-3{ transition-delay:240ms; }
 .reveal.delay-4{ transition-delay:320ms; }
 
-/* ====== Section Card Wrapper ====== */
+/* Section card */
 .section-card{
   background: rgba(0,0,0,0.02);
   border: 1px solid rgba(0,0,0,0.06);
   border-radius: 18px;
-  padding: 22px 22px;
+  padding: 22px;
   position: relative;
 }
 
-/* 1) Subtle Float (Breathing) Animation */
+/* Subtle float (“breathing”) animation */
 @keyframes floaty {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
 }
-.section-card.float {
-  animation: floaty 6.5s ease-in-out infinite;
-}
-.section-card.float:hover{
-  animation-play-state: paused;
-}
+.section-card.float { animation: floaty 6.5s ease-in-out infinite; }
+.section-card.float:hover{ animation-play-state: paused; }
 
-/* ====== Chips ====== */
+/* Chips */
 .cure-chips{ display:flex; flex-wrap:wrap; gap:10px; margin:12px 0 6px 0; }
 .cure-chip{
   display:inline-block;
@@ -60,7 +54,7 @@ layout: home
   box-shadow:0 10px 18px rgba(0,0,0,0.10);
 }
 
-/* ====== Fancy Divider ====== */
+/* Soft divider */
 .hr-soft{
   border:none;
   height:1px;
@@ -68,7 +62,7 @@ layout: home
   margin: 26px 0;
 }
 
-/* 2) CTA Button + Glow */
+/* CTA buttons */
 .cta-row{
   display:flex;
   flex-wrap:wrap;
@@ -109,13 +103,9 @@ layout: home
     0 18px 36px rgba(0,0,0,0.12),
     0 0 0 6px rgba(0,91,172,0.10);
 }
+.cta-note{ font-size:13px; color:#555; }
 
-.cta-note{
-  font-size:13px;
-  color:#555;
-}
-
-/* Small inline icon */
+/* Inline icons */
 .cta-ico{
   width:18px; height:18px;
   display:inline-block;
@@ -126,7 +116,7 @@ layout: home
 .ico-mail{ --mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="black" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>'); }
 .ico-users{ --mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="black" d="M16 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm-8 0a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-3.33 0-6 1.34-6 3v2h12v-2c0-1.66-2.67-3-6-3Zm8 0c-.42 0-.82.03-1.2.08A4.9 4.9 0 0 1 18 16v2h6v-2c0-1.66-2.67-3-6-3Z"/></svg>'); }
 
-/* Reduced Motion */
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce){
   .reveal{ opacity:1; transform:none; transition:none; }
   .section-card.float{ animation:none; }
@@ -136,29 +126,33 @@ layout: home
 </style>
 
 <div class="reveal">
-  
-# <span style="color:#005BAC;"><strong>CURE@Inha</strong></span>  
-### <span style="color:#005BAC;">Subsurface Intelligence for the Energy Transition</span>
 
-We fuse **physics**, **data**, and **AI** to build next-generation geoenergy systems—  
-from **CO₂ storage** to **underground hydrogen storage**.
+<h1><span style="color:#005BAC;"><strong>CURE@Inha</strong></span></h1>
+<h3><span style="color:#005BAC;">Subsurface Intelligence for the Energy Transition</span></h3>
+
+<p>
+We fuse <strong>physics</strong>, <strong>data</strong>, and <strong>AI</strong> to build next-generation geoenergy systems—<br>
+from <strong>CO₂ storage</strong> to <strong>underground hydrogen storage</strong>.
+</p>
 
 </div>
 
-<div class="hr-soft"></div>
+<hr class="hr-soft" />
 
 <div class="section-card float reveal">
-  
-## <span style="color:#005BAC;"><strong>What We Do</strong></span>
 
-At CURE (Center for Unconventional Resources & Energy), we integrate:
+<h2><span style="color:#005BAC;"><strong>What We Do</strong></span></h2>
 
-- <span style="color:#005BAC;"><strong>Reservoir Physics</strong></span> & high-fidelity simulation  
-- <span style="color:#005BAC;"><strong>Digital Rock</strong></span> & multiscale characterization  
-- <span style="color:#005BAC;"><strong>Generative AI</strong></span> & uncertainty quantification  
-- <span style="color:#005BAC;"><strong>CCS</strong></span> & <span style="color:#005BAC;"><strong>Underground Hydrogen Storage</strong></span>
+<p>At CURE (Center for Unconventional Resources &amp; Energy), we integrate:</p>
 
-<span style="color:#005BAC;"><strong>We don’t just model the subsurface — we engineer intelligence into it.</strong></span>
+<ul>
+  <li><span style="color:#005BAC;"><strong>Reservoir Physics</strong></span> &amp; high-fidelity simulation</li>
+  <li><span style="color:#005BAC;"><strong>Digital Rock</strong></span> &amp; multiscale characterization</li>
+  <li><span style="color:#005BAC;"><strong>Generative AI</strong></span> &amp; uncertainty quantification</li>
+  <li><span style="color:#005BAC;"><strong>CCS</strong></span> &amp; <span style="color:#005BAC;"><strong>Underground Hydrogen Storage</strong></span></li>
+</ul>
+
+<p><span style="color:#005BAC;"><strong>We don’t just model the subsurface — we engineer intelligence into it.</strong></span></p>
 
 <div class="cure-chips">
   <span class="cure-chip">#CCS</span>
@@ -170,35 +164,40 @@ At CURE (Center for Unconventional Resources & Energy), we integrate:
 
 </div>
 
-<div class="hr-soft"></div>
+<hr class="hr-soft" />
 
 <div class="section-card float reveal">
-  
-## 🔬 <span style="color:#005BAC;"><strong>Research Thrusts</strong></span>
 
-- CO₂ Storage Integrity & Risk  
-- AI-driven Geological Modeling  
-- Digital Rock Physics (imaging → flow → mechanics)  
-- Subsurface Uncertainty & Optimization  
+<h2>🔬 <span style="color:#005BAC;"><strong>Research Thrusts</strong></span></h2>
+
+<ul>
+  <li>CO₂ Storage Integrity &amp; Risk</li>
+  <li>AI-driven Geological Modeling</li>
+  <li>Digital Rock Physics (imaging → flow → mechanics)</li>
+  <li>Subsurface Uncertainty &amp; Optimization</li>
+</ul>
 
 </div>
 
-<div class="hr-soft"></div>
+<hr class="hr-soft" />
 
 <div class="section-card float reveal" id="join">
-  
-## 🚀 <span style="color:#005BAC;"><strong>Join the CURE Lab</strong></span>  
-### <span style="color:#005BAC;">Seeking Future Leaders</span>
 
-We are looking for **highly motivated MS/PhD students and research interns** who want to work on:
+<h2>🚀 <span style="color:#005BAC;"><strong>Join the CURE Lab</strong></span></h2>
+<h3><span style="color:#005BAC;">Seeking Future Leaders</span></h3>
 
-- <span style="color:#005BAC;"><strong>AI + Geoenergy</strong></span>  
-- <span style="color:#005BAC;"><strong>CCS & Hydrogen</strong></span>  
-- <span style="color:#005BAC;"><strong>Digital Rock Modeling</strong></span>
+<p>We are looking for <strong>highly motivated MS/PhD students and research interns</strong> who want to work on:</p>
 
+<ul>
+  <li><span style="color:#005BAC;"><strong>AI + Geoenergy</strong></span></li>
+  <li><span style="color:#005BAC;"><strong>CCS &amp; Hydrogen</strong></span></li>
+  <li><span style="color:#005BAC;"><strong>Digital Rock Modeling</strong></span></li>
+</ul>
+
+<p>
 At CURE, you will build strong computational skills, publish internationally, and grow into a globally competitive researcher.
+</p>
 
-<!-- 2) CTA Buttons -->
 <div class="cta-row">
   <a class="cta-btn" href="#apply">
     <span class="cta-ico ico-mail"></span>
@@ -213,37 +212,42 @@ At CURE, you will build strong computational skills, publish internationally, an
 
 </div>
 
-<div class="hr-soft"></div>
+<hr class="hr-soft" />
 
 <div class="section-card float reveal" id="apply">
-  
-## ✉️ <span style="color:#005BAC;"><strong>How to Apply (지원 방법)</strong></span>
 
-CURE Lab에 관심 있는 학생은 아래 서류를 준비하여 이메일로 보내주세요.  
-(연구실/주제 적합성 논의를 위해 **사전 컨택을 권장**합니다.)
+<h2>✉️ <span style="color:#005BAC;"><strong>How to Apply (지원 방법)</strong></span></h2>
 
-**제출 서류**
-1) **자기소개서** (지원 동기, 관심 연구 주제, 본인의 강점/경험)  
-2) **CV** (프로그래밍/시뮬레이션/실험 등 기술 스택, 연구·프로젝트 경험 포함)  
-3) **성적표**
+<p>
+CURE Lab에 관심 있는 학생은 아래 서류를 준비하여 이메일로 보내주세요.<br>
+(연구실/주제 적합성 논의를 위해 <strong>사전 컨택을 권장</strong>합니다.)
+</p>
 
-**제출처**
-- **hyundon.shin@inha.ac.kr (PI)**  
-- **honggeun.jo@inha.ac.kr (Co-PI)**  
+<p><strong>제출 서류</strong></p>
+<ol>
+  <li><strong>자기소개서</strong> (지원 동기, 관심 연구 주제, 본인의 강점/경험)</li>
+  <li><strong>CV</strong> (프로그래밍/시뮬레이션/실험 등 기술 스택, 연구·프로젝트 경험 포함)</li>
+  <li><strong>성적표</strong></li>
+</ol>
 
-**Tip**: 학부 인턴/진학 예정자는 관심 주제와 가능한 시작 시점을 함께 적어주시면 더 빠르게 매칭할 수 있습니다.
+<p><strong>제출처</strong></p>
+<ul>
+  <li><strong>hyundon.shin@inha.ac.kr (PI)</strong></li>
+  <li><strong>honggeun.jo@inha.ac.kr (Co-PI)</strong></li>
+</ul>
+
+<p><strong>Tip</strong>: 학부 인턴/진학 예정자는 관심 주제와 가능한 시작 시점을 함께 적어주시면 더 빠르게 매칭할 수 있습니다.</p>
 
 </div>
 
 <script>
-/* ====== Scroll Reveal (fade-up + stagger) ====== */
+/* Reveal sections as they enter the viewport */
 (function(){
   const els = document.querySelectorAll('.reveal');
   if (!('IntersectionObserver' in window)) {
     els.forEach(el => el.classList.add('is-visible'));
     return;
   }
-
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if(entry.isIntersecting){
@@ -260,10 +264,3 @@ CURE Lab에 관심 있는 학생은 아래 서류를 준비하여 이메일로 �
   });
 })();
 </script>
-
-<!--
-3) If you want a "landing page" remaster tailored to your current Jekyll theme:
-- Share which theme you use (e.g., minima / just-the-docs / cayman / etc.)
-- Or paste your _config.yml theme line + main layout name.
-Then I can match typography, spacing, and button styles perfectly to your site.
--->
