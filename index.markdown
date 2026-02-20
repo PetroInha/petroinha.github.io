@@ -4,23 +4,23 @@
 
 layout: home
 ---
-# CURE Lab  
-### AI-Powered Subsurface Intelligence
+### <span style="color:#005BAC;">AI-Powered Subsurface Intelligence</span>
 
-Engineering the subsurface for a net-zero future.
+<span style="color:#005BAC;"><strong>Engineering the subsurface for a net-zero future.</strong></span>
 
 At the Center for Unconventional Resources & Energy (CURE), we integrate:
 
-- Reservoir Physics & Simulation  
-- Digital Rock & Multiscale Imaging  
-- Generative AI & Uncertainty Quantification  
-- CCS & Underground Hydrogen Storage  
+- <span style="color:#005BAC;">Reservoir Physics & Simulation</span>  
+- <span style="color:#005BAC;">Digital Rock & Multiscale Imaging</span>  
+- <span style="color:#005BAC;">Generative AI & Uncertainty Quantification</span>  
+- <span style="color:#005BAC;">CCS & Underground Hydrogen Storage</span>  
 
-We do not just model reservoirs. We build intelligent geoenergy systems for the energy transition.
+We do not just model reservoirs.  
+<span style="color:#005BAC;"><strong>We build intelligent geoenergy systems for the energy transition.</strong></span>
 
 ---
 
-## 🔬 Research Focus
+## 🔬 <span style="color:#005BAC;">Research Focus</span>
 
 - Carbon Storage Integrity  
 - AI-driven Geological Modeling  
@@ -29,14 +29,17 @@ We do not just model reservoirs. We build intelligent geoenergy systems for the 
 
 ---
 
-## 🚀 Join CURE Lab
+## 🚀 <span style="color:#005BAC;">Join CURE Lab</span>
 
 We are seeking highly motivated MS/PhD students and research interns who want to lead the future of:
 
-- AI + Geoenergy  
-- CCS & Hydrogen Storage  
-- Digital Subsurface Modeling  
+- <span style="color:#005BAC;">AI + Geoenergy</span>  
+- <span style="color:#005BAC;">CCS & Hydrogen Storage</span>  
+- <span style="color:#005BAC;">Digital Subsurface Modeling</span>  
 
 Students at CURE publish internationally, develop advanced computational expertise, and grow into global researchers.
 
-📩 Send CV, transcript, and statement of interest to **hyundon.shin@inha.ac.kr (PI)** or **honggeun.jo@inha.ac.kr (Co-PI)**
+📩 Send CV, transcript, and statement of interest to  
+**hyundon.shin@inha.ac.kr (PI)**  
+or  
+**honggeun.jo@inha.ac.kr (Co-PI)**
