@@ -3,61 +3,183 @@ layout: page
 title: Members
 permalink: /Members/
 ---
+# 👥 Our Team
 
-[Principal Investigator](#principal-id) | [CO-PI](#co-pi-id)|[Researchers](#researcher-id) | 
-[Graduates](#graduate-id) | [Undergraduate](#undergraduate-id) | [Alumni](#alumni-id-PhD) |
-
-
-# Principal Investigator (PI) {#principal-id}
-
-![Principal Investigator](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/dr_shin.png?raw=true)
+We cultivate future leaders in **AI-powered subsurface engineering and carbon-neutral geoenergy systems.**
 
 ---
 
-# CO-PI {#co-pi-id}
+# 👨‍🏫 Leadership
 
-![CO-PI](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/dr_jo.PNG?raw=true)
+<style>
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.profile-card {
+  display: flex;
+  gap: 24px;
+  background: white;
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.08);
+}
+
+.profile-card img {
+  width: 180px;
+  border-radius: 16px;
+}
+
+.profile-info h3 {
+  margin-top: 0;
+  color: #005BAC;
+}
+
+.profile-info p {
+  margin: 6px 0;
+}
+
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+  margin-top: 25px;
+}
+
+.member-card {
+  background: white;
+  border-radius: 18px;
+  padding: 22px;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  transition: 0.2s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-4px);
+}
+
+.member-card img {
+  width: 140px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.member-card h4 {
+  margin: 6px 0;
+  color: #005BAC;
+  font-size: 16px;
+}
+
+.member-card p {
+  font-size: 13px;
+  margin: 4px 0;
+}
+
+.alumni-card {
+  background: #f7f7f7;
+  border-radius: 16px;
+  padding: 18px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
+
+<div class="section-grid">
+
+<div class="profile-card">
+<img src="https://github.com/Inha-ERE/cure.github.io/blob/main/_images/hd_shin.jpg?raw=true">
+<div class="profile-info">
+<h3>Prof. Hyundon Shin</h3>
+<p><strong>Professor, Dept. of Energy Resources Engineering</strong></p>
+<p>Ph.D., University of Alberta</p>
+<p>Oil Sands · Shale Gas · CCS · Hydrogen</p>
+<p><em>Former:</em> KNOC · Shell · Husky · Suncor · ConocoPhillips</p>
+</div>
+</div>
+
+<div class="profile-card">
+<img src="https://github.com/Inha-ERE/cure.github.io/blob/main/_images/hj_photo.jfif?raw=true">
+<div class="profile-info">
+<h3>Prof. Honggeun Jo</h3>
+<p><strong>Assistant Professor, Dept. of ERE</strong></p>
+<p>Ph.D., University of Texas at Austin</p>
+<p>Subsurface AI · Digital Rock · CCS Modeling</p>
+<p><em>Former:</em> KOGAS · Halliburton · LLNL · BP</p>
+</div>
+</div>
+
+</div>
 
 ---
-<!-- 
-# Researchers {#researcher-id}
 
-| Profile  | Position |Research Interest  |
-| :------:|:-------:|:--------|
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_viet_2.png?raw=true" width="212" height="250" /> <br> Dr. Viet Nguyen-Le  | Post-doc (2022.2~) | Modeling of hydraulic fracturing and shale gas performance, <br> Enhancing shale gas recovery by CO2 injection and CO2 storage in various reservoir types, <br> History matching and optimization of thermal processes <br> (SAGD, ES-SAGD, SAGP, Wind-down, In-situ combustion).| -->
+# 🎓 Graduate Students
+
+<div class="member-grid">
+
+<div class="member-card">
+<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_kim.jpg?raw=true">
+<h4>김남화</h4>
+<p>Ph.D. Candidate (2020~)</p>
+<p>ML-based SAGD & CO₂ Optimization</p>
+</div>
+
+<div class="member-card">
+<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_bop.jpg?raw=true">
+<h4>Bop Duana Afrireksa</h4>
+<p>Ph.D. Candidate</p>
+<p>CO₂ Injectivity · Reservoir Modeling</p>
+</div>
+
+<div class="member-card">
+<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_ESPark.png?raw=true">
+<h4>박은실</h4>
+<p>M.S. (2024~)</p>
+<p>InSAR-based CCS Monitoring</p>
+</div>
+
+<div class="member-card">
+<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_DHKim.png?raw=true">
+<h4>김동희</h4>
+<p>M.S. (2025~)</p>
+<p>Digital Rock · Underground H₂ Storage</p>
+</div>
+
+<div class="member-card">
+<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_Aitiana.jpg?raw=true">
+<h4>Aitiana Sanchez</h4>
+<p>M.S. (2025~)</p>
+<p>Digital Rock Integration in CCS</p>
+</div>
+
+</div>
 
 ---
 
-# Graduate Students {#graduate-id}
+# 👩‍💻 Undergraduate Interns
 
-| Profile  | Program |Research Interest    |
-| :------:|:-------:|:-----------------|
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_kim.jpg?raw=true" width="127" height="150" /> <br> 김남화  |  Ph.D. candidate <br>(2020.9~) | [Machine learning based SAGD performance prediction](https://www.sciencedirect.com/science/article/pii/S2949891023006449?via%3Dihub), <br> Machine learning based CO2 injection optimization, <br>  Reservoir modeling |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_bop.jpg?raw=true" width="127" height="150" /> <br> Bop Duana Afrireksa |  Ph.D. candidate <br>(2018.9~) | CO2 injectivity optimization, <br> SAGD infill well performance optimization, <br>  Reservoir modeling |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_KHKim.png?raw=true" width="127" height="150" /> <br> 김광현 |  Ph.D. student <br> (Part time) | Oil sand SAGD production prediction and optimization, <br> Geological model characterization, <br>  Machine learning based well-log analytic  |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_ESPark.png?raw=true" width="127" height="150" /> <br> 박은실 |  Master's degree <br>(2024.9~) | [InSAR-based CCS monitoring and history matching](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5226149) |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_YJKim.png?raw=true" width="127" height="150" /> <br> 이영진 |  Master's degree <br>(2024.9~) | ES-SAGD productivity assessment experiment |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_JHSeol.png?raw=true" width="127" height="150" /> <br> 설정환 |  Master's degree <br>(2025.3~) | Lithium extraction from subsurface brine |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_DHKim.png?raw=true" width="127" height="150" /> <br> 김동희 |  Master's degree <br>(2025.9~) | Drilling operation simulation, Digital rock, Undeground Hydrogen Stoage |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_Aitiana.jpg?raw=true" width="127" height="150" /> <br> Aitiana Sanchez |  Master's degree <br>(2025.9~) | Integrating Digital Rock into CCS |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_jinwoo.PNG?raw=true" width="127" height="150" /> <br> Jinwoo Eo |  Master's degree <br>(2026.3~) | Structure modeling, Digital Rock, LBM |
-|<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_jinwoo.PNG?raw=true" width="127" height="150" /> <br> 이용훈 |  Master's degree <br>(2026.3~) | TBD |
-  
----
+<div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:20px;">
+<span style="background:#E8F2FF; color:#005BAC; padding:8px 14px; border-radius:999px;">장대현 · REE</span>
+<span style="background:#E8F2FF; color:#005BAC; padding:8px 14px; border-radius:999px;">정지혜 · SAGD</span>
+<span style="background:#E8F2FF; color:#005BAC; padding:8px 14px; border-radius:999px;">조정민 · CCS</span>
+<span style="background:#E8F2FF; color:#808080; padding:8px 14px; border-radius:999px;">최유미 · ML</span>
+<span style="background:#E8F2FF; color:#808080; padding:8px 14px; border-radius:999px;">강태구 · ML</span>
+</div>
 
-# Undergraduate Interns {#undergraduate-id}
-
-| 이름 | 소속  | 연구주제 |
-| :------------ |:---------------| :-----|
-| 장대현 | 인하대학교 2학년 | REE |
-| 정지혜 | 인하대학교 3학년 | SAGD |
-| 조정민 | 인하대학교 4학년 | CCS |
-| _최유미_ | 인하대학교 4학년 | ML 기반 예측모델 개발 |
-| _강태구_ | 인하대학교 4학년 | ML 기반 예측모델 개발 |
-
+<p style="margin-top:15px;"><strong>※ Undergraduate Research Positions Open</strong> – honggeun.jo@inha.ac.kr</p>
 
 **※학부연구생 상시모집중** - 문의: honggeun.jo@inha.ac.kr
-
 
 --- 
 # Alumni (PhD) {#alumni-id-PhD}
