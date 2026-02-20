@@ -493,7 +493,7 @@ Heavy Oil Recovery · EOR · ML · CCUS
 <div class="metric-grid">
 
 <div class="metric-card metric-highlight">
-  <h1 class="metric-number" data-target="90>">0</h1>
+  <h1 class="metric-number" data-target="90">0</h1>
   <p class="metric-label">Industry Placement Rate (%)</p>
 </div>
 
