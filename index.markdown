@@ -44,7 +44,35 @@ We are looking for **highly motivated MS/PhD students and research interns** who
 - <span style="color:#005BAC;"><strong>Digital Subsurface Modeling</strong></span>
 
 At CURE, you will build strong computational skills, publish internationally, and grow into a globally competitive researcher.
+<!-- CURE Keyword Chips (outlined + hover) -->
+<style>
+  .cure-chips { display:flex; flex-wrap:wrap; gap:10px; margin:12px 0 6px 0; }
+  .cure-chip {
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:999px;
+    border:1.5px solid #005BAC;
+    color:#005BAC;
+    background:rgba(0, 91, 172, 0.08);
+    font-weight:700;
+    font-size:0.92rem;
+    letter-spacing:0.2px;
+    transition:all 140ms ease;
+  }
+  .cure-chip:hover {
+    background:#005BAC;
+    color:#fff;
+    transform:translateY(-1px);
+  }
+</style>
 
+<div class="cure-chips">
+  <span class="cure-chip">#CCS</span>
+  <span class="cure-chip">#UHS</span>
+  <span class="cure-chip">#DigitalRock</span>
+  <span class="cure-chip">#GenAI</span>
+  <span class="cure-chip">#UQ</span>
+</div>
 ---
 
 ## ✉️ <span style="color:#005BAC;"><strong>How to Apply (지원 방법)</strong></span>
