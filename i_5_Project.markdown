@@ -90,3 +90,14 @@ for low-carbon unconventional oil development.</p>
 </div>
 
 ---
+
+## 🎯 <span style="color:#005BAC;">Strategic Focus</span>
+
+<div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:15px;">
+<span style="background:#005BAC; color:white; padding:8px 14px; border-radius:999px;">AI-Powered Subsurface</span>
+<span style="background:#005BAC; color:white; padding:8px 14px; border-radius:999px;">Nano → Field Scale</span>
+<span style="background:#005BAC; color:white; padding:8px 14px; border-radius:999px;">CCS Commercialization</span>
+<span style="background:#005BAC; color:white; padding:8px 14px; border-radius:999px;">Digital Geoenergy</span>
+</div>
+
+---
