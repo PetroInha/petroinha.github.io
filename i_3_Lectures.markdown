@@ -3,8 +3,6 @@ layout: page
 title: Lectures
 permalink: /Lectures/
 ---
-## 🗺️ <span style="color:#005BAC;"><strong>Curriculum Map (Track Connections)</strong></span>
-
 <style>
   .cure-map{max-width:1100px;margin:16px auto 0;}
   .cure-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin:16px 0;}
