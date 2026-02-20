@@ -178,22 +178,22 @@ We cultivate future leaders in **AI-powered subsurface engineering and carbon-ne
 </div>
 
 <div class="member-card">
-<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_jinwoo.png?raw=true">
+<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_jinwoo.PNG?raw=true">
 <h4>어진우</h4>
 <p>M.S. (2026~)</p>
 <p>Generative model for digital rock</p>
 </div>
 
 <div class="member-card">
-<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_jinwoo.png?raw=true">
+<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_jinwoo.PNG?raw=true">
 <h4>이용훈</h4>
 <p>M.S. (2026~)</p>
 <p>SAGD simulation and experiment</p>
 </div>
 
 <div class="member-card">
-<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_jinwoo.png?raw=true">
-<h4>이용훈</h4>
+<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_KHKim.png?raw=true">
+<h4>김광현</h4>
 <p>Ph.D. Candiate (part-time)</p>
 <p>Geological model characterization</p>
 </div>
@@ -445,6 +445,7 @@ Heavy Oil Recovery · EOR · ML · CCUS
 
 </div>
 </div>
+
 <!-- ====================== -->
 <!-- Alumni Impact Metrics - Startup Version -->
 <style>
@@ -492,23 +493,18 @@ Heavy Oil Recovery · EOR · ML · CCUS
 <div class="metric-grid">
 
 <div class="metric-card metric-highlight">
-  <h1 class="metric-number" data-target="95">0</h1>
+  <h1 class="metric-number" data-target="90>">0</h1>
   <p class="metric-label">Industry Placement Rate (%)</p>
 </div>
 
 <div class="metric-card">
-  <h1 class="metric-number" data-target="50">0</h1>
+  <h1 class="metric-number" data-target="19">0</h1>
   <p class="metric-label">Graduated Students</p>
 </div>
 
 <div class="metric-card">
-  <h1 class="metric-number" data-target="20">0</h1>
+  <h1 class="metric-number" data-target="8">0</h1>
   <p class="metric-label">Energy Companies</p>
-</div>
-
-<div class="metric-card">
-  <h1 class="metric-number" data-target="10">0</h1>
-  <p class="metric-label">Years of Industry Collaboration</p>
 </div>
 
 </div>
