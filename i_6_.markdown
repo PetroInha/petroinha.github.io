@@ -98,13 +98,13 @@ backdrop-filter: blur(3px);
 .data-flow{
 height:2px;
 background:linear-gradient(
-180deg,
+90deg,
 transparent,
 #005BAC,
 transparent
 );
 
-animation:dataFlow 4s linear infinite;
+animation:dataFlow 30s linear infinite;
 
 margin:32px 0;
 }
@@ -329,8 +329,6 @@ hydrogen energy systems, and geothermal energy.
 
 <div class="data-flow"></div>
 
-
-<hr class="hr-soft" />
 
 
 # 📄 Symposium Pamphlet
