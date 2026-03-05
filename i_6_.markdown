@@ -459,9 +459,20 @@ CURE Lab – Inha University
   <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" alt="World map">
 
   <div class="node" title="South Korea" style="top:31.0%; left:82.0%;"></div>
-</div>
+  <div class="node" title="Japan"       style="top:31.6%; left:85.0%;"></div>
+  <div class="node" title="China"       style="top:32.2%; left:75.9%;"></div>
 
-<div class="data-flow"></div>
+  <div class="node" title="Thailand"    style="top:43.3%; left:74.8%;"></div>
+  <div class="node" title="Vietnam"     style="top:42.7%; left:76.7%;"></div>
+  <div class="node" title="Indonesia"   style="top:52.7%; left:79.5%;"></div>
+
+  <div class="node" title="Australia"   style="top:65.5%; left:83.6%;"></div>
+
+  <div class="node" title="Norway"      style="top:18.3%; left:48.9%;"></div>
+
+  <div class="node" title="Canada"      style="top:20.5%; left:17.3%;"></div>
+  <div class="node" title="USA"         style="top:29.9%; left:19.5%;"></div>
+</div>
 
 
 # Contact
