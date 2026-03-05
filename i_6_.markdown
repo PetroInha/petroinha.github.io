@@ -98,7 +98,7 @@ backdrop-filter: blur(3px);
 .data-flow{
 height:2px;
 background:linear-gradient(
-90deg,
+180deg,
 transparent,
 #005BAC,
 transparent
