@@ -248,19 +248,19 @@ grid-template-columns:1fr;
 
 }
 
-/* ================= ACADEMIC TITLE HOVER ================= */
+/* ================= SECTION TITLE HOVER ================= */
 
-.page h1{
+/* apply to markdown section titles only */
+h1:not(.hero-title){
 position:relative;
 display:inline-block;
 padding-bottom:6px;
-
 transition:all .25s ease;
+cursor:pointer;
 }
 
 /* animated underline */
-
-.page h1::after{
+h1:not(.hero-title)::after{
 content:"";
 position:absolute;
 left:0;
@@ -270,27 +270,24 @@ width:0%;
 height:3px;
 
 background:linear-gradient(90deg,#005BAC,#0A6ED1);
-
 transition:width .35s ease;
 }
 
-/* hover effect */
-
-.page h1:hover{
+/* hover interaction */
+h1:not(.hero-title):hover{
 transform:translateY(-2px);
 color:#005BAC;
 }
 
-.page h1:hover::after{
+h1:not(.hero-title):hover::after{
 width:100%;
 }
-
 </style>
 
 
 <div class="symp-hero">
 
-<h1>IsCUE 2026</h1>
+<h1 class="hero-title">IsCUE 2026</h1>
 
 <h2>The 4th International Symposium on CCS & Unconventional Energy</h2>
 
