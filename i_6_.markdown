@@ -104,14 +104,14 @@ transparent,
 transparent
 );
 
-animation:dataFlow 30s linear infinite;
+animation:dataFlow 4s linear infinite;
 
 margin:32px 0;
 }
 
 @keyframes dataFlow{
-0%{background-position:-200px;}
-100%{background-position:200px;}
+0%{background-position:-300px;}
+100%{background-position:300px;}
 }
 
 
@@ -329,6 +329,8 @@ hydrogen energy systems, and geothermal energy.
 
 <div class="data-flow"></div>
 
+
+<hr class="hr-soft" />
 
 
 # 📄 Symposium Pamphlet
