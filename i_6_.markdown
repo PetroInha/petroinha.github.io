@@ -6,16 +6,20 @@ permalink: /is-cue/
 
 <style>
 
-/* ================= HERO ================= */
+/* ================= GLOBAL ================= */
 
 .hr-soft{
-  border:none;
-  height:1px;
-  background:linear-gradient(90deg, rgba(0,91,172,0), rgba(0,91,172,0.55), rgba(0,91,172,0));
-  margin: 26px 0;
+border:none;
+height:1px;
+background:linear-gradient(90deg, rgba(0,91,172,0), rgba(0,91,172,0.55), rgba(0,91,172,0));
+margin:34px 0;
 }
 
+
+/* ================= HERO ================= */
+
 .symp-hero{
+
 background:linear-gradient(
 135deg,
 #002F6C,
@@ -28,10 +32,13 @@ background-size:300% 300%;
 animation:gradientShift 14s ease infinite;
 
 color:white;
-padding:55px 40px;
+padding:60px 42px;
 border-radius:20px;
-margin-bottom:40px;
-box-shadow:0 18px 45px rgba(0,0,0,0.18);
+
+margin-bottom:42px;
+
+box-shadow:0 22px 48px rgba(0,0,0,0.18);
+
 }
 
 @keyframes gradientShift{
@@ -42,104 +49,51 @@ box-shadow:0 18px 45px rgba(0,0,0,0.18);
 
 .symp-hero h1{
 margin:0;
-font-size:36px;
+font-size:40px;
 font-weight:800;
+letter-spacing:0.5px;
 }
 
 .symp-hero h2{
-margin-top:8px;
+margin-top:10px;
 font-weight:500;
-opacity:0.9;
-}
-
-h1,h2{
-position:relative;
-display:inline-block;
-}
-
-h1::after,h2::after{
-content:"";
-display:block;
-height:3px;
-width:0%;
-background:#005BAC;
-margin-top:6px;
-transition:width 0.5s ease;
-}
-
-h1:hover::after,
-h2:hover::after{
-width:100%;
+opacity:0.92;
 }
 
 .symp-hero p{
-margin-top:18px;
+margin-top:20px;
 font-size:16px;
-line-height:1.6;
+line-height:1.65;
 max-width:850px;
+opacity:0.95;
 }
+
+
+/* ================= HERO META ================= */
 
 .hero-meta{
 display:flex;
 flex-wrap:wrap;
-gap:16px;
-margin-top:22px;
+gap:14px;
+margin-top:26px;
 }
 
 .hero-chip{
-background:rgba(255,255,255,0.15);
-padding:8px 14px;
+
+background:rgba(255,255,255,0.18);
+
+padding:8px 16px;
+
 border-radius:999px;
+
 font-weight:600;
 font-size:14px;
+
+backdrop-filter: blur(3px);
 }
 
 
-/* ================= PAMPHLET ================= */
-
-.pamphlet{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:25px;
-margin:40px 0;
-}
-
-.pamphlet img{
-width:100%;
-border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
-}
-
-/* ================= BUTTONS ================= */
-
-.symp-buttons{
-display:flex;
-flex-wrap:wrap;
-gap:14px;
-margin-top:20px;
-}
-
-.symp-btn{
-padding:12px 22px;
-border-radius:10px;
-background:#005BAC;
-color:white !important;
-font-weight:700;
-text-decoration:none;
-
-box-shadow:0 10px 22px rgba(0,91,172,0.35);
-transition:all 0.25s ease;
-}
-
-.symp-btn:hover{
-
-transform:translateY(-3px) scale(1.03);
-
-box-shadow:
-0 18px 40px rgba(0,91,172,0.45),
-0 0 20px rgba(0,91,172,0.35);
-
-}
+/* ================= DATA FLOW ================= */
 
 .data-flow{
 height:2px;
@@ -151,58 +105,187 @@ transparent
 );
 
 animation:dataFlow 4s linear infinite;
-margin:30px 0;
+
+margin:32px 0;
 }
 
 @keyframes dataFlow{
 0%{background-position:-200px;}
 100%{background-position:200px;}
 }
+
+
+/* ================= PAMPHLET ================= */
+
+.pamphlet{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:28px;
+margin:42px 0;
+}
+
+.pamphlet img{
+
+width:100%;
+
+border-radius:12px;
+
+box-shadow:0 12px 28px rgba(0,0,0,0.16);
+
+transition:transform .3s ease, box-shadow .3s ease;
+
+}
+
+.pamphlet img:hover{
+
+transform:scale(1.03);
+
+box-shadow:0 20px 40px rgba(0,0,0,0.25);
+
+}
+
+
+/* ================= BUTTONS ================= */
+
+.symp-buttons{
+
+display:flex;
+flex-wrap:wrap;
+gap:14px;
+
+margin-top:22px;
+
+}
+
+.symp-btn{
+
+padding:12px 22px;
+
+border-radius:10px;
+
+background:#005BAC;
+
+color:white !important;
+
+font-weight:700;
+
+text-decoration:none;
+
+box-shadow:0 12px 24px rgba(0,91,172,0.32);
+
+transition:all .25s ease;
+
+}
+
+.symp-btn:hover{
+
+transform:translateY(-3px) scale(1.04);
+
+box-shadow:
+0 20px 42px rgba(0,91,172,0.45),
+0 0 20px rgba(0,91,172,0.35);
+
+}
+
+
 /* ================= LOGO GRID ================= */
 
 .logo-grid{
+
 display:grid;
+
 grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-gap:30px;
+
+gap:34px;
+
 align-items:center;
-margin-top:25px;
+
+margin-top:30px;
+
 }
 
 .logo-item{
+
 display:flex;
+
 align-items:center;
+
 justify-content:center;
-padding:12px;
-border-radius:10px;
+
+padding:14px;
+
+border-radius:12px;
+
+transition:transform .25s ease, box-shadow .25s ease;
+
+}
+
+.logo-item:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 14px 32px rgba(0,0,0,0.18);
+
 }
 
 .logo-item img{
+
 max-width:120px;
+
 max-height:60px;
+
 }
 
 .logo-blue{
+
 background:#005BAC;
-padding:14px;
-border-radius:8px;
+
+padding:16px;
+
+border-radius:10px;
+
 }
 
-.section{
-margin-top:50px;
-}
+
+/* ================= FLOATING SECTIONS ================= */
 
 @keyframes floatCard{
+
 0%{transform:translateY(0px);}
 50%{transform:translateY(-6px);}
 100%{transform:translateY(0px);}
+
 }
 
 .section-card{
+
 animation:floatCard 7s ease-in-out infinite;
+
 }
 
 .section-card:hover{
+
 animation-play-state:paused;
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width:768px){
+
+.symp-hero{
+
+padding:42px 26px;
+
+}
+
+.symp-hero h1{
+
+font-size:32px;
+
+}
+
 }
 
 </style>
@@ -212,14 +295,23 @@ animation-play-state:paused;
 
 <h1>IsCUE 2026</h1>
 
-<h2>International Symposium on CCS & Unconventional Energy</h2>
+<h2>The 4th International Symposium on CCS & Unconventional Energy</h2>
 
 <p>
-The <strong>International Symposium on CCS and Unconventional Energy (IsCUE)</strong> is an international forum bringing together leading researchers, engineers, and industry experts working on emerging subsurface energy technologies.
+
+The <strong>International Symposium on CCS and Unconventional Energy (IsCUE)</strong>  
+is an international forum bringing together leading researchers, engineers,  
+and industry experts working on emerging subsurface energy technologies.
+
 </p>
 
 <p>
-Key topics include <strong>Carbon Capture and Storage (CCS)</strong>, unconventional oil and gas resources, <strong>direct lithium extraction from subsurface brine</strong>, hydrogen energy systems, and geothermal energy.
+
+Key topics include <strong>Carbon Capture and Storage (CCS)</strong>,  
+unconventional oil and gas resources,  
+<strong>direct lithium extraction from subsurface brine</strong>,  
+hydrogen energy systems, and geothermal energy.
+
 </p>
 
 <div class="hero-meta">
@@ -234,9 +326,12 @@ Key topics include <strong>Carbon Capture and Storage (CCS)</strong>, unconventi
 
 </div>
 
+
 <div class="data-flow"></div>
 
+
 <hr class="hr-soft" />
+
 
 # 📄 Symposium Pamphlet
 
@@ -248,7 +343,9 @@ Key topics include <strong>Carbon Capture and Storage (CCS)</strong>, unconventi
 
 </div>
 
+
 <hr class="hr-soft" />
+
 
 # ✉️ Registration & Abstract Submission
 
@@ -275,6 +372,7 @@ CURE Lab – Inha University
 
 <hr class="hr-soft" />
 
+
 # 🌍 Participating Institutions
 
 The symposium brings together researchers from leading universities and energy companies across Asia, Europe, and the Americas.
@@ -291,7 +389,7 @@ Participating universities include:
 - **Kazakh-British Technical University (Kazakhstan)**
 - **Federal University of Pernambuco (Brazil)**
 
-Industry participation includes major global energy service companies:
+Industry participation includes:
 
 - **SLB**
 - **Halliburton**
@@ -345,13 +443,15 @@ Industry participation includes major global energy service companies:
 
 </div>
 
+
 <hr class="hr-soft" />
+
 
 # 📅 Event Schedule
 
 **May 27 – May 29, 2026**
 
-Location:  
+Location  
 **Northeast Petroleum University**  
 Daqing, China
 
@@ -361,7 +461,9 @@ The symposium program will include:
 - Invited international keynote speakers  
 - Technical sessions on CCS and unconventional energy systems  
 
+
 <hr class="hr-soft" />
+
 
 # 📬 Contact
 
@@ -371,6 +473,7 @@ For questions regarding the symposium:
 CURE Lab – Inha University  
 
 hyundon.shin@inha.ac.kr
+
 
 <br>
 
