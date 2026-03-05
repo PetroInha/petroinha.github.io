@@ -16,12 +16,28 @@ permalink: /is-cue/
 }
 
 .symp-hero{
-background:linear-gradient(135deg,#002F6C,#005BAC);
+background:linear-gradient(
+135deg,
+#002F6C,
+#005BAC,
+#0A6ED1,
+#003E82
+);
+
+background-size:300% 300%;
+animation:gradientShift 14s ease infinite;
+
 color:white;
 padding:55px 40px;
 border-radius:20px;
 margin-bottom:40px;
 box-shadow:0 18px 45px rgba(0,0,0,0.18);
+}
+
+@keyframes gradientShift{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
 .symp-hero h1{
@@ -34,6 +50,26 @@ font-weight:800;
 margin-top:8px;
 font-weight:500;
 opacity:0.9;
+}
+
+h1,h2{
+position:relative;
+display:inline-block;
+}
+
+h1::after,h2::after{
+content:"";
+display:block;
+height:3px;
+width:0%;
+background:#005BAC;
+margin-top:6px;
+transition:width 0.5s ease;
+}
+
+h1:hover::after,
+h2:hover::after{
+width:100%;
 }
 
 .symp-hero p{
@@ -57,6 +93,7 @@ border-radius:999px;
 font-weight:600;
 font-size:14px;
 }
+
 
 /* ================= PAMPHLET ================= */
 
@@ -89,15 +126,38 @@ background:#005BAC;
 color:white !important;
 font-weight:700;
 text-decoration:none;
-box-shadow:0 8px 20px rgba(0,91,172,0.25);
-transition:all 0.2s ease;
+
+box-shadow:0 10px 22px rgba(0,91,172,0.35);
+transition:all 0.25s ease;
 }
 
 .symp-btn:hover{
-transform:translateY(-2px);
-box-shadow:0 12px 28px rgba(0,91,172,0.35);
+
+transform:translateY(-3px) scale(1.03);
+
+box-shadow:
+0 18px 40px rgba(0,91,172,0.45),
+0 0 20px rgba(0,91,172,0.35);
+
 }
 
+.data-flow{
+height:2px;
+background:linear-gradient(
+90deg,
+transparent,
+#005BAC,
+transparent
+);
+
+animation:dataFlow 4s linear infinite;
+margin:30px 0;
+}
+
+@keyframes dataFlow{
+0%{background-position:-200px;}
+100%{background-position:200px;}
+}
 /* ================= LOGO GRID ================= */
 
 .logo-grid{
@@ -131,6 +191,20 @@ border-radius:8px;
 margin-top:50px;
 }
 
+@keyframes floatCard{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-6px);}
+100%{transform:translateY(0px);}
+}
+
+.section-card{
+animation:floatCard 7s ease-in-out infinite;
+}
+
+.section-card:hover{
+animation-play-state:paused;
+}
+
 </style>
 
 
@@ -159,6 +233,8 @@ Key topics include <strong>Carbon Capture and Storage (CCS)</strong>, unconventi
 </div>
 
 </div>
+
+<div class="data-flow"></div>
 
 <hr class="hr-soft" />
 
