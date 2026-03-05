@@ -4,13 +4,24 @@ title: Project
 permalink: /Project/
 ---
 
+
+<style>
+/* Soft divider */
+.hr-soft{
+  border:none;
+  height:1px;
+  background:linear-gradient(90deg, rgba(0,91,172,0), rgba(0,91,172,0.55), rgba(0,91,172,0));
+  margin: 26px 0;
+}
+</style>
+
 # 🚀 <span style="color:#005BAC;">Research Portfolio</span>
 
 We lead interdisciplinary national R&D programs in  
 <span style="color:#005BAC;"><strong>CCS, Digital Rock, Generative AI, and Geoenergy Systems</strong></span>,  
 bridging nano-scale physics to field-scale deployment.
 
----
+<hr class="hr-soft" />
 
 ## 🔥 <span style="color:#005BAC;">Ongoing Projects</span>
 
@@ -66,7 +77,7 @@ bridging nano-scale physics to field-scale deployment.
 
 </div>
 
----
+<hr class="hr-soft" />
 
 ## 📂 <span style="color:#888;">Past Projects</span>
 
@@ -86,7 +97,7 @@ bridging nano-scale physics to field-scale deployment.
 
 </div>
 
----
+<hr class="hr-soft" />
 
 ## 🎯 <span style="color:#005BAC;">Strategic Focus</span>
 
@@ -134,4 +145,3 @@ bridging nano-scale physics to field-scale deployment.
   <div class="focus-chip">CCS Commercialization</div>
   <div class="focus-chip">Digital Geoenergy Systems</div>
 </div>
----

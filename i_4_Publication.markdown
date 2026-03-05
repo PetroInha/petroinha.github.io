@@ -4,6 +4,17 @@ title: Publication
 permalink: /Publication/
 ---
 
+
+<style>
+/* Soft divider */
+.hr-soft{
+  border:none;
+  height:1px;
+  background:linear-gradient(90deg, rgba(0,91,172,0), rgba(0,91,172,0.55), rgba(0,91,172,0));
+  margin: 26px 0;
+}
+</style>
+
 # Publications
 
 ## 👨‍🏫 <span style="color:#005BAC;"><strong>PIs' Profiles</strong></span>
@@ -14,12 +25,9 @@ permalink: /Publication/
 - <span style="color:#005BAC;"><strong>Honggeun Jo</strong></span>  
   [google scholar](https://scholar.google.com/citations?user=u0OE5CIAAAAJ)
 
----
+<hr class="hr-soft" />
 
 # Peer-Reviewed Journal Articles  
-*(Chronological order: Recent → Earlier)*
-
----
 
 ## <span style="color:#005BAC;"><strong>2025</strong></span>
 
@@ -41,7 +49,7 @@ permalink: /Publication/
 
 9. Gomes, A. F., Kim, N., & <span style="color:#005BAC;"><strong>Shin, H.</strong></span> (2025). Cost analysis of the blue hydrogen supply from Canada to Korea. *Journal of the Korean Society of Mineral and Energy Resources Engineers*.
 
----
+<hr class="hr-soft" />
 
 ## <span style="color:#005BAC;"><strong>2024</strong></span>
 
@@ -59,7 +67,7 @@ permalink: /Publication/
 
 (Additional 2024 Shin oil sands / hydrogen supply / economic papers included here.)
 
----
+<hr class="hr-soft" />
 
 ## <span style="color:#005BAC;"><strong>2023</strong></span>
 
@@ -71,7 +79,7 @@ permalink: /Publication/
 
 - Musayev, K., <span style="color:#005BAC;"><strong>Shin, H.</strong></span>. Optimization of CO₂ injection and brine production well placement. *IJGGC*.
 
----
+<hr class="hr-soft" />
 
 ## <span style="color:#005BAC;"><strong>2022</strong></span>
 
@@ -81,7 +89,7 @@ permalink: /Publication/
 
 - Nguyen-Le, V., & <span style="color:#005BAC;"><strong>Shin, H.</strong></span>. Montney shale gas ANN models. *Energy*.
 
----
+<hr class="hr-soft" />
 
 ## 2021–2004 (Selected Major Works)
 
@@ -95,19 +103,19 @@ permalink: /Publication/
 
 - <span style="color:#005BAC;"><strong>Shin, H.</strong></span>. Fast-SAGD process development series. *SPE*, *PETSOC*, *JCPT* (2004–2007).
 
----
+<hr class="hr-soft" />
 
 # Patents
 
 - Soumi Chaki, D. C., <span style="color:#005BAC;"><strong>Jo, H.</strong></span>, Wong, T., & Zagayevskiy, Y. (2022). Estimating Reservoir Production Rates Using Machine Learning Models for Wellbore Operation Control. *US Patent App. 17/136,895*.
 
----
+<hr class="hr-soft" />
 
 # Software / Open Source
 
 - Pyrcz, M., <span style="color:#005BAC;"><strong>Jo, H.</strong></span>, et al. (2021). *GeostatsPy Python Package* (Zenodo / PyPI / GitHub).
 
----
+<hr class="hr-soft" />
 
 # Conference Proceedings
 
@@ -116,5 +124,3 @@ permalink: /Publication/
 - Kim, M., <span style="color:#005BAC;"><strong>Shin, H.</strong></span>. Multi-lateral horizontal well with dual-tubing system for CCS cost reduction. *AGU Fall Meeting*.
 
 - Multiple SAGD / CO₂ storage conference papers (SPE, EAGE, ISOPE, PETSOC, GHGT).
-
----
