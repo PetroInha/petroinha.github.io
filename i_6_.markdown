@@ -371,19 +371,25 @@ CURE Lab – Inha University
 <div class="schedule-grid">
 
 <div class="schedule-card">
+  <p style="margin:0 0 10px 0; font-weight:800; font-size:18px;">
+    May 27 – May 29, 2026
+  </p>
 
-**May 27 – May 29, 2026**
+  <p style="margin:0 0 14px 0; line-height:1.6;">
+    <span style="font-weight:700;">Location</span><br>
+    <span style="font-weight:800;">Northeast Petroleum University</span><br>
+    Daqing, China
+  </p>
 
-Location  
-**Northeast Petroleum University**  
-Daqing, China
+  <p style="margin:0 0 10px 0; font-weight:800;">
+    Program Highlights
+  </p>
 
-Program Highlights:
-
-- Field trips and technical training sessions  
-- Invited international keynote speakers  
-- Technical sessions on CCS and unconventional energy systems  
-
+  <ul style="margin:0; padding-left:18px; line-height:1.7;">
+    <li>Field trips and technical training sessions</li>
+    <li>Invited international keynote speakers</li>
+    <li>Technical sessions on CCS and unconventional energy systems</li>
+  </ul>
 </div>
 
 <div class="schedule-map">
