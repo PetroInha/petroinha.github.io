@@ -1,8 +1,8 @@
-<hr class="hr-soft" />
+---
 layout: page
 title: IS-QUE Symposium
 permalink: /is-que/
-<hr class="hr-soft" />
+---
 
 <style>
 

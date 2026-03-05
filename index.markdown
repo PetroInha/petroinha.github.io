@@ -2,7 +2,75 @@
 layout: home
 ---
 
+
+
 <style>
+
+
+/* ===== Top split layout ===== */
+
+.hero-split{
+display:grid;
+grid-template-columns: 1.4fr 1fr;
+gap:30px;
+align-items:center;
+margin-bottom:25px;
+}
+
+/* responsive */
+
+@media (max-width:900px){
+.hero-split{
+grid-template-columns:1fr;
+}
+}
+
+/* ===== ISQUE card ===== */
+
+.isque-card{
+background:linear-gradient(135deg,#003E82,#005BAC);
+color:white;
+border-radius:18px;
+padding:24px;
+box-shadow:0 16px 40px rgba(0,0,0,0.18);
+transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.isque-card:hover{
+transform:translateY(-4px);
+box-shadow:0 22px 48px rgba(0,0,0,0.22);
+}
+
+.isque-card h3{
+margin-top:0;
+font-weight:700;
+}
+
+.isque-chip{
+display:inline-block;
+background:rgba(255,255,255,0.18);
+padding:6px 12px;
+border-radius:999px;
+font-size:13px;
+margin-right:6px;
+margin-top:6px;
+}
+
+.isque-btn{
+display:inline-block;
+margin-top:14px;
+padding:10px 14px;
+border-radius:10px;
+background:white;
+color:#005BAC !important;
+font-weight:700;
+text-decoration:none;
+}
+
+.isque-btn:hover{
+background:#f1f6ff;
+}
+
 /* Scroll reveal (fade-up on scroll) */
 .reveal{
   opacity:0;
@@ -125,17 +193,55 @@ layout: home
 }
 </style>
 
-<div class="reveal">
+<div class="hero-split reveal">
+
+<!-- LEFT : current CURE intro -->
+
+<div>
 
 <h1><span style="color:#005BAC;"><strong>CURE@Inha</strong></span></h1>
+
 <h3><span style="color:#005BAC;">Subsurface Intelligence for the Energy Transition</span></h3>
 
 <p>
-We fuse <strong>physics</strong>, <strong>data</strong>, and <strong>AI</strong> to build next-generation geoenergy systems—<br>
+We fuse <strong>physics</strong>, <strong>data</strong>, and <strong>AI</strong> to build next-generation geoenergy systems—
 from <strong>CO₂ storage</strong> to <strong>underground hydrogen storage</strong>.
 </p>
 
 </div>
+
+
+<!-- RIGHT : ISQUE info -->
+
+<div class="isque-card">
+
+<h3>🌍 IS-QUE 2026</h3>
+
+<p>
+<strong>International Symposium on CCS & Unconventional Energy</strong>
+</p>
+
+<p style="font-size:14px; line-height:1.5; opacity:0.95">
+
+Carbon storage · Hydrogen · Geothermal ·  
+Direct Lithium Extraction · Unconventional Oil & Gas
+
+</p>
+
+<div>
+
+<span class="isque-chip">📅 May 27–29 2026</span>
+
+<span class="isque-chip">📍 NEPU, China</span>
+
+</div>
+
+<a class="isque-btn" href="/is-que/">
+Symposium Details →
+</a>
+
+</div>
+
 
 <hr class="hr-soft" />
 
