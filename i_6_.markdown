@@ -1,0 +1,222 @@
+---
+layout: page
+title: IS-QUE-26
+permalink: /IsQue26/
+---
+
+<style>
+
+/* Hero section */
+
+.symp-hero{
+background:linear-gradient(135deg,#003E82,#005BAC);
+color:white;
+padding:40px;
+border-radius:18px;
+margin-bottom:30px;
+}
+
+/* pamphlet layout */
+
+.pamphlet{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+margin:30px 0;
+}
+
+.pamphlet img{
+width:100%;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* buttons */
+
+.symp-buttons{
+display:flex;
+flex-wrap:wrap;
+gap:14px;
+margin-top:20px;
+}
+
+.symp-btn{
+padding:12px 20px;
+border-radius:10px;
+background:#005BAC;
+color:white !important;
+font-weight:700;
+text-decoration:none;
+box-shadow:0 8px 20px rgba(0,91,172,0.25);
+transition:all 0.2s ease;
+}
+
+.symp-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 12px 28px rgba(0,91,172,0.35);
+}
+
+/* logo grid */
+
+.logo-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:30px;
+align-items:center;
+margin-top:30px;
+}
+
+.logo-grid img{
+max-width:120px;
+max-height:60px;
+margin:auto;
+display:block;
+filter:grayscale(0%);
+opacity:0.9;
+transition:all 0.25s ease;
+}
+
+.logo-grid img:hover{
+opacity:1;
+transform:scale(1.08);
+}
+
+/* section spacing */
+
+.section{
+margin-top:50px;
+}
+
+</style>
+
+<div class="symp-hero">
+
+# International Symposium on CCS & Unconventional Energy  
+### **IS-QUE 2026**
+
+The **International Symposium on CCS and Unconventional Energy (IS-QUE)**  
+is a global forum for researchers, engineers, and industry leaders working on **subsurface energy systems**.
+
+The symposium focuses on emerging technologies including:
+
+- Carbon Capture and Storage (CCS)
+- Direct Lithium Extraction from subsurface brine
+- Hydrogen energy systems
+- Geothermal energy
+- Unconventional oil & gas resources (oil sands / shale gas)
+
+The event is initiated by **Dr. Hyundon Shin (PI, CURE Lab, Inha University)**.
+
+</div>
+
+---
+
+# 📄 Symposium Pamphlet
+
+<div class="pamphlet">
+
+<img src="https://github.com/Inha-ERE/cure.github.io/blob/main/_images/_ISCUE_26_page_1.jpg?raw=true">
+
+<img src="https://github.com/Inha-ERE/cure.github.io/blob/main/_images/_ISCUE_26_page_2.jpg?raw=true">
+
+</div>
+
+---
+
+# ✉️ Registration & Abstract Submission
+
+<div class="symp-buttons">
+
+<a class="symp-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSd2ovAaYZZBLi-Sw4JemaA52Nqquvr2ZzESGrvzmD1EIEWxcQ/viewform" target="_blank">
+Register for the Symposium
+</a>
+
+<a class="symp-btn" href="https://drive.google.com/uc?export=download&id=12i1z4ZxTZmJ8B69DvkLC024IcH0qAbIM">
+Download Abstract Template
+</a>
+
+</div>
+
+---
+
+# 🌍 Participating Universities
+
+The symposium brings together researchers from leading institutions:
+
+- **Inha University (Korea)**
+- **Northeast Petroleum University (China)**
+- **Dalian University of Technology (China)**
+- **China University of Petroleum – Beijing (China)**
+- **Chulalongkorn University (Thailand)**
+- **Chiang Mai University (Thailand)**
+- **Ho Chi Minh City University of Technology (Vietnam)**
+- **Kazakh-British Technical University (Kazakhstan)**
+- **Federal University of Pernambuco (Brazil)**
+
+Industry participants include:
+
+- **SLB**
+- **Baker Hughes**
+- **Halliburton**
+
+---
+
+# 🤝 Participating Institutions
+
+<div class="logo-grid">
+
+<img src="https://www.inha.ac.kr/sites/kr/images/logo.png">
+
+<img src="https://www.nepu.edu.cn/en/images/logo.png">
+
+<img src="https://en.dlut.edu.cn/images/logo.png">
+
+<img src="https://www.cup.edu.cn/english/images/logo.png">
+
+<img src="https://upload.wikimedia.org/wikipedia/en/2/25/Chiang_mai_university_logo.png">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/HCMCUT.svg/250px-HCMCUT.svg.png">
+
+<img src="https://kbtu.edu.kz/images/logo_blue.png">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Bras%C3%A3o_da_UFPE.png/330px-Bras%C3%A3o_da_UFPE.png">
+
+<img src="https://www.slb.com/-/media/images/logo/SLB_Logo_Positive_RGB_TM.svg">
+
+<img src="https://cdn.brandfolder.io/3I2CY2XL/as/vkc5w586w5gtr898396p3w/halliburton-logo.svg">
+
+<img src="https://www.bakerhughes.com/themes/custom/bh/dist/images/logo.png">
+
+</div>
+
+---
+
+# 📅 Event Schedule
+
+**May 27 – May 29, 2026**
+
+Location:  
+**Northeast Petroleum University, Daqing, China**
+
+Program includes:
+
+- Field trip & training workshop
+- International invited talks
+- CCS & unconventional energy technical sessions
+
+---
+
+# 📬 Contact
+
+For questions about the symposium:
+
+**Dr. Hyundon Shin**  
+Inha University  
+
+hyundon.shin@inha.ac.kr
+
+
+**Dr. Zhejun Pan**  
+North East Petroleum University 
+
+zhejun.pan@nepu.edu.cn
