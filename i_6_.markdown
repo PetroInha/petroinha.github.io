@@ -1,15 +1,13 @@
 ---
 layout: page
-title: IS-QUE Symposium
-permalink: /is-que/
+title: IsCUE Symposium
+permalink: /is-cue/
 ---
 
 <style>
 
 /* ================= HERO ================= */
 
-
-/* Soft divider */
 .hr-soft{
   border:none;
   height:1px;
@@ -107,7 +105,7 @@ display:grid;
 grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
 gap:30px;
 align-items:center;
-margin-top:35px;
+margin-top:25px;
 }
 
 .logo-item{
@@ -129,8 +127,6 @@ padding:14px;
 border-radius:8px;
 }
 
-/* ================= SECTION ================= */
-
 .section{
 margin-top:50px;
 }
@@ -140,12 +136,12 @@ margin-top:50px;
 
 <div class="symp-hero">
 
-<h1>IS-QUE 2026</h1>
+<h1>IsCUE 2026</h1>
 
 <h2>International Symposium on CCS & Unconventional Energy</h2>
 
 <p>
-The <strong>International Symposium on CCS and Unconventional Energy (IS-QUE)</strong> is a global forum bringing together researchers, engineers, and industry leaders working on emerging subsurface energy systems.
+The <strong>International Symposium on CCS and Unconventional Energy (IsCUE)</strong> is an international forum bringing together leading researchers, engineers, and industry experts working on emerging subsurface energy technologies.
 </p>
 
 <p>
@@ -158,7 +154,7 @@ Key topics include <strong>Carbon Capture and Storage (CCS)</strong>, unconventi
 
 <span class="hero-chip">📍 Northeast Petroleum University, China</span>
 
-<span class="hero-chip">Host: NorthEast Petroleum University | CURE Lab – Inha University</span>
+<span class="hero-chip">Host: Northeast Petroleum University | CURE Lab – Inha University</span>
 
 </div>
 
@@ -192,11 +188,22 @@ Download Abstract Template
 
 </div>
 
+<br>
+
+After preparing the abstract using the template above, please submit your abstract by email to:
+
+**Dr. Hyundon Shin**  
+CURE Lab – Inha University  
+
+📧 **hyundon.shin@inha.ac.kr**
+
 <hr class="hr-soft" />
 
-# 🌍 Participating Universities
+# 🌍 Participating Institutions
 
-The symposium brings together international researchers from:
+The symposium brings together researchers from leading universities and energy companies across Asia, Europe, and the Americas.
+
+Participating universities include:
 
 - **Inha University (Korea)**
 - **Northeast Petroleum University (China)**
@@ -208,15 +215,11 @@ The symposium brings together international researchers from:
 - **Kazakh-British Technical University (Kazakhstan)**
 - **Federal University of Pernambuco (Brazil)**
 
-Industry participants include:
+Industry participation includes major global energy service companies:
 
 - **SLB**
 - **Halliburton**
 - **Baker Hughes**
-
-<hr class="hr-soft" />
-
-# 🤝 Participating Institutions
 
 <div class="logo-grid">
 
@@ -276,11 +279,11 @@ Location:
 **Northeast Petroleum University**  
 Daqing, China
 
-Program includes:
+The symposium program will include:
 
-- Field trip and technical training sessions  
-- Invited international speakers  
-- Technical sessions on CCS and unconventional energy  
+- Field trips and technical training sessions  
+- Invited international keynote speakers  
+- Technical sessions on CCS and unconventional energy systems  
 
 <hr class="hr-soft" />
 
@@ -293,8 +296,9 @@ CURE Lab – Inha University
 
 hyundon.shin@inha.ac.kr
 
+<br>
 
 **Dr. Zhejun Pan**  
-North East Petroleum University 
+North East Petroleum University  
 
 zhejun.pan@nepu.edu.cn
