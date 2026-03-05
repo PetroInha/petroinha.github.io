@@ -241,7 +241,7 @@ Symposium Details →
 </a>
 
 </div>
-
+</div>
 
 <hr class="hr-soft" />
 
