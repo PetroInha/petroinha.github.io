@@ -12,33 +12,21 @@ permalink: /is-cue/
 border:none;
 height:1px;
 background:linear-gradient(90deg, rgba(0,91,172,0), rgba(0,91,172,0.55), rgba(0,91,172,0));
-margin:34px 0;
+margin:36px 0;
 }
 
 
 /* ================= HERO ================= */
 
 .symp-hero{
-
-background:linear-gradient(
-135deg,
-#002F6C,
-#005BAC,
-#0A6ED1,
-#003E82
-);
-
+background:linear-gradient(135deg,#002F6C,#005BAC,#0A6ED1,#003E82);
 background-size:300% 300%;
 animation:gradientShift 14s ease infinite;
-
 color:white;
 padding:60px 42px;
 border-radius:20px;
-
-margin-bottom:42px;
-
+margin-bottom:40px;
 box-shadow:0 22px 48px rgba(0,0,0,0.18);
-
 }
 
 @keyframes gradientShift{
@@ -51,7 +39,6 @@ box-shadow:0 22px 48px rgba(0,0,0,0.18);
 margin:0;
 font-size:40px;
 font-weight:800;
-letter-spacing:0.5px;
 }
 
 .symp-hero h2{
@@ -65,7 +52,6 @@ margin-top:20px;
 font-size:16px;
 line-height:1.65;
 max-width:850px;
-opacity:0.95;
 }
 
 
@@ -79,16 +65,11 @@ margin-top:26px;
 }
 
 .hero-chip{
-
 background:rgba(255,255,255,0.18);
-
 padding:8px 16px;
-
 border-radius:999px;
-
 font-weight:600;
 font-size:14px;
-
 backdrop-filter: blur(3px);
 }
 
@@ -97,65 +78,47 @@ backdrop-filter: blur(3px);
 
 .data-flow{
 height:2px;
-background:linear-gradient(
-90deg,
-transparent,
-#005BAC,
-transparent
-);
-
-background-size:400px;
+background:linear-gradient(90deg,transparent,#005BAC,transparent);
+background-size:200% 100%;
 animation:dataFlow 4s linear infinite;
-
-margin:32px 0;
+margin:30px 0;
 }
 
 @keyframes dataFlow{
-0%{background-position:-200px;}
-100%{background-position:200px;}
+0%{background-position:200% 0;}
+100%{background-position:-200% 0;}
 }
 
 
 /* ================= WORLD MAP ================= */
 
 .world-map{
-
 position:relative;
 max-width:900px;
-margin:40px auto;
-
+margin:50px auto;
 }
 
 .world-map img{
-
 width:100%;
-opacity:0.85;
-
+opacity:0.9;
 }
 
-/* nodes */
+/* animated nodes */
 
 .node{
-
 position:absolute;
 width:12px;
 height:12px;
-
 background:#005BAC;
 border-radius:50%;
-
 box-shadow:0 0 12px rgba(0,91,172,0.8);
-
 animation:pulse 2s infinite;
-
 }
 
 @keyframes pulse{
-
-0%{transform:scale(0.9);opacity:0.8;}
-50%{transform:scale(1.5);opacity:0.4;}
-100%{transform:scale(0.9);opacity:0.8;}
-
+0%{transform:scale(0.8);opacity:0.9;}
+50%{transform:scale(1.6);opacity:0.4;}
+100%{transform:scale(0.8);opacity:0.9;}
 }
 
 
@@ -165,158 +128,105 @@ animation:pulse 2s infinite;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:28px;
-margin:42px 0;
+margin:40px 0;
 }
 
 .pamphlet img{
-
 width:100%;
-
 border-radius:12px;
-
 box-shadow:0 12px 28px rgba(0,0,0,0.16);
-
-transition:transform .3s ease, box-shadow .3s ease;
-
+transition:transform .3s ease;
 }
 
 .pamphlet img:hover{
-
 transform:scale(1.03);
-
-box-shadow:0 20px 40px rgba(0,0,0,0.25);
-
 }
 
 
 /* ================= BUTTONS ================= */
 
 .symp-buttons{
-
 display:flex;
 flex-wrap:wrap;
 gap:14px;
-
-margin-top:22px;
-
+margin-top:20px;
 }
 
 .symp-btn{
-
 padding:12px 22px;
-
 border-radius:10px;
-
 background:#005BAC;
-
 color:white !important;
-
 font-weight:700;
-
 text-decoration:none;
-
 box-shadow:0 12px 24px rgba(0,91,172,0.32);
-
 transition:all .25s ease;
-
 }
 
 .symp-btn:hover{
-
-transform:translateY(-3px) scale(1.04);
-
-box-shadow:
-0 20px 42px rgba(0,91,172,0.45),
-0 0 20px rgba(0,91,172,0.35);
-
+transform:translateY(-3px) scale(1.03);
+box-shadow:0 20px 40px rgba(0,91,172,0.45);
 }
 
 
 /* ================= LOGO GRID ================= */
 
 .logo-grid{
-
 display:grid;
-
 grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-
 gap:34px;
-
 align-items:center;
-
 margin-top:30px;
-
 }
 
 .logo-item{
-
 display:flex;
-
 align-items:center;
-
 justify-content:center;
-
 padding:14px;
-
 border-radius:12px;
-
 transition:transform .25s ease, box-shadow .25s ease;
-
 }
 
 .logo-item:hover{
-
-transform:translateY(-6px);
-
+transform:translateY(-5px);
 box-shadow:0 14px 32px rgba(0,0,0,0.18);
-
 }
 
 .logo-item img{
-
 max-width:120px;
-
 max-height:60px;
-
 }
 
 .logo-blue{
-
 background:#005BAC;
-
 padding:16px;
-
 border-radius:10px;
-
 }
 
 
-/* ================= SCHEDULE SPLIT ================= */
+/* ================= SCHEDULE GRID ================= */
 
 .schedule-grid{
-
 display:grid;
-
 grid-template-columns:1fr 1fr;
-
 gap:40px;
+margin-top:20px;
+}
 
-align-items:start;
-
+.schedule-card{
+background:white;
+padding:24px;
+border-radius:14px;
+box-shadow:0 12px 28px rgba(0,0,0,0.12);
 }
 
 .schedule-map iframe{
-
 width:100%;
-
 height:320px;
-
-border-radius:12px;
-
 border:none;
-
-box-shadow:0 12px 24px rgba(0,0,0,0.2);
-
+border-radius:12px;
+box-shadow:0 12px 24px rgba(0,0,0,0.18);
 }
 
 
@@ -341,7 +251,6 @@ grid-template-columns:1fr;
 </style>
 
 
-
 <div class="symp-hero">
 
 <h1>IsCUE 2026</h1>
@@ -349,28 +258,22 @@ grid-template-columns:1fr;
 <h2>International Symposium on CCS & Unconventional Energy</h2>
 
 <p>
-
 The <strong>International Symposium on CCS and Unconventional Energy (IsCUE)</strong>  
 is an international forum bringing together leading researchers, engineers,  
 and industry experts working on emerging subsurface energy technologies.
-
 </p>
 
 <p>
-
 Key topics include <strong>Carbon Capture and Storage (CCS)</strong>,  
 unconventional oil and gas resources,  
 <strong>direct lithium extraction from subsurface brine</strong>,  
 hydrogen energy systems, and geothermal energy.
-
 </p>
 
 <div class="hero-meta">
 
 <span class="hero-chip">📅 May 27–29, 2026</span>
-
 <span class="hero-chip">📍 Northeast Petroleum University, China</span>
-
 <span class="hero-chip">Host: Northeast Petroleum University | CURE Lab – Inha University</span>
 
 </div>
@@ -381,42 +284,20 @@ hydrogen energy systems, and geothermal energy.
 <div class="data-flow"></div>
 
 
-<hr class="hr-soft" />
-
-# 🌍 Global Collaboration Network
-
-<div class="world-map">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg">
-
-<div class="node" style="top:38%;left:78%;"></div> <!-- Korea -->
-<div class="node" style="top:37%;left:80%;"></div> <!-- China -->
-<div class="node" style="top:45%;left:74%;"></div> <!-- Thailand -->
-<div class="node" style="top:47%;left:76%;"></div> <!-- Vietnam -->
-<div class="node" style="top:33%;left:67%;"></div> <!-- Kazakhstan -->
-<div class="node" style="top:63%;left:40%;"></div> <!-- Brazil -->
-
-</div>
-
-
-<hr class="hr-soft" />
-
-
-# 📄 Symposium Pamphlet
+# Symposium Pamphlet
 
 <div class="pamphlet">
 
 <img src="https://github.com/Inha-ERE/cure.github.io/blob/main/_images/_ISCUE_26_page_1.jpg?raw=true">
-
 <img src="https://github.com/Inha-ERE/cure.github.io/blob/main/_images/_ISCUE_26_page_2.jpg?raw=true">
 
 </div>
 
 
-<hr class="hr-soft" />
+<div class="data-flow"></div>
 
 
-# ✉️ Registration & Abstract Submission
+# Registration & Abstract Submission
 
 <div class="symp-buttons">
 
@@ -432,7 +313,7 @@ Download Abstract Template
 
 <br>
 
-After preparing the abstract using the template above, please submit your abstract by email to:
+Submit abstracts via email to:
 
 **Dr. Hyundon Shin**  
 CURE Lab – Inha University  
@@ -440,10 +321,10 @@ CURE Lab – Inha University
 📧 **hyundon.shin@inha.ac.kr**
 
 
-<hr class="hr-soft" />
+<div class="data-flow"></div>
 
 
-# 🌍 Participating Institutions
+# Participating Institutions
 
 <div class="logo-grid">
 
@@ -459,7 +340,7 @@ CURE Lab – Inha University
 <img src="https://en.dlut.edu.cn/images/logo.png">
 </div>
 
-<div class="logo-item logo-blue" title="China University of Petroleum Beijing">
+<div class="logo-item logo-blue" title="China University of Petroleum">
 <img src="https://www.cup.edu.cn/english/images/logo.png">
 </div>
 
@@ -479,29 +360,17 @@ CURE Lab – Inha University
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Bras%C3%A3o_da_UFPE.png/330px-Bras%C3%A3o_da_UFPE.png">
 </div>
 
-<div class="logo-item" title="SLB">
-<img src="https://www.slb.com/-/media/images/logo/SLB_Logo_Positive_RGB_TM.svg">
-</div>
-
-<div class="logo-item" title="Halliburton">
-<img src="https://cdn.brandfolder.io/3I2CY2XL/as/vkc5w586w5gtr898396p3w/halliburton-logo.svg">
-</div>
-
-<div class="logo-item" title="Baker Hughes">
-<img src="https://www.bakerhughes.com/themes/custom/bh/dist/images/logo.png">
-</div>
-
 </div>
 
 
-<hr class="hr-soft" />
+<div class="data-flow"></div>
 
 
-# 📅 Event Schedule
+# Event Schedule
 
 <div class="schedule-grid">
 
-<div>
+<div class="schedule-card">
 
 **May 27 – May 29, 2026**
 
@@ -509,7 +378,7 @@ Location
 **Northeast Petroleum University**  
 Daqing, China
 
-The symposium program will include:
+Program Highlights:
 
 - Field trips and technical training sessions  
 - Invited international keynote speakers  
@@ -519,17 +388,45 @@ The symposium program will include:
 
 <div class="schedule-map">
 
-<iframe src="https://maps.google.com/maps?q=Northeast%20Petroleum%20University%20Daqing&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+<iframe src="https://maps.google.com/maps?q=Northeast%20Petroleum%20University%20Daqing&z=13&output=embed"></iframe>
 
 </div>
 
 </div>
 
 
-<hr class="hr-soft" />
+<div class="data-flow"></div>
 
 
-# 📬 Contact
+# Global Collaboration Network
+
+<div class="world-map">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg">
+
+<!-- nodes -->
+
+<div class="node" style="top:38%;left:80%;"></div> <!-- Korea -->
+<div class="node" style="top:37%;left:78%;"></div> <!-- Japan -->
+<div class="node" style="top:37%;left:75%;"></div> <!-- China -->
+<div class="node" style="top:44%;left:74%;"></div> <!-- Thailand -->
+<div class="node" style="top:46%;left:76%;"></div> <!-- Vietnam -->
+<div class="node" style="top:47%;left:73%;"></div> <!-- Indonesia -->
+
+<div class="node" style="top:63%;left:88%;"></div> <!-- Australia -->
+
+<div class="node" style="top:30%;left:50%;"></div> <!-- Norway -->
+
+<div class="node" style="top:30%;left:22%;"></div> <!-- Canada -->
+<div class="node" style="top:36%;left:20%;"></div> <!-- USA -->
+
+</div>
+
+
+<div class="data-flow"></div>
+
+
+# Contact
 
 **Dr. Hyundon Shin**  
 CURE Lab – Inha University  
