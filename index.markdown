@@ -25,9 +25,9 @@ grid-template-columns:1fr;
 }
 }
 
-/* ===== ISQUE card ===== */
+/* ===== iscue card ===== */
 
-.isque-card{
+.iscue-card{
 background:linear-gradient(135deg,#003E82,#005BAC);
 color:white;
 border-radius:18px;
@@ -36,17 +36,17 @@ box-shadow:0 16px 40px rgba(0,0,0,0.18);
 transition:transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.isque-card:hover{
+.iscue-card:hover{
 transform:translateY(-4px);
 box-shadow:0 22px 48px rgba(0,0,0,0.22);
 }
 
-.isque-card h3{
+.iscue-card h3{
 margin-top:0;
 font-weight:700;
 }
 
-.isque-chip{
+.iscue-chip{
 display:inline-block;
 background:rgba(255,255,255,0.18);
 padding:6px 12px;
@@ -56,7 +56,7 @@ margin-right:6px;
 margin-top:6px;
 }
 
-.isque-btn{
+.iscue-btn{
 display:inline-block;
 margin-top:14px;
 padding:10px 14px;
@@ -67,7 +67,7 @@ font-weight:700;
 text-decoration:none;
 }
 
-.isque-btn:hover{
+.iscue-btn:hover{
 background:#f1f6ff;
 }
 
@@ -211,11 +211,11 @@ from <strong>CO₂ storage</strong> to <strong>underground hydrogen storage</str
 </div>
 
 
-<!-- RIGHT : ISQUE info -->
+<!-- RIGHT : iscue info -->
 
-<div class="isque-card">
+<div class="iscue-card">
 
-<h3>🌍 IS-QUE 2026</h3>
+<h3>🌍 IsCUE 2026</h3>
 
 <p>
 <strong>International Symposium on CCS & Unconventional Energy</strong>
@@ -230,13 +230,13 @@ Direct Lithium Extraction · Unconventional Oil & Gas
 
 <div>
 
-<span class="isque-chip">📅 May 27–29 2026</span>
+<span class="iscue-chip">📅 May 27–29 2026</span>
 
-<span class="isque-chip">📍 NEPU, China</span>
+<span class="iscue-chip">📍 NEPU, China</span>
 
 </div>
 
-<a class="isque-btn" href="/is-que/">
+<a class="iscue-btn" href="/is-cue/">
 Symposium Details →
 </a>
 
