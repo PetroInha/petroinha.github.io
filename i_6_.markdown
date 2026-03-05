@@ -104,14 +104,58 @@ transparent,
 transparent
 );
 
+background-size:400px;
 animation:dataFlow 4s linear infinite;
 
 margin:32px 0;
 }
 
 @keyframes dataFlow{
-0%{background-position:-300px;}
-100%{background-position:300px;}
+0%{background-position:-200px;}
+100%{background-position:200px;}
+}
+
+
+/* ================= WORLD MAP ================= */
+
+.world-map{
+
+position:relative;
+max-width:900px;
+margin:40px auto;
+
+}
+
+.world-map img{
+
+width:100%;
+opacity:0.85;
+
+}
+
+/* nodes */
+
+.node{
+
+position:absolute;
+width:12px;
+height:12px;
+
+background:#005BAC;
+border-radius:50%;
+
+box-shadow:0 0 12px rgba(0,91,172,0.8);
+
+animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{transform:scale(0.9);opacity:0.8;}
+50%{transform:scale(1.5);opacity:0.4;}
+100%{transform:scale(0.9);opacity:0.8;}
+
 }
 
 
@@ -247,25 +291,31 @@ border-radius:10px;
 }
 
 
-/* ================= FLOATING SECTIONS ================= */
+/* ================= SCHEDULE SPLIT ================= */
 
-@keyframes floatCard{
+.schedule-grid{
 
-0%{transform:translateY(0px);}
-50%{transform:translateY(-6px);}
-100%{transform:translateY(0px);}
+display:grid;
 
-}
+grid-template-columns:1fr 1fr;
 
-.section-card{
+gap:40px;
 
-animation:floatCard 7s ease-in-out infinite;
+align-items:start;
 
 }
 
-.section-card:hover{
+.schedule-map iframe{
 
-animation-play-state:paused;
+width:100%;
+
+height:320px;
+
+border-radius:12px;
+
+border:none;
+
+box-shadow:0 12px 24px rgba(0,0,0,0.2);
 
 }
 
@@ -275,15 +325,15 @@ animation-play-state:paused;
 @media (max-width:768px){
 
 .symp-hero{
-
 padding:42px 26px;
-
 }
 
 .symp-hero h1{
-
 font-size:32px;
+}
 
+.schedule-grid{
+grid-template-columns:1fr;
 }
 
 }
@@ -291,11 +341,12 @@ font-size:32px;
 </style>
 
 
+
 <div class="symp-hero">
 
 <h1>IsCUE 2026</h1>
 
-<h2>The 4th International Symposium on CCS & Unconventional Energy</h2>
+<h2>International Symposium on CCS & Unconventional Energy</h2>
 
 <p>
 
@@ -326,6 +377,26 @@ hydrogen energy systems, and geothermal energy.
 
 </div>
 
+
+<div class="data-flow"></div>
+
+
+<hr class="hr-soft" />
+
+# 🌍 Global Collaboration Network
+
+<div class="world-map">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg">
+
+<div class="node" style="top:38%;left:78%;"></div> <!-- Korea -->
+<div class="node" style="top:37%;left:80%;"></div> <!-- China -->
+<div class="node" style="top:45%;left:74%;"></div> <!-- Thailand -->
+<div class="node" style="top:47%;left:76%;"></div> <!-- Vietnam -->
+<div class="node" style="top:33%;left:67%;"></div> <!-- Kazakhstan -->
+<div class="node" style="top:63%;left:40%;"></div> <!-- Brazil -->
+
+</div>
 
 
 <hr class="hr-soft" />
@@ -368,74 +439,55 @@ CURE Lab – Inha University
 
 📧 **hyundon.shin@inha.ac.kr**
 
+
 <hr class="hr-soft" />
 
 
 # 🌍 Participating Institutions
 
-The symposium brings together researchers from leading universities and energy companies across Asia, Europe, and the Americas.
-
-Participating universities include:
-
-- **Inha University (Korea)**
-- **Northeast Petroleum University (China)**
-- **Dalian University of Technology (China)**
-- **China University of Petroleum – Beijing (China)**
-- **Chulalongkorn University (Thailand)**
-- **Chiang Mai University (Thailand)**
-- **Ho Chi Minh City University of Technology (Vietnam)**
-- **Kazakh-British Technical University (Kazakhstan)**
-- **Federal University of Pernambuco (Brazil)**
-
-Industry participation includes:
-
-- **SLB**
-- **Halliburton**
-- **Baker Hughes**
-
 <div class="logo-grid">
 
-<div class="logo-item">
+<div class="logo-item" title="Inha University">
 <img src="https://www.inha.ac.kr/sites/kr/images/logo.png">
 </div>
 
-<div class="logo-item logo-blue">
+<div class="logo-item logo-blue" title="Northeast Petroleum University">
 <img src="https://www.nepu.edu.cn/en/images/logo.png">
 </div>
 
-<div class="logo-item logo-blue">
+<div class="logo-item logo-blue" title="Dalian University of Technology">
 <img src="https://en.dlut.edu.cn/images/logo.png">
 </div>
 
-<div class="logo-item logo-blue">
+<div class="logo-item logo-blue" title="China University of Petroleum Beijing">
 <img src="https://www.cup.edu.cn/english/images/logo.png">
 </div>
 
-<div class="logo-item">
+<div class="logo-item" title="Chiang Mai University">
 <img src="https://upload.wikimedia.org/wikipedia/en/2/25/Chiang_mai_university_logo.png">
 </div>
 
-<div class="logo-item">
+<div class="logo-item" title="Ho Chi Minh City University of Technology">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/HCMCUT.svg/250px-HCMCUT.svg.png">
 </div>
 
-<div class="logo-item">
+<div class="logo-item" title="Kazakh-British Technical University">
 <img src="https://kbtu.edu.kz/images/logo_blue.png">
 </div>
 
-<div class="logo-item">
+<div class="logo-item" title="Federal University of Pernambuco">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Bras%C3%A3o_da_UFPE.png/330px-Bras%C3%A3o_da_UFPE.png">
 </div>
 
-<div class="logo-item">
+<div class="logo-item" title="SLB">
 <img src="https://www.slb.com/-/media/images/logo/SLB_Logo_Positive_RGB_TM.svg">
 </div>
 
-<div class="logo-item">
+<div class="logo-item" title="Halliburton">
 <img src="https://cdn.brandfolder.io/3I2CY2XL/as/vkc5w586w5gtr898396p3w/halliburton-logo.svg">
 </div>
 
-<div class="logo-item">
+<div class="logo-item" title="Baker Hughes">
 <img src="https://www.bakerhughes.com/themes/custom/bh/dist/images/logo.png">
 </div>
 
@@ -446,6 +498,10 @@ Industry participation includes:
 
 
 # 📅 Event Schedule
+
+<div class="schedule-grid">
+
+<div>
 
 **May 27 – May 29, 2026**
 
@@ -459,19 +515,26 @@ The symposium program will include:
 - Invited international keynote speakers  
 - Technical sessions on CCS and unconventional energy systems  
 
+</div>
+
+<div class="schedule-map">
+
+<iframe src="https://maps.google.com/maps?q=Northeast%20Petroleum%20University%20Daqing&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+
+</div>
+
+</div>
+
 
 <hr class="hr-soft" />
 
 
 # 📬 Contact
 
-For questions regarding the symposium:
-
 **Dr. Hyundon Shin**  
 CURE Lab – Inha University  
 
-hyundon.shin@inha.ac.kr
-
+hyundon.shin@inha.ac.kr  
 
 <br>
 
