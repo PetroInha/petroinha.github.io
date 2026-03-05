@@ -327,8 +327,6 @@ hydrogen energy systems, and geothermal energy.
 </div>
 
 
-<div class="data-flow"></div>
-
 
 <hr class="hr-soft" />
 
