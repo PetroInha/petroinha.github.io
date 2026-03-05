@@ -465,12 +465,13 @@ CURE Lab – Inha University
 
   <div class="node" title="Australia"   style="top:65.5%; left:83.6%;"></div>
 
+  <div class="node" title="UAE"         style="top:41.2%; left:65.1%;"></div>
   <div class="node" title="Norway"      style="top:18.3%; left:48.9%;"></div>
 
   <div class="node" title="Canada"      style="top:20.5%; left:17.3%;"></div>
   <div class="node" title="USA"         style="top:29.9%; left:19.5%;"></div>
+  <div class="node" title="Brazil"      style="top:62.8%; left:36.9%;"></div>
 </div>
-
 
 # Contact
 
