@@ -2,21 +2,6 @@
 layout: home
 ---
 
-<div class="section-card">
-
-<h2 style="color:#005BAC;">🌍 Upcoming International Symposium</h2>
-
-<strong>IS-QUE 2026</strong><br>
-International Symposium on CCS & Unconventional Energy
-
-<p>
-Hosted by <strong>CURE Lab – Inha University</strong>
-</p>
-
-<a class="cta-btn" href="/is-que/">View Symposium Page</a>
-
-</div>
-
 <style>
 /* Scroll reveal (fade-up on scroll) */
 .reveal{

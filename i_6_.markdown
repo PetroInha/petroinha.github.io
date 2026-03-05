@@ -1,28 +1,72 @@
----
+<hr class="hr-soft" />
 layout: page
-title: IS-QUE-26
-permalink: /IsQue26/
----
+title: IS-QUE Symposium
+permalink: /is-que/
+<hr class="hr-soft" />
 
 <style>
 
-/* Hero section */
+/* ================= HERO ================= */
 
-.symp-hero{
-background:linear-gradient(135deg,#003E82,#005BAC);
-color:white;
-padding:40px;
-border-radius:18px;
-margin-bottom:30px;
+
+/* Soft divider */
+.hr-soft{
+  border:none;
+  height:1px;
+  background:linear-gradient(90deg, rgba(0,91,172,0), rgba(0,91,172,0.55), rgba(0,91,172,0));
+  margin: 26px 0;
 }
 
-/* pamphlet layout */
+.symp-hero{
+background:linear-gradient(135deg,#002F6C,#005BAC);
+color:white;
+padding:55px 40px;
+border-radius:20px;
+margin-bottom:40px;
+box-shadow:0 18px 45px rgba(0,0,0,0.18);
+}
+
+.symp-hero h1{
+margin:0;
+font-size:36px;
+font-weight:800;
+}
+
+.symp-hero h2{
+margin-top:8px;
+font-weight:500;
+opacity:0.9;
+}
+
+.symp-hero p{
+margin-top:18px;
+font-size:16px;
+line-height:1.6;
+max-width:850px;
+}
+
+.hero-meta{
+display:flex;
+flex-wrap:wrap;
+gap:16px;
+margin-top:22px;
+}
+
+.hero-chip{
+background:rgba(255,255,255,0.15);
+padding:8px 14px;
+border-radius:999px;
+font-weight:600;
+font-size:14px;
+}
+
+/* ================= PAMPHLET ================= */
 
 .pamphlet{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:25px;
-margin:30px 0;
+margin:40px 0;
 }
 
 .pamphlet img{
@@ -31,7 +75,7 @@ border-radius:12px;
 box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* buttons */
+/* ================= BUTTONS ================= */
 
 .symp-buttons{
 display:flex;
@@ -41,7 +85,7 @@ margin-top:20px;
 }
 
 .symp-btn{
-padding:12px 20px;
+padding:12px 22px;
 border-radius:10px;
 background:#005BAC;
 color:white !important;
@@ -56,32 +100,36 @@ transform:translateY(-2px);
 box-shadow:0 12px 28px rgba(0,91,172,0.35);
 }
 
-/* logo grid */
+/* ================= LOGO GRID ================= */
 
 .logo-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
 gap:30px;
 align-items:center;
-margin-top:30px;
+margin-top:35px;
 }
 
-.logo-grid img{
+.logo-item{
+display:flex;
+align-items:center;
+justify-content:center;
+padding:12px;
+border-radius:10px;
+}
+
+.logo-item img{
 max-width:120px;
 max-height:60px;
-margin:auto;
-display:block;
-filter:grayscale(0%);
-opacity:0.9;
-transition:all 0.25s ease;
 }
 
-.logo-grid img:hover{
-opacity:1;
-transform:scale(1.08);
+.logo-blue{
+background:#005BAC;
+padding:14px;
+border-radius:8px;
 }
 
-/* section spacing */
+/* ================= SECTION ================= */
 
 .section{
 margin-top:50px;
@@ -89,27 +137,34 @@ margin-top:50px;
 
 </style>
 
+
 <div class="symp-hero">
 
-# International Symposium on CCS & Unconventional Energy  
-### **IS-QUE 2026**
+<h1>IS-QUE 2026</h1>
 
-The **International Symposium on CCS and Unconventional Energy (IS-QUE)**  
-is a global forum for researchers, engineers, and industry leaders working on **subsurface energy systems**.
+<h2>International Symposium on CCS & Unconventional Energy</h2>
 
-The symposium focuses on emerging technologies including:
+<p>
+The <strong>International Symposium on CCS and Unconventional Energy (IS-QUE)</strong> is a global forum bringing together researchers, engineers, and industry leaders working on emerging subsurface energy systems.
+</p>
 
-- Carbon Capture and Storage (CCS)
-- Direct Lithium Extraction from subsurface brine
-- Hydrogen energy systems
-- Geothermal energy
-- Unconventional oil & gas resources (oil sands / shale gas)
+<p>
+Key topics include <strong>Carbon Capture and Storage (CCS)</strong>, unconventional oil and gas resources, <strong>direct lithium extraction from subsurface brine</strong>, hydrogen energy systems, and geothermal energy.
+</p>
 
-The event is initiated by **Dr. Hyundon Shin (PI, CURE Lab, Inha University)**.
+<div class="hero-meta">
+
+<span class="hero-chip">📅 May 27–29, 2026</span>
+
+<span class="hero-chip">📍 Northeast Petroleum University, China</span>
+
+<span class="hero-chip">Host: CURE Lab – Inha University</span>
 
 </div>
 
----
+</div>
+
+<hr class="hr-soft" />
 
 # 📄 Symposium Pamphlet
 
@@ -121,7 +176,7 @@ The event is initiated by **Dr. Hyundon Shin (PI, CURE Lab, Inha University)**.
 
 </div>
 
----
+<hr class="hr-soft" />
 
 # ✉️ Registration & Abstract Submission
 
@@ -137,11 +192,11 @@ Download Abstract Template
 
 </div>
 
----
+<hr class="hr-soft" />
 
 # 🌍 Participating Universities
 
-The symposium brings together researchers from leading institutions:
+The symposium brings together international researchers from:
 
 - **Inha University (Korea)**
 - **Northeast Petroleum University (China)**
@@ -156,62 +211,85 @@ The symposium brings together researchers from leading institutions:
 Industry participants include:
 
 - **SLB**
-- **Baker Hughes**
 - **Halliburton**
+- **Baker Hughes**
 
----
+<hr class="hr-soft" />
 
 # 🤝 Participating Institutions
 
 <div class="logo-grid">
 
+<div class="logo-item">
 <img src="https://www.inha.ac.kr/sites/kr/images/logo.png">
+</div>
 
+<div class="logo-item logo-blue">
 <img src="https://www.nepu.edu.cn/en/images/logo.png">
+</div>
 
+<div class="logo-item logo-blue">
 <img src="https://en.dlut.edu.cn/images/logo.png">
+</div>
 
+<div class="logo-item logo-blue">
 <img src="https://www.cup.edu.cn/english/images/logo.png">
+</div>
 
+<div class="logo-item">
 <img src="https://upload.wikimedia.org/wikipedia/en/2/25/Chiang_mai_university_logo.png">
+</div>
 
+<div class="logo-item">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/HCMCUT.svg/250px-HCMCUT.svg.png">
+</div>
 
+<div class="logo-item">
 <img src="https://kbtu.edu.kz/images/logo_blue.png">
+</div>
 
+<div class="logo-item">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Bras%C3%A3o_da_UFPE.png/330px-Bras%C3%A3o_da_UFPE.png">
+</div>
 
+<div class="logo-item">
 <img src="https://www.slb.com/-/media/images/logo/SLB_Logo_Positive_RGB_TM.svg">
+</div>
 
+<div class="logo-item">
 <img src="https://cdn.brandfolder.io/3I2CY2XL/as/vkc5w586w5gtr898396p3w/halliburton-logo.svg">
+</div>
 
+<div class="logo-item">
 <img src="https://www.bakerhughes.com/themes/custom/bh/dist/images/logo.png">
+</div>
 
 </div>
 
----
+<hr class="hr-soft" />
 
 # 📅 Event Schedule
 
 **May 27 – May 29, 2026**
 
 Location:  
-**Northeast Petroleum University, Daqing, China**
+**Northeast Petroleum University**  
+Daqing, China
 
 Program includes:
 
-- Field trip & training workshop
-- International invited talks
-- CCS & unconventional energy technical sessions
+- Field trip and technical training sessions  
+- Invited international speakers  
+- Technical sessions on CCS and unconventional energy  
 
----
+<hr class="hr-soft" />
 
 # 📬 Contact
 
-For questions about the symposium:
+For questions regarding the symposium:
 
 **Dr. Hyundon Shin**  
-Inha University  
+CURE Lab – Inha University  
 
 hyundon.shin@inha.ac.kr
 
