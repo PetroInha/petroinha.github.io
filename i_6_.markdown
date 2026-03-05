@@ -255,7 +255,7 @@ grid-template-columns:1fr;
 
 <h1>IsCUE 2026</h1>
 
-<h2>International Symposium on CCS & Unconventional Energy</h2>
+<h2>The 4th International Symposium on CCS & Unconventional Energy</h2>
 
 <p>
 The <strong>International Symposium on CCS and Unconventional Energy (IsCUE)</strong>  
