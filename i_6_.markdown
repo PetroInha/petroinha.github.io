@@ -360,6 +360,20 @@ CURE Lab – Inha University
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Bras%C3%A3o_da_UFPE.png/330px-Bras%C3%A3o_da_UFPE.png">
 </div>
 
+
+<div class="logo-item" title="SLB">
+<img src="https://www.slb.com/-/media/images/logo/SLB_Logo_Positive_RGB_TM.svg">
+</div>
+
+<div class="logo-item" title="Halliburton">
+<img src="https://cdn.brandfolder.io/3I2CY2XL/as/vkc5w586w5gtr898396p3w/halliburton-logo.svg">
+</div>
+
+<div class="logo-item" title="Baker Hughes">
+<img src="https://www.bakerhughes.com/themes/custom/bh/dist/images/logo.png">
+</div>
+
+
 </div>
 
 
@@ -404,29 +418,26 @@ CURE Lab – Inha University
 <div class="data-flow"></div>
 
 
+# Global Collaboration Network<div class="data-flow"></div>
+
 # Global Collaboration Network
 <div class="world-map">
   <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" alt="World map">
 
-  <!-- East Asia -->
-  <div class="node" title="South Korea" style="top:29.4%; left:85.3%;"></div> <!-- ~37N,127E -->
-  <div class="node" title="Japan"       style="top:30.0%; left:88.3%;"></div> <!-- ~36N,138E -->
-  <div class="node" title="China"       style="top:30.6%; left:79.2%;"></div> <!-- ~35N,105E -->
+  <div class="node" title="South Korea" style="top:26.4%; left:80.3%;"></div>
+  <div class="node" title="Japan"       style="top:27.0%; left:83.3%;"></div>
+  <div class="node" title="China"       style="top:27.6%; left:74.2%;"></div>
 
-  <!-- Southeast Asia -->
-  <div class="node" title="Thailand"    style="top:41.7%; left:78.1%;"></div> <!-- ~15N,101E -->
-  <div class="node" title="Vietnam"     style="top:41.1%; left:80.0%;"></div> <!-- ~16N,108E -->
-  <div class="node" title="Indonesia"   style="top:51.1%; left:82.8%;"></div> <!-- ~2S,118E -->
+  <div class="node" title="Thailand"    style="top:38.7%; left:73.1%;"></div>
+  <div class="node" title="Vietnam"     style="top:38.1%; left:75.0%;"></div>
+  <div class="node" title="Indonesia"   style="top:48.1%; left:77.8%;"></div>
 
-  <!-- Oceania -->
-  <div class="node" title="Australia"   style="top:63.9%; left:86.9%;"></div> <!-- ~25S,133E -->
+  <div class="node" title="Australia"   style="top:60.9%; left:81.9%;"></div>
 
-  <!-- Europe -->
-  <div class="node" title="Norway"      style="top:16.7%; left:52.2%;"></div> <!-- ~60N,8E -->
+  <div class="node" title="Norway"      style="top:13.7%; left:47.2%;"></div>
 
-  <!-- North America -->
-  <div class="node" title="Canada"      style="top:18.9%; left:20.6%;"></div> <!-- ~56N,106W -->
-  <div class="node" title="USA"         style="top:28.3%; left:22.8%;"></div> <!-- ~39N,98W -->
+  <div class="node" title="Canada"      style="top:15.9%; left:15.6%;"></div>
+  <div class="node" title="USA"         style="top:25.3%; left:17.8%;"></div>
 </div>
 
 <div class="data-flow"></div>
