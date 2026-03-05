@@ -248,24 +248,37 @@ grid-template-columns:1fr;
 
 }
 
+/* ================= ACADEMIC TITLE HOVER ================= */
 
 .page h1{
 position:relative;
 display:inline-block;
-padding-bottom:4px;
+padding-bottom:6px;
+
+transition:all .25s ease;
 }
+
+/* animated underline */
 
 .page h1::after{
 content:"";
 position:absolute;
 left:0;
 bottom:0;
+
 width:0%;
 height:3px;
-background:#005BAC; /* Inha Blue */
-transition:width .35s ease;
+
 background:linear-gradient(90deg,#005BAC,#0A6ED1);
-box-shadow:0 0 6px rgba(0,91,172,0.4);
+
+transition:width .35s ease;
+}
+
+/* hover effect */
+
+.page h1:hover{
+transform:translateY(-2px);
+color:#005BAC;
 }
 
 .page h1:hover::after{
