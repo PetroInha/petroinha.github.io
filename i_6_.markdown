@@ -405,29 +405,29 @@ CURE Lab – Inha University
 
 
 # Global Collaboration Network
-
 <div class="world-map">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" alt="World map">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg">
+  <!-- East Asia -->
+  <div class="node" title="South Korea" style="top:29.4%; left:85.3%;"></div> <!-- ~37N,127E -->
+  <div class="node" title="Japan"       style="top:30.0%; left:88.3%;"></div> <!-- ~36N,138E -->
+  <div class="node" title="China"       style="top:30.6%; left:79.2%;"></div> <!-- ~35N,105E -->
 
-<!-- nodes -->
+  <!-- Southeast Asia -->
+  <div class="node" title="Thailand"    style="top:41.7%; left:78.1%;"></div> <!-- ~15N,101E -->
+  <div class="node" title="Vietnam"     style="top:41.1%; left:80.0%;"></div> <!-- ~16N,108E -->
+  <div class="node" title="Indonesia"   style="top:51.1%; left:82.8%;"></div> <!-- ~2S,118E -->
 
-<div class="node" style="top:38%;left:80%;"></div> <!-- Korea -->
-<div class="node" style="top:37%;left:78%;"></div> <!-- Japan -->
-<div class="node" style="top:37%;left:75%;"></div> <!-- China -->
-<div class="node" style="top:44%;left:74%;"></div> <!-- Thailand -->
-<div class="node" style="top:46%;left:76%;"></div> <!-- Vietnam -->
-<div class="node" style="top:47%;left:73%;"></div> <!-- Indonesia -->
+  <!-- Oceania -->
+  <div class="node" title="Australia"   style="top:63.9%; left:86.9%;"></div> <!-- ~25S,133E -->
 
-<div class="node" style="top:63%;left:88%;"></div> <!-- Australia -->
+  <!-- Europe -->
+  <div class="node" title="Norway"      style="top:16.7%; left:52.2%;"></div> <!-- ~60N,8E -->
 
-<div class="node" style="top:30%;left:50%;"></div> <!-- Norway -->
-
-<div class="node" style="top:30%;left:22%;"></div> <!-- Canada -->
-<div class="node" style="top:36%;left:20%;"></div> <!-- USA -->
-
+  <!-- North America -->
+  <div class="node" title="Canada"      style="top:18.9%; left:20.6%;"></div> <!-- ~56N,106W -->
+  <div class="node" title="USA"         style="top:28.3%; left:22.8%;"></div> <!-- ~39N,98W -->
 </div>
-
 
 <div class="data-flow"></div>
 
