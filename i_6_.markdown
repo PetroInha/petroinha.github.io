@@ -47,6 +47,30 @@ font-weight:500;
 opacity:0.92;
 }
 
+
+.page h1{
+position:relative;
+display:inline-block;
+padding-bottom:4px;
+}
+
+.page h1::after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:0%;
+height:3px;
+background:#005BAC; /* Inha Blue */
+transition:width .35s ease;
+background:linear-gradient(90deg,#005BAC,#0A6ED1);
+box-shadow:0 0 6px rgba(0,91,172,0.4);
+}
+
+.page h1:hover::after{
+width:100%;
+}
+
 .symp-hero p{
 margin-top:20px;
 font-size:16px;
