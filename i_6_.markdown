@@ -298,7 +298,7 @@ hydrogen energy systems, and geothermal energy.
 
 <span class="hero-chip">📅 May 27–29, 2026</span>
 <span class="hero-chip">📍 Northeast Petroleum University, China</span>
-<span class="hero-chip">Host: Northeast Petroleum University | CURE Lab – Inha University</span>
+<span class="hero-chip">Host: Northeast Petroleum University & Inha University</span>
 
 </div>
 
