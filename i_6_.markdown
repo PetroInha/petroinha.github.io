@@ -382,6 +382,10 @@ CURE Lab – Inha University
 <img src="https://upload.wikimedia.org/wikipedia/en/2/25/Chiang_mai_university_logo.png">
 </div>
 
+<div class="logo-item" title="Chulalongkorn University">
+<img src="https://www.chula.ac.th/wp-content/themes/phrakieo/assets/images/logo-chula-color-2025.svg">
+</div>
+
 <div class="logo-item" title="Ho Chi Minh City University of Technology">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/HCMCUT.svg/250px-HCMCUT.svg.png">
 </div>
