@@ -7,11 +7,20 @@ permalink: /Members/
 
 We cultivate future leaders in **AI-powered subsurface engineering and carbon-neutral geoenergy systems.**
 
----
+<hr class="hr-soft" />
+
 
 # 👨‍🏫 Leadership
 
 <style>
+
+.hr-soft{
+  border:none;
+  height:1px;
+  background:linear-gradient(90deg, rgba(0,91,172,0), rgba(0,91,172,0.55), rgba(0,91,172,0));
+  margin: 26px 0;
+}
+
 .section-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
@@ -122,7 +131,8 @@ We cultivate future leaders in **AI-powered subsurface engineering and carbon-ne
 
 </div>
 
----
+<hr class="hr-soft" />
+
 
 # 🎓 Graduate Students
 
@@ -202,7 +212,8 @@ We cultivate future leaders in **AI-powered subsurface engineering and carbon-ne
 
 </div>
 
----
+<hr class="hr-soft" />
+
 
 # 👩‍💻 Undergraduate Interns
 
@@ -217,7 +228,8 @@ We cultivate future leaders in **AI-powered subsurface engineering and carbon-ne
 
 <p style="margin-top:15px;"><strong>※ 학부연구생 상시모집중</strong> – honggeun.jo@inha.ac.kr</p>
 
----
+<hr class="hr-soft" />
+
 
 # 🎓 Alumni
 
@@ -323,6 +335,16 @@ Heavy Oil Recovery · EOR · ML · CCUS
 </div>
 
 <div class="alumni-card">
+<h4>김현민</h4>
+<div class="alumni-meta">Master's · 2025.3</div>
+<div class="alumni-affil">삼성중공업|해양엔지니어링팀(판교)</div>
+<div class="alumni-topic">
+4D Seismic in CCS  
+<br><a href="https://pubs.geoscienceworld.org/gsw/lithosphere/article/2024/4/lithosphere_2024_209/650382/Uncertainty-Quantification-Based-on-Deep-Learning" target="_blank">Publication →</a>
+</div>
+</div>
+
+<div class="alumni-card">
 <h4>백인욱</h4>
 <div class="alumni-meta">Master's · 2025.3</div>
 <div class="alumni-affil">국토교통과학기술진흥원</div>
@@ -330,14 +352,14 @@ Heavy Oil Recovery · EOR · ML · CCUS
 </div>
 
 <div class="alumni-card">
-<h4>김현민</h4>
+<h4>백진현</h4>
 <div class="alumni-meta">Master's · 2025.3</div>
-<div class="alumni-affil">삼성중공업</div>
-<div class="alumni-topic">
-4D Seismic in CCS  
-<br><a href="https://pubs.geoscienceworld.org/gsw/lithosphere/article/2024/4/lithosphere_2024_209/650382/Uncertainty-Quantification-Based-on-Deep-Learning" target="_blank">Publication →</a>
+<div class="alumni-affil">한국에너지기술연구원</div>
+<div class="alumni-topic">SAGD</div>
 </div>
-</div>
+
+
+
 
 <div class="alumni-card">
 <h4>Yenny Andrea Rincon Cuenca</h4>
@@ -496,12 +518,12 @@ Heavy Oil Recovery · EOR · ML · CCUS
 <div class="metric-grid">
 
 <div class="metric-card metric-highlight">
-  <h1 class="metric-number" data-target="90">0</h1>
+  <h1 class="metric-number" data-target="95">0</h1>
   <p class="metric-label">Industry Placement Rate (%)</p>
 </div>
 
 <div class="metric-card">
-  <h1 class="metric-number" data-target="19">0</h1>
+  <h1 class="metric-number" data-target="20">0</h1>
   <p class="metric-label">Graduated Students</p>
 </div>
 
