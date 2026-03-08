@@ -5,7 +5,7 @@ permalink: /is-cue/
 ---
 
 <style>
- 
+
 /* ================= GLOBAL ================= */
  
 .hr-soft{
@@ -327,6 +327,13 @@ hydrogen energy systems, and geothermal energy.
 
 </div>
 
+<div class="symp-buttons">
+
+<a class="symp-btn" href="https://drive.google.com/uc?export=download&id=1HeaLWTk5MaBgDyZjIRNWIs2sBMWZGYBV">
+Download IsCUE 2026 Pamphlet 
+</a>
+
+</div>
 
 <div class="data-flow"></div>
 
