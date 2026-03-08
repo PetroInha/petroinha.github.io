@@ -136,10 +136,10 @@ We cultivate future leaders in **AI-powered subsurface engineering and carbon-ne
 </div>
 
 <div class="member-card">
-<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_bop.jpg?raw=true">
-<h4>Bop Duana Afrireksa</h4>
-<p>Ph.D. Candidate</p>
-<p>CO₂ Injectivity · Reservoir Modeling</p>
+<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_YJKim.png?raw=true">
+<h4>이영진</h4>
+<p>M.S. (2024~)</p>
+<p>ES-SAGD Optimization</p>
 </div>
 
 <div class="member-card">
@@ -163,12 +163,7 @@ We cultivate future leaders in **AI-powered subsurface engineering and carbon-ne
 <p>Digital Rock Integration in CCS</p>
 </div>
 
-<div class="member-card">
-<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_YJKim.png?raw=true">
-<h4>이영진</h4>
-<p>M.S. (2024~)</p>
-<p>ES-SAGD Optimization</p>
-</div>
+
 
 <div class="member-card">
 <img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_JHSeol.png?raw=true">
@@ -198,6 +193,13 @@ We cultivate future leaders in **AI-powered subsurface engineering and carbon-ne
 <p>Geological model characterization</p>
 </div>
 
+<div class="member-card">
+<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_bop.jpg?raw=true">
+<h4>Bop Duana Afrireksa</h4>
+<p>Ph.D. Candidate</p>
+<p>CO₂ Injectivity · Reservoir Modeling</p>
+</div>
+
 </div>
 
 ---
@@ -208,6 +210,7 @@ We cultivate future leaders in **AI-powered subsurface engineering and carbon-ne
 <span style="background:#E8F2FF; color:#005BAC; padding:8px 14px; border-radius:999px;">장대현 · REE</span>
 <span style="background:#E8F2FF; color:#005BAC; padding:8px 14px; border-radius:999px;">정지혜 · SAGD</span>
 <span style="background:#E8F2FF; color:#005BAC; padding:8px 14px; border-radius:999px;">조정민 · CCS</span>
+<span style="background:#E8F2FF; color:#005BAC; padding:8px 14px; border-radius:999px;">김보희 · ML</span>
 <span style="background:#E8F2FF; color:#808080; padding:8px 14px; border-radius:999px;">최유미 · ML</span>
 <span style="background:#E8F2FF; color:#808080; padding:8px 14px; border-radius:999px;">강태구 · ML</span>
 </div>
