@@ -307,7 +307,7 @@ hydrogen energy systems, and geothermal energy.
 <div class="hero-meta">
 
 <span class="hero-chip">📅 May 27–29, 2026</span>
-<span class="hero-chip">📍 Northeast Petroleum University, China</span>
+<span class="hero-chip">📍 Northeast Petroleum University, Daqing, China</span>
 <span class="hero-chip">Host: Northeast Petroleum University & Inha University</span>
 
 </div>
