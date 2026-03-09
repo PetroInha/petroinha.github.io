@@ -191,12 +191,65 @@ background:#f1f6ff;
   .cure-chip{ transition:none; }
   .cta-btn{ transition:none; }
 }
+
+/* ===== HERO SLIDER ===== */
+
+.hero-slider{
+position:relative;
+width:100%;
+height:260px;
+overflow:hidden;
+border-radius:14px;
+box-shadow:0 10px 26px rgba(0,0,0,0.18);
+margin-top:18px;
+}
+
+.hero-slide{
+position:absolute;
+width:100%;
+height:100%;
+opacity:0;
+transition:opacity 1s ease;
+}
+
+.hero-slide img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.hero-slide.active{
+opacity:1;
+}
+
+/* dots */
+
+.slider-dots{
+position:absolute;
+bottom:10px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:6px;
+}
+
+.slider-dot{
+width:8px;
+height:8px;
+border-radius:50%;
+background:rgba(255,255,255,0.6);
+}
+
+.slider-dot.active{
+background:white;
+}
+
+
 </style>
 
 <div class="hero-split reveal">
 
 <!-- LEFT : current CURE intro -->
-
 <div>
 
 <h1><span style="color:#005BAC;"><strong>CURE@Inha</strong></span></h1>
@@ -207,6 +260,38 @@ background:#f1f6ff;
 We fuse <strong>physics</strong>, <strong>data</strong>, and <strong>AI</strong> to build next-generation geoenergy systems—
 from <strong>CO₂ storage</strong> to <strong>underground hydrogen storage</strong>.
 </p>
+
+<div class="hero-slider">
+
+<div class="hero-slide active">
+<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/hd_shin.JPG?raw=true">
+</div>
+
+<div class="hero-slide">
+<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Pyrcz_3.jpg?raw=true">
+</div>
+
+<div class="hero-slide">
+<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/2024_grad.jpg?raw=true">
+</div>
+
+<div class="hero-slide">
+<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/2024summer.png?raw=true">
+</div>
+
+<div class="hero-slide">
+<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/seminar_field_1.jpg?raw=true">
+</div>
+
+<div class="slider-dots">
+<span class="slider-dot active"></span>
+<span class="slider-dot"></span>
+<span class="slider-dot"></span>
+<span class="slider-dot"></span>
+<span class="slider-dot"></span>
+</div>
+
+</div>
 
 </div>
 
