@@ -303,7 +303,7 @@ from <strong>CO₂ storage</strong> to <strong>underground hydrogen storage</str
 <h3>🌍 IsCUE 2026</h3>
 
 <p>
-<strong>International Symposium on CCS & Unconventional Energy</strong>
+<strong>The 4th International Symposium on CCS & Unconventional Energy</strong>
 </p>
 
 <p style="font-size:14px; line-height:1.5; opacity:0.95">
@@ -315,7 +315,7 @@ Direct Lithium Extraction · Unconventional Oil & Gas
 
 <div>
 
-<span class="iscue-chip">📅 May 27–29 2026</span>
+<span class="iscue-chip">📅 May 27–29, 2026</span>
 
 <span class="iscue-chip">📍 NEPU, China</span>
 
