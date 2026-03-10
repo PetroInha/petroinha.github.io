@@ -108,7 +108,7 @@ We cultivate future leaders in **AI-powered subsurface engineering and carbon-ne
 <div class="section-grid">
 
 <div class="profile-card">
-<img src="https://github.com/Inha-ERE/cure.github.io/blob/main/_images/hd_shin.JPG">
+<img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/hd_shin.JPG">
 <div class="profile-info">
 <h3>Prof. Hyundon Shin</h3>
 <p><strong>Professor, Dept. of Energy Resources Engineering</strong></p>
@@ -119,7 +119,7 @@ We cultivate future leaders in **AI-powered subsurface engineering and carbon-ne
 </div>
 
 <div class="profile-card">
-<img src="https://github.com/Inha-ERE/cure.github.io/blob/main/_images/hj_photo.jfif">
+<img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/hj_photo.jfif">
 <div class="profile-info">
 <h3>Prof. Honggeun Jo</h3>
 <p><strong>Assistant Professor, Dept. of ERE</strong></p>
