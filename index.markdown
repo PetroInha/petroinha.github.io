@@ -264,23 +264,23 @@ from <strong>CO₂ storage</strong> to <strong>underground hydrogen storage</str
 <div class="hero-slider">
 
 <div class="hero-slide active">
-<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/hd_shin.JPG?raw=true">
+<img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/hd_shin.JPG">
 </div>
 
 <div class="hero-slide">
-<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/Pyrcz_3.jpg?raw=true">
+<img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/Pyrcz_3.jpg">
 </div>
 
 <div class="hero-slide">
-<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/2024_grad.jpg?raw=true">
+<img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/2024_grad.jpg">
 </div>
 
 <div class="hero-slide">
-<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/2024summer.png?raw=true">
+<img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/2024summer.png">
 </div>
 
 <div class="hero-slide">
-<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/seminar_field_1.jpg?raw=true">
+<img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/seminar_field_1.jpg">
 </div>
 
 <div class="slider-dots">
