@@ -5,6 +5,6 @@ date:   2024-08-01 16:03:50 +0900
 categories: jekyll update
 ---
 
-| ![Principal Investigator](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/2024summer.png?raw=true) | 
+| ![Principal Investigator](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/2024summer.png) | 
 |:--:| 
 | Group photo at summer workshop |

@@ -7,11 +7,11 @@ categories: jekyll update
 
 | 사진 |
 |:--:| 
-| ![image_1](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/sirri_zzang_1.jpg?raw=true) | 
+| ![image_1](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/sirri_zzang_1.jpg) | 
 |:--:| 
-| ![image_2](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/sirri_zzang_2.jpg?raw=true) | 
+| ![image_2](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/sirri_zzang_2.jpg) | 
 |:--:| 
-| ![image_3](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/sirri_zzang_3.jpg?raw=true) | 
+| ![image_3](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/sirri_zzang_3.jpg) | 
 |:--:| 
 
 2025년 추계연합자원학술대회에서

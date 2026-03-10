@@ -5,9 +5,9 @@ date:   2024-11-23 12:00:00 +0900
 categories: jekyll update
 ---
 
-| ![image_1](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/KakaoTalk_20241123_005004648.jpg?raw=true) | 
+| ![image_1](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/KakaoTalk_20241123_005004648.jpg) | 
 |:--:| 
-| ![image_2](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/KakaoTalk_20241123_004026350.jpg?raw=true) | 
+| ![image_2](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/KakaoTalk_20241123_004026350.jpg) | 
 |:--:| 
 |Photos during seminar| 
 

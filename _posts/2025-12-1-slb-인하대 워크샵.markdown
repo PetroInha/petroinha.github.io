@@ -7,7 +7,7 @@ categories: jekyll update
 
 | 사진 |
 |:--:| 
-| ![image_1](https://github.com/Inha-ERE/cure.github.io/blob/main/_images/inha-slb.jpg?raw=true) | 
+| ![image_1](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/inha-slb.jpg) | 
 
 기사전문: [https://www.e-platform.net/news/articleView.html?idxno=98276](https://www.e-platform.net/news/articleView.html?idxno=98276)
 
