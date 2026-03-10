@@ -261,6 +261,12 @@ We fuse <strong>physics</strong>, <strong>data</strong>, and <strong>AI</strong>
 from <strong>CO₂ storage</strong> to <strong>underground hydrogen storage</strong>.
 </p>
 
+<link rel="preload" as="image" href="/_images/hd_shin.JPG">
+<link rel="preload" as="image" href="/_images/Pyrcz_3.jpg">
+<link rel="preload" as="image" href="/_images/2024_grad.jpg">
+<link rel="preload" as="image" href="/_images/2024summer.png">
+<link rel="preload" as="image" href="/_images/seminar_field_1.jpg">
+
 <div class="hero-slider">
 
 <div class="hero-slide active">
