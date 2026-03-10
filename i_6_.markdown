@@ -322,8 +322,8 @@ hydrogen energy systems, and geothermal energy.
 
 <div class="pamphlet">
 
-<img src="https://github.com/Inha-ERE/cure.github.io/blob/main/_images/_ISCUE_26_page_1.jpg?raw=true">
-<img src="https://github.com/Inha-ERE/cure.github.io/blob/main/_images/_ISCUE_26_page_2.jpg?raw=true">
+<img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_ISCUE_26_page_1.jpg">
+<img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_ISCUE_26_page_2.jpg">
 
 </div>
 

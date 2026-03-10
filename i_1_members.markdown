@@ -108,7 +108,7 @@ We cultivate future leaders in **AI-powered subsurface engineering and carbon-ne
 <div class="section-grid">
 
 <div class="profile-card">
-<img src="https://github.com/Inha-ERE/cure.github.io/blob/main/_images/hd_shin.JPG?raw=true">
+<img src="https://github.com/Inha-ERE/cure.github.io/blob/main/_images/hd_shin.JPG">
 <div class="profile-info">
 <h3>Prof. Hyundon Shin</h3>
 <p><strong>Professor, Dept. of Energy Resources Engineering</strong></p>
@@ -119,7 +119,7 @@ We cultivate future leaders in **AI-powered subsurface engineering and carbon-ne
 </div>
 
 <div class="profile-card">
-<img src="https://github.com/Inha-ERE/cure.github.io/blob/main/_images/hj_photo.jfif?raw=true">
+<img src="https://github.com/Inha-ERE/cure.github.io/blob/main/_images/hj_photo.jfif">
 <div class="profile-info">
 <h3>Prof. Honggeun Jo</h3>
 <p><strong>Assistant Professor, Dept. of ERE</strong></p>
@@ -139,35 +139,35 @@ We cultivate future leaders in **AI-powered subsurface engineering and carbon-ne
 <div class="member-grid">
 
 <div class="member-card">
-<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_kim.jpg?raw=true">
+<img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_kim.jpg">
 <h4>김남화</h4>
 <p>Ph.D. Candidate (2020~)</p>
 <p>ML-based SAGD & CO₂ Optimization</p>
 </div>
 
 <div class="member-card">
-<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_YJKim.png?raw=true">
+<img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_YJKim.png">
 <h4>이영진</h4>
 <p>M.S. (2024~)</p>
 <p>ES-SAGD Optimization</p>
 </div>
 
 <div class="member-card">
-<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_ESPark.png?raw=true">
+<img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_ESPark.png">
 <h4>박은실</h4>
 <p>M.S. (2024~)</p>
 <p>InSAR-based CCS Monitoring</p>
 </div>
 
 <div class="member-card">
-<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_DHKim.png?raw=true">
+<img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_DHKim.png">
 <h4>김동희</h4>
 <p>M.S. (2025~)</p>
 <p>Digital Rock · Underground H₂ Storage</p>
 </div>
 
 <div class="member-card">
-<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_Aitiana.jpg?raw=true">
+<img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_Aitiana.jpg">
 <h4>Aitiana Sanchez</h4>
 <p>M.S. (2025~)</p>
 <p>Digital Rock Integration in CCS</p>
@@ -176,35 +176,35 @@ We cultivate future leaders in **AI-powered subsurface engineering and carbon-ne
 
 
 <div class="member-card">
-<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_JHSeol.png?raw=true">
+<img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_JHSeol.png">
 <h4>설정환</h4>
 <p>M.S. (2025~)</p>
 <p>Lithum production, CCS injectivity</p>
 </div>
 
 <div class="member-card">
-<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_jinwoo.PNG?raw=true">
+<img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_jinwoo.PNG">
 <h4>어진우</h4>
 <p>M.S. (2026~)</p>
 <p>Generative model for digital rock</p>
 </div>
 
 <div class="member-card">
-<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_jinwoo.PNG?raw=true">
+<img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_jinwoo.PNG">
 <h4>이용훈</h4>
 <p>M.S. (2026~)</p>
 <p>SAGD simulation and experiment</p>
 </div>
 
 <div class="member-card">
-<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_KHKim.png?raw=true">
+<img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_KHKim.png">
 <h4>김광현</h4>
 <p>Ph.D. Candiate (part-time)</p>
 <p>Geological model characterization</p>
 </div>
 
 <div class="member-card">
-<img src="https://github.com/PetroInha/petroinha.github.io/blob/main/_images/_bop.jpg?raw=true">
+<img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_bop.jpg">
 <h4>Bop Duana Afrireksa</h4>
 <p>Ph.D. Candidate</p>
 <p>CO₂ Injectivity · Reservoir Modeling</p>
