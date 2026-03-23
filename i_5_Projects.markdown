@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Project
-permalink: /Project/
+title: Projects
+permalink: /Projects/
 ---
 
 
@@ -15,7 +15,7 @@ permalink: /Project/
 }
 </style>
 
-# 🚀 <span style="color:#005BAC;">Research Portfolio</span>
+# <span style="color:#005BAC;">Research Portfolio</span>
 
 We lead interdisciplinary national R&D programs in  
 <span style="color:#005BAC;"><strong>CCS, Digital Rock, Generative AI, and Geoenergy Systems</strong></span>,  
@@ -23,7 +23,7 @@ bridging nano-scale physics to field-scale deployment.
 
 <hr class="hr-soft" />
 
-## 🔥 <span style="color:#005BAC;">Ongoing Projects</span>
+## <span style="color:#005BAC;">Ongoing Projects</span>
 
 <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(360px,1fr)); gap:28px; margin-top:30px;">
 
@@ -79,7 +79,7 @@ bridging nano-scale physics to field-scale deployment.
 
 <hr class="hr-soft" />
 
-## 📂 <span style="color:#888;">Past Projects</span>
+## <span style="color:#888;">Past Projects</span>
 
 <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(360px,1fr)); gap:24px; margin-top:25px;">
 
@@ -99,7 +99,7 @@ bridging nano-scale physics to field-scale deployment.
 
 <hr class="hr-soft" />
 
-## 🎯 <span style="color:#005BAC;">Strategic Focus</span>
+## <span style="color:#005BAC;">Strategic Focus</span>
 
 <style>
 .focus-container {

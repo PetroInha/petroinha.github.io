@@ -53,7 +53,7 @@ permalink: /Lectures/
       </div>
       <ul class="cure-list">
         <li>에너지자원지질 (Energy Resources Geology)</li>
-        <li>컴퓨터 프로그래밍</li>
+        <li>컴퓨터 프로그래밍 (Computer Programming)</li>
       </ul>
       <div class="cure-chipline">
         <span class="cure-chip">Subsurface Basics</span>
@@ -92,9 +92,9 @@ permalink: /Lectures/
         <li>지오에너지공학개론 (Introduction to GeoEnergy Engineering)</li>
         <li>이산화탄소 포집 및 저장 기술 (CO2 Capture and Storage Technology)</li>
         <li>시추 및 지층평가공학 (Drilling and Foramtion Evaluation Engineering)</li>
-        <li>지오에너지 모델링 (GeoEnergy Modelling)</li>
+        <li>저류 모델링 및 시뮬레이션 (Reservoir Modeling and Simulation)</li>
         <li>지오에너지 생산 및 설비 (Geoenergy Production and Facility)</li>
-        <li>비전통석유개발</li>
+        <li>비전통석유개발 (Unconventional Resouces Development)</li>
       </ul>
       <div class="cure-chipline">
         <span class="cure-chip">CCS</span>

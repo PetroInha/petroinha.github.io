@@ -6,3 +6,4 @@ vendor
 *.ppt*
 *.doc*
 *.pdf
+*.py
