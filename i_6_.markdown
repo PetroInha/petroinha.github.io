@@ -459,8 +459,6 @@ CURE Lab – Inha University
 
 </div>
 
-<iframe src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/realization.html" width="100%" height="600"></iframe>
-
 <div class="data-flow"></div>
 
 # Global Collaboration Network Worldmap
