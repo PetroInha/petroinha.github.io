@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[인하대학교] 2026 춘계 CCS 보호연구 워크숍"
+title:  "[인하대] 2026 춘계 CCS 워크숍 후기"
 date:   2026-04-16 18:00:00 +0900
 categories: jekyll update
 ---
@@ -9,128 +9,124 @@ categories: jekyll update
 |:--:|
 | ![image_3](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/spring_workshop_2026_3.jpg) |
 
-# 🔷 2026 춘계 인하대학교 CCS 보호연구 워크숍
-## “AI·Digital Rock·Simulation이 결합된 차세대 CCS 연구의 방향”
+# 2026 춘계 인하대학교 CCS 워크숍 후기
+## “에너지공학, 실제로는 이런 연구를 합니다”
 
-2026년 4월 16–17일, 인하대학교 **Subsurface Analysis Lab (SAL)**을 중심으로  
-**2026 보호연구과제 1차 워크숍**이 인천 영종도 *더 위크앤 리조트*에서 개최되었습니다. :contentReference[oaicite:0]{index=0}  
+2026년 4월 16–17일, 인하대학교 Subsurface Analysis Lab(SAL) 주관으로  
+영종도 더 위크앤 리조트에서 **CCS 보호연구 워크숍**이 개최되었습니다. :contentReference[oaicite:0]{index=0}  
 
 이번 워크숍은  
-📌 **1차년도 연구성과 점검**  
-📌 **2차년도 연구계획 수립 및 고도화**  
-📌 **국내외 CCS 전문가 자문 및 협력 강화**  
-
-를 목표로 진행된 매우 중요한 기술 교류의 장이었습니다.
+연구실 학생들과 교수진, 그리고 외부 전문가들이 함께 모여  
+**현재 진행 중인 연구와 실제 산업 기술을 연결해보는 자리**였습니다.
 
 ---
 
-## 🎯 워크숍 핵심 목적 및 의미
+## 우리가 실제로 다루는 연구는?
 
-이번 워크숍은 단순한 학술 교류를 넘어,  
-**실제 CCS 상용화를 위한 기술적 기반을 점검하는 전략적 회의**로서 의미를 가집니다.
+이번 워크숍에서는 단순한 이론이 아니라,  
+**현장에서 실제로 사용되는 기술들**이 중심이었습니다.
 
-- 1차년도 연구 결과 통합 검증  
-- Digital Rock & AI 기반 CCS 기술 고도화 방향 논의  
-- 현장 적용을 고려한 Simulation 기술 점검  
-- 산·학·연 협력 기반 CCS 기술 체계 구축  
+- CO₂를 지하에 저장하는 **CCS 기술**
+- 암석 내부 구조를 분석하는 **Digital Rock**
+- 유체 흐름을 계산하는 **시뮬레이션**
+- 데이터를 기반으로 모델을 만드는 **AI/머신러닝**
 
-> **“데이터 기반 CCS 기술의 정밀도가 곧 저장 안정성과 직결된다.”**
+즉,  
+**지질 + 유체 + 데이터 + AI가 모두 결합된 융합 연구**입니다.
 
 ---
 
-## 🎤 초청 전문가 세미나
+## 전문가 세미나: 산업과 연구의 연결
 
-### 1️⃣ 한양대학교 변중무 교수
+### 한양대학교 변중무 교수님
 
 | ![image_1](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/spring_workshop_2026_1.jpg) |
 
-**“탄성파 자료 기반 지층 물성 예측 기술”**
+탄성파 데이터를 이용해 지층의 성질을 추정하는 방법을 소개해주셨습니다.
 
-- 탄성파 데이터를 활용한 **subsurface property estimation**
-- 불확실성 하에서의 **inverse problem 접근법**
-- CCS 저장소 평가에서의 **정량적 물성 추정 중요성 강조**
+핵심은 다음과 같습니다.
 
-📌 핵심 메시지  
-→ **“관측 데이터 기반의 물성 추정 정밀도가 CCS 성공의 핵심”**
+- 눈에 보이지 않는 지하를 **데이터로 해석하는 기술**
+- 불확실한 정보를 기반으로 최적의 해를 찾는 과정
+- CCS 저장소 평가에서 매우 중요한 역할
 
 ---
 
-### 2️⃣ SLB 정대인 박사
+### SLB 정대인 박사님
 
 | ![image_4](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/spring_workshop_2026_4.jpg) |
 
-**“CCS Simulation Issues & Field-scale Challenges”**
+글로벌 에너지 기업 SLB에서 수행하는 실제 CCS 프로젝트 경험을 공유해주셨습니다.
 
-- 실제 필드 적용에서의 **simulation bottleneck**
-- 대규모 모델에서의 **계산 효율성과 정확도 trade-off**
-- 산업 관점에서의 **operational constraints 및 적용 전략**
+특히 인상적인 부분은 다음과 같습니다.
 
-📌 핵심 메시지  
-→ **“현장 적용 가능한 모델이 진짜 기술이다.”**
+- 실제 현장에서는 계산 속도와 정확도를 동시에 고려해야 함
+- 연구용 모델과 산업용 모델은 다르다는 점
+- “현장에서 돌아가는 모델”이 가장 중요하다는 점
 
 ---
 
-## 🧠 연구성과 발표: Digital Rock & AI 기반 CCS
+## 연구원 발표: 우리가 직접 하는 연구
 
 | ![image_2](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/spring_workshop_2026_2.jpg) |
 
-조상인 연구원의 발표를 포함하여,  
-참여 연구원들은 다음과 같은 주제를 중심으로 연구성과를 공유했습니다.
+조상인 연구원을 포함한 연구실 구성원들이  
+현재 수행 중인 연구를 직접 발표했습니다.
 
-- Micro-CT 기반 **Digital Rock Characterization**
-- LBM 기반 **Pore-scale Flow Simulation**
-- Diffusion / Generative AI 기반 **지질 모델 생성**
-- ES-MDA 기반 **History Matching 및 Data Assimilation**
-- CCS 저장소의 **불확실성 정량화 및 예측 정확도 개선**
+주요 내용은 다음과 같습니다.
 
-📌 공통 핵심  
-→ **“데이터 + 물리 기반 모델 + AI의 통합”**
+- Micro-CT 기반 암석 구조 분석 (Digital Rock)
+- LBM을 이용한 미세 유동 해석
+- Diffusion 모델 기반 탄성파 자료 해석
+- CCS 저장소 운영 효율 향상 연구
 
----
-
-## 🔬 2차년도 연구 방향: 정밀도와 확장성
-
-워크숍 2일차에서는  
-향후 연구 방향에 대한 심도 깊은 논의가 이루어졌습니다.
-
-- Meter-scale 실험 및 Digital Twin 연계
-- THMC coupling 기반 물리 모델 확장
-- AI 기반 모델 생성 및 조건부 시뮬레이션
-- Field-scale 적용을 위한 computational scalability 확보
-
-📌 방향성 요약  
-→ **“실험–데이터–모델–AI를 연결하는 통합 프레임워크 구축”**
+즉,  
+**논문 속 이론이 아니라 실제 연구실에서 수행 중인 프로젝트**입니다.
 
 ---
 
-## 🤝 연구 협력 및 네트워킹
+## 연구 방향: 앞으로 무엇을 하게 될까?
+
+워크숍에서는 앞으로의 연구 방향도 함께 논의되었습니다.
+
+- 실험 + 시뮬레이션 + AI를 연결하는 연구
+- Digital Twin 기반 저장소 예측 기술
+- 실제 산업 적용을 고려한 대규모 모델링
+
+결론적으로,
+
+> **연구의 목표는 “논문”이 아니라 “현장 적용”입니다.**
+
+---
+
+## 연구실 분위기
 
 | ![image_5](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/spring_workshop_2026_5.jpg) |
 
-워크숍 이후 저녁 시간에는  
-참석자 간 자유로운 토론과 네트워킹이 이어졌습니다.
+워크숍 이후에는 교수님들과 연구원들이 함께  
+편하게 소통하는 시간을 가졌습니다.
 
-- 산·학·연 연구 협력 강화
-- 국제 공동연구 가능성 논의
-- 실제 프로젝트 적용을 위한 의견 교환
-
----
-
-## 🚀 결론: CCS 기술의 다음 단계
-
-이번 워크숍은 단순한 연구 발표를 넘어,  
-**차세대 CCS 기술의 방향성을 명확히 정의한 자리**였습니다.
-
-### 핵심 정리
-
-- CCS는 이제 **이론 → 실증 → 상용화 단계로 이동 중**
-- **AI + Simulation + Data Integration**이 핵심 기술
-- 정밀도, 확장성, 현장 적용성 확보가 가장 중요한 과제
-
-> **“이제 중요한 것은 ‘잘 작동하는 모델’이 아니라  
-> ‘현장에서 검증 가능한 모델’이다.”**
+- 연구 이야기뿐 아니라 진로에 대한 조언
+- 산업과 연구의 차이에 대한 현실적인 이야기
+- 연구실 생활에 대한 다양한 경험 공유
 
 ---
 
-인하대학교 Subsurface Analysis Lab은 앞으로도  
-**실제 산업과 연결되는 CCS 기술 개발**을 지속적으로 추진할 예정입니다.
+## 한 줄 정리
+
+이번 워크숍을 한 문장으로 정리하면:
+
+> **“에너지공학은 교과서가 아니라, 실제 산업 문제를 해결하는 학문입니다.”**
+
+---
+
+## 관심 있는 학생들에게
+
+- 데이터 분석, AI, 시뮬레이션에 관심 있는 학생  
+- 에너지, 탄소중립, CCS 분야에 관심 있는 학생  
+- 실제 연구와 산업 기술을 함께 경험하고 싶은 학생  
+
+이라면,
+
+Center for Unconventional Resources & Energy 에서  
+그 경험을 직접 해볼 수 있습니다.
