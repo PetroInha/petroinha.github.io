@@ -12,8 +12,8 @@ categories: jekyll update
 # 2026 춘계 인하대학교 CCS 워크숍 후기
 ## “에너지공학, 실제로는 이런 연구를 합니다”
 
-2026년 4월 16–17일, 인하대학교 Subsurface Analysis Lab(SAL) 주관으로  
-영종도 더 위크앤 리조트에서 **CCS 보호연구 워크숍**이 개최되었습니다. :contentReference[oaicite:0]{index=0}  
+2026년 4월 16–17일, 인하대학교 Center for Unconventional Resources & Energy (CURE) 주관으로  
+영종도 더 위크앤 리조트에서 **CCS 보호연구 워크숍**이 개최되었습니다. 
 
 이번 워크숍은  
 연구실 학생들과 교수진, 그리고 외부 전문가들이 함께 모여  
