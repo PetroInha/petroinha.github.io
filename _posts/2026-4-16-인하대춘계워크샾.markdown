@@ -130,3 +130,31 @@ categories: jekyll update
 
 Center for Unconventional Resources & Energy 에서  
 그 경험을 직접 해볼 수 있습니다.
+
+---
+
+<div class="section-card float reveal" id="apply">
+
+<h2>✉️ <span style="color:#005BAC;"><strong>How to Apply (지원 방법)</strong></span></h2>
+
+<p>
+CURE Lab에 관심 있는 학생은 아래 서류를 준비하여 이메일로 보내주세요.<br>
+(연구실/주제 적합성 논의를 위해 <strong>사전 컨택을 권장</strong>합니다.)
+</p>
+
+<p><strong>제출 서류</strong></p>
+<ol>
+  <li><strong>자기소개서</strong> (지원 동기, 관심 연구 주제, 본인의 강점/경험)</li>
+  <li><strong>CV</strong> (프로그래밍/시뮬레이션/실험 등 기술 스택, 연구·프로젝트 경험 포함)</li>
+  <li><strong>성적표</strong></li>
+</ol>
+
+<p><strong>제출처</strong></p>
+<ul>
+  <li><strong>hyundon.shin@inha.ac.kr (PI)</strong></li>
+  <li><strong>honggeun.jo@inha.ac.kr (Co-PI)</strong></li>
+</ul>
+
+<p><strong>Tip</strong>: 학부 인턴/진학 예정자는 관심 주제와 가능한 시작 시점을 함께 적어주시면 더 빠르게 매칭할 수 있습니다.</p>
+
+</div>
