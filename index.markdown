@@ -28,12 +28,32 @@ grid-template-columns:1fr;
 /* ===== iscue card ===== */
 
 .iscue-card{
-background:linear-gradient(135deg,#003E82,#005BAC);
+background:linear-gradient(135deg,#003E82,#005BAC,#0A6ED1);
+background-size:200% 200%;
+animation:gradShiftCard 12s ease infinite;
 color:white;
 border-radius:18px;
 padding:24px;
 box-shadow:0 16px 40px rgba(0,0,0,0.18);
 transition:transform 0.25s ease, box-shadow 0.25s ease;
+position:relative;
+overflow:hidden;
+}
+
+.iscue-card::after{
+content:"";
+position:absolute;
+bottom:-40px; right:-40px;
+width:160px; height:160px;
+background:rgba(255,255,255,0.05);
+border-radius:50%;
+pointer-events:none;
+}
+
+@keyframes gradShiftCard{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
 .iscue-card:hover{
@@ -42,33 +62,121 @@ box-shadow:0 22px 48px rgba(0,0,0,0.22);
 }
 
 .iscue-card h3{
-margin-top:0;
+margin-top:8px;
+margin-bottom:6px;
 font-weight:700;
+}
+
+.iscue-success-badge{
+display:inline-flex;
+align-items:center;
+gap:7px;
+background:rgba(74,222,128,0.20);
+border:1px solid rgba(74,222,128,0.45);
+padding:5px 13px;
+border-radius:999px;
+font-size:12px;
+font-weight:700;
+letter-spacing:0.4px;
+color:#d4f7e0;
+}
+
+.iscue-success-dot{
+width:7px; height:7px;
+background:#4ade80;
+border-radius:50%;
+box-shadow:0 0 6px #4ade80;
+animation:blinkDot 2s ease infinite;
+flex-shrink:0;
+}
+
+@keyframes blinkDot{
+0%,100%{opacity:1;}
+50%{opacity:0.25;}
 }
 
 .iscue-chip{
 display:inline-block;
-background:rgba(255,255,255,0.18);
-padding:6px 12px;
+background:rgba(255,255,255,0.16);
+border:1px solid rgba(255,255,255,0.22);
+padding:5px 11px;
 border-radius:999px;
-font-size:13px;
-margin-right:6px;
+font-size:12px;
+margin-right:5px;
 margin-top:6px;
 }
 
 .iscue-btn{
 display:inline-block;
 margin-top:14px;
-padding:10px 14px;
+padding:10px 16px;
 border-radius:10px;
 background:white;
 color:#005BAC !important;
 font-weight:700;
 text-decoration:none;
+font-size:14px;
+transition:background .2s ease, transform .2s ease;
+position:relative;
+z-index:1;
 }
 
 .iscue-btn:hover{
-background:#f1f6ff;
+background:#eef4ff;
+transform:translateY(-2px);
+}
+
+/* ===== recent highlights ===== */
+
+.highlights-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
+margin-top:14px;
+}
+
+.hl-card{
+border-radius:12px;
+padding:16px;
+background:rgba(0,91,172,0.05);
+border:1px solid rgba(0,91,172,0.12);
+transition:transform .2s ease, box-shadow .2s ease;
+text-decoration:none !important;
+color:inherit !important;
+display:block;
+}
+
+.hl-card:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 24px rgba(0,0,0,0.10);
+background:rgba(0,91,172,0.09);
+}
+
+.hl-tag{
+font-size:11px;
+font-weight:700;
+text-transform:uppercase;
+letter-spacing:0.6px;
+color:#005BAC;
+margin-bottom:6px;
+}
+
+.hl-title{
+font-size:14px;
+font-weight:700;
+line-height:1.4;
+color:#111;
+margin:0;
+}
+
+.hl-sub{
+font-size:12px;
+color:#666;
+margin-top:4px;
+}
+
+@media(max-width:600px){
+.highlights-grid{grid-template-columns:1fr;}
 }
 
 /* Scroll reveal (fade-up on scroll) */
@@ -300,29 +408,28 @@ from <strong>CO₂ storage</strong> to <strong>underground hydrogen storage</str
 
 <div class="iscue-card">
 
+<div class="iscue-success-badge">
+  <div class="iscue-success-dot"></div>
+  Successfully Completed
+</div>
+
 <h3>🌍 IsCUE 2026</h3>
 
-<p>
+<p style="margin:0 0 8px 0;">
 <strong>The 4th International Symposium on CCS & Unconventional Energy</strong>
 </p>
 
-<p style="font-size:14px; line-height:1.5; opacity:0.95">
-
-Carbon storage · Hydrogen · Geothermal ·  
-Direct Lithium Extraction · Unconventional Oil & Gas
-
+<p style="font-size:13px; line-height:1.55; opacity:0.93; margin:0;">
+Three inspiring days in Daqing, China — researchers from 12+ countries advancing CCS, hydrogen, geothermal, and unconventional resources. Next stop: <strong>Vietnam 2027</strong>.
 </p>
 
 <div>
-
-<span class="iscue-chip">📅 May 27–29, 2026</span>
-
-<span class="iscue-chip">📍 NEPU, China</span>
-
+<span class="iscue-chip">✅ May 27–29, 2026 · Daqing, China</span>
+<span class="iscue-chip">🇻🇳 IsCUE 2027 · Quy Nhon, Vietnam</span>
 </div>
 
 <a class="iscue-btn" href="/is-cue/">
-Symposium Details →
+See Event Recap →
 </a>
 
 </div>
@@ -367,6 +474,30 @@ Symposium Details →
   <li>Digital Rock Physics (imaging → flow → mechanics)</li>
   <li>Subsurface Uncertainty &amp; Optimization</li>
 </ul>
+
+</div>
+
+<hr class="hr-soft" />
+
+<div class="section-card reveal">
+
+<h2>📰 <span style="color:#005BAC;"><strong>Recent Highlights</strong></span></h2>
+
+<div class="highlights-grid">
+
+  <a class="hl-card" href="/is-cue/">
+    <div class="hl-tag">✅ Symposium · May 2026</div>
+    <p class="hl-title">IsCUE 2026 Successfully Completed</p>
+    <p class="hl-sub">Daqing, China · 12+ countries · IsCUE 2027 next in Vietnam</p>
+  </a>
+
+  <a class="hl-card" href="/2026/05/03/EGU26.html">
+    <div class="hl-tag">🎤 Conference · May 2026</div>
+    <p class="hl-title">Two Presentations at EGU 2026</p>
+    <p class="hl-sub">Austria Center Vienna · ML-CCS & SinFusion geological modeling</p>
+  </a>
+
+</div>
 
 </div>
 
