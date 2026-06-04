@@ -587,9 +587,7 @@ width:100%;
 
     if(elapsed > total){ canvas.remove(); return; }
 
-    /* trail effect */
-    ctx.fillStyle = 'rgba(0,0,0,0.13)';
-    ctx.fillRect(0,0,canvas.width,canvas.height);
+    ctx.clearRect(0,0,canvas.width,canvas.height);
 
     /* launch new bursts during active window */
     if(elapsed < DURATION && elapsed - lastBurst > burstInterval){
