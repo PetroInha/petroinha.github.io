@@ -222,7 +222,7 @@ applications in CCS and advanced geological modeling.
 <div class="pres-grid">
 
   <div class="pres-card">
-    <img class="pres-photo" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/EGU26_2.jpg" alt="Presentation by Aitian at EGU 2026">
+    <img class="pres-photo" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/EGU_2.jpg" alt="Presentation by Aitian at EGU 2026">
     <div class="pres-body">
       <div class="pres-type">Oral Presentation</div>
       <p class="pres-title">Machine-learning assisted assessment of CO₂ leakage through adjacent wells in geological carbon storage</p>
