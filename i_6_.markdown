@@ -540,6 +540,100 @@ width:100%;
 
 </style>
 
+<canvas id="fw-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;"></canvas>
+
+<script>
+(function(){
+  var canvas = document.getElementById('fw-canvas');
+  var ctx = canvas.getContext('2d');
+
+  function resize(){ canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var colors = ['#ff6b6b','#ffd93d','#6bcb77','#4d96ff','#ff922b','#cc5de8','#f06595','#74c0fc','#ffffff'];
+
+  function rand(a,b){ return Math.random()*(b-a)+a; }
+
+  function burst(x, y){
+    var color = colors[Math.floor(Math.random()*colors.length)];
+    var color2 = colors[Math.floor(Math.random()*colors.length)];
+    for(var i=0;i<90;i++){
+      var angle = (Math.PI*2/90)*i + rand(-0.05,0.05);
+      var speed = rand(2.5,9);
+      particles.push({
+        x:x, y:y,
+        vx:Math.cos(angle)*speed,
+        vy:Math.sin(angle)*speed,
+        alpha:1,
+        color: i%3===0 ? color2 : color,
+        r: rand(2,4.5),
+        decay: rand(0.010,0.018),
+        gravity:0.09
+      });
+    }
+  }
+
+  var startTime = Date.now();
+  var DURATION = 5000;
+  var FADEOUT  = 1200;
+  var lastBurst = -999;
+  var burstInterval = 550;
+
+  function frame(){
+    var elapsed = Date.now() - startTime;
+    var total = DURATION + FADEOUT;
+
+    if(elapsed > total){ canvas.remove(); return; }
+
+    /* trail effect */
+    ctx.fillStyle = 'rgba(0,0,0,0.13)';
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+
+    /* launch new bursts during active window */
+    if(elapsed < DURATION && elapsed - lastBurst > burstInterval){
+      burst(rand(canvas.width*0.15, canvas.width*0.85),
+            rand(canvas.height*0.10, canvas.height*0.55));
+      /* occasionally fire two at once */
+      if(Math.random() > 0.55){
+        burst(rand(canvas.width*0.15, canvas.width*0.85),
+              rand(canvas.height*0.10, canvas.height*0.55));
+      }
+      lastBurst = elapsed;
+    }
+
+    /* fade out canvas after DURATION */
+    if(elapsed > DURATION){
+      canvas.style.opacity = Math.max(0, 1 - (elapsed - DURATION) / FADEOUT);
+    }
+
+    /* update & draw particles */
+    for(var i=particles.length-1;i>=0;i--){
+      var p=particles[i];
+      p.x+=p.vx; p.y+=p.vy;
+      p.vy+=p.gravity;
+      p.vx*=0.97;
+      p.alpha-=p.decay;
+      if(p.alpha<=0){ particles.splice(i,1); continue; }
+      ctx.save();
+      ctx.globalAlpha=p.alpha;
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=p.color;
+      ctx.shadowColor=p.color;
+      ctx.shadowBlur=6;
+      ctx.fill();
+      ctx.restore();
+    }
+
+    requestAnimationFrame(frame);
+  }
+
+  requestAnimationFrame(frame);
+})();
+</script>
+
 
 <div class="symp-hero">
 
@@ -582,7 +676,7 @@ Three unforgettable days in Daqing — from technical sessions inside the halls 
 <div class="gallery-grid">
 
   <div class="gallery-item featured">
-    <img src="/_images/daqing_1.jpg" alt="IsCUE 2026 Group Photo">
+    <img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/daqing_1.jpg" alt="IsCUE 2026 Group Photo">
     <div class="gallery-caption">
       IsCUE 2026 — Official Group Photo
       <span>Participants from 12+ countries gathered at Northeast Petroleum University, Daqing, China</span>
@@ -590,7 +684,7 @@ Three unforgettable days in Daqing — from technical sessions inside the halls 
   </div>
 
   <div class="gallery-item">
-    <img src="/_images/daqing_2.jpg" alt="Welcoming dinner at Daqing Lake">
+    <img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/daqing_2.jpg" alt="Welcoming dinner at Daqing Lake">
     <div class="gallery-caption">
       Welcoming Dinner at Daqing Lake
       <span>An evening of fellowship and celebration beside the scenic Daqing lakefront</span>
@@ -598,7 +692,7 @@ Three unforgettable days in Daqing — from technical sessions inside the halls 
   </div>
 
   <div class="gallery-item">
-    <img src="/_images/daqing_3.jpg" alt="Prof. Mai Cao Lan announcing IsCUE 2027 in Vietnam">
+    <img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/daqing_3.jpg" alt="Prof. Mai Cao Lan announcing IsCUE 2027 in Vietnam">
     <div class="gallery-caption">
       Looking Ahead — IsCUE 2027 Announced
       <span>Prof. Mai Cao Lan presenting the next symposium in Quy Nhon City, Vietnam</span>
