@@ -1,0 +1,257 @@
+---
+layout: post
+title: "CURE at EGU 2026 — Two Presentations in Vienna"
+date: 2026-05-3 18:00:00 +0900
+categories: jekyll update
+---
+
+<style>
+
+.egu-hero{
+background:linear-gradient(135deg,#002F6C,#005BAC,#1565C0,#003E82);
+background-size:300% 300%;
+animation:gradShift 14s ease infinite;
+color:white;
+padding:52px 40px;
+border-radius:18px;
+margin-bottom:36px;
+box-shadow:0 20px 48px rgba(0,0,0,0.20);
+position:relative;
+overflow:hidden;
+}
+
+.egu-hero::before{
+content:"";
+position:absolute;
+top:-50px; right:-50px;
+width:200px; height:200px;
+background:rgba(255,255,255,0.06);
+border-radius:50%;
+}
+
+@keyframes gradShift{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.egu-hero h2{
+margin:0 0 10px 0;
+font-size:28px;
+font-weight:800;
+position:relative;
+z-index:1;
+}
+
+.egu-hero p{
+margin:0;
+font-size:15px;
+line-height:1.7;
+opacity:0.92;
+max-width:780px;
+position:relative;
+z-index:1;
+}
+
+.egu-chips{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+margin-top:22px;
+position:relative;
+z-index:1;
+}
+
+.egu-chip{
+background:rgba(255,255,255,0.18);
+border:1px solid rgba(255,255,255,0.25);
+backdrop-filter:blur(4px);
+padding:7px 16px;
+border-radius:999px;
+font-size:13px;
+font-weight:600;
+}
+
+.data-flow{
+height:2px;
+background:linear-gradient(90deg,transparent,#005BAC,transparent);
+background-size:200% 100%;
+animation:dataFlow 4s linear infinite;
+margin:32px 0;
+}
+
+@keyframes dataFlow{
+0%{background-position:200% 0;}
+100%{background-position:-200% 0;}
+}
+
+.photo-featured{
+border-radius:16px;
+overflow:hidden;
+box-shadow:0 16px 40px rgba(0,0,0,0.18);
+margin:28px 0;
+}
+
+.photo-featured img{
+width:100%;
+display:block;
+transition:transform .4s ease;
+}
+
+.photo-featured:hover img{
+transform:scale(1.02);
+}
+
+.photo-caption{
+background:#f7f9fc;
+padding:14px 20px;
+font-size:13px;
+color:#555;
+font-style:italic;
+border-top:1px solid #e4eaf2;
+}
+
+.pres-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:24px;
+margin:28px 0;
+}
+
+.pres-card{
+background:white;
+border-radius:16px;
+box-shadow:0 8px 28px rgba(0,0,0,0.10);
+overflow:hidden;
+border-top:5px solid #005BAC;
+transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.pres-card:hover{
+transform:translateY(-5px);
+box-shadow:0 18px 44px rgba(0,0,0,0.15);
+}
+
+.pres-photo{
+width:100%;
+height:220px;
+object-fit:cover;
+display:block;
+}
+
+.pres-body{
+padding:22px;
+}
+
+.pres-type{
+display:inline-block;
+background:#e8f0fb;
+color:#005BAC;
+font-size:11px;
+font-weight:700;
+text-transform:uppercase;
+letter-spacing:0.8px;
+padding:4px 10px;
+border-radius:6px;
+margin-bottom:12px;
+}
+
+.pres-title{
+font-size:15px;
+font-weight:700;
+line-height:1.45;
+color:#111;
+margin:0 0 10px 0;
+}
+
+.pres-authors{
+font-size:13px;
+color:#555;
+line-height:1.6;
+margin:0;
+}
+
+.pres-authors strong{
+color:#005BAC;
+}
+
+@media(max-width:700px){
+.pres-grid{grid-template-columns:1fr;}
+.egu-hero{padding:36px 22px;}
+.egu-hero h2{font-size:22px;}
+}
+
+</style>
+
+
+<div class="egu-hero">
+
+<h2>CURE at EGU General Assembly 2026 🌍</h2>
+
+<p>
+Two members of our lab travelled to Vienna, Austria to present their research at
+<strong>EGU 2026</strong> — Europe's largest geosciences conference, bringing together
+over 20,000 scientists from around the world. It was an inspiring week of science,
+new collaborations, and proud moments for the CURE group.
+</p>
+
+<div class="egu-chips">
+  <span class="egu-chip">📅 May 3–8, 2026</span>
+  <span class="egu-chip">📍 Austria Center Vienna, Austria</span>
+  <span class="egu-chip">🌐 EGU General Assembly 2026</span>
+  <span class="egu-chip">2 Presentations · CURE Lab</span>
+</div>
+
+</div>
+
+
+<div class="photo-featured">
+  <img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/EGU26_1.jpg" alt="CURE Lab group photo at EGU 2026">
+  <div class="photo-caption">CURE Lab at EGU 2026 — Austria Center Vienna, May 2026</div>
+</div>
+
+
+<div class="data-flow"></div>
+
+
+## Our Presentations
+
+We are proud to have contributed two works to EGU 2026, spanning machine-learning
+applications in CCS and advanced geological modeling.
+
+<div class="pres-grid">
+
+  <div class="pres-card">
+    <img class="pres-photo" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/EGU26_2.jpg" alt="Presentation by Aitian at EGU 2026">
+    <div class="pres-body">
+      <div class="pres-type">Oral Presentation</div>
+      <p class="pres-title">Machine-learning assisted assessment of CO₂ leakage through adjacent wells in geological carbon storage</p>
+      <p class="pres-authors"><strong>A.V.S. Ismodes</strong>, B.D. Afrireksa, H. Shin, H. Jo<br>EGU General Assembly 2026</p>
+    </div>
+  </div>
+
+  <div class="pres-card">
+    <img class="pres-photo" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/EGU26_3.jpg" alt="Poster by Eunsil Park at EGU 2026">
+    <div class="pres-body">
+      <div class="pres-type">Poster Presentation</div>
+      <p class="pres-title">SinFusion-based Geological Model Augmentation and Well Data Integration</p>
+      <p class="pres-authors"><strong>E. Park</strong>, H. Lee, J. Yoon, H. Jo<br>EGU General Assembly 2026</p>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="data-flow"></div>
+
+
+## A Week of Science in Vienna
+
+EGU 2026 was a remarkable opportunity to share our work with the global geosciences
+community, receive feedback from leading experts, and discover the latest advances in
+CCS, subsurface modeling, and energy transition research.
+
+We are proud of Aitian and Eunsil for representing CURE on the international stage —
+and grateful to every lab member whose contributions made this research possible.
+
+Onward to the next conference! 🚀
