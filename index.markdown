@@ -240,7 +240,7 @@ margin-top:4px;
   bottom:calc(100% + 12px);
   left:50%;
   transform:translateX(-50%) scale(0.92);
-  width:220px;
+  width:660px;
   border-radius:14px;
   box-shadow:0 14px 36px rgba(0,0,0,0.22);
   opacity:0;
