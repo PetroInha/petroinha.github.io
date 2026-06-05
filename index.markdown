@@ -209,65 +209,89 @@ margin-top:4px;
 .section-card.float { animation: floaty 6.5s ease-in-out infinite; }
 .section-card.float:hover{ animation-play-state: paused; }
 
-/* Research topic grid */
-.topic-grid{
+/* Research topic explorer */
+.topic-explorer{
   display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:16px;
+  grid-template-columns:180px 1fr;
+  gap:20px;
   margin-top:22px;
+  align-items:start;
 }
 
-.topic-card{
-  border-radius:14px;
+.topic-nav{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.topic-nav-btn{
+  padding:12px 16px;
+  border-radius:12px;
+  border:1.5px solid rgba(0,91,172,0.22);
+  color:#005BAC;
+  background:rgba(0,91,172,0.05);
+  font-weight:700;
+  font-size:14px;
+  cursor:pointer;
+  text-align:left;
+  transition:all .2s ease;
+  width:100%;
+}
+
+.topic-nav-btn:hover{
+  background:rgba(0,91,172,0.12);
+  border-color:#005BAC;
+  transform:translateX(3px);
+}
+
+.topic-nav-btn.active{
+  background:#005BAC;
+  color:white;
+  border-color:#005BAC;
+  box-shadow:0 8px 20px rgba(0,91,172,0.28);
+  transform:translateX(3px);
+}
+
+.topic-display{
+  border-radius:16px;
   overflow:hidden;
-  box-shadow:0 6px 20px rgba(0,0,0,0.10);
+  box-shadow:0 12px 36px rgba(0,0,0,0.14);
   background:white;
-  border:1px solid rgba(0,91,172,0.10);
-  transition:transform .25s ease, box-shadow .25s ease;
 }
 
-.topic-card:hover{
-  transform:translateY(-7px);
-  box-shadow:0 18px 40px rgba(0,91,172,0.18);
-}
-
-.topic-img{
+.topic-display img{
   width:100%;
   aspect-ratio:16/9;
   object-fit:cover;
   display:block;
+  transition:opacity .3s ease;
 }
 
-.topic-body{
-  padding:12px 12px 14px;
-  text-align:center;
+.topic-display-desc{
+  padding:18px 22px;
+  background:#f7f9fc;
+  border-top:1px solid #e4eaf2;
 }
 
-.topic-tag{
-  display:inline-block;
-  padding:4px 10px;
-  border-radius:999px;
-  border:1.5px solid #005BAC;
+.topic-display-desc strong{
+  display:block;
+  font-size:15px;
   color:#005BAC;
-  background:rgba(0,91,172,0.07);
-  font-weight:700;
-  font-size:12px;
-  margin-bottom:7px;
+  margin-bottom:6px;
 }
 
-.topic-desc{
-  font-size:12px;
-  color:#555;
-  line-height:1.5;
+.topic-display-desc p{
+  font-size:14px;
+  color:#444;
+  line-height:1.65;
   margin:0;
 }
 
-@media(max-width:900px){
-  .topic-grid{grid-template-columns:repeat(3,1fr);}
-}
-
-@media(max-width:560px){
-  .topic-grid{grid-template-columns:repeat(2,1fr);}
+@media(max-width:700px){
+  .topic-explorer{grid-template-columns:1fr;}
+  .topic-nav{flex-direction:row;flex-wrap:wrap;}
+  .topic-nav-btn{width:auto;font-size:13px;padding:9px 13px;}
+  .topic-nav-btn:hover,.topic-nav-btn.active{transform:none;}
 }
 
 /* Soft divider */
@@ -482,58 +506,79 @@ See Event Recap →
 <h2><span style="color:#005BAC;"><strong>What We Do</strong></span></h2>
 
 <p>
-At <strong>CURE</strong> (Center for Unconventional Resources &amp; Energy), we fuse
-<strong>physics</strong>, <strong>data</strong>, and <strong>AI</strong> to engineer
-intelligence into the subsurface — from pore-scale imaging to field-scale carbon storage.
+At <strong>CURE</strong>, we fuse <strong>physics</strong>, <strong>data</strong>, and <strong>AI</strong>
+to engineer intelligence into the subsurface — from pore-scale imaging to field-scale carbon storage.
+Click a topic to explore.
 </p>
 
-<div class="topic-grid">
+<div class="topic-explorer">
 
-  <div class="topic-card">
-    <img class="topic-img" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/CCS_reduced.jpg" alt="CCS">
-    <div class="topic-body">
-      <div class="topic-tag">#CCS</div>
-      <p class="topic-desc">Carbon Capture &amp; Storage — integrity, risk &amp; monitoring</p>
-    </div>
+  <div class="topic-nav">
+    <button class="topic-nav-btn active" onclick="selectTopic(this,’CCS’)">#CCS</button>
+    <button class="topic-nav-btn" onclick="selectTopic(this,’UHS’)">#UHS</button>
+    <button class="topic-nav-btn" onclick="selectTopic(this,’DRP’)">#DigitalRock</button>
+    <button class="topic-nav-btn" onclick="selectTopic(this,’GenAI’)">#GenAI</button>
+    <button class="topic-nav-btn" onclick="selectTopic(this,’UQ’)">#UQ</button>
   </div>
 
-  <div class="topic-card">
-    <img class="topic-img" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/UHS_reduced.jpg" alt="UHS">
-    <div class="topic-body">
-      <div class="topic-tag">#UHS</div>
-      <p class="topic-desc">Underground Hydrogen Storage — safety &amp; cyclic efficiency</p>
-    </div>
-  </div>
-
-  <div class="topic-card">
-    <img class="topic-img" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/DRP_reduced.jpg" alt="Digital Rock Physics">
-    <div class="topic-body">
-      <div class="topic-tag">#DigitalRock</div>
-      <p class="topic-desc">Pore-scale imaging, flow simulation &amp; multiscale characterization</p>
-    </div>
-  </div>
-
-  <div class="topic-card">
-    <img class="topic-img" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/GenAI_reduced.jpg" alt="Generative AI">
-    <div class="topic-body">
-      <div class="topic-tag">#GenAI</div>
-      <p class="topic-desc">Generative AI for geological modeling &amp; data augmentation</p>
-    </div>
-  </div>
-
-  <div class="topic-card">
-    <img class="topic-img" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/UQ_reduced.jpg" alt="Uncertainty Quantification">
-    <div class="topic-body">
-      <div class="topic-tag">#UQ</div>
-      <p class="topic-desc">Uncertainty quantification for robust subsurface decisions</p>
+  <div class="topic-display" id="topic-display">
+    <img id="topic-img" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/CCS_reduced.jpg" alt="CCS">
+    <div class="topic-display-desc">
+      <strong id="topic-title">Carbon Capture &amp; Storage (CCS)</strong>
+      <p id="topic-desc">Monitoring CO₂ plume migration, assessing wellbore integrity, and quantifying leakage risk in geological storage formations. We develop ML-assisted diagnostics and high-fidelity simulation frameworks for safe, long-term storage.</p>
     </div>
   </div>
 
 </div>
 
-<p style="margin-top:18px;"><span style="color:#005BAC;"><strong>We don’t just model the subsurface — we engineer intelligence into it.</strong></span></p>
+<p style="margin-top:20px;"><span style="color:#005BAC;"><strong>We don’t just model the subsurface — we engineer intelligence into it.</strong></span></p>
 
 </div>
+
+<script>
+var topicData = {
+  CCS: {
+    img: ‘https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/CCS_reduced.jpg’,
+    title: ‘Carbon Capture &amp; Storage (CCS)’,
+    desc: ‘Monitoring CO₂ plume migration, assessing wellbore integrity, and quantifying leakage risk in geological storage formations. We develop ML-assisted diagnostics and high-fidelity simulation frameworks for safe, long-term storage.’
+  },
+  UHS: {
+    img: ‘https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/UHS_reduced.jpg’,
+    title: ‘Underground Hydrogen Storage (UHS)’,
+    desc: ‘Investigating cyclic injection and withdrawal dynamics, geochemical reactions, and microbial effects in porous reservoirs. We model hydrogen behavior to maximize storage safety and energy recovery efficiency.’
+  },
+  DRP: {
+    img: ‘https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/DRP_reduced.jpg’,
+    title: ‘Digital Rock Physics’,
+    desc: ‘Reconstructing 3D pore microstructures from micro-CT imaging, simulating multiphase flow with lattice Boltzmann methods, and upscaling pore-scale properties to the reservoir scale for accurate formation evaluation.’
+  },
+  GenAI: {
+    img: ‘https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/GenAI_reduced.jpg’,
+    title: ‘Generative AI for Geoscience’,
+    desc: ‘Applying diffusion models, GANs, and SinFusion-based techniques to generate realistic geological realizations, augment scarce subsurface data, and enable physics-informed deep learning for seismic interpretation.’
+  },
+  UQ: {
+    img: ‘https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/UQ_reduced.jpg’,
+    title: ‘Uncertainty Quantification (UQ)’,
+    desc: ‘Deploying ensemble methods, surrogate models, and Bayesian frameworks to propagate geological uncertainty through reservoir simulations — enabling robust, risk-informed decisions for energy storage and production.’
+  }
+};
+
+function selectTopic(btn, key) {
+  document.querySelectorAll(‘.topic-nav-btn’).forEach(function(b){ b.classList.remove(‘active’); });
+  btn.classList.add(‘active’);
+  var d = topicData[key];
+  var img = document.getElementById(‘topic-img’);
+  img.style.opacity = ‘0’;
+  setTimeout(function(){
+    img.src = d.img;
+    img.alt = key;
+    img.style.opacity = ‘1’;
+  }, 150);
+  document.getElementById(‘topic-title’).innerHTML = d.title;
+  document.getElementById(‘topic-desc’).textContent = d.desc;
+}
+</script>
 
 <hr class="hr-soft" />
 
