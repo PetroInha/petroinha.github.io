@@ -209,51 +209,65 @@ margin-top:4px;
 .section-card.float { animation: floaty 6.5s ease-in-out infinite; }
 .section-card.float:hover{ animation-play-state: paused; }
 
-/* Chips */
-.cure-chips{ display:flex; flex-wrap:wrap; gap:10px; margin:12px 0 6px 0; }
-.cure-chip{
+/* Research topic grid */
+.topic-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:16px;
+  margin-top:22px;
+}
+
+.topic-card{
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 6px 20px rgba(0,0,0,0.10);
+  background:white;
+  border:1px solid rgba(0,91,172,0.10);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.topic-card:hover{
+  transform:translateY(-7px);
+  box-shadow:0 18px 40px rgba(0,91,172,0.18);
+}
+
+.topic-img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  display:block;
+}
+
+.topic-body{
+  padding:12px 12px 14px;
+  text-align:center;
+}
+
+.topic-tag{
   display:inline-block;
-  padding:7px 14px;
+  padding:4px 10px;
   border-radius:999px;
   border:1.5px solid #005BAC;
   color:#005BAC;
-  background:rgba(0, 91, 172, 0.08);
+  background:rgba(0,91,172,0.07);
   font-weight:700;
-  font-size:0.92rem;
-  letter-spacing:0.2px;
-  transition:transform 180ms ease, background 180ms ease, color 180ms ease, box-shadow 180ms ease;
-}
-.cure-chip:hover{
-  background:#005BAC;
-  color:#fff;
-  transform:translateY(-2px) scale(1.02);
-  box-shadow:0 10px 18px rgba(0,0,0,0.10);
+  font-size:12px;
+  margin-bottom:7px;
 }
 
-/* Chip image preview on hover */
-.chip-wrap{
-  position:relative;
-  display:inline-block;
+.topic-desc{
+  font-size:12px;
+  color:#555;
+  line-height:1.5;
+  margin:0;
 }
-.chip-preview{
-  position:absolute;
-  bottom:calc(100% + 12px);
-  left:50%;
-  transform:translateX(-50%) scale(0.92);
-  width:660px;
-  border-radius:14px;
-  box-shadow:0 14px 36px rgba(0,0,0,0.22);
-  opacity:0;
-  visibility:hidden;
-  transition:opacity 200ms ease, transform 200ms ease, visibility 200ms ease;
-  pointer-events:none;
-  z-index:200;
-  background:white;
+
+@media(max-width:900px){
+  .topic-grid{grid-template-columns:repeat(3,1fr);}
 }
-.chip-wrap:hover .chip-preview{
-  opacity:1;
-  visibility:visible;
-  transform:translateX(-50%) scale(1);
+
+@media(max-width:560px){
+  .topic-grid{grid-template-columns:repeat(2,1fr);}
 }
 
 /* Soft divider */
@@ -467,39 +481,57 @@ See Event Recap →
 
 <h2><span style="color:#005BAC;"><strong>What We Do</strong></span></h2>
 
-<p>At CURE (Center for Unconventional Resources &amp; Energy), we integrate:</p>
+<p>
+At <strong>CURE</strong> (Center for Unconventional Resources &amp; Energy), we fuse
+<strong>physics</strong>, <strong>data</strong>, and <strong>AI</strong> to engineer
+intelligence into the subsurface — from pore-scale imaging to field-scale carbon storage.
+</p>
 
-<ul>
-  <li><span style="color:#005BAC;"><strong>Reservoir Physics</strong></span> &amp; high-fidelity simulation</li>
-  <li><span style="color:#005BAC;"><strong>Digital Rock</strong></span> &amp; multiscale characterization</li>
-  <li><span style="color:#005BAC;"><strong>Generative AI</strong></span> &amp; uncertainty quantification</li>
-  <li><span style="color:#005BAC;"><strong>CCS</strong></span> &amp; <span style="color:#005BAC;"><strong>Underground Hydrogen Storage</strong></span></li>
-</ul>
+<div class="topic-grid">
 
-<p><span style="color:#005BAC;"><strong>We don’t just model the subsurface — we engineer intelligence into it.</strong></span></p>
+  <div class="topic-card">
+    <img class="topic-img" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/CCS_reduced.jpg" alt="CCS">
+    <div class="topic-body">
+      <div class="topic-tag">#CCS</div>
+      <p class="topic-desc">Carbon Capture &amp; Storage — integrity, risk &amp; monitoring</p>
+    </div>
+  </div>
 
-<div class="cure-chips">
-  <div class="chip-wrap">
-    <span class="cure-chip">#CCS</span>
-    <img class="chip-preview" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/CCS_reduced.jpg" alt="CCS">
+  <div class="topic-card">
+    <img class="topic-img" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/UHS_reduced.jpg" alt="UHS">
+    <div class="topic-body">
+      <div class="topic-tag">#UHS</div>
+      <p class="topic-desc">Underground Hydrogen Storage — safety &amp; cyclic efficiency</p>
+    </div>
   </div>
-  <div class="chip-wrap">
-    <span class="cure-chip">#UHS</span>
-    <img class="chip-preview" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/UHS_reduced.jpg" alt="UHS">
+
+  <div class="topic-card">
+    <img class="topic-img" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/DRP_reduced.jpg" alt="Digital Rock Physics">
+    <div class="topic-body">
+      <div class="topic-tag">#DigitalRock</div>
+      <p class="topic-desc">Pore-scale imaging, flow simulation &amp; multiscale characterization</p>
+    </div>
   </div>
-  <div class="chip-wrap">
-    <span class="cure-chip">#DigitalRock</span>
-    <img class="chip-preview" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/DRP_reduced.jpg" alt="Digital Rock Physics">
+
+  <div class="topic-card">
+    <img class="topic-img" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/GenAI_reduced.jpg" alt="Generative AI">
+    <div class="topic-body">
+      <div class="topic-tag">#GenAI</div>
+      <p class="topic-desc">Generative AI for geological modeling &amp; data augmentation</p>
+    </div>
   </div>
-  <div class="chip-wrap">
-    <span class="cure-chip">#GenAI</span>
-    <img class="chip-preview" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/GenAI_reduced.jpg" alt="Generative AI">
+
+  <div class="topic-card">
+    <img class="topic-img" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/UQ_reduced.jpg" alt="Uncertainty Quantification">
+    <div class="topic-body">
+      <div class="topic-tag">#UQ</div>
+      <p class="topic-desc">Uncertainty quantification for robust subsurface decisions</p>
+    </div>
   </div>
-  <div class="chip-wrap">
-    <span class="cure-chip">#UQ</span>
-    <img class="chip-preview" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/UQ_reduced.jpg" alt="Uncertainty Quantification">
-  </div>
+
 </div>
+
+<p style="margin-top:18px;"><span style="color:#005BAC;"><strong>We don’t just model the subsurface — we engineer intelligence into it.</strong></span></p>
 
 </div>
 
