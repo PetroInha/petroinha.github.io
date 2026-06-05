@@ -514,11 +514,11 @@ Click a topic to explore.
 <div class="topic-explorer">
 
   <div class="topic-nav">
-    <button class="topic-nav-btn active" onclick="selectTopic(this,’CCS’)">#CCS</button>
-    <button class="topic-nav-btn" onclick="selectTopic(this,’UHS’)">#UHS</button>
-    <button class="topic-nav-btn" onclick="selectTopic(this,’DRP’)">#DigitalRock</button>
-    <button class="topic-nav-btn" onclick="selectTopic(this,’GenAI’)">#GenAI</button>
-    <button class="topic-nav-btn" onclick="selectTopic(this,’UQ’)">#UQ</button>
+    <button class="topic-nav-btn active" data-topic="CCS">#CCS</button>
+    <button class="topic-nav-btn" data-topic="UHS">#UHS</button>
+    <button class="topic-nav-btn" data-topic="DRP">#DigitalRock</button>
+    <button class="topic-nav-btn" data-topic="GenAI">#GenAI</button>
+    <button class="topic-nav-btn" data-topic="UQ">#UQ</button>
   </div>
 
   <div class="topic-display" id="topic-display">
@@ -536,48 +536,51 @@ Click a topic to explore.
 </div>
 
 <script>
-var topicData = {
-  CCS: {
-    img: ‘https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/CCS_reduced.jpg’,
-    title: ‘Carbon Capture &amp; Storage (CCS)’,
-    desc: ‘Monitoring CO₂ plume migration, assessing wellbore integrity, and quantifying leakage risk in geological storage formations. We develop ML-assisted diagnostics and high-fidelity simulation frameworks for safe, long-term storage.’
-  },
-  UHS: {
-    img: ‘https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/UHS_reduced.jpg’,
-    title: ‘Underground Hydrogen Storage (UHS)’,
-    desc: ‘Investigating cyclic injection and withdrawal dynamics, geochemical reactions, and microbial effects in porous reservoirs. We model hydrogen behavior to maximize storage safety and energy recovery efficiency.’
-  },
-  DRP: {
-    img: ‘https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/DRP_reduced.jpg’,
-    title: ‘Digital Rock Physics’,
-    desc: ‘Reconstructing 3D pore microstructures from micro-CT imaging, simulating multiphase flow with lattice Boltzmann methods, and upscaling pore-scale properties to the reservoir scale for accurate formation evaluation.’
-  },
-  GenAI: {
-    img: ‘https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/GenAI_reduced.jpg’,
-    title: ‘Generative AI for Geoscience’,
-    desc: ‘Applying diffusion models, GANs, and SinFusion-based techniques to generate realistic geological realizations, augment scarce subsurface data, and enable physics-informed deep learning for seismic interpretation.’
-  },
-  UQ: {
-    img: ‘https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/UQ_reduced.jpg’,
-    title: ‘Uncertainty Quantification (UQ)’,
-    desc: ‘Deploying ensemble methods, surrogate models, and Bayesian frameworks to propagate geological uncertainty through reservoir simulations — enabling robust, risk-informed decisions for energy storage and production.’
-  }
-};
+(function(){
+  var topics = {
+    CCS:   { img: ‘https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/CCS_reduced.jpg’,   title: ‘Carbon Capture & Storage (CCS)’,       desc: ‘Monitoring CO₂ plume migration, assessing wellbore integrity, and quantifying leakage risk in geological storage formations. We develop ML-assisted diagnostics and high-fidelity simulation frameworks for safe, long-term storage.’ },
+    UHS:   { img: ‘https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/UHS_reduced.jpg’,   title: ‘Underground Hydrogen Storage (UHS)’,    desc: ‘Investigating cyclic injection and withdrawal dynamics, geochemical reactions, and microbial effects in porous reservoirs. We model hydrogen behavior to maximize storage safety and energy recovery efficiency.’ },
+    DRP:   { img: ‘https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/DRP_reduced.jpg’,   title: ‘Digital Rock Physics’,                  desc: ‘Reconstructing 3D pore microstructures from micro-CT imaging, simulating multiphase flow with lattice Boltzmann methods, and upscaling pore-scale properties to the reservoir scale for accurate formation evaluation.’ },
+    GenAI: { img: ‘https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/GenAI_reduced.jpg’, title: ‘Generative AI for Geoscience’,           desc: ‘Applying diffusion models, GANs, and SinFusion-based techniques to generate realistic geological realizations, augment scarce subsurface data, and enable physics-informed deep learning for seismic interpretation.’ },
+    UQ:    { img: ‘https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/UQ_reduced.jpg’,    title: ‘Uncertainty Quantification (UQ)’,        desc: ‘Deploying ensemble methods, surrogate models, and Bayesian frameworks to propagate geological uncertainty through reservoir simulations — enabling robust, risk-informed decisions for energy storage and production.’ }
+  };
 
-function selectTopic(btn, key) {
-  document.querySelectorAll(‘.topic-nav-btn’).forEach(function(b){ b.classList.remove(‘active’); });
-  btn.classList.add(‘active’);
-  var d = topicData[key];
-  var img = document.getElementById(‘topic-img’);
-  img.style.opacity = ‘0’;
-  setTimeout(function(){
-    img.src = d.img;
-    img.alt = key;
-    img.style.opacity = ‘1’;
-  }, 150);
-  document.getElementById(‘topic-title’).innerHTML = d.title;
-  document.getElementById(‘topic-desc’).textContent = d.desc;
-}
+  function init() {
+    var btns   = document.querySelectorAll(‘.topic-nav-btn’);
+    var imgEl  = document.getElementById(‘topic-img’);
+    var titleEl= document.getElementById(‘topic-title’);
+    var descEl = document.getElementById(‘topic-desc’);
+
+    if (!imgEl) return;
+
+    btns.forEach(function(btn) {
+      btn.addEventListener(‘click’, function() {
+        var key = this.getAttribute(‘data-topic’);
+        var d   = topics[key];
+        if (!d) return;
+
+        btns.forEach(function(b){ b.classList.remove(‘active’); });
+        this.classList.add(‘active’);
+
+        imgEl.style.opacity = ‘0’;
+        imgEl.onload = function() {
+          imgEl.style.opacity = ‘1’;
+          imgEl.onload = null;
+        };
+        imgEl.src   = d.img;
+        imgEl.alt   = key;
+        titleEl.textContent = d.title;
+        descEl.textContent  = d.desc;
+      });
+    });
+  }
+
+  if (document.readyState === ‘loading’) {
+    document.addEventListener(‘DOMContentLoaded’, init);
+  } else {
+    init();
+  }
+})();
 </script>
 
 <hr class="hr-soft" />
