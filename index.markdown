@@ -503,7 +503,7 @@ See Event Recap →
 
 <div class="section-card float reveal">
 
-<h2><span style="color:#005BAC;"><strong>What We Do</strong></span></h2>
+<h2>🔬 <span style="color:#005BAC;"><strong>What We Do</strong></span></h2>
 
 <p>
 At <strong>CURE</strong>, we fuse <strong>physics</strong>, <strong>data</strong>, and <strong>AI</strong>
@@ -579,21 +579,6 @@ function selectTopic(btn, key) {
   document.getElementById(‘topic-desc’).textContent = d.desc;
 }
 </script>
-
-<hr class="hr-soft" />
-
-<div class="section-card float reveal">
-
-<h2>🔬 <span style="color:#005BAC;"><strong>Research Thrusts</strong></span></h2>
-
-<ul>
-  <li>CO₂ Storage Integrity &amp; Risk</li>
-  <li>AI-driven Geological Modeling</li>
-  <li>Digital Rock Physics (imaging → flow → mechanics)</li>
-  <li>Subsurface Uncertainty &amp; Optimization</li>
-</ul>
-
-</div>
 
 <hr class="hr-soft" />
 
