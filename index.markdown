@@ -225,17 +225,17 @@ margin-top:4px;
 }
 
 .topic-nav-btn{
-  padding:12px 16px;
-  border-radius:12px;
+  padding:10px 18px;
+  border-radius:999px;
   border:1.5px solid rgba(0,91,172,0.22);
   color:#005BAC;
   background:rgba(0,91,172,0.05);
   font-weight:700;
   font-size:14px;
   cursor:pointer;
-  text-align:left;
+  text-align:center;
   transition:all .2s ease;
-  width:100%;
+  white-space:nowrap;
 }
 
 .topic-nav-btn:hover{
