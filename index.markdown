@@ -491,7 +491,7 @@ See Event Recap →
     <p class="hl-sub">Daqing, China · 12+ countries · IsCUE 2027 next in Vietnam</p>
   </a>
 
-  <a class="hl-card" href="https://petroinha.github.io/jekyll/update/2026/05/03/EGU26.html">
+  <a class="hl-card" href="/jekyll/update/2026/05/03/EGU26.html">
     <div class="hl-tag">🎤 Conference · May 2026</div>
     <p class="hl-title">Two Presentations at EGU 2026</p>
     <p class="hl-sub">Austria Center Vienna · ML-CCS & SinFusion geological modeling</p>
