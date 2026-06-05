@@ -230,6 +230,32 @@ margin-top:4px;
   box-shadow:0 10px 18px rgba(0,0,0,0.10);
 }
 
+/* Chip image preview on hover */
+.chip-wrap{
+  position:relative;
+  display:inline-block;
+}
+.chip-preview{
+  position:absolute;
+  bottom:calc(100% + 12px);
+  left:50%;
+  transform:translateX(-50%) scale(0.92);
+  width:220px;
+  border-radius:14px;
+  box-shadow:0 14px 36px rgba(0,0,0,0.22);
+  opacity:0;
+  visibility:hidden;
+  transition:opacity 200ms ease, transform 200ms ease, visibility 200ms ease;
+  pointer-events:none;
+  z-index:200;
+  background:white;
+}
+.chip-wrap:hover .chip-preview{
+  opacity:1;
+  visibility:visible;
+  transform:translateX(-50%) scale(1);
+}
+
 /* Soft divider */
 .hr-soft{
   border:none;
@@ -453,11 +479,26 @@ See Event Recap →
 <p><span style="color:#005BAC;"><strong>We don’t just model the subsurface — we engineer intelligence into it.</strong></span></p>
 
 <div class="cure-chips">
-  <span class="cure-chip">#CCS</span>
-  <span class="cure-chip">#UHS</span>
-  <span class="cure-chip">#DigitalRock</span>
-  <span class="cure-chip">#GenAI</span>
-  <span class="cure-chip">#UQ</span>
+  <div class="chip-wrap">
+    <span class="cure-chip">#CCS</span>
+    <img class="chip-preview" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/CCS.png" alt="CCS">
+  </div>
+  <div class="chip-wrap">
+    <span class="cure-chip">#UHS</span>
+    <img class="chip-preview" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/UHS.png" alt="UHS">
+  </div>
+  <div class="chip-wrap">
+    <span class="cure-chip">#DigitalRock</span>
+    <img class="chip-preview" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/DRP.png" alt="Digital Rock Physics">
+  </div>
+  <div class="chip-wrap">
+    <span class="cure-chip">#GenAI</span>
+    <img class="chip-preview" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/GenAI.png" alt="Generative AI">
+  </div>
+  <div class="chip-wrap">
+    <span class="cure-chip">#UQ</span>
+    <img class="chip-preview" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/UQ.png" alt="Uncertainty Quantification">
+  </div>
 </div>
 
 </div>
