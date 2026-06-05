@@ -212,7 +212,7 @@ margin-top:4px;
 /* Research topic explorer */
 .topic-explorer{
   display:grid;
-  grid-template-columns:180px 1fr;
+  grid-template-columns:140px 1fr;
   gap:20px;
   margin-top:22px;
   align-items:start;
