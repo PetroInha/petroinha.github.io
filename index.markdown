@@ -244,14 +244,6 @@ margin-top:4px;
   transform:translateX(3px);
 }
 
-.topic-nav-btn.active{
-  background:#005BAC;
-  color:white;
-  border-color:#005BAC;
-  box-shadow:0 8px 20px rgba(0,91,172,0.28);
-  transform:translateX(3px);
-}
-
 .topic-display{
   border-radius:16px;
   overflow:hidden;
@@ -259,12 +251,15 @@ margin-top:4px;
   background:white;
 }
 
-.topic-display img{
+input.topic-radio{ display:none; }
+
+.topic-panel{ display:none; }
+
+.topic-display-img{
   width:100%;
   aspect-ratio:16/9;
   object-fit:cover;
   display:block;
-  transition:opacity .3s ease;
 }
 
 .topic-display-desc{
@@ -287,11 +282,35 @@ margin-top:4px;
   margin:0;
 }
 
+/* CSS-only tab switching via :checked sibling selectors */
+#t-ccs:checked   ~ .topic-explorer #panel-ccs,
+#t-uhs:checked   ~ .topic-explorer #panel-uhs,
+#t-drp:checked   ~ .topic-explorer #panel-drp,
+#t-genai:checked ~ .topic-explorer #panel-genai,
+#t-uq:checked    ~ .topic-explorer #panel-uq { display:block; }
+
+#t-ccs:checked   ~ .topic-explorer label[for="t-ccs"],
+#t-uhs:checked   ~ .topic-explorer label[for="t-uhs"],
+#t-drp:checked   ~ .topic-explorer label[for="t-drp"],
+#t-genai:checked ~ .topic-explorer label[for="t-genai"],
+#t-uq:checked    ~ .topic-explorer label[for="t-uq"]{
+  background:#005BAC;
+  color:white;
+  border-color:#005BAC;
+  box-shadow:0 8px 20px rgba(0,91,172,0.28);
+  transform:translateX(3px);
+}
+
 @media(max-width:700px){
   .topic-explorer{grid-template-columns:1fr;}
   .topic-nav{flex-direction:row;flex-wrap:wrap;}
   .topic-nav-btn{width:auto;font-size:13px;padding:9px 13px;}
-  .topic-nav-btn:hover,.topic-nav-btn.active{transform:none;}
+  .topic-nav-btn:hover{transform:none;}
+  #t-ccs:checked   ~ .topic-explorer label[for="t-ccs"],
+  #t-uhs:checked   ~ .topic-explorer label[for="t-uhs"],
+  #t-drp:checked   ~ .topic-explorer label[for="t-drp"],
+  #t-genai:checked ~ .topic-explorer label[for="t-genai"],
+  #t-uq:checked    ~ .topic-explorer label[for="t-uq"]{ transform:none; }
 }
 
 /* Soft divider */
@@ -505,27 +524,55 @@ See Event Recap →
 
 <h2>🔬 <span style="color:#005BAC;"><strong>What We Do</strong></span></h2>
 
-<p>
-At <strong>CURE</strong>, we fuse <strong>physics</strong>, <strong>data</strong>, and <strong>AI</strong>
-to engineer intelligence into the subsurface — from pore-scale imaging to field-scale carbon storage.
-Click a topic to explore.
-</p>
+<p>At <strong>CURE</strong>, we fuse <strong>physics</strong>, <strong>data</strong>, and <strong>AI</strong> to engineer intelligence into the subsurface — from pore-scale imaging to field-scale carbon storage. Click a topic to explore.</p>
+
+<input class="topic-radio" type="radio" name="topic" id="t-ccs" checked><input class="topic-radio" type="radio" name="topic" id="t-uhs"><input class="topic-radio" type="radio" name="topic" id="t-drp"><input class="topic-radio" type="radio" name="topic" id="t-genai"><input class="topic-radio" type="radio" name="topic" id="t-uq">
 
 <div class="topic-explorer">
 
   <div class="topic-nav">
-    <button class="topic-nav-btn active" data-topic="CCS">#CCS</button>
-    <button class="topic-nav-btn" data-topic="UHS">#UHS</button>
-    <button class="topic-nav-btn" data-topic="DRP">#DigitalRock</button>
-    <button class="topic-nav-btn" data-topic="GenAI">#GenAI</button>
-    <button class="topic-nav-btn" data-topic="UQ">#UQ</button>
+    <label for="t-ccs" class="topic-nav-btn">#CCS</label>
+    <label for="t-uhs" class="topic-nav-btn">#UHS</label>
+    <label for="t-drp" class="topic-nav-btn">#DigitalRock</label>
+    <label for="t-genai" class="topic-nav-btn">#GenAI</label>
+    <label for="t-uq" class="topic-nav-btn">#UQ</label>
   </div>
 
-  <div class="topic-display" id="topic-display">
-    <img id="topic-img" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/CCS_reduced.jpg" alt="CCS">
-    <div class="topic-display-desc">
-      <strong id="topic-title">Carbon Capture &amp; Storage (CCS)</strong>
-      <p id="topic-desc">Monitoring CO₂ plume migration, assessing wellbore integrity, and quantifying leakage risk in geological storage formations. We develop ML-assisted diagnostics and high-fidelity simulation frameworks for safe, long-term storage.</p>
+  <div class="topic-display">
+    <div class="topic-panel" id="panel-ccs">
+      <img class="topic-display-img" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/CCS_reduced.jpg" alt="CCS">
+      <div class="topic-display-desc">
+        <strong>Carbon Capture &amp; Storage (CCS)</strong>
+        <p>Monitoring CO₂ plume migration, assessing wellbore integrity, and quantifying leakage risk in geological storage formations. We develop ML-assisted diagnostics and high-fidelity simulation frameworks for safe, long-term storage.</p>
+      </div>
+    </div>
+    <div class="topic-panel" id="panel-uhs">
+      <img class="topic-display-img" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/UHS_reduced.jpg" alt="UHS">
+      <div class="topic-display-desc">
+        <strong>Underground Hydrogen Storage (UHS)</strong>
+        <p>Investigating cyclic injection and withdrawal dynamics, geochemical reactions, and microbial effects in porous reservoirs. We model hydrogen behavior to maximize storage safety and energy recovery efficiency.</p>
+      </div>
+    </div>
+    <div class="topic-panel" id="panel-drp">
+      <img class="topic-display-img" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/DRP_reduced.jpg" alt="Digital Rock Physics">
+      <div class="topic-display-desc">
+        <strong>Digital Rock Physics</strong>
+        <p>Reconstructing 3D pore microstructures from micro-CT imaging, simulating multiphase flow with lattice Boltzmann methods, and upscaling pore-scale properties to the reservoir scale for accurate formation evaluation.</p>
+      </div>
+    </div>
+    <div class="topic-panel" id="panel-genai">
+      <img class="topic-display-img" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/GenAI_reduced.jpg" alt="Generative AI">
+      <div class="topic-display-desc">
+        <strong>Generative AI for Geoscience</strong>
+        <p>Applying diffusion models, GANs, and SinFusion-based techniques to generate realistic geological realizations, augment scarce subsurface data, and enable physics-informed deep learning for seismic interpretation.</p>
+      </div>
+    </div>
+    <div class="topic-panel" id="panel-uq">
+      <img class="topic-display-img" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/UQ_reduced.jpg" alt="UQ">
+      <div class="topic-display-desc">
+        <strong>Uncertainty Quantification (UQ)</strong>
+        <p>Deploying ensemble methods, surrogate models, and Bayesian frameworks to propagate geological uncertainty through reservoir simulations — enabling robust, risk-informed decisions for energy storage and production.</p>
+      </div>
     </div>
   </div>
 
@@ -534,54 +581,6 @@ Click a topic to explore.
 <p style="margin-top:20px;"><span style="color:#005BAC;"><strong>We don’t just model the subsurface — we engineer intelligence into it.</strong></span></p>
 
 </div>
-
-<script>
-(function(){
-  var topics = {
-    CCS:   { img: ‘https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/CCS_reduced.jpg’,   title: ‘Carbon Capture & Storage (CCS)’,       desc: ‘Monitoring CO₂ plume migration, assessing wellbore integrity, and quantifying leakage risk in geological storage formations. We develop ML-assisted diagnostics and high-fidelity simulation frameworks for safe, long-term storage.’ },
-    UHS:   { img: ‘https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/UHS_reduced.jpg’,   title: ‘Underground Hydrogen Storage (UHS)’,    desc: ‘Investigating cyclic injection and withdrawal dynamics, geochemical reactions, and microbial effects in porous reservoirs. We model hydrogen behavior to maximize storage safety and energy recovery efficiency.’ },
-    DRP:   { img: ‘https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/DRP_reduced.jpg’,   title: ‘Digital Rock Physics’,                  desc: ‘Reconstructing 3D pore microstructures from micro-CT imaging, simulating multiphase flow with lattice Boltzmann methods, and upscaling pore-scale properties to the reservoir scale for accurate formation evaluation.’ },
-    GenAI: { img: ‘https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/GenAI_reduced.jpg’, title: ‘Generative AI for Geoscience’,           desc: ‘Applying diffusion models, GANs, and SinFusion-based techniques to generate realistic geological realizations, augment scarce subsurface data, and enable physics-informed deep learning for seismic interpretation.’ },
-    UQ:    { img: ‘https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/UQ_reduced.jpg’,    title: ‘Uncertainty Quantification (UQ)’,        desc: ‘Deploying ensemble methods, surrogate models, and Bayesian frameworks to propagate geological uncertainty through reservoir simulations — enabling robust, risk-informed decisions for energy storage and production.’ }
-  };
-
-  function init() {
-    var btns   = document.querySelectorAll(‘.topic-nav-btn’);
-    var imgEl  = document.getElementById(‘topic-img’);
-    var titleEl= document.getElementById(‘topic-title’);
-    var descEl = document.getElementById(‘topic-desc’);
-
-    if (!imgEl) return;
-
-    btns.forEach(function(btn) {
-      btn.addEventListener(‘click’, function() {
-        var key = this.getAttribute(‘data-topic’);
-        var d   = topics[key];
-        if (!d) return;
-
-        btns.forEach(function(b){ b.classList.remove(‘active’); });
-        this.classList.add(‘active’);
-
-        imgEl.style.opacity = ‘0’;
-        imgEl.onload = function() {
-          imgEl.style.opacity = ‘1’;
-          imgEl.onload = null;
-        };
-        imgEl.src   = d.img;
-        imgEl.alt   = key;
-        titleEl.textContent = d.title;
-        descEl.textContent  = d.desc;
-      });
-    });
-  }
-
-  if (document.readyState === ‘loading’) {
-    document.addEventListener(‘DOMContentLoaded’, init);
-  } else {
-    init();
-  }
-})();
-</script>
 
 <hr class="hr-soft" />
 
