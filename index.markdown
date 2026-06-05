@@ -481,23 +481,23 @@ See Event Recap →
 <div class="cure-chips">
   <div class="chip-wrap">
     <span class="cure-chip">#CCS</span>
-    <img class="chip-preview" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/CCS.png" alt="CCS">
+    <img class="chip-preview" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/CCS_reduced.jpg" alt="CCS">
   </div>
   <div class="chip-wrap">
     <span class="cure-chip">#UHS</span>
-    <img class="chip-preview" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/UHS.png" alt="UHS">
+    <img class="chip-preview" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/UHS_reduced.jpg" alt="UHS">
   </div>
   <div class="chip-wrap">
     <span class="cure-chip">#DigitalRock</span>
-    <img class="chip-preview" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/DRP.png" alt="Digital Rock Physics">
+    <img class="chip-preview" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/DRP_reduced.jpg" alt="Digital Rock Physics">
   </div>
   <div class="chip-wrap">
     <span class="cure-chip">#GenAI</span>
-    <img class="chip-preview" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/GenAI.png" alt="Generative AI">
+    <img class="chip-preview" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/GenAI_reduced.jpg" alt="Generative AI">
   </div>
   <div class="chip-wrap">
     <span class="cure-chip">#UQ</span>
-    <img class="chip-preview" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/UQ.png" alt="Uncertainty Quantification">
+    <img class="chip-preview" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/UQ_reduced.jpg" alt="Uncertainty Quantification">
   </div>
 </div>
 
