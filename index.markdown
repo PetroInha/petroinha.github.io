@@ -211,16 +211,16 @@ margin-top:4px;
 
 /* Research topic explorer */
 .topic-explorer{
-  display:grid;
-  grid-template-columns:140px 1fr;
-  gap:20px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
   margin-top:22px;
-  align-items:start;
 }
 
 .topic-nav{
   display:flex;
-  flex-direction:column;
+  flex-direction:row;
+  flex-wrap:wrap;
   gap:10px;
 }
 
@@ -241,7 +241,7 @@ margin-top:4px;
 .topic-nav-btn:hover{
   background:rgba(0,91,172,0.12);
   border-color:#005BAC;
-  transform:translateX(3px);
+  transform:translateY(-2px);
 }
 
 .topic-display{
@@ -298,14 +298,12 @@ input.topic-radio{ display:none; }
   color:white;
   border-color:#005BAC;
   box-shadow:0 8px 20px rgba(0,91,172,0.28);
-  transform:translateX(3px);
+  transform:translateY(-2px);
 }
 
 @media(max-width:700px){
-  .topic-explorer{grid-template-columns:1fr;}
-  .topic-nav{flex-direction:row;flex-wrap:wrap;}
-  .topic-nav-btn{width:auto;font-size:13px;padding:9px 13px;}
-  .topic-nav-btn:hover{transform:none;}
+  .topic-nav-btn{font-size:13px;padding:9px 13px;}
+  .topic-nav-btn:hover,
   #t-ccs:checked   ~ .topic-explorer label[for="t-ccs"],
   #t-uhs:checked   ~ .topic-explorer label[for="t-uhs"],
   #t-drp:checked   ~ .topic-explorer label[for="t-drp"],
