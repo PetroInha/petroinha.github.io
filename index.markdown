@@ -233,7 +233,7 @@ margin-top:4px;
 
 .topic-img{
   width:100%;
-  height:150px;
+  aspect-ratio:16/9;
   object-fit:cover;
   display:block;
 }
