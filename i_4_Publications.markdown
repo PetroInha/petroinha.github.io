@@ -28,15 +28,14 @@ permalink: /Publications/
 
 .section-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#005BAC;border-left:3px solid #005BAC;padding-left:8px;margin:16px 0 10px;}
 
-.pub-list{list-style:none;margin:0 0 16px;padding:0;counter-reset:pub-counter;}
-.pub-list li{counter-increment:pub-counter;display:flex;gap:12px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid #f0f3f8;font-size:14px;line-height:1.65;color:#222;}
+.pub-list{margin:0 0 16px;padding-left:22px;}
+.pub-list li{margin-bottom:11px;padding-bottom:11px;border-bottom:1px solid #f0f3f8;font-size:14px;line-height:1.75;color:#222;}
 .pub-list li:last-child{border-bottom:none;margin-bottom:0;}
-.pub-list li::before{content:counter(pub-counter);min-width:22px;height:22px;background:#e8f0fb;color:#005BAC;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px;}
 
 .pub-bullet{list-style:none;margin:0 0 16px;padding:0;}
-.pub-bullet li{display:flex;gap:10px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #f0f3f8;font-size:14px;line-height:1.65;color:#222;}
+.pub-bullet li{position:relative;padding-left:16px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #f0f3f8;font-size:14px;line-height:1.75;color:#222;}
 .pub-bullet li:last-child{border-bottom:none;margin-bottom:0;}
-.pub-bullet li::before{content:"▸";color:#005BAC;font-size:12px;flex-shrink:0;margin-top:3px;}
+.pub-bullet li::before{content:"▸";color:#005BAC;position:absolute;left:0;top:0;}
 
 pi{color:#005BAC;font-weight:700;}
 em{color:#444;}
