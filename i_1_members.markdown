@@ -298,9 +298,7 @@ permalink: /Members/
 <div class="mem-section-title">Undergraduate Interns</div>
 
 <div class="intern-chips">
-  <span class="intern-chip">장대현 · REE</span>
   <span class="intern-chip">정지혜 · SAGD</span>
-  <span class="intern-chip">조정민 · CCS</span>
   <span class="intern-chip">김보희 · ML</span>
   <span class="intern-chip" style="opacity:0.55;">최유미 · ML</span>
   <span class="intern-chip" style="opacity:0.55;">강태구 · ML</span>
