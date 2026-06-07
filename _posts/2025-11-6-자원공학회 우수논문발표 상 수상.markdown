@@ -1,25 +1,48 @@
 ---
 layout: post
-title:  "추계연합자원학술대회 우수논문발표상 수상 - 박은실 연구원"
+title:  "추계연합자원학술대회 우수논문발표상 수상 — 박은실 연구원"
 date:   2025-11-6 15:00:00 +0900
 categories: jekyll update
 ---
 
-| 사진 |
-|:--:| 
-| ![image_1](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/sirri_zzang_1.jpg) | 
-|:--:| 
-| ![image_2](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/sirri_zzang_2.jpg) | 
-|:--:| 
-| ![image_3](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/sirri_zzang_3.jpg) | 
-|:--:| 
+<style>
+.post-hero{color:white;padding:36px 32px;border-radius:16px;margin-bottom:28px;box-shadow:0 14px 36px rgba(0,0,0,0.16);position:relative;overflow:hidden;}
+.post-hero::before{content:"";position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:rgba(255,255,255,0.06);border-radius:50%;}
+.post-hero h2{margin:0 0 8px 0;font-size:24px;font-weight:800;position:relative;z-index:1;}
+.post-hero p{margin:0;opacity:0.92;font-size:14px;line-height:1.65;position:relative;z-index:1;max-width:720px;}
+.post-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;position:relative;z-index:1;}
+.post-chip{background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.25);padding:5px 12px;border-radius:999px;font-size:12px;font-weight:600;}
+.post-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:22px 0;}
+.post-gallery-item{border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,0.10);}
+.post-gallery-item img{width:100%;height:210px;object-fit:cover;display:block;transition:transform .3s ease;}
+.post-gallery-item:hover img{transform:scale(1.04);}
+.data-flow{height:2px;background:linear-gradient(90deg,transparent,#005BAC,transparent);background-size:200% 100%;animation:dataFlow 4s linear infinite;margin:24px 0;}
+@keyframes dataFlow{0%{background-position:200% 0;}100%{background-position:-200% 0;}}
+</style>
 
-2025년 추계연합자원학술대회에서
-✨ 학술발표 우수상 ✨을 수상한
-박은실 연구원에게 뜨거운 박수를 보냅니다! 👏👏👏
+<div class="post-hero" style="background:linear-gradient(135deg,#1a4a00,#2e7d32,#43a047);">
+<h2>우수논문발표상 수상 — 박은실 연구원</h2>
+<p>Congratulations to Eunsil Park for receiving the Best Presentation Award at the 2025 Autumn Korean Society for Mineral and Energy Resources Engineers Conference!</p>
+<div class="post-chips">
+  <span class="post-chip">📅 November 2025</span>
+  <span class="post-chip">🏆 우수논문발표상</span>
+  <span class="post-chip">박은실 (Eunsil Park)</span>
+  <span class="post-chip">추계연합자원학술대회</span>
+</div>
+</div>
 
-발표 실력도, 연구 열정도, 사진 속 아우라도
-이미 우리 연구실 에이스…🔥
+<div class="post-gallery">
+  <div class="post-gallery-item">
+    <img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/sirri_zzang_1.jpg" alt="우수논문발표상 수상 사진 1">
+  </div>
+  <div class="post-gallery-item">
+    <img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/sirri_zzang_2.jpg" alt="우수논문발표상 수상 사진 2">
+  </div>
+  <div class="post-gallery-item">
+    <img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/sirri_zzang_3.jpg" alt="우수논문발표상 수상 사진 3">
+  </div>
+</div>
 
-올해도 은실 파워 제대로 보여주셨습니다.
-다음 상은 어디서 받을지 벌써 기대되는군요 😎
+<div class="data-flow"></div>
+
+2025년 추계연합자원학술대회에서 **우수논문발표상**을 수상한 박은실 연구원에게 뜨거운 박수를 보냅니다! 뛰어난 발표 실력과 연구 열정으로 올해도 CURE를 빛내주었습니다. 다음 수상 소식도 기대합니다!

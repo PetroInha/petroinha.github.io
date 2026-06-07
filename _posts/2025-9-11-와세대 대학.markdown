@@ -5,29 +5,39 @@ date:   2025-9-11 15:00:00 +0900
 categories: jekyll update
 ---
 
-![image_1](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/Inha-Waseda Univ.JPG) | 
+<style>
+.post-hero{background:linear-gradient(135deg,#002F6C,#005BAC);color:white;padding:36px 32px;border-radius:16px;margin-bottom:28px;box-shadow:0 14px 36px rgba(0,0,0,0.16);position:relative;overflow:hidden;}
+.post-hero::before{content:"";position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:rgba(255,255,255,0.06);border-radius:50%;}
+.post-hero h2{margin:0 0 8px 0;font-size:24px;font-weight:800;position:relative;z-index:1;}
+.post-hero p{margin:0;opacity:0.92;font-size:14px;line-height:1.65;position:relative;z-index:1;max-width:720px;}
+.post-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;position:relative;z-index:1;}
+.post-chip{background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.25);padding:5px 12px;border-radius:999px;font-size:12px;font-weight:600;}
+.post-photo{border-radius:14px;overflow:hidden;box-shadow:0 10px 28px rgba(0,0,0,0.13);margin:22px 0;}
+.post-photo img{width:100%;display:block;transition:transform .4s ease;}
+.post-photo:hover img{transform:scale(1.02);}
+.post-caption{padding:11px 16px;background:#f7f9fc;border-top:1px solid #e4eaf2;font-size:13px;color:#555;font-style:italic;text-align:center;}
+.data-flow{height:2px;background:linear-gradient(90deg,transparent,#005BAC,transparent);background-size:200% 100%;animation:dataFlow 4s linear infinite;margin:24px 0;}
+@keyframes dataFlow{0%{background-position:200% 0;}100%{background-position:-200% 0;}}
+</style>
 
+<div class="post-hero">
+<h2>인하–와세다 국제 워크숍</h2>
+<p>Researchers from Inha University and Waseda University — with guests from Dalian University, Canada, and Japan — gathered in Seoul for a two-day international workshop on CCS, hydrogen storage, geomechanics, and AI-driven subsurface modeling.</p>
+<div class="post-chips">
+  <span class="post-chip">📅 September 11–12, 2025</span>
+  <span class="post-chip">📍 홍대 Holiday Inn, Seoul</span>
+  <span class="post-chip">🌏 Inha × Waseda × Dalian</span>
+  <span class="post-chip">🤝 국제 공동 연구</span>
+</div>
+</div>
 
-🌟 인하–와세다 (feat. 중국 대련대) 워크숍: 이게 바로 대학원 FLEX 🌟
+<div class="post-photo">
+  <img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/Inha-Waseda Univ.JPG" alt="Inha-Waseda International Workshop 2025">
+  <div class="post-caption">Inha–Waseda International Workshop — September 2025, Seoul</div>
+</div>
 
-연구실 PI이신 신현돈 교수님의 주관으로,
-9월 11–12일, 홍대 Holiday Inn에서
-인하대랑 와세다대 연구자들이 한자리에 모여
-이틀 동안 빡세게(?) 또 즐겁게(?) 연구 얘기를 풀어놓는 워크숍이 열렸습니다.
+<div class="data-flow"></div>
 
-CO₂ 저장, 수소지하저장, 지오메카닉스, AI 모델링까지
-발표 주제는 완전 국제 공조 프로젝트급이고,
-분위기는 그냥 과탑들끼리 MT 온 느낌 😂
+신현돈 교수님의 주관으로, 9월 11–12일 홍대 Holiday Inn에서 인하대와 와세다대 연구자들이 한자리에 모여 이틀간 집중적인 연구 발표와 토론을 진행했습니다.
 
-캐나다·중국·일본에서 오신 초청 강연자들,
-인하·와세다 학생 연구발표,
-그리고 저녁 네트워킹
-
-솔직히 말해서…
-“아, 대학원 오면 이런 거 할 수 있구나”
-이런 생각이 자연스럽게 들어요.
-
-연구도 재밌고
-사람들도 좋고
-해외 연구실이랑 교류까지 되면…
-솔직히 이건 반칙이죠? 😎
+CO₂ 저장, 수소지하저장, 지오메카닉스, AI 모델링까지 — 발표 주제는 국제 공조 프로젝트급이었습니다. 캐나다·중국·일본에서 오신 초청 강연자들과 인하·와세다 학생 연구발표, 그리고 저녁 네트워킹까지 이어지며 의미 있는 교류의 장이 되었습니다.

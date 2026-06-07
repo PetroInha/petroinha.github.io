@@ -5,22 +5,56 @@ date:   2025-7-14 15:00:00 +0900
 categories: jekyll update
 ---
 
-| ![image_1](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/Pyrcz_1.jpg) | 
-|:--:| 
-| ![image_2](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/Pyrcz_2.jpg) | 
-|:--:| 
-| ![image_3](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/Pyrcz_3.jpg) | 
-|:--:| 
-| ![image_4](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/Pyrcz_4.jpg) | 
+<style>
+.post-hero{background:linear-gradient(135deg,#002F6C,#005BAC);color:white;padding:36px 32px;border-radius:16px;margin-bottom:28px;box-shadow:0 14px 36px rgba(0,0,0,0.16);position:relative;overflow:hidden;}
+.post-hero::before{content:"";position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:rgba(255,255,255,0.06);border-radius:50%;}
+.post-hero h2{margin:0 0 8px 0;font-size:24px;font-weight:800;position:relative;z-index:1;}
+.post-hero p{margin:0;opacity:0.92;font-size:14px;line-height:1.65;position:relative;z-index:1;max-width:720px;}
+.post-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;position:relative;z-index:1;}
+.post-chip{background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.25);padding:5px 12px;border-radius:999px;font-size:12px;font-weight:600;}
+.post-photo{border-radius:14px;overflow:hidden;box-shadow:0 10px 28px rgba(0,0,0,0.13);margin:22px 0;}
+.post-photo img{width:100%;display:block;transition:transform .4s ease;}
+.post-photo:hover img{transform:scale(1.02);}
+.post-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:22px 0;}
+.post-gallery-item{border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,0.10);}
+.post-gallery-item img{width:100%;height:210px;object-fit:cover;display:block;transition:transform .3s ease;}
+.post-gallery-item:hover img{transform:scale(1.04);}
+.data-flow{height:2px;background:linear-gradient(90deg,transparent,#005BAC,transparent);background-size:200% 100%;animation:dataFlow 4s linear infinite;margin:24px 0;}
+@keyframes dataFlow{0%{background-position:200% 0;}100%{background-position:-200% 0;}}
+</style>
 
-미국 텍사스 주립대학교의 Pyrcz 교수님이 드디어 방한하셨습니다 🇺🇸✈️🇰🇷!
-인하대학교, 한국지질자원연구원, 그리고 한국석유공사를 차례로 방문하시며
-**“심층학습(Deep Learning)이 어떻게 지하공간 모델링에 활용될 수 있는가”**라는 흥미진진한 주제로 멋진 세미나를 진행하셨죠 🧠💡.
+<div class="post-hero">
+<h2>Prof. Michael Pyrcz Visits Korea</h2>
+<p>Professor Michael Pyrcz from UT Austin visited Korea for a landmark series of seminars and meetings at Inha University, KIGAM, and KNOC — deepening ties for future collaboration in deep learning and subsurface modeling.</p>
+<div class="post-chips">
+  <span class="post-chip">📅 July 2025</span>
+  <span class="post-chip">👤 Prof. Pyrcz — UT Austin</span>
+  <span class="post-chip">🇺🇸✈️🇰🇷 방한</span>
+  <span class="post-chip">🤝 International Collaboration</span>
+</div>
+</div>
 
-세미나 후에는 텍사스 주립대와 인하대 간 미래 공동연구 계획에 대해 진지하게(그리고 약간은 유쾌하게 😄) 논의했습니다.
-무엇보다 앞으로 더 많은 학생들이 이런 기회를 통해
-국제적인 교류와 협력의 장을 넓혀갈 수 있도록 하기로 했답니다 🌍🤝.
+<div class="post-gallery">
+  <div class="post-gallery-item">
+    <img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/Pyrcz_1.jpg" alt="Prof. Pyrcz visit photo 1">
+  </div>
+  <div class="post-gallery-item">
+    <img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/Pyrcz_2.jpg" alt="Prof. Pyrcz visit photo 2">
+  </div>
+  <div class="post-gallery-item">
+    <img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/Pyrcz_3.jpg" alt="Prof. Pyrcz visit photo 3">
+  </div>
+  <div class="post-gallery-item">
+    <img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/Pyrcz_4.jpg" alt="Prof. Pyrcz visit photo 4">
+  </div>
+</div>
 
-“이번 만남은 시작일 뿐!” — 다음 만남은 아마도 텍사스 BBQ 냄새가 풍기는 곳에서일지도 모르겠습니다 😉🔥.
+<div class="data-flow"></div>
 
-| ![image_5](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/Pyrcz_5.jpg) | 
+미국 텍사스 주립대학교의 Pyrcz 교수님이 방한하셨습니다! 인하대학교, 한국지질자원연구원(KIGAM), 그리고 한국석유공사(KNOC)를 차례로 방문하시며 **"심층학습(Deep Learning)이 어떻게 지하공간 모델링에 활용될 수 있는가"**라는 주제로 뜻깊은 세미나를 진행하셨습니다.
+
+세미나 후에는 텍사스 주립대와 인하대 간 미래 공동연구 계획에 대해 진지하게 논의했습니다. 앞으로 더 많은 학생들이 국제적인 교류와 협력의 장을 넓혀갈 수 있도록 하기로 했습니다.
+
+<div class="post-photo">
+  <img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/Pyrcz_5.jpg" alt="Prof. Pyrcz visit — group photo">
+</div>

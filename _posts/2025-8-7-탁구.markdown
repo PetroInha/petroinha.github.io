@@ -5,17 +5,45 @@ date:   2025-8-7 15:00:00 +0900
 categories: jekyll update
 ---
 
-| ![image_1](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/ping1.jpg) | 
-|:--:| 
-| ![image_2](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/ping2.jpg) | 
-|:--:| 
-| ![image_3](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/ping3.jpg) | 
-|:--:| 
+<style>
+.post-hero{background:linear-gradient(135deg,#002F6C,#005BAC);color:white;padding:36px 32px;border-radius:16px;margin-bottom:28px;box-shadow:0 14px 36px rgba(0,0,0,0.16);position:relative;overflow:hidden;}
+.post-hero::before{content:"";position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:rgba(255,255,255,0.06);border-radius:50%;}
+.post-hero h2{margin:0 0 8px 0;font-size:24px;font-weight:800;position:relative;z-index:1;}
+.post-hero p{margin:0;opacity:0.92;font-size:14px;line-height:1.65;position:relative;z-index:1;max-width:720px;}
+.post-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;position:relative;z-index:1;}
+.post-chip{background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.25);padding:5px 12px;border-radius:999px;font-size:12px;font-weight:600;}
+.post-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:22px 0;}
+.post-gallery-item{border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,0.10);}
+.post-gallery-item img{width:100%;height:210px;object-fit:cover;display:block;transition:transform .3s ease;}
+.post-gallery-item:hover img{transform:scale(1.04);}
+.data-flow{height:2px;background:linear-gradient(90deg,transparent,#005BAC,transparent);background-size:200% 100%;animation:dataFlow 4s linear infinite;margin:24px 0;}
+@keyframes dataFlow{0%{background-position:200% 0;}100%{background-position:-200% 0;}}
+</style>
 
-오늘은 연구실 구성원들이 🏓 모여 뜨거운 탁구 친선경기를 펼쳤습니다!  
-게임 내내 “슛~” “아~!” 하는 환호와 웃음소리가 연구실을 가득 채웠고 😂, 예상치 못한 스매시와 짜릿한 역전승에 모두가 환호했습니다 🙌.  
+<div class="post-hero">
+<h2>연구실 탁구 친선경기 &amp; 바비큐 파티</h2>
+<p>CURE Lab members gathered for a spirited table tennis tournament followed by a BBQ party — a perfect day of friendly competition, good food, and great company.</p>
+<div class="post-chips">
+  <span class="post-chip">📅 August 2025</span>
+  <span class="post-chip">🏓 Table Tennis Tournament</span>
+  <span class="post-chip">🔥 BBQ Party</span>
+</div>
+</div>
 
-경기가 끝난 뒤에는 바로 옆에서 🍖 바비큐 파티를 즐기며 서로의 플레이를 되짚고, 맛있는 고기와 함께 더 깊은 대화를 나누었습니다 🥩🔥.  
-탁구 라켓에서 바비큐 집게로, 웃음과 맛이 끊이지 않았던 하루!
-  
-앞으로도 이렇게 즐거운 추억을 많이 만들어 가길 바랍니다 💛✨ 
+<div class="post-gallery">
+  <div class="post-gallery-item">
+    <img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/ping1.jpg" alt="Table tennis photo 1">
+  </div>
+  <div class="post-gallery-item">
+    <img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/ping2.jpg" alt="Table tennis photo 2">
+  </div>
+  <div class="post-gallery-item">
+    <img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/ping3.jpg" alt="Table tennis photo 3">
+  </div>
+</div>
+
+<div class="data-flow"></div>
+
+오늘은 연구실 구성원들이 모여 뜨거운 탁구 친선경기를 펼쳤습니다! 게임 내내 환호와 웃음소리가 연구실을 가득 채웠고, 예상치 못한 스매시와 짜릿한 역전승에 모두가 환호했습니다.
+
+경기가 끝난 뒤에는 바로 옆에서 바비큐 파티를 즐기며 서로의 플레이를 되짚고, 맛있는 고기와 함께 더 깊은 대화를 나누었습니다. 탁구 라켓에서 바비큐 집게로 — 웃음과 맛이 끊이지 않았던 하루였습니다!

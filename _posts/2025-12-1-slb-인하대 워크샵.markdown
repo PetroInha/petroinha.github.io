@@ -1,100 +1,73 @@
 ---
 layout: post
-title:  "[인하대-slb] 비전통에너지 산학 공동 워크숍"
+title:  "[인하대-SLB] 비전통에너지 산학 공동 워크숍"
 date:   2025-12-1 15:00:00 +0900
 categories: jekyll update
 ---
 
-| 사진 |
-|:--:| 
-| ![image_1](https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/inha-slb.jpg) | 
+<style>
+.post-hero{background:linear-gradient(135deg,#002F6C,#005BAC);color:white;padding:36px 32px;border-radius:16px;margin-bottom:28px;box-shadow:0 14px 36px rgba(0,0,0,0.16);position:relative;overflow:hidden;}
+.post-hero::before{content:"";position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:rgba(255,255,255,0.06);border-radius:50%;}
+.post-hero h2{margin:0 0 8px 0;font-size:24px;font-weight:800;position:relative;z-index:1;}
+.post-hero p{margin:0;opacity:0.92;font-size:14px;line-height:1.65;position:relative;z-index:1;max-width:720px;}
+.post-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;position:relative;z-index:1;}
+.post-chip{background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.25);padding:5px 12px;border-radius:999px;font-size:12px;font-weight:600;}
+.post-photo{border-radius:14px;overflow:hidden;box-shadow:0 10px 28px rgba(0,0,0,0.13);margin:22px 0;}
+.post-photo img{width:100%;display:block;transition:transform .4s ease;}
+.post-photo:hover img{transform:scale(1.02);}
+.post-caption{padding:11px 16px;background:#f7f9fc;border-top:1px solid #e4eaf2;font-size:13px;color:#555;font-style:italic;text-align:center;}
+.data-flow{height:2px;background:linear-gradient(90deg,transparent,#005BAC,transparent);background-size:200% 100%;animation:dataFlow 4s linear infinite;margin:24px 0;}
+@keyframes dataFlow{0%{background-position:200% 0;}100%{background-position:-200% 0;}}
+.post-quote{border-left:4px solid #005BAC;padding:12px 20px;background:#f0f5ff;border-radius:0 10px 10px 0;margin:18px 0;font-style:italic;color:#333;}
+</style>
 
-기사전문: [https://www.e-platform.net/news/articleView.html?idxno=98276](https://www.e-platform.net/news/articleView.html?idxno=98276)
+<div class="post-hero">
+<h2>인하대 × SLB 비전통에너지 산학 공동 워크숍</h2>
+<p>Inha University's Department of Resources Engineering and global energy company SLB (Schlumberger) co-hosted a two-day unconventional energy industry-academia workshop at The Week&amp; Resort, Yeongjongtdo.</p>
+<div class="post-chips">
+  <span class="post-chip">📅 December 1–2, 2025</span>
+  <span class="post-chip">📍 더 위크앤 리조트, 영종도</span>
+  <span class="post-chip">🏭 Inha × SLB</span>
+  <span class="post-chip">⛽ CCS · Oil Sands · Hydrogen</span>
+</div>
+</div>
 
-# 🔥 인하대 × SLB 비전통에너지 워크숍 후기
-## “오일샌드? CCS? 수소? 이게 바로 에너지전공의 진짜 월드다!”
+<div class="post-photo">
+  <img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/inha-slb.jpg" alt="인하대-SLB 산학 공동 워크숍">
+  <div class="post-caption">인하대-SLB 비전통에너지 산학 공동 워크숍 — December 2025, 영종도</div>
+</div>
 
-12월 1~2일, 인하대학교 자원공학과와 글로벌 에너지 기업 **SLB(Schlumberger)**가  
-인천 영종도 *더 위크앤 리조트*에서 **비전통에너지 산학 공동 워크숍**을 성공적으로 개최했습니다.  
+기사전문: [e-platform.net](https://www.e-platform.net/news/articleView.html?idxno=98276)
 
-말 그대로 *에너지계 어벤저스*가 총출동한 자리였습니다.
+<div class="data-flow"></div>
 
----
+## Oil Sands Technology: Advanced Reservoir Simulation
 
-## 🛢 오일샌드 기술, 알고 보면 진짜 하드코어
+The first session featured Prof. Hyundon Shin's presentation on **"Oil Sands Production Technology and Simulation."** Oil sands — a complex mixture of oil, sand, and clay — require high-temperature, high-pressure steam injection (SAGD method) to reduce viscosity and improve productivity.
 
-첫 발표는 인하대 **신현돈 교수님**의  
-**“오일샌드 생산기술과 시뮬레이션”** 세션으로 시작됐습니다.
+<div class="post-quote">"Accurate prediction of how steam spreads and how the formation responds determines production performance — and simulation precision will decide everything."</div>
 
-오일샌드는 *기름 + 모래 + 점토*가 뒤엉킨, 개발 난이도 최상급 자원입니다.  
-그래서 개발 과정에서는 지층에 **고온·고압 스팀(SAGD 공법)**을 주입해 점도를 낮추고 생산성을 높여야 하죠.
+Key points highlighted:
+- High initial CAPEX → prediction failure carries enormous risk
+- Lab vs. field data discrepancy → history matching techniques are essential
+- Importance of accurate petrophysical property-based modeling
 
-> “스팀이 어떻게 퍼지는지, 지층이 어떻게 반응하는지,  
-> 점도가 어떻게 변하는지를 정확히 예측하는 게 생산성을 좌우한다.”
+<div class="data-flow"></div>
 
-즉,  
-📌 **정확한 시뮬레이션이 기술 경쟁력 그 자체!**
+## CCS, Lithium, Hydrogen — The Spectrum of Energy Engineering
 
-### 신 교수님이 강조한 핵심 포인트
-- **막대한 초기 투자(CAPEX)** → 예측 실패 시 리스크도 매우 큼  
-- 실험실 데이터 vs 현장 데이터 불일치 → **히스토리 매칭 기술 필수**  
-- 지층 물성, 열전달, 유동특성 등 **정확한 물성 기반 모델링**의 중요성  
+Subsequent sessions covered a wide range of next-generation energy technologies:
 
-그리고 미래 경쟁력에 대한 결론은 단호했습니다.
+- SLB's **thermal simulation advancement**
+- **CCS database construction and Cross-border M&A trends** by KIGAM and KNOC
+- **Direct Lithium Extraction (DLE)** from brine formations
+- **Hydrogen and unconventional resource development technologies**
+- Case studies on industry-academia collaborative research and international cooperation
 
-> **“시뮬레이션 정밀도가 모든 걸 결정할 것이다.”**
+<div class="data-flow"></div>
 
----
+## Message from Prof. Hyundon Shin
 
-## 🌍 CCS·리튬·수소… 에너지전공의 스펙트럼은 상상 이상
+<div class="post-quote">"Even in the era of carbon neutrality, unconventional resource development technologies remain critically important for energy security and key material procurement."</div>
 
-이어진 세션에서는 다양한 차세대 에너지 기술이 소개되었습니다.
-
-- SLB의 **열공법 시뮬레이션 고도화**
-- 한국지질자원연구원·한국석유공사의 **CCS 데이터베이스 구축 및 Cross-border M&A 트렌드**
-- 염수층에서 자원을 뽑아내는 **리튬 직접추출(DLE) 기술**
-- **수소 및 비전통 자원 개발 기술**
-- 산·학 공동 연구사례 및 국제 협력 방향
-
-하나하나가  
-“와… 진짜 미래 기술이다…”  
-라는 말이 절로 나오는 흥미로운 내용들뿐이었습니다.
-
-> 솔직히 말하면, 교과서보다 10년은 앞서 있는 이야기들이었음 😎
-
-
-## 💬 신현돈 교수님의 메시지
-
-> “탄소중립 시대에도 비전통 자원 개발기술은  
-> 에너지안보와 핵심소재 확보 차원에서 여전히 중요합니다.”
-
-즉,  
-
-📌 에너지 분야의 중요성은 오히려 더 커진다  
-📌 산·학·연 협력은 필수다  
-📌 배우는 지식이 실제 산업에서 바로 쓰인다  
-
-라는 메시지입니다.
-
----
-
-## 🌟 학부생 여러분, 여기부터가 진짜입니다
-
-이번 워크숍을 한 문장으로 요약하면:
-
-> **“에너지 전공은 어렵지만, 그래서 더 재미있고, 그래서 더 기회가 많다.”**
-
-오일샌드, CCS, 수소, 리튬…  
-이 모든 기술의 중심에는 **지질·유체·데이터·AI·시뮬레이션**이 놓여 있습니다.
-
-그리고 이 기술들을 다룰 사람은 누구일까요?
-
-👉 **바로 미래의 여러분!**
-
-인하대 자원공학과는  
-기업·연구기관과 함께 이러한 실전 연구들을 지속적으로 수행하며  
-학생들이 ‘진짜 기술’을 배울 수 있는 환경을 만들어가고 있습니다.
-
-에너지 전환 시대,  
-**현실에서 쓰이는 기술을 배우고 싶다면**  
-이 세계… 한 번 들어와 보세요 🙂
+This workshop was a powerful reminder that the scope of energy engineering is broad, the challenges are real, and the opportunities for students and researchers alike are greater than ever.
