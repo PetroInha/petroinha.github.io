@@ -440,6 +440,13 @@ permalink: /Lectures/
     </div>
 
     <div class="curr-row">
+      <span class="curr-code">ENR3314</span>
+      <span class="curr-ko">CO₂ 지중저장 모니터링</span>
+      <span class="curr-en">CO₂ Subsurface Storage Monitoring</span>
+      <span class="curr-desc-sm">Monitoring verification and accounting (MVA) for CCS — seismic, InSAR, geochemical, and wellbore monitoring techniques.</span>
+    </div>
+
+    <div class="curr-row">
       <span class="curr-code">ENR3315</span>
       <span class="curr-ko">지오에너지공학개론 <span class="cure-tag shin">Shin</span></span>
       <span class="curr-en">Introduction to Geo-Energy Engineering</span>
