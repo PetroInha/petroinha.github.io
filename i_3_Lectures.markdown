@@ -74,6 +74,14 @@ permalink: /Lectures/
 .grad-by.jo{color:#1565c0;}
 .grad-by.shin{color:#00695c;}
 
+/* ── YouTube link ── */
+.yt-link{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;color:#c00;text-decoration:none;margin-top:8px;padding:3px 10px 3px 7px;border-radius:999px;background:#fff2f2;border:1px solid #ffd5d5;transition:background .2s,border-color .2s;}
+.yt-link:hover{background:#ffe0e0;border-color:#ffb3b3;}
+.yt-link::before{content:"▶";font-size:9px;}
+.yt-link-sm{display:inline-flex;align-items:center;gap:3px;font-size:10.5px;color:#c00;text-decoration:none;margin-top:5px;font-weight:700;}
+.yt-link-sm::before{content:"▶";font-size:8px;}
+.yt-link-sm:hover{text-decoration:underline;}
+
 /* ── Pathway ── */
 .pathway{background:linear-gradient(135deg,rgba(0,91,172,0.05),rgba(0,91,172,0.02));border:1px dashed rgba(0,91,172,0.30);border-radius:16px;padding:20px 24px;}
 .pathway h4{margin:0 0 14px;color:#005BAC;font-size:15px;}
@@ -234,6 +242,7 @@ permalink: /Lectures/
     <div class="fac-name-en">Computer Programming</div>
     <div class="fac-desc">Problem-solving using Python; covers data structures, algorithms, and computational engineering applications.</div>
     <div class="fac-chips"><span class="fac-chip">Python</span><span class="fac-chip">Algorithms</span><span class="fac-chip">Engineering Computing</span></div>
+    <a class="yt-link" href="https://www.youtube.com/playlist?list=PLsIf1wrPUXjEIUCFfU__Xp7r3OJ_jmyE6" target="_blank" rel="noopener">YouTube Playlist</a>
   </div>
 
   <div class="fac-card jo-card">
@@ -242,6 +251,7 @@ permalink: /Lectures/
     <div class="fac-name-en">Fluid Mechanics</div>
     <div class="fac-desc">Fluid properties, hydrostatics, flow equations, viscous and compressible flow — with applications to underground and surface energy systems.</div>
     <div class="fac-chips"><span class="fac-chip">Darcy's Law</span><span class="fac-chip">Flow Equations</span><span class="fac-chip">Well Deliverability</span></div>
+    <a class="yt-link" href="https://www.youtube.com/playlist?list=PLsIf1wrPUXjHrtA7vZYU_HTUZRJfz_CtG" target="_blank" rel="noopener">YouTube Playlist</a>
   </div>
 
   <div class="fac-card jo-card">
@@ -258,6 +268,7 @@ permalink: /Lectures/
     <div class="fac-name-en">CO₂ Capture and Storage Technology</div>
     <div class="fac-desc">Principles and technologies for geological carbon sequestration — site selection, injection design, trapping mechanisms, and risk assessment.</div>
     <div class="fac-chips"><span class="fac-chip">CCS</span><span class="fac-chip">CO₂ Injection</span><span class="fac-chip">Storage Security</span></div>
+    <a class="yt-link" href="https://www.youtube.com/playlist?list=PLsIf1wrPUXjFgYl5oxXZJnbOH3q9ruwAz" target="_blank" rel="noopener">YouTube Playlist</a>
   </div>
 
   <div class="fac-card jo-card">
@@ -266,6 +277,7 @@ permalink: /Lectures/
     <div class="fac-name-en">Energy Big Data</div>
     <div class="fac-desc">Data science workflows applied to energy systems — data wrangling, dimensionality reduction, supervised and unsupervised learning for geoscience applications.</div>
     <div class="fac-chips"><span class="fac-chip">Machine Learning</span><span class="fac-chip">Data Science</span><span class="fac-chip">Geoscience</span></div>
+    <a class="yt-link" href="https://www.youtube.com/playlist?list=PLsIf1wrPUXjHrtA7vZYU_HTUZRJfz_CtG" target="_blank" rel="noopener">YouTube Playlist</a>
   </div>
 
   <div class="fac-card jo-card">
@@ -345,6 +357,7 @@ permalink: /Lectures/
       <span class="curr-ko">컴퓨터프로그래밍 <span class="cure-tag jo">Jo</span></span>
       <span class="curr-en">Computer Programming</span>
       <span class="curr-desc-sm">Python programming and computational problem-solving for engineering applications.</span>
+      <a class="yt-link-sm" href="https://www.youtube.com/playlist?list=PLsIf1wrPUXjEIUCFfU__Xp7r3OJ_jmyE6" target="_blank" rel="noopener">YouTube</a>
     </div>
 
     <div class="curr-row">
@@ -359,6 +372,7 @@ permalink: /Lectures/
       <span class="curr-ko">유체역학 <span class="cure-tag jo">Jo</span></span>
       <span class="curr-en">Fluid Mechanics</span>
       <span class="curr-desc-sm">Fluid behavior in underground and surface contexts; Darcy's law, flow equations, and well deliverability.</span>
+      <a class="yt-link-sm" href="https://www.youtube.com/playlist?list=PLsIf1wrPUXjHrtA7vZYU_HTUZRJfz_CtG" target="_blank" rel="noopener">YouTube</a>
     </div>
 
     <div class="curr-row">
@@ -423,6 +437,7 @@ permalink: /Lectures/
       <span class="curr-ko">이산화탄소 포집 및 저장 기술 <span class="cure-tag jo">Jo</span></span>
       <span class="curr-en">CO₂ Capture and Storage Technology</span>
       <span class="curr-desc-sm">Geological sequestration of CO₂ — capture technologies, storage formation selection, injectivity, and long-term containment.</span>
+      <a class="yt-link-sm" href="https://www.youtube.com/playlist?list=PLsIf1wrPUXjFgYl5oxXZJnbOH3q9ruwAz" target="_blank" rel="noopener">YouTube</a>
     </div>
 
     <div class="curr-row">
@@ -430,6 +445,7 @@ permalink: /Lectures/
       <span class="curr-ko">에너지 빅데이터 <span class="cure-tag jo">Jo</span></span>
       <span class="curr-en">Energy Big Data</span>
       <span class="curr-desc-sm">Machine learning and data analytics for energy and geoscience datasets — feature engineering, regression, and classification.</span>
+      <a class="yt-link-sm" href="https://www.youtube.com/playlist?list=PLsIf1wrPUXjHrtA7vZYU_HTUZRJfz_CtG" target="_blank" rel="noopener">YouTube</a>
     </div>
 
     <div class="curr-row">
