@@ -28,14 +28,20 @@ permalink: /Lectures/
 .faculty-hname{font-size:15px;font-weight:800;color:#005BAC;margin:0 0 1px;}
 .faculty-hrole{font-size:11.5px;color:#888;}
 
-.fac-card{background:white;border-radius:12px;padding:14px 16px;box-shadow:0 4px 14px rgba(0,0,0,0.07);margin-bottom:12px;border-left:3px solid #c5d8f0;transition:border-color .2s,box-shadow .2s;}
+.fac-card{background:white;border-radius:12px;padding:12px 15px;box-shadow:0 4px 14px rgba(0,0,0,0.07);margin-bottom:10px;border-left:3px solid #c5d8f0;transition:border-color .2s,box-shadow .2s;}
 .fac-card:hover{border-left-color:#005BAC;box-shadow:0 8px 24px rgba(0,0,0,0.11);}
-.fac-code{font-size:11px;font-weight:700;color:#aaa;letter-spacing:0.5px;margin-bottom:3px;}
-.fac-name-ko{font-size:14px;font-weight:800;color:#111;margin:0 0 1px;}
-.fac-name-en{font-size:12px;color:#666;margin:0 0 6px;}
-.fac-desc{font-size:12.5px;color:#555;line-height:1.6;margin:0 0 8px;}
-.fac-chips{display:flex;flex-wrap:wrap;gap:5px;}
-.fac-chip{background:#e8f0fb;color:#005BAC;font-size:10.5px;font-weight:600;padding:2px 9px;border-radius:999px;}
+.fac-card.jo-card{border-left-color:#b3c8e8;}
+.fac-card.shin-card{border-left-color:#b3d1c6;}
+.fac-card.jo-card:hover{border-left-color:#1565c0;}
+.fac-card.shin-card:hover{border-left-color:#00695c;}
+.fac-code{font-size:11px;font-weight:700;color:#aaa;letter-spacing:0.5px;margin-bottom:2px;}
+.fac-name-ko{font-size:13.5px;font-weight:800;color:#111;margin:0 0 1px;}
+.fac-name-en{font-size:11.5px;color:#666;margin:0 0 5px;}
+.fac-desc{font-size:12px;color:#555;line-height:1.55;margin:0 0 7px;}
+.fac-chips{display:flex;flex-wrap:wrap;gap:4px;}
+.fac-chip{background:#e8f0fb;color:#005BAC;font-size:10px;font-weight:600;padding:2px 8px;border-radius:999px;}
+.fac-chip.shin-chip{background:#e8f4f1;color:#00695c;}
+.fac-level{font-size:10px;font-weight:700;letter-spacing:0.4px;color:#aaa;text-transform:uppercase;margin-bottom:10px;margin-top:4px;}
 
 /* ── Curriculum grid ── */
 .curr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:8px;}
@@ -48,7 +54,9 @@ permalink: /Lectures/
 .curr-ko{font-weight:700;color:#111;display:block;line-height:1.3;}
 .curr-en{color:#777;font-size:12px;display:block;margin-bottom:3px;}
 .curr-desc-sm{font-size:11.5px;color:#888;line-height:1.5;}
-.cure-tag{display:inline-block;background:#e8f0fb;color:#005BAC;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:999px;margin-left:5px;vertical-align:middle;}
+.cure-tag{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:999px;margin-left:5px;vertical-align:middle;}
+.cure-tag.shin{background:#e8f4f1;color:#00695c;}
+.cure-tag.jo{background:#e8f0fb;color:#1565c0;}
 
 /* ── Grad cards ── */
 .grad-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin-bottom:8px;}
@@ -56,13 +64,15 @@ permalink: /Lectures/
 .grad-card:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(0,0,0,0.12);}
 .grad-card.jo{border-top-color:#1565c0;}
 .grad-card.shin{border-top-color:#00695c;}
-.grad-card.both{border-top:4px solid transparent;border-image:linear-gradient(90deg,#00695c,#1565c0) 1;}
 .grad-ko{font-size:14.5px;font-weight:800;color:#111;margin:0 0 2px;}
 .grad-en{font-size:12px;color:#777;margin:0 0 8px;}
 .grad-desc{font-size:13px;color:#555;line-height:1.65;margin:0 0 10px;}
 .grad-chips{display:flex;flex-wrap:wrap;gap:5px;}
 .grad-chip{background:#f0f4fa;color:#005BAC;font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;}
-.grad-by{font-size:11px;color:#aaa;margin-top:8px;}
+.grad-chip.shin{background:#f0f7f4;color:#00695c;}
+.grad-by{font-size:11px;font-weight:700;margin-top:10px;}
+.grad-by.jo{color:#1565c0;}
+.grad-by.shin{color:#00695c;}
 
 /* ── Pathway ── */
 .pathway{background:linear-gradient(135deg,rgba(0,91,172,0.05),rgba(0,91,172,0.02));border:1px dashed rgba(0,91,172,0.30);border-radius:16px;padding:20px 24px;}
@@ -100,25 +110,173 @@ permalink: /Lectures/
 
 <div class="faculty-grid">
 
-<!-- Prof. Shin -->
+<!-- ── Prof. Shin ── -->
 <div class="faculty-col">
-  <div class="faculty-header">
+  <div class="faculty-header" style="border-left-color:#00695c;">
     <img class="faculty-avatar" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/hd_shin.JPG" alt="Prof. Shin">
     <div>
-      <div class="faculty-hname">Prof. Hyundon Shin</div>
-      <div class="faculty-hrole">Reservoir Engineering · CCS · Oil Sands · Hydrogen</div>
+      <div class="faculty-hname" style="color:#00695c;">Prof. Hyundon Shin</div>
+      <div class="faculty-hrole">Reservoir Engineering · CCS · Renewables · Oil Sands</div>
     </div>
   </div>
 
-  <div class="fac-card">
+  <div class="fac-level">Undergraduate</div>
+
+  <div class="fac-card shin-card">
     <div class="fac-code">ENR3315</div>
     <div class="fac-name-ko">지오에너지공학개론</div>
     <div class="fac-name-en">Introduction to Geo-Energy Engineering</div>
-    <div class="fac-desc">Petroleum engineering fundamentals — reservoir types, fluid properties, drive mechanisms, and basic well performance. Entry point to subsurface energy systems.</div>
-    <div class="fac-chips"><span class="fac-chip">Reservoir</span><span class="fac-chip">Petroleum Engineering</span><span class="fac-chip">Fluid Flow</span></div>
+    <div class="fac-desc">Petroleum engineering fundamentals — reservoir fluid properties, drive mechanisms, and basic well performance analysis.</div>
+    <div class="fac-chips"><span class="fac-chip shin-chip">Reservoir</span><span class="fac-chip shin-chip">Petroleum Engineering</span><span class="fac-chip shin-chip">Fluid Flow</span></div>
   </div>
 
-  <div class="fac-card">
+  <div class="fac-card shin-card">
+    <div class="fac-code">ENR2113</div>
+    <div class="fac-name-ko">에너지자원지질</div>
+    <div class="fac-name-en">Energy Resources Geology</div>
+    <div class="fac-desc">Geological fundamentals — stratigraphy, structural geology, and rock classification applied to subsurface resource development.</div>
+    <div class="fac-chips"><span class="fac-chip shin-chip">Geology</span><span class="fac-chip shin-chip">Stratigraphy</span><span class="fac-chip shin-chip">Rock Classification</span></div>
+  </div>
+
+  <div class="fac-card shin-card">
+    <div class="fac-code">ENR2108</div>
+    <div class="fac-name-ko">신재생에너지개론</div>
+    <div class="fac-name-en">Introduction to Renewable Energy</div>
+    <div class="fac-desc">Overview of solar, wind, hydro, geothermal, and hydrogen energy — working principles, potential, and development challenges.</div>
+    <div class="fac-chips"><span class="fac-chip shin-chip">Solar</span><span class="fac-chip shin-chip">Wind</span><span class="fac-chip shin-chip">Geothermal</span><span class="fac-chip shin-chip">Hydrogen</span></div>
+  </div>
+
+  <div class="fac-card shin-card">
+    <div class="fac-code">ENR4319</div>
+    <div class="fac-name-ko">지오에너지 생산 및 설비</div>
+    <div class="fac-name-en">Geo-Energy Production and Facility</div>
+    <div class="fac-desc">Petroleum production engineering, nodal analysis, well stimulation, artificial lift, and surface facility design and optimization.</div>
+    <div class="fac-chips"><span class="fac-chip shin-chip">Production Engineering</span><span class="fac-chip shin-chip">Well Completion</span><span class="fac-chip shin-chip">Facilities</span></div>
+  </div>
+
+  <div class="fac-card shin-card">
+    <div class="fac-code">ENR4324</div>
+    <div class="fac-name-ko">에너지자원공학 설계 및 평가</div>
+    <div class="fac-name-en">Energy Resources Engineering Capstone Design</div>
+    <div class="fac-desc">Integrative capstone project spanning exploration through resource utilization — team-based design, economic feasibility analysis, and presentation.</div>
+    <div class="fac-chips"><span class="fac-chip shin-chip">Capstone</span><span class="fac-chip shin-chip">Project Design</span><span class="fac-chip shin-chip">Feasibility Analysis</span></div>
+  </div>
+
+  <div class="fac-card shin-card">
+    <div class="fac-code">ENR2211</div>
+    <div class="fac-name-ko">광물 탐사 및 평가</div>
+    <div class="fac-name-en">Mineral Exploration and Evaluation</div>
+    <div class="fac-desc">Rock and mineral classification, thermodynamics of igneous processes, geochemistry, optical identification techniques, and field excursion.</div>
+    <div class="fac-chips"><span class="fac-chip shin-chip">Mineralogy</span><span class="fac-chip shin-chip">Geochemistry</span><span class="fac-chip shin-chip">Field Work</span></div>
+  </div>
+
+  <div class="fac-level" style="margin-top:18px;">Graduate (대학원)</div>
+
+  <div class="fac-card shin-card">
+    <div class="fac-name-ko">디지털 트윈과 저류층 시뮬레이션</div>
+    <div class="fac-name-en">Digital Twin and Reservoir Simulation</div>
+    <div class="fac-desc">Coupled fluid flow and geomechanical simulation, data assimilation, and real-time reservoir management via digital twin frameworks.</div>
+    <div class="fac-chips"><span class="fac-chip shin-chip">Digital Twin</span><span class="fac-chip shin-chip">Reservoir Sim</span><span class="fac-chip shin-chip">Data Assimilation</span></div>
+  </div>
+
+  <div class="fac-card shin-card">
+    <div class="fac-name-ko">가스공학특론</div>
+    <div class="fac-name-en">Advanced Gas Engineering</div>
+    <div class="fac-desc">Unconventional gas (shale, tight), gas condensate systems, enhanced gas recovery, and underground gas storage design.</div>
+    <div class="fac-chips"><span class="fac-chip shin-chip">Shale Gas</span><span class="fac-chip shin-chip">EGR</span><span class="fac-chip shin-chip">UGS</span></div>
+  </div>
+
+  <div class="fac-card shin-card">
+    <div class="fac-name-ko">기후환경과 에너지기술</div>
+    <div class="fac-name-en">Climate Environment and Energy Technology</div>
+    <div class="fac-desc">Interactions between energy systems and the climate — emissions accounting, environmental impact assessment, and engineering solutions for sustainable development.</div>
+    <div class="fac-chips"><span class="fac-chip shin-chip">Climate Policy</span><span class="fac-chip shin-chip">Sustainability</span><span class="fac-chip shin-chip">Emissions</span></div>
+  </div>
+
+  <div class="fac-card shin-card">
+    <div class="fac-name-ko">에너지산업과 신재생에너지</div>
+    <div class="fac-name-en">Energy Industry and Renewable Energy</div>
+    <div class="fac-desc">Industry structure and investment landscape of global renewable energy — project finance, grid integration, and the evolving role of fossil fuels in a transition economy.</div>
+    <div class="fac-chips"><span class="fac-chip shin-chip">Renewables</span><span class="fac-chip shin-chip">Energy Markets</span><span class="fac-chip shin-chip">Project Finance</span></div>
+  </div>
+
+  <div class="fac-card shin-card">
+    <div class="fac-name-ko">신재생에너지 산업 및 기술 동향</div>
+    <div class="fac-name-en">Renewable Energy Industry and Technology Trends</div>
+    <div class="fac-desc">Emerging technologies and market trends in solar PV, offshore wind, green hydrogen, and battery storage — with case studies on leading global projects.</div>
+    <div class="fac-chips"><span class="fac-chip shin-chip">Solar PV</span><span class="fac-chip shin-chip">Offshore Wind</span><span class="fac-chip shin-chip">Green H₂</span></div>
+  </div>
+
+  <div class="fac-card shin-card">
+    <div class="fac-name-ko">인류의 그림자, 에너지 바로 알기</div>
+    <div class="fac-name-en">Humanity's Shadow: Understanding Energy</div>
+    <div class="fac-desc">A cross-disciplinary seminar exploring the history, geopolitics, and social dimensions of energy — from fossil fuel civilization to the future of sustainable energy access.</div>
+    <div class="fac-chips"><span class="fac-chip shin-chip">Energy History</span><span class="fac-chip shin-chip">Geopolitics</span><span class="fac-chip shin-chip">Society</span></div>
+  </div>
+
+</div>
+
+<!-- ── Prof. Jo ── -->
+<div class="faculty-col">
+  <div class="faculty-header" style="border-left-color:#1565c0;">
+    <img class="faculty-avatar" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/hj_photo.jfif" alt="Prof. Jo">
+    <div>
+      <div class="faculty-hname" style="color:#1565c0;">Prof. Honggeun Jo</div>
+      <div class="faculty-hrole">Subsurface AI · Geostatistics · CCS · Reservoir Modeling</div>
+    </div>
+  </div>
+
+  <div class="fac-level">Undergraduate</div>
+
+  <div class="fac-card jo-card">
+    <div class="fac-code">ENR1902</div>
+    <div class="fac-name-ko">컴퓨터프로그래밍</div>
+    <div class="fac-name-en">Computer Programming</div>
+    <div class="fac-desc">Problem-solving using Python; covers data structures, algorithms, and computational engineering applications.</div>
+    <div class="fac-chips"><span class="fac-chip">Python</span><span class="fac-chip">Algorithms</span><span class="fac-chip">Engineering Computing</span></div>
+  </div>
+
+  <div class="fac-card jo-card">
+    <div class="fac-code">ENR2102</div>
+    <div class="fac-name-ko">유체역학</div>
+    <div class="fac-name-en">Fluid Mechanics</div>
+    <div class="fac-desc">Fluid properties, hydrostatics, flow equations, viscous and compressible flow — with applications to underground and surface energy systems.</div>
+    <div class="fac-chips"><span class="fac-chip">Darcy's Law</span><span class="fac-chip">Flow Equations</span><span class="fac-chip">Well Deliverability</span></div>
+  </div>
+
+  <div class="fac-card jo-card">
+    <div class="fac-code">ENR3103</div>
+    <div class="fac-name-ko">지구통계학</div>
+    <div class="fac-name-en">Geostatistics</div>
+    <div class="fac-desc">Spatial data analysis for resource evaluation — variogram modeling, kriging interpolation, sequential simulation, and geological uncertainty quantification.</div>
+    <div class="fac-chips"><span class="fac-chip">Kriging</span><span class="fac-chip">Spatial Statistics</span><span class="fac-chip">Uncertainty</span></div>
+  </div>
+
+  <div class="fac-card jo-card">
+    <div class="fac-code">ENR3207</div>
+    <div class="fac-name-ko">이산화탄소 포집 및 저장 기술</div>
+    <div class="fac-name-en">CO₂ Capture and Storage Technology</div>
+    <div class="fac-desc">Principles and technologies for geological carbon sequestration — site selection, injection design, trapping mechanisms, and risk assessment.</div>
+    <div class="fac-chips"><span class="fac-chip">CCS</span><span class="fac-chip">CO₂ Injection</span><span class="fac-chip">Storage Security</span></div>
+  </div>
+
+  <div class="fac-card jo-card">
+    <div class="fac-code">ENR3312</div>
+    <div class="fac-name-ko">에너지 빅데이터</div>
+    <div class="fac-name-en">Energy Big Data</div>
+    <div class="fac-desc">Data science workflows applied to energy systems — data wrangling, dimensionality reduction, supervised and unsupervised learning for geoscience applications.</div>
+    <div class="fac-chips"><span class="fac-chip">Machine Learning</span><span class="fac-chip">Data Science</span><span class="fac-chip">Geoscience</span></div>
+  </div>
+
+  <div class="fac-card jo-card">
+    <div class="fac-code">ENR4320</div>
+    <div class="fac-name-ko">에너지자원과 인공지능</div>
+    <div class="fac-name-en">Energy Resources and Artificial Intelligence</div>
+    <div class="fac-desc">Deep learning and generative AI for subsurface modeling — CNNs for seismic interpretation, GAN-based geological model generation, and AI-driven uncertainty quantification.</div>
+    <div class="fac-chips"><span class="fac-chip">Deep Learning</span><span class="fac-chip">Generative AI</span><span class="fac-chip">Seismic AI</span></div>
+  </div>
+
+  <div class="fac-card jo-card">
     <div class="fac-code">ENR3313</div>
     <div class="fac-name-ko">시추 및 지층평가공학</div>
     <div class="fac-name-en">Drilling and Subsurface Evaluation Engineering</div>
@@ -126,64 +284,37 @@ permalink: /Lectures/
     <div class="fac-chips"><span class="fac-chip">Drilling</span><span class="fac-chip">Well Logs</span><span class="fac-chip">Python</span></div>
   </div>
 
-  <div class="fac-card">
-    <div class="fac-code">ENR3207</div>
-    <div class="fac-name-ko">이산화탄소 포집 및 저장 기술</div>
-    <div class="fac-name-en">CO₂ Capture and Storage Technology</div>
-    <div class="fac-desc">Principles and technologies for geological carbon sequestration — site selection, injection design, trapping mechanisms, and risk assessment for CCS projects.</div>
-    <div class="fac-chips"><span class="fac-chip">CCS</span><span class="fac-chip">CO₂ Injection</span><span class="fac-chip">Storage Security</span></div>
+  <div class="fac-card jo-card">
+    <div class="fac-code">ENR4312</div>
+    <div class="fac-name-ko">저류 모델링 및 시뮬레이션</div>
+    <div class="fac-name-en">Reservoir Modeling and Simulation</div>
+    <div class="fac-desc">Reservoir engineering fundamentals, fluid properties, reserve calculations, flow simulation, and enhanced recovery method evaluation.</div>
+    <div class="fac-chips"><span class="fac-chip">Reservoir Sim</span><span class="fac-chip">EOR</span><span class="fac-chip">Reserve Estimation</span></div>
   </div>
 
-  <div class="fac-card">
-    <div class="fac-code">ENR4319</div>
-    <div class="fac-name-ko">지오에너지 생산 및 설비</div>
-    <div class="fac-name-en">Geo-Energy Production and Facility</div>
-    <div class="fac-desc">Petroleum production engineering, well completion methods, artificial lift, surface facility design, and production optimization strategies.</div>
-    <div class="fac-chips"><span class="fac-chip">Production Engineering</span><span class="fac-chip">Well Completion</span><span class="fac-chip">Facilities</span></div>
-  </div>
-</div>
+  <div class="fac-level" style="margin-top:18px;">Graduate (대학원)</div>
 
-<!-- Prof. Jo -->
-<div class="faculty-col">
-  <div class="faculty-header">
-    <img class="faculty-avatar" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/hj_photo.jfif" alt="Prof. Jo">
-    <div>
-      <div class="faculty-hname">Prof. Honggeun Jo</div>
-      <div class="faculty-hrole">Subsurface AI · Geostatistics · Digital Rock · CCS Modeling</div>
-    </div>
+  <div class="fac-card jo-card">
+    <div class="fac-name-ko">지오에너지 머신러닝</div>
+    <div class="fac-name-en">Geo-Energy Machine Learning</div>
+    <div class="fac-desc">Supervised and unsupervised learning, deep neural networks, and physics-informed ML for reservoir characterization, production forecasting, and subsurface data analysis.</div>
+    <div class="fac-chips"><span class="fac-chip">Neural Networks</span><span class="fac-chip">History Matching</span><span class="fac-chip">PINN</span></div>
   </div>
 
-  <div class="fac-card">
-    <div class="fac-code">ENR3103</div>
-    <div class="fac-name-ko">지구통계학</div>
-    <div class="fac-name-en">Geostatistics</div>
-    <div class="fac-desc">Statistical methods for spatial data analysis and resource assessment — variogram modeling, kriging, sequential Gaussian simulation, and geological uncertainty quantification.</div>
-    <div class="fac-chips"><span class="fac-chip">Kriging</span><span class="fac-chip">Spatial Statistics</span><span class="fac-chip">Uncertainty</span></div>
+  <div class="fac-card jo-card">
+    <div class="fac-name-ko">추계학적 지구통계 모델링</div>
+    <div class="fac-name-en">Stochastic Geostatistical Modeling</div>
+    <div class="fac-desc">Advanced geostatistical simulation — multi-point statistics, object-based modeling, and training image-based approaches for 3D subsurface model generation.</div>
+    <div class="fac-chips"><span class="fac-chip">MPS</span><span class="fac-chip">SinGAN</span><span class="fac-chip">Model Uncertainty</span></div>
   </div>
 
-  <div class="fac-card">
-    <div class="fac-code">ENR3314</div>
-    <div class="fac-name-ko">CO₂ 지중저장 모니터링</div>
-    <div class="fac-name-en">CO₂ Subsurface Storage Monitoring</div>
-    <div class="fac-desc">Monitoring and verification technologies for geological carbon storage — 4D seismic, InSAR surface deformation, well-based sensors, and data integration workflows.</div>
-    <div class="fac-chips"><span class="fac-chip">4D Seismic</span><span class="fac-chip">InSAR</span><span class="fac-chip">CCS Monitoring</span></div>
+  <div class="fac-card jo-card">
+    <div class="fac-name-ko">심화저류공학</div>
+    <div class="fac-name-en">Advanced Reservoir Engineering</div>
+    <div class="fac-desc">Advanced flow equations, well testing analysis, enhanced oil recovery methods, and integrated reservoir management strategies for complex geological settings.</div>
+    <div class="fac-chips"><span class="fac-chip">Well Testing</span><span class="fac-chip">EOR</span><span class="fac-chip">Reservoir Management</span></div>
   </div>
 
-  <div class="fac-card">
-    <div class="fac-code">ENR3312</div>
-    <div class="fac-name-ko">에너지 빅데이터</div>
-    <div class="fac-name-en">Energy Big Data</div>
-    <div class="fac-desc">Data science workflows applied to energy systems — data wrangling, dimensionality reduction, supervised and unsupervised learning for geoscience and energy applications.</div>
-    <div class="fac-chips"><span class="fac-chip">Machine Learning</span><span class="fac-chip">Data Science</span><span class="fac-chip">Geoscience</span></div>
-  </div>
-
-  <div class="fac-card">
-    <div class="fac-code">ENR4320</div>
-    <div class="fac-name-ko">에너지자원과 인공지능</div>
-    <div class="fac-name-en">Energy Resources and Artificial Intelligence</div>
-    <div class="fac-desc">Deep learning and generative AI methods for subsurface modeling — CNNs for seismic interpretation, GAN-based geological model generation, and AI-driven uncertainty quantification.</div>
-    <div class="fac-chips"><span class="fac-chip">Deep Learning</span><span class="fac-chip">Generative AI</span><span class="fac-chip">Subsurface Modeling</span></div>
-  </div>
 </div>
 
 </div><!-- end faculty-grid -->
@@ -211,30 +342,44 @@ permalink: /Lectures/
 
     <div class="curr-row">
       <span class="curr-code">ENR1902</span>
-      <span class="curr-ko">컴퓨터프로그래밍</span>
+      <span class="curr-ko">컴퓨터프로그래밍 <span class="cure-tag jo">Jo</span></span>
       <span class="curr-en">Computer Programming</span>
       <span class="curr-desc-sm">Python programming and computational problem-solving for engineering applications.</span>
     </div>
 
     <div class="curr-row">
       <span class="curr-code">ENR2113</span>
-      <span class="curr-ko">에너지자원지질</span>
+      <span class="curr-ko">에너지자원지질 <span class="cure-tag shin">Shin</span></span>
       <span class="curr-en">Energy Resources Geology</span>
       <span class="curr-desc-sm">Geological fundamentals — stratigraphy, structural geology, and rock classification applied to subsurface resource development.</span>
     </div>
 
     <div class="curr-row">
       <span class="curr-code">ENR2102</span>
-      <span class="curr-ko">유체역학</span>
+      <span class="curr-ko">유체역학 <span class="cure-tag jo">Jo</span></span>
       <span class="curr-en">Fluid Mechanics</span>
       <span class="curr-desc-sm">Fluid behavior in underground and surface contexts; Darcy's law, flow equations, and well deliverability.</span>
+    </div>
+
+    <div class="curr-row">
+      <span class="curr-code">ENR2108</span>
+      <span class="curr-ko">신재생에너지개론 <span class="cure-tag shin">Shin</span></span>
+      <span class="curr-en">Introduction to Renewable Energy</span>
+      <span class="curr-desc-sm">Overview of solar, wind, hydro, geothermal, and hydrogen energy — principles, potential, and development challenges.</span>
+    </div>
+
+    <div class="curr-row">
+      <span class="curr-code">ENR2211</span>
+      <span class="curr-ko">광물 탐사 및 평가 <span class="cure-tag shin">Shin</span></span>
+      <span class="curr-en">Mineral Exploration and Evaluation</span>
+      <span class="curr-desc-sm">Rock and mineral classification, optical identification techniques, geochemistry, and field excursion.</span>
     </div>
 
     <div class="curr-row">
       <span class="curr-code">ENR2105</span>
       <span class="curr-ko">에너지자원수치해석</span>
       <span class="curr-en">Numerical Analysis for Energy Resources</span>
-      <span class="curr-desc-sm">Mathematical methods and their computational implementation for solving engineering problems.</span>
+      <span class="curr-desc-sm">Numerical methods and computational implementation for solving engineering problems.</span>
     </div>
 
     <div class="curr-row">
@@ -242,13 +387,6 @@ permalink: /Lectures/
       <span class="curr-ko">에너지열역학</span>
       <span class="curr-en">Energy Thermodynamics</span>
       <span class="curr-desc-sm">Thermodynamic principles governing heat transfer, phase behavior, and energy conversion in reservoir and surface systems.</span>
-    </div>
-
-    <div class="curr-row">
-      <span class="curr-code">ENR2108</span>
-      <span class="curr-ko">신재생에너지개론</span>
-      <span class="curr-en">Introduction to Renewable Energy</span>
-      <span class="curr-desc-sm">Overview of solar, wind, hydro, geothermal, and biomass energy — principles, potential, and challenges.</span>
     </div>
 
     <div class="curr-row">
@@ -275,42 +413,42 @@ permalink: /Lectures/
 
     <div class="curr-row">
       <span class="curr-code">ENR3103</span>
-      <span class="curr-ko">지구통계학 <span class="cure-tag">Jo</span></span>
+      <span class="curr-ko">지구통계학 <span class="cure-tag jo">Jo</span></span>
       <span class="curr-en">Geostatistics</span>
       <span class="curr-desc-sm">Variogram analysis, kriging interpolation, stochastic simulation, and spatial uncertainty quantification.</span>
     </div>
 
     <div class="curr-row">
       <span class="curr-code">ENR3207</span>
-      <span class="curr-ko">이산화탄소 포집 및 저장 기술 <span class="cure-tag">Shin</span></span>
+      <span class="curr-ko">이산화탄소 포집 및 저장 기술 <span class="cure-tag jo">Jo</span></span>
       <span class="curr-en">CO₂ Capture and Storage Technology</span>
       <span class="curr-desc-sm">Geological sequestration of CO₂ — capture technologies, storage formation selection, injectivity, and long-term containment.</span>
     </div>
 
     <div class="curr-row">
       <span class="curr-code">ENR3312</span>
-      <span class="curr-ko">에너지 빅데이터 <span class="cure-tag">Jo</span></span>
+      <span class="curr-ko">에너지 빅데이터 <span class="cure-tag jo">Jo</span></span>
       <span class="curr-en">Energy Big Data</span>
       <span class="curr-desc-sm">Machine learning and data analytics for energy and geoscience datasets — feature engineering, regression, and classification.</span>
     </div>
 
     <div class="curr-row">
       <span class="curr-code">ENR3313</span>
-      <span class="curr-ko">시추 및 지층평가공학 <span class="cure-tag">Shin</span></span>
+      <span class="curr-ko">시추 및 지층평가공학 <span class="cure-tag jo">Jo</span></span>
       <span class="curr-en">Drilling and Subsurface Evaluation</span>
       <span class="curr-desc-sm">Rotary drilling mechanics, well design, formation evaluation from logs, and Python-based data interpretation.</span>
     </div>
 
     <div class="curr-row">
       <span class="curr-code">ENR3314</span>
-      <span class="curr-ko">CO₂ 지중저장 모니터링 <span class="cure-tag">Jo</span></span>
+      <span class="curr-ko">CO₂ 지중저장 모니터링</span>
       <span class="curr-en">CO₂ Subsurface Storage Monitoring</span>
       <span class="curr-desc-sm">Monitoring verification and accounting (MVA) for CCS — seismic, InSAR, geochemical, and wellbore monitoring techniques.</span>
     </div>
 
     <div class="curr-row">
       <span class="curr-code">ENR3315</span>
-      <span class="curr-ko">지오에너지공학개론 <span class="cure-tag">Shin</span></span>
+      <span class="curr-ko">지오에너지공학개론 <span class="cure-tag shin">Shin</span></span>
       <span class="curr-en">Introduction to Geo-Energy Engineering</span>
       <span class="curr-desc-sm">Petroleum reservoir fundamentals — fluid properties, drive mechanisms, material balance, and reservoir performance analysis.</span>
     </div>
@@ -331,10 +469,38 @@ permalink: /Lectures/
   <div class="curr-col-body">
 
     <div class="curr-row">
+      <span class="curr-code">ENR4312</span>
+      <span class="curr-ko">저류 모델링 및 시뮬레이션 <span class="cure-tag jo">Jo</span></span>
+      <span class="curr-en">Reservoir Modeling and Simulation</span>
+      <span class="curr-desc-sm">Reservoir engineering fundamentals, fluid properties, flow simulation, reserve calculations, and enhanced recovery methods.</span>
+    </div>
+
+    <div class="curr-row">
+      <span class="curr-code">ENR4319</span>
+      <span class="curr-ko">지오에너지 생산 및 설비 <span class="cure-tag shin">Shin</span></span>
+      <span class="curr-en">Geo-Energy Production and Facility</span>
+      <span class="curr-desc-sm">Production engineering fundamentals — nodal analysis, artificial lift, surface processing, and production system optimization.</span>
+    </div>
+
+    <div class="curr-row">
+      <span class="curr-code">ENR4320</span>
+      <span class="curr-ko">에너지자원과 인공지능 <span class="cure-tag jo">Jo</span></span>
+      <span class="curr-en">Energy Resources and Artificial Intelligence</span>
+      <span class="curr-desc-sm">Deep learning, CNNs, GANs, and generative models applied to seismic interpretation, geological modeling, and production prediction.</span>
+    </div>
+
+    <div class="curr-row">
+      <span class="curr-code">ENR4324</span>
+      <span class="curr-ko">에너지자원공학 설계 및 평가 <span class="cure-tag shin">Shin</span></span>
+      <span class="curr-en">Energy Resources Engineering Capstone Design</span>
+      <span class="curr-desc-sm">Integrative capstone project spanning exploration through resource utilization — team-based design, analysis, and presentation.</span>
+    </div>
+
+    <div class="curr-row">
       <span class="curr-code">ENR4211</span>
-      <span class="curr-ko">수소에너지 저장과 안전</span>
+      <span class="curr-ko">수소에너지저장과 안전</span>
       <span class="curr-en">Hydrogen Energy Storage and Safety</span>
-      <span class="curr-desc-sm">Underground and surface hydrogen storage systems, compression and liquefaction, safety protocols, and geological H₂ storage concepts.</span>
+      <span class="curr-desc-sm">Underground and surface hydrogen storage systems, safety protocols, and geological H₂ storage concepts.</span>
     </div>
 
     <div class="curr-row">
@@ -342,20 +508,6 @@ permalink: /Lectures/
       <span class="curr-ko">수소에너지공학개론</span>
       <span class="curr-en">Introduction to Hydrogen Energy Engineering</span>
       <span class="curr-desc-sm">Hydrogen production pathways (green, blue, grey), fuel cells, and the role of hydrogen in the energy transition.</span>
-    </div>
-
-    <div class="curr-row">
-      <span class="curr-code">ENR4319</span>
-      <span class="curr-ko">지오에너지 생산 및 설비 <span class="cure-tag">Shin</span></span>
-      <span class="curr-en">Geo-Energy Production and Facility</span>
-      <span class="curr-desc-sm">Production engineering fundamentals — well deliverability, artificial lift, surface processing, and production system optimization.</span>
-    </div>
-
-    <div class="curr-row">
-      <span class="curr-code">ENR4320</span>
-      <span class="curr-ko">에너지자원과 인공지능 <span class="cure-tag">Jo</span></span>
-      <span class="curr-en">Energy Resources and Artificial Intelligence</span>
-      <span class="curr-desc-sm">Deep learning, CNNs, GANs, and generative models applied to seismic interpretation, geological modeling, and production prediction.</span>
     </div>
 
     <div class="curr-row">
@@ -379,13 +531,6 @@ permalink: /Lectures/
       <span class="curr-desc-sm">Circular resource utilization systems, waste-to-resource frameworks, and lifecycle thinking for critical materials.</span>
     </div>
 
-    <div class="curr-row">
-      <span class="curr-code">ENR4324</span>
-      <span class="curr-ko">에너지자원공학 설계 및 평가</span>
-      <span class="curr-en">Energy Resources Engineering Capstone Design</span>
-      <span class="curr-desc-sm">Integrative capstone project spanning exploration through resource utilization — team-based design, analysis, and presentation.</span>
-    </div>
-
   </div>
 </div>
 
@@ -401,71 +546,75 @@ permalink: /Lectures/
 <div class="grad-grid">
 
 <div class="grad-card jo">
-  <div class="grad-ko">추계학적 지구통계 모델링</div>
-  <div class="grad-en">Stochastic Geostatistical Modeling</div>
-  <div class="grad-desc">Advanced geostatistical simulation methods — multi-point statistics, object-based modeling, and training image-based approaches for 3D subsurface model generation.</div>
-  <div class="grad-chips"><span class="grad-chip">MPS</span><span class="grad-chip">SinGAN</span><span class="grad-chip">Model Uncertainty</span></div>
-  <div class="grad-by">Prof. Jo</div>
-</div>
-
-<div class="grad-card jo">
   <div class="grad-ko">지오에너지 머신러닝</div>
   <div class="grad-en">Geo-Energy Machine Learning</div>
   <div class="grad-desc">Supervised and unsupervised learning, deep neural networks, and physics-informed ML for reservoir characterization, production forecasting, and subsurface data analysis.</div>
   <div class="grad-chips"><span class="grad-chip">Neural Networks</span><span class="grad-chip">History Matching</span><span class="grad-chip">PINN</span></div>
-  <div class="grad-by">Prof. Jo</div>
+  <div class="grad-by jo">Prof. Jo</div>
 </div>
 
 <div class="grad-card jo">
-  <div class="grad-ko">디지털 트윈과 저류층 시뮬레이션</div>
-  <div class="grad-en">Digital Twin and Reservoir Simulation</div>
-  <div class="grad-desc">Building digital twin frameworks for subsurface systems — coupled fluid flow and geomechanical simulation, data assimilation (ES-MDA), and real-time reservoir management.</div>
-  <div class="grad-chips"><span class="grad-chip">ES-MDA</span><span class="grad-chip">Reservoir Sim</span><span class="grad-chip">Digital Twin</span></div>
-  <div class="grad-by">Prof. Jo</div>
+  <div class="grad-ko">추계학적 지구통계 모델링</div>
+  <div class="grad-en">Stochastic Geostatistical Modeling</div>
+  <div class="grad-desc">Advanced geostatistical simulation methods — multi-point statistics, object-based modeling, and training image-based approaches for 3D subsurface model generation.</div>
+  <div class="grad-chips"><span class="grad-chip">MPS</span><span class="grad-chip">SinGAN</span><span class="grad-chip">Model Uncertainty</span></div>
+  <div class="grad-by jo">Prof. Jo</div>
+</div>
+
+<div class="grad-card jo">
+  <div class="grad-ko">심화저류공학</div>
+  <div class="grad-en">Advanced Reservoir Engineering</div>
+  <div class="grad-desc">Advanced flow equations, well testing analysis, enhanced oil recovery methods, and integrated reservoir management strategies for complex geological settings.</div>
+  <div class="grad-chips"><span class="grad-chip">Well Testing</span><span class="grad-chip">EOR</span><span class="grad-chip">Reservoir Management</span></div>
+  <div class="grad-by jo">Prof. Jo</div>
 </div>
 
 <div class="grad-card shin">
-  <div class="grad-ko">탄소감축 및 기후변화 대응기술</div>
-  <div class="grad-en">Carbon Reduction and Climate Change Response Technology</div>
-  <div class="grad-desc">Advanced CCS technologies, CCUS system design, carbon capture process engineering, and integrated energy-climate policy frameworks for net-zero pathways.</div>
-  <div class="grad-chips"><span class="grad-chip">CCUS</span><span class="grad-chip">Net-Zero</span><span class="grad-chip">CO₂ Storage</span></div>
-  <div class="grad-by">Prof. Shin</div>
+  <div class="grad-ko">디지털 트윈과 저류층 시뮬레이션</div>
+  <div class="grad-en">Digital Twin and Reservoir Simulation</div>
+  <div class="grad-desc">Building digital twin frameworks for subsurface systems — coupled fluid flow and geomechanical simulation, data assimilation (ES-MDA), and real-time reservoir management.</div>
+  <div class="grad-chips"><span class="grad-chip shin">ES-MDA</span><span class="grad-chip shin">Reservoir Sim</span><span class="grad-chip shin">Digital Twin</span></div>
+  <div class="grad-by shin">Prof. Shin</div>
 </div>
 
 <div class="grad-card shin">
   <div class="grad-ko">가스공학특론</div>
   <div class="grad-en">Advanced Gas Engineering</div>
   <div class="grad-desc">Advanced treatment of natural gas reservoir performance — unconventional gas (shale, tight), gas condensate systems, EGR, and underground gas storage design.</div>
-  <div class="grad-chips"><span class="grad-chip">Shale Gas</span><span class="grad-chip">EGR</span><span class="grad-chip">UGS</span></div>
-  <div class="grad-by">Prof. Shin</div>
+  <div class="grad-chips"><span class="grad-chip shin">Shale Gas</span><span class="grad-chip shin">EGR</span><span class="grad-chip shin">UGS</span></div>
+  <div class="grad-by shin">Prof. Shin</div>
 </div>
 
-<div class="grad-card">
+<div class="grad-card shin">
   <div class="grad-ko">기후환경과 에너지기술</div>
   <div class="grad-en">Climate Environment and Energy Technology</div>
   <div class="grad-desc">Interactions between energy systems and the climate — emissions accounting, environmental impact assessment, and engineering solutions for sustainable energy development.</div>
-  <div class="grad-chips"><span class="grad-chip">Climate Policy</span><span class="grad-chip">Emissions</span><span class="grad-chip">Sustainability</span></div>
+  <div class="grad-chips"><span class="grad-chip shin">Climate Policy</span><span class="grad-chip shin">Emissions</span><span class="grad-chip shin">Sustainability</span></div>
+  <div class="grad-by shin">Prof. Shin</div>
 </div>
 
-<div class="grad-card">
+<div class="grad-card shin">
   <div class="grad-ko">에너지산업과 신재생에너지</div>
   <div class="grad-en">Energy Industry and Renewable Energy</div>
   <div class="grad-desc">Industry structure and investment landscape of global renewable energy — project finance, grid integration, and the evolving role of fossil fuels in a transition economy.</div>
-  <div class="grad-chips"><span class="grad-chip">Renewables</span><span class="grad-chip">Energy Markets</span><span class="grad-chip">Project Finance</span></div>
+  <div class="grad-chips"><span class="grad-chip shin">Renewables</span><span class="grad-chip shin">Energy Markets</span><span class="grad-chip shin">Project Finance</span></div>
+  <div class="grad-by shin">Prof. Shin</div>
 </div>
 
-<div class="grad-card">
+<div class="grad-card shin">
   <div class="grad-ko">신재생에너지 산업 및 기술 동향</div>
   <div class="grad-en">Renewable Energy Industry and Technology Trends</div>
   <div class="grad-desc">Emerging technologies and market trends in solar PV, offshore wind, green hydrogen, and battery storage — with case studies on leading global projects.</div>
-  <div class="grad-chips"><span class="grad-chip">Solar PV</span><span class="grad-chip">Offshore Wind</span><span class="grad-chip">Green H₂</span></div>
+  <div class="grad-chips"><span class="grad-chip shin">Solar PV</span><span class="grad-chip shin">Offshore Wind</span><span class="grad-chip shin">Green H₂</span></div>
+  <div class="grad-by shin">Prof. Shin</div>
 </div>
 
-<div class="grad-card">
+<div class="grad-card shin">
   <div class="grad-ko">인류의 그림자, 에너지 바로 알기</div>
-  <div class="grad-en">Understanding Energy and Humanity</div>
+  <div class="grad-en">Humanity's Shadow: Understanding Energy</div>
   <div class="grad-desc">A cross-disciplinary seminar exploring the history, geopolitics, and social dimensions of energy — from fossil fuel civilization to the future of sustainable energy access.</div>
-  <div class="grad-chips"><span class="grad-chip">Energy History</span><span class="grad-chip">Geopolitics</span><span class="grad-chip">Society</span></div>
+  <div class="grad-chips"><span class="grad-chip shin">Energy History</span><span class="grad-chip shin">Geopolitics</span><span class="grad-chip shin">Society</span></div>
+  <div class="grad-by shin">Prof. Shin</div>
 </div>
 
 </div>
@@ -480,10 +629,11 @@ permalink: /Lectures/
 <div class="pathway">
 <h4>Foundation → Specialization → Research</h4>
 <div class="pathway-rows">
-  <div class="pathway-row"><span class="pw-from">컴퓨터프로그래밍</span><span class="pw-arr">→</span><span class="pw-to">에너지빅데이터 → 에너지자원과인공지능 → (Grad) 지오에너지 머신러닝</span></div>
-  <div class="pathway-row"><span class="pw-from">에너지자원지질</span><span class="pw-arr">→</span><span class="pw-to">지구물리탐사 → 지오에너지공학개론 → 지오에너지생산및설비</span></div>
-  <div class="pathway-row"><span class="pw-from">지구통계학</span><span class="pw-arr">→</span><span class="pw-to">에너지빅데이터 → CO₂지중저장모니터링 → (Grad) 추계학적 지구통계 모델링 · 디지털 트윈</span></div>
-  <div class="pathway-row"><span class="pw-from">이산화탄소포집및저장기술</span><span class="pw-arr">→</span><span class="pw-to">CO₂지중저장모니터링 → (Grad) 탄소감축 및 기후변화 대응기술</span></div>
-  <div class="pathway-row"><span class="pw-from">시추및지층평가공학</span><span class="pw-arr">→</span><span class="pw-to">지오에너지생산및설비 → 수소에너지저장과안전 → (Grad) 가스공학특론</span></div>
+  <div class="pathway-row"><span class="pw-from">컴퓨터프로그래밍</span><span class="pw-arr">→</span><span class="pw-to">에너지 빅데이터 → 에너지자원과 인공지능 → (Grad) 지오에너지 머신러닝</span></div>
+  <div class="pathway-row"><span class="pw-from">에너지자원지질</span><span class="pw-arr">→</span><span class="pw-to">지구물리탐사 → 지오에너지공학개론 → 지오에너지 생산 및 설비</span></div>
+  <div class="pathway-row"><span class="pw-from">지구통계학</span><span class="pw-arr">→</span><span class="pw-to">에너지 빅데이터 → 저류 모델링 및 시뮬레이션 → (Grad) 추계학적 지구통계 모델링</span></div>
+  <div class="pathway-row"><span class="pw-from">이산화탄소 포집 및 저장 기술</span><span class="pw-arr">→</span><span class="pw-to">CO₂ 지중저장 모니터링 → (Grad) 디지털 트윈과 저류층 시뮬레이션</span></div>
+  <div class="pathway-row"><span class="pw-from">유체역학</span><span class="pw-arr">→</span><span class="pw-to">시추 및 지층평가공학 → 저류 모델링 및 시뮬레이션 → (Grad) 심화저류공학 · 가스공학특론</span></div>
+  <div class="pathway-row"><span class="pw-from">신재생에너지개론</span><span class="pw-arr">→</span><span class="pw-to">에너지전환 및 정책 → (Grad) 에너지산업과 신재생에너지 · 신재생에너지 산업 및 기술 동향</span></div>
 </div>
 </div>
