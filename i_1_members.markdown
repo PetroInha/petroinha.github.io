@@ -236,18 +236,6 @@ permalink: /Members/
   </div>
 </div>
 
-<div class="member-card">
-  <img class="member-photo" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_Aitiana.jpg" alt="Aitiana Sanchez">
-  <span class="member-badge badge-ms">M.S.</span>
-  <div class="member-body">
-    <div class="member-name">Aitiana V.S. Ismodes</div>
-    <div class="member-degree">M.S. (2025~)</div>
-    <div class="member-topics">
-      <span class="member-topic">Digital Rock</span>
-      <span class="member-topic">CCS</span>
-    </div>
-  </div>
-</div>
 
 <div class="member-card">
   <img class="member-photo" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_JHSeol.png" alt="설정환">
