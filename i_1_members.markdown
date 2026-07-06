@@ -103,8 +103,8 @@ permalink: /Members/
 <p>We cultivate future leaders in AI-powered subsurface engineering, geological carbon storage, and carbon-neutral geoenergy systems — bridging cutting-edge research with real-world impact.</p>
 <div class="mem-hero-chips">
   <span class="mem-hero-chip">📍 Inha University</span>
-  <span class="mem-hero-chip">🎓 2 PIs · 10 Graduate Students</span>
-  <span class="mem-hero-chip">🌏 Korea · Peru · Indonesia · Colombia</span>
+  <span class="mem-hero-chip">🎓 2 PIs · 9+ Graduate Students</span>
+  <span class="mem-hero-chip">🌏 Korea · Vietnam · Indonesia · Colombia</span>
   <span class="mem-hero-chip">🏭 95% Industry Placement</span>
 </div>
 </div>
