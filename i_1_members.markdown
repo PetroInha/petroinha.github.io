@@ -332,9 +332,10 @@ permalink: /Members/
 
 <div class="alumni-card ms">
   <div class="alumni-name">박은실</div>
-  <div class="alumni-meta">M.S. · 2026.2</div>
+  <div class="alumni-meta">M.S. · 2026.8</div>
   <div class="alumni-dest">SLB (Schlumberger) <span>Industry</span></div>
   <div class="alumni-topics">InSAR · THM Simulation · CCS Monitoring</div>
+  <a class="alumni-link" href="https://scholar.google.com/citations?user=6zJUImcAAAAJ&hl=ko" target="_blank">Google Scholar →</a>
 </div>
 
 <div class="alumni-card ms">
