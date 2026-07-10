@@ -211,7 +211,7 @@ permalink: /Members/
 </div>
 
 <div class="member-card">
-  <img class="member-photo" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_YJKim.png" alt="이영진">
+  <img class="member-photo" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_yongjin.jpg" alt="이영진">
   <span class="member-badge badge-phd">Ph.D.</span>
   <div class="member-body">
     <div class="member-name">이영진</div>
@@ -224,7 +224,7 @@ permalink: /Members/
 </div>
 
 <div class="member-card">
-  <img class="member-photo" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_DHKim.png" alt="김동희">
+  <img class="member-photo" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_donghee.jpg" alt="김동희">
   <span class="member-badge badge-ms">M.S.</span>
   <div class="member-body">
     <div class="member-name">김동희</div>
@@ -238,7 +238,7 @@ permalink: /Members/
 
 
 <div class="member-card">
-  <img class="member-photo" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_JHSeol.png" alt="설정환">
+  <img class="member-photo" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_jeonghwan.jpg" alt="설정환">
   <span class="member-badge badge-ms">M.S.</span>
   <div class="member-body">
     <div class="member-name">설정환</div>
@@ -264,7 +264,7 @@ permalink: /Members/
 </div>
 
 <div class="member-card">
-  <img class="member-photo" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_jinwoo.PNG" alt="이용훈">
+  <img class="member-photo" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_yonghoon.jpg" alt="이용훈">
   <span class="member-badge badge-ms">M.S.</span>
   <div class="member-body">
     <div class="member-name">이용훈</div>
