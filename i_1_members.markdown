@@ -251,7 +251,7 @@ permalink: /Members/
 </div>
 
 <div class="member-card">
-  <img class="member-photo" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_jinwoo.PNG" alt="어진우">
+  <img class="member-photo" src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/_jinwoo.jpg" alt="어진우">
   <span class="member-badge badge-ms">M.S.</span>
   <div class="member-body">
     <div class="member-name">어진우</div>
