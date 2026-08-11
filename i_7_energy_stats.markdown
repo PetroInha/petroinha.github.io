@@ -14,7 +14,8 @@ permalink: /EnergyInsight/
 .eng-tag{background:rgba(255,255,255,0.13);border:1px solid rgba(255,255,255,0.22);border-radius:20px;padding:4px 12px;font-size:11.5px;font-weight:600;}
 
 .eng-frame-wrap{border:1px solid #e3e9f2;border-radius:14px;overflow:hidden;box-shadow:0 8px 26px rgba(0,0,0,0.07);background:#fff;}
-.eng-frame-wrap iframe{display:block;width:100%;height:2100px;border:0;}
+/* Fallback height only — the script below resizes the frame to its content. */
+.eng-frame-wrap iframe{display:block;width:100%;height:3000px;border:0;}
 
 .eng-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:14px 0 30px;font-size:12.5px;color:#77839a;}
 .eng-bar a{color:#005BAC;font-weight:600;text-decoration:none;}
@@ -46,10 +47,37 @@ permalink: /EnergyInsight/
 </div>
 
 <div class="eng-frame-wrap">
-  <iframe src="{{ '/_images/energy_stats.html' | relative_url }}"
+  <iframe id="eng-frame"
+          src="{{ '/_images/energy_stats.html' | relative_url }}"
           title="CURE Energy Market Monitor"
           loading="lazy"></iframe>
 </div>
+
+<script>
+// The dashboard is served from this same origin, so its height can be read
+// directly and the frame sized to fit — avoids both an inner scrollbar and a
+// large blank gap. The CSS height stands as the fallback if this ever throws.
+(function () {
+  var f = document.getElementById('eng-frame');
+  if (!f) return;
+
+  function fit() {
+    try {
+      var d = f.contentDocument || f.contentWindow.document;
+      var h = Math.max(d.body.scrollHeight, d.documentElement.scrollHeight);
+      if (h > 400) f.style.height = (h + 40) + 'px';
+    } catch (e) { /* cross-origin or not ready — keep the CSS fallback */ }
+  }
+
+  f.addEventListener('load', function () {
+    fit();
+    // Plotly lays out asynchronously; re-measure once it has settled.
+    setTimeout(fit, 400);
+    setTimeout(fit, 1500);
+  });
+  window.addEventListener('resize', fit);
+})();
+</script>
 
 <div class="eng-bar">
   <span>Interactive — hover for values, drag to zoom, double-click to reset.</span>
