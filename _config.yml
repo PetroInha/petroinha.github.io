@@ -34,6 +34,14 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Jekyll skips any directory whose name starts with "_", so _images/ is not
+# copied into _site by default — which is why most pages link their images
+# from raw.githubusercontent.com instead. The energy dashboard has to be
+# served by the site itself (an iframe cannot render raw.githubusercontent
+# HTML, which is returned as text/plain), so publish the folder explicitly.
+include:
+  - _images
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
