@@ -904,45 +904,98 @@ def _apply_view_yranges(fig, by_key, placements, forecasts, view_start):
                                  secondary_y=secondary)
 
 
-def longshort_equity(scored: Optional[pd.DataFrame]) -> Optional[float]:
-    """
-    Equity multiple from trading the model's daily direction call.
-
-    Go long one unit when it says tomorrow closes higher, short one unit when
-    it says lower, hold exactly one day, compound. 1.10 means the stake grew
-    10%; 0.90 means it lost 10%. Frictionless — no spread, no financing, no
-    slippage — so treat it as an upper bound on what the signal is worth.
-    """
-    if scored is None or scored.empty:
-        return None
-    pos = np.where(scored["pred_up"].values, 1.0, -1.0)
-    ret = scored["act_ret"].values / 100.0
-    return float(np.prod(1.0 + pos * ret))
-
-
+PERF_WINDOW = 28         # scored days the red band always covers
+STOP_LOSS = 0.02         # intraday loss at which the day's position is closed
 BACKTEST_FILL = "rgba(214,48,49,0.10)"
 
 
-def _add_backtest_band(fig, by_key, log) -> dict:
+def longshort_returns(scored: Optional[pd.DataFrame],
+                      ohlc: Optional[pd.DataFrame] = None,
+                      stop: float = STOP_LOSS) -> Optional[dict]:
     """
-    Shade the replayed window and label what a daily long/short made there.
+    Equity multiples from trading the model's daily direction call.
 
-    The band is a background shape rather than a trace, so it stays out of the
-    legend; the figure's y-ranges are already pinned by this point, so the
-    label can be placed a fixed fraction up the panel.
+    Base rule: long one unit when it says tomorrow closes higher, short one
+    unit when it says lower, entered at the previous close and held to this
+    one. 1.10 means the stake grew a tenth.
+
+    Stop rule: the same, but the position is closed the moment the day's move
+    goes `stop` against it, capping that day near -2% instead of riding the
+    full adverse move. The day's own high and low decide whether the stop was
+    touched, and a gap through it fills at the open — worse than the stop —
+    rather than pretending the exit was free.
+
+    Both are frictionless: no spread, financing or slippage. Treat them as
+    ceilings on what the signal is worth.
+    """
+    if scored is None or scored.empty:
+        return None
+    long_side = scored["pred_up"].values
+    entry = scored["spot"].values.astype(float)
+    close = scored["actual"].values.astype(float)
+
+    plain = np.where(long_side, close / entry - 1.0, -(close / entry - 1.0))
+
+    stopped = np.zeros(len(scored), dtype=bool)
+    ret = plain.copy()
+    if ohlc is not None and {"Open", "High", "Low"} <= set(ohlc.columns):
+        bar = ohlc.reindex(scored.index)
+        op = pd.to_numeric(bar["Open"], errors="coerce").values
+        hi = pd.to_numeric(bar["High"], errors="coerce").values
+        lo = pd.to_numeric(bar["Low"], errors="coerce").values
+        have = np.isfinite(op) & np.isfinite(hi) & np.isfinite(lo)
+
+        for i in range(len(scored)):
+            if not have[i]:
+                continue
+            if long_side[i]:
+                trigger = entry[i] * (1.0 - stop)
+                if op[i] <= trigger:                  # gapped through it
+                    ret[i], stopped[i] = op[i] / entry[i] - 1.0, True
+                elif lo[i] <= trigger:
+                    ret[i], stopped[i] = -stop, True
+            else:
+                trigger = entry[i] * (1.0 + stop)
+                if op[i] >= trigger:
+                    ret[i], stopped[i] = -(op[i] / entry[i] - 1.0), True
+                elif hi[i] >= trigger:
+                    ret[i], stopped[i] = -stop, True
+
+    return {
+        "plain": float(np.prod(1.0 + plain)),
+        "stopped": float(np.prod(1.0 + ret)),
+        "n": int(len(scored)),
+        "n_stopped": int(stopped.sum()),
+        "has_bars": bool(ohlc is not None
+                         and {"Open", "High", "Low"} <= set(ohlc.columns)),
+    }
+
+
+def _add_performance_band(fig, by_key, log) -> dict:
+    """
+    Shade the most recent `PERF_WINDOW` scored days and label what trading
+    them would have returned.
+
+    The window is deliberately rolling rather than the full history: it always
+    covers the last 28 scored calls, so the band stays the same size as live
+    days accumulate instead of creeping wider every run.
+
+    The band is a background shape, not a trace, so it adds no legend entry;
+    the y-ranges are already pinned by this point, so the label can sit at a
+    known height.
     """
     out = {}
-    if log is None or log.empty or "source" not in log.columns:
+    if log is None or log.empty:
         return out
     for key, row, yname in (("wti", 1, "yaxis"), ("gas", 2, "yaxis2")):
         s = by_key.get(key)
         if s is None or s.data is None:
             continue
-        sub = log[(log["target"] == key)
-                  & (log["source"].fillna("live") == "backtest")]
-        scored = score_predictions(sub, s.data["Close"])
+        scored = score_predictions(log[log["target"] == key],
+                                   s.data["Close"])
         if scored is None or scored.empty:
             continue
+        scored = scored.tail(PERF_WINDOW)
 
         x0, x1 = scored.index.min(), scored.index.max()
         fig.add_vrect(x0=x0 - pd.Timedelta(hours=12),
@@ -950,10 +1003,10 @@ def _add_backtest_band(fig, by_key, log) -> dict:
                       row=row, col=1, layer="below",
                       fillcolor=BACKTEST_FILL, line_width=0)
 
-        eq = longshort_equity(scored)
-        if eq is None:
+        res = longshort_returns(scored, s.data)
+        if res is None:
             continue
-        out[key] = eq
+        out[key] = res
 
         try:
             lo, hi = fig.layout[yname].range
@@ -961,14 +1014,14 @@ def _add_backtest_band(fig, by_key, log) -> dict:
             continue
         if lo is None or hi is None:
             continue
-        mid_x = x0 + (x1 - x0) / 2
+        sub = (f"2% stop-loss · last {res['n']} days · "
+               f"{res['n_stopped']} stopped<br>no stop: "
+               f"{res['plain'] * 100:,.1f}%")
         fig.add_annotation(
-            x=mid_x, y=lo + 0.90 * (hi - lo), row=row, col=1,
+            x=x0 + (x1 - x0) / 2, y=lo + 0.90 * (hi - lo), row=row, col=1,
             showarrow=False, align="center",
-            text=(f"<b>{eq * 100:,.1f}%</b><br>"
-                  f"<span style='font-size:9.5px;color:#8a5a55'>"
-                  f"daily long/short over backtest "
-                  f"({len(scored)} days)</span>"),
+            text=(f"<b>{res['stopped'] * 100:,.1f}%</b><br>"
+                  f"<span style='font-size:9.5px;color:#8a5a55'>{sub}</span>"),
             font=dict(size=16, color="#c0392b"),
             bgcolor="rgba(255,255,255,0.72)", borderpad=3,
         )
@@ -1204,10 +1257,12 @@ def build_figure(series_list: list, forecasts: dict, window_start,
         _apply_view_yranges(fig, by_key, placements, forecasts, view_start)
 
     # After the y-ranges are pinned, so the label can sit at a known height.
-    equity = _add_backtest_band(fig, by_key, log)
-    if equity:
-        print("  long/short over backtest: " + ", ".join(
-            f"{k} {v*100:.1f}%" for k, v in equity.items()))
+    equity = _add_performance_band(fig, by_key, log)
+    for k, r in equity.items():
+        print(f"  long/short last {r['n']}d — {k}: "
+              f"{r['stopped']*100:.1f}% with 2% stop "
+              f"({r['n_stopped']} stopped), "
+              f"{r['plain']*100:.1f}% without")
 
     _add_hero_legends(fig, rows)
     _add_outlook_header(fig, forecasts, stats)

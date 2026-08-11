@@ -108,7 +108,14 @@ The colour scores the **direction**, not the price. Read each call as a daily lo
 
 Next to each P10/P50/P90 line at the top of the chart is that contract's **direction F1**, with the hit rate, the number of scored calls, and the mean absolute price error. F1 is used rather than raw accuracy on purpose: "up" is the positive class, so a model that simply calls up every day can post a flattering hit rate in a rising market while F1 exposes it. Roughly 0.5 is a coin flip.
 
-The <b style="color:#c0392b">red band</b> marks the backtested window, and the bold red number in the middle of it is what a **daily long/short** would have been worth over that stretch: go long one unit when the model calls up, short one unit when it calls down, hold a day, compound. **100% is break-even** — 110% means the stake grew a tenth, 90% means it lost one. It is frictionless, with no spread, financing or slippage, so read it as a ceiling on what the signal is worth rather than an achievable return.
+The <b style="color:#c0392b">red band</b> always covers the **most recent 28 scored days** — a rolling window, so it stays the same width as live calls accumulate rather than creeping wider every run.
+
+The bold red number in it is what trading those days would have been worth. **100% is break-even**: 110% means the stake grew a tenth, 90% means it lost one. Two variants are shown:
+
+- **The headline figure** applies a **2% intraday stop**. Enter at the previous close, and if the day moves 2% against the position, close it there instead of riding the full adverse move. The day's own high and low decide whether the stop was touched, and a gap straight through it fills at the open — worse than the stop — rather than pretending the exit was free.
+- **"no stop"** is the plain version: hold every position to the close regardless.
+
+Both are frictionless — no spread, financing or slippage — so read them as ceilings on what the signal is worth rather than achievable returns. The count of stopped days is shown alongside; when it is a large share of the window, the stop is doing most of the work and the direction call rather less.
 
 **Where the stars come from.** The chart is seeded with a **walk-forward backtest** over the preceding 30 trading days. For each of those days the panel is truncated to that date before the model is fitted, validated and simulated, so it never sees the bar it is predicting — there is no lookahead in the training. But those rows were still generated after the fact, so they are tagged `backtest` and are not the same thing as a call made in advance. Every subsequent run appends genuine live predictions on top, which are tagged `live` and can never be overwritten by a later replay. Over time the record becomes predominantly live.
 
