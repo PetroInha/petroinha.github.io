@@ -80,13 +80,16 @@ em{color:#444;}
 <div class="year-header">
   <span class="year-badge new">2026</span>
   <div class="year-line"></div>
-  <span class="year-count">7 journal · 2 conference</span>
+  <span class="year-count">10 journal · 2 conference</span>
 </div>
 
 <div class="section-label">Journal Articles</div>
 <ol class="pub-list">
+  <li><pi>Jo, H.</pi>, Park, E., &amp; Ahn, S. (2026). From a Single Geological Interpretation to History Matching: A SinGAN–ES-MDA Framework for CO₂ Storage in Channelized Aquifers. <em>Geoenergy Science and Engineering</em>, 214709.</li>
   <li>Park, E., Kim, H., <pi>Jo, H.</pi>, &amp; Pyrcz, M. J. (2026). Multi-Scale Joint Deformation–BHP Data Assimilation for CO₂ Storage Reservoir Characterization Using ES-MDA. <em>IEEE Transactions on Geoscience and Remote Sensing</em>.</li>
+  <li>Merzoug, A., <pi>Jo, H.</pi>, &amp; Pyrcz, M. J. (2026). Generalized Conditioning of Generative Artificial Intelligence for History Matching Subsurface Models. <em>Mathematical Geosciences</em>, 58(2), 313–346.</li>
   <li>Choi, S., Chae, M., Yoon, S., Kim, T. W., Jo, S., Choi, B. I., <pi>Jo, H.</pi>, &amp; Min, B. (2026). Integrated design and optimization for a unified carbon capture and storage system using a machine-learning-assisted multi-objective optimization framework. <em>Journal of CO₂ Utilization</em>, 106, 103402.</li>
+  <li>Kim, N., &amp; <pi>Shin, H.</pi> (2026). Optimization of SAGD well elevation utilizing characteristics of vertical permeability distribution in multi-realized 3-D reservoir models. <em>Fuel</em>, 420, 139018.</li>
   <li>Cho, S., Kim, H., Park, E., Kim, J., <pi>Jo, H.</pi>, Byun, J., &amp; Pyun, S. (2026). Assessment of Facies and Porosity Uncertainty in a West Sea CO₂ Storage Reservoir Using 3D Seismic-Driven Geostatistical Ensemble Modeling Techniques. <em>Geophysics and Geophysical Exploration</em>, 29(1), 76–86.</li>
   <li>Seol, J., Kim, N., Afrireksa, B. D., <pi>Jo, H.</pi>, &amp; <pi>Shin, H.</pi> (2026). Effect of Permeability on CO₂ Storage and Injectivity in Low-Permeability Saline Aquifers. <em>Journal of the Korean Society of Mineral and Energy Resources Engineers</em>, 63.</li>
   <li>Kim, D., Eo, J., Park, E., Lee, M., Keehm, Y., Lee, K., &amp; <pi>Jo, H.</pi> (2026). Generative Artificial Intelligence-Based Carbon Capture and Storage Caprock Shale Digital Rock Data Augmentation. <em>Journal of the Korean Society of Mineral and Energy Resources Engineers</em>, 63.</li>
@@ -107,14 +110,13 @@ em{color:#444;}
 <div class="year-header">
   <span class="year-badge">2025</span>
   <div class="year-line"></div>
-  <span class="year-count">11 journal · 1 conference</span>
+  <span class="year-count">10 journal · 1 conference</span>
 </div>
 
 <div class="section-label">Journal Articles</div>
 <ol class="pub-list">
-  <li>Merzoug, A., <pi>Jo, H.</pi>, &amp; Pyrcz, M. J. (2025). Generalized Conditioning of Generative Artificial Intelligence for History Matching Subsurface Models. <em>Mathematical Geosciences</em>.</li>
-  <li>Liu, L., Maldonado-Cruz, E., <pi>Jo, H.</pi>, Prodanović, M., &amp; Pyrcz, M. J. (2025). Data Conditioning for Subsurface Models with Single-Image Generative Adversarial Network (SinGAN). <em>Mathematical Geosciences</em>.</li>
-  <li>Liu, L., Salazar, J. J., <pi>Jo, H.</pi>, Prodanović, M., &amp; Pyrcz, M. J. (2025). Minimum acceptance criteria for subsurface uncertainty models from SinGAN. <em>Computational Geosciences</em>, 29(1), 6.</li>
+  <li>Liu, L., Maldonado-Cruz, E., <pi>Jo, H.</pi>, Prodanović, M., &amp; Pyrcz, M. J. (2025). Data Conditioning for Subsurface Models with Single-Image Generative Adversarial Network (SinGAN). <em>Mathematical Geosciences</em>, 57(8), 1451–1470.</li>
+  <li>Liu, L., Salazar, J. J., <pi>Jo, H.</pi>, Prodanović, M., &amp; Pyrcz, M. J. (2025). Minimum acceptance criteria for subsurface scenario-based uncertainty models from single image generative adversarial networks (SinGAN). <em>Computational Geosciences</em>, 29(1), 6.</li>
   <li>Park, E., Kim, H., <pi>Shin, H.</pi>, &amp; <pi>Jo, H.</pi> (2025). Deep learning-assisted THM-integrated InSAR modeling for CO₂ storage characterization and surface deformation forecasting. <em>International Journal of Greenhouse Gas Control</em>, 147, 104461.</li>
   <li>Kim, J., Kim, D., Jo, W., Kim, J., <pi>Jo, H.</pi>, &amp; Choe, J. (2025). Physics-Informed Sampling Scheme for Efficient Well Placement Optimization. <em>Journal of Energy Resources Technology, Part B: Subsurface Energy and Carbon</em>.</li>
   <li>Kim, D., King, M., <pi>Jo, H.</pi>, &amp; Choe, J. (2025). Fast and Reliable History Matching of Channel Reservoirs Using Initial Models Selected by Streamline and Deep Learning. <em>Journal of Energy Resources Technology, Part B: Subsurface Energy and Carbon</em>.</li>
@@ -216,15 +218,42 @@ em{color:#444;}
 <ul class="pub-bullet">
   <li><pi>Jo, H.</pi>, Pan, W., Santos, J. E., Jung, H., &amp; Pyrcz, M. J. (2021). Machine learning assisted history matching for a deepwater lobe system. <em>Journal of Petroleum Science and Engineering</em>, 207, 109086.</li>
   <li>Santos, J. E., Yin, Y., <pi>Jo, H.</pi>, Pan, W., Kang, Q., Viswanathan, H. S., Prodanović, M., et al. (2021). Computationally efficient multiscale neural networks applied to fluid flow in complex 3D porous media. <em>Transport in Porous Media</em>, 140(1), 241–272.</li>
+  <li>Yu, Y., Xu, C., Misra, S., Li, W., Ashby, M., Pan, W., Deng, T., <pi>Jo, H.</pi>, Santos, J. E., Fu, L., et al. (2021). Synthetic sonic log generation with machine learning: A contest summary from five methods. <em>Petrophysics</em>, 62(4), 393–406.</li>
+  <li>Nguyen-Le, V., Kim, M., <pi>Shin, H.</pi>, &amp; Little, E. (2021). Multivariate approach to gas production forecast using early production data for Barnett shale reservoir. <em>Journal of Natural Gas Science and Engineering</em>, 87, 103776.</li>
+  <li>Song, G., Lee, H. S., &amp; <pi>Shin, H.</pi> (2021). Three-dimensional modelling of desorbed gas volume and comparison to gas production rate in the Montney plays, Western Canadian Sedimentary Basin. <em>Geofluids</em>, 2021, 6674183.</li>
+  <li><pi>Shin, H.</pi>, Nguyen-Le, V., Kim, M., Shin, H., &amp; Little, E. (2021). Development of production-forecasting model based on the characteristics of production decline analysis using the reservoir and hydraulic fracture parameters in Montney shale. <em>Geofluids</em>, 2021, 6613410.</li>
   <li><pi>Jo, H.</pi>, Santos, J. E., &amp; Pyrcz, M. J. (2020). Conditioning stratigraphic, rule-based models with generative adversarial networks: a deepwater lobe example. <em>Energy Exploration &amp; Exploitation</em>, 38(6), 2558–2578.</li>
   <li><pi>Jo, H.</pi> &amp; Pyrcz, M. J. (2020). Robust rule-based aggradational lobe reservoir models. <em>Natural Resources Research</em>, 29(2), 1193–1213.</li>
-  <li>Nguyen-Le, V., Kim, M., <pi>Shin, H.</pi>, &amp; Little, E. (2021). Multivariate approach to gas production forecast using early production data for Barnett shale reservoir. <em>Journal of Natural Gas Science and Engineering</em>, 87, 103776.</li>
+  <li>Santos, J. E., Xu, D., <pi>Jo, H.</pi>, Landry, C. J., Prodanović, M., &amp; Pyrcz, M. J. (2020). PoreFlow-Net: A 3D convolutional neural network to predict fluid flow through porous media. <em>Advances in Water Resources</em>, 138, 103539.</li>
+  <li>Jung, H., <pi>Jo, H.</pi>, Kim, S., Kang, B., Jeong, H., &amp; Choe, J. (2020). Use of channel information update and discrete cosine transform in ensemble smoother for channel reservoir characterization. <em>Journal of Energy Resources Technology</em>, 142(1), 012901.</li>
   <li>Kim, M., &amp; <pi>Shin, H.</pi> (2020). Machine learning-based prediction of the shale barrier size and spatial location using key features of SAGD production curves. <em>Journal of Petroleum Science and Engineering</em>, 191, 107205.</li>
   <li>Kim, M., &amp; <pi>Shin, H.</pi> (2020). Numerical simulation of undulating shale breaking with SAGD (UB-SAGD) for oil sands reservoir with a shale barrier. <em>Journal of Petroleum Science and Engineering</em>, 195, 107604.</li>
+  <li>Nguyen-Le, V., <pi>Shin, H.</pi>, &amp; Little, E. (2020). Development of shale gas prediction models for long-term production and economics based on early production data in Barnett reservoir. <em>Energies</em>, 13(2), 424.</li>
+  <li>Nguyen-Le, V., &amp; <pi>Shin, H.</pi> (2019). Development of reservoir economic indicator for Barnett Shale gas potential evaluation based on the reservoir and hydraulic fracturing parameters. <em>Journal of Natural Gas Science and Engineering</em>, 66, 159–167.</li>
+  <li>Jun, C., Kim, M., &amp; <pi>Shin, H.</pi> (2019). Optimization of well placement and operating conditions for various well patterns in CO₂ sequestration in the Pohang Basin, Korea. <em>International Journal of Greenhouse Gas Control</em>, 90, 102810.</li>
+  <li>Kim, M., &amp; <pi>Shin, H.</pi> (2019). Application of a dual tubing CO₂ injection–water production horizontal well pattern for improving the CO₂ storage capacity and reducing the CAPEX: A case study in Pohang basin. <em>International Journal of Greenhouse Gas Control</em>, 90, 102813.</li>
+  <li>Kim, G., Lee, H., Chen, Z., Athichanagorn, S., &amp; <pi>Shin, H.</pi> (2019). Effect of reservoir characteristics on the productivity and production forecasting of the Montney shale gas in Canada. <em>Journal of Petroleum Science and Engineering</em>, 182, 106276.</li>
+  <li>Jung, H., <pi>Jo, H.</pi>, Kim, S., Lee, K., &amp; Choe, J. (2018). Geological model sampling using PCA-assisted support vector machine for reliable channel reservoir characterization. <em>Journal of Petroleum Science and Engineering</em>, 167, 396–405.</li>
+  <li>Kim, M., &amp; <pi>Shin, H.</pi> (2018). Development and application of proxy models for predicting the shale barrier size using reservoir parameters and SAGD production data. <em>Journal of Petroleum Science and Engineering</em>, 170, 331–344.</li>
+  <li>Kim, K. H., Lee, K., Lee, H. S., Rhee, C. W., &amp; <pi>Shin, H.</pi> (2018). Lithofacies modeling by multipoint statistics and economic evaluation by NPV volume for the early Cretaceous Wabiskaw Member in Athabasca oilsands area, Canada. <em>Geoscience Frontiers</em>, 9(2), 441–451.</li>
+  <li>Jung, H., <pi>Jo, H.</pi>, Kim, S., Lee, K., &amp; Choe, J. (2017). Recursive update of channel information for reliable history matching of channel reservoirs using EnKF with DCT. <em>Journal of Petroleum Science and Engineering</em>, 154, 19–37.</li>
+  <li><pi>Jo, H.</pi>, Jung, H., Ahn, J., Lee, K., &amp; Choe, J. (2017). History matching of channel reservoirs using ensemble Kalman filter with continuous update of channel information. <em>Energy Exploration &amp; Exploitation</em>, 35(1), 3–23.</li>
+  <li>Jung, H., <pi>Jo, H.</pi>, Lee, K., &amp; Choe, J. (2017). Characterization of various channel fields using an initial ensemble selection scheme and covariance localization. <em>Journal of Energy Resources Technology</em>, 139(6), 062906.</li>
+  <li>Lee, H., Jin, J., <pi>Shin, H.</pi>, &amp; Choe, J. (2015). Efficient prediction of SAGD productions using static factor clustering. <em>Journal of Energy Resources Technology</em>, 137(3), 032907.</li>
+  <li>Lee, K., Jung, S. P., <pi>Shin, H.</pi>, &amp; Choe, J. (2014). Uncertainty quantification of channelized reservoir using ensemble smoother with selective measurement data. <em>Energy Exploration &amp; Exploitation</em>, 32(5), 805–816.</li>
+  <li><pi>Shin, H.</pi> (2012). A simple parameter to optimize SAGD operating conditions. <em>Geosystem Engineering</em>, 15(2), 85–89.</li>
   <li><pi>Shin, H.</pi> &amp; Polikar, M. (2007). Review of reservoir parameters to optimize SAGD and Fast-SAGD operating conditions. <em>Journal of Canadian Petroleum Technology</em>, 46(01).</li>
   <li><pi>Shin, H.</pi> &amp; Polikar, M. (2006). Fast-SAGD application in the Alberta oil sands areas. <em>Journal of Canadian Petroleum Technology</em>, 45(09).</li>
+</ul>
+
+<div class="section-label">Conference Proceedings (Selected)</div>
+<ul class="pub-bullet">
+  <li><pi>Shin, H.</pi>, Hwang, T., &amp; Chon, B. H. (2012). Optimal grid system design for SAGD simulation. <em>SPE Canada Heavy Oil Conference</em>, SPE-157900-MS.</li>
   <li><pi>Shin, H.</pi> &amp; Choe, J. (2009). Shale barrier effects on the SAGD performance. <em>SPE/EAGE Reservoir Characterization &amp; Simulation Conference</em>. (101 citations)</li>
+  <li><pi>Shin, H.</pi> &amp; Polikar, M. (2007). Evaluation of SAGD projects using a dynamic economic indicator. <em>PETSOC Canadian International Petroleum Conference</em>, PETSOC-2007-173.</li>
+  <li><pi>Shin, H.</pi> &amp; Polikar, M. (2006). Experimental investigation of the Fast-SAGD process. <em>PETSOC Canadian International Petroleum Conference</em>, PETSOC-2006-097.</li>
   <li><pi>Shin, H.</pi> &amp; Polikar, M. (2005). Optimizing the SAGD process in three major Canadian oil-sands areas. <em>SPE Annual Technical Conference and Exhibition</em>, SPE-95754-MS. (80 citations)</li>
+  <li><pi>Shin, H.</pi> &amp; Polikar, M. (2005). New economic indicator to evaluate SAGD performance. <em>SPE Western Regional Meeting</em>, SPE-94024-MS.</li>
 </ul>
 </div>
 
@@ -266,7 +295,7 @@ em{color:#444;}
 </div>
 
 <ul class="pub-bullet">
-  <li><pi>Jo, H.</pi>, Park, E., &amp; Ahn, S. From a Single Geological Interpretation to History Matching: A SinGAN-ES-MDA Framework for CO₂ Storage in Channelized Aquifers. <em>SSRN Preprint</em>. <span class="preprint-note">Under Review</span></li>
   <li>Choi, S., Hernandez-Mejia, J. L., <pi>Jo, H.</pi>, &amp; Pyrcz, M. J. A Diagnostic Method for Spatiotemporal Analysis of the Impact of Subsurface Reservoir Uncertainty on Dynamic Response Using Shapley Values. <em>SSRN Preprint</em>. <span class="preprint-note">Under Review</span></li>
+  <li>Jiang, S., Tang, H., Fu, P., &amp; <pi>Jo, H.</pi> A Transfer Learning-Based Surrogate Model for Geological Carbon Storage with Multi-Fidelity Training Data. <span class="preprint-note">In Preparation</span></li>
 </ul>
 </div>
