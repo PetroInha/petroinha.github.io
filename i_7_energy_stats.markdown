@@ -36,7 +36,7 @@ permalink: /EnergyInsight/
 
 <div class="eng-hero">
   <h2>Energy Market Monitor</h2>
-  <p>Three months of the prices and macro drivers our CO₂ storage, hydrogen and unconventional-resource work depends on — crude and gas benchmarks alongside the dollar, the Treasury and TIPS curves, volatility and carbon — with a random-forest P10/P50/P90 outlook for the week ahead pinned to the top of the chart.</p>
+  <p>Three months of the prices and macro drivers our CO₂ storage, hydrogen and unconventional-resource work depends on — crude and gas benchmarks alongside the dollar, the Treasury and TIPS curves, volatility and carbon — with a random-forest P10/P50/P90 outlook for the week ahead pinned to the top of the chart, and every past call scored against what actually printed.</p>
   <div class="eng-tags">
     <span class="eng-tag">WTI · Brent · Dubai</span>
     <span class="eng-tag">Henry Hub</span>
@@ -92,9 +92,17 @@ permalink: /EnergyInsight/
 </script>
 
 <div class="eng-bar">
-  <span><b>All panels share one time axis</b> — drag to pan, scroll to zoom, double-click to reset, and every other chart follows.</span>
+  <span><b>All panels share one time axis</b> — drag to pan, scroll to zoom, double-click to reset, and every other chart follows. Opens on the last three months plus the forecast week; pan left for more history.</span>
   <a href="{{ '/_images/energy_stats.html' | relative_url }}" target="_blank">Open full screen ↗</a>
 </div>
+
+### Track record — the yellow stars
+
+Every run writes its full forecast to a log before anything is drawn. When a predicted day's close finally prints, that run's **next-day P50** is plotted as a <b style="color:#b38600">yellow star ★</b> on top of the candle it was predicting, with the actual and the percentage error on hover.
+
+The point is that these are calls the model committed to **in advance**. Nothing here is refitted after the outcome is known, and no star can be added retroactively — if the log has no entry for a day, no star appears for it. The stars accumulate as the dashboard keeps running, so the crude and gas panels double as an unedited scorecard: a cluster of stars sitting consistently above or below the bars is the model telling on itself.
+
+Prices are archived to `__datafile/energy_panel.csv` and forecasts to `__datafile/forecast_log.csv`. Each run resumes from where the archive left off rather than re-downloading years of history, so the record only grows.
 
 
 ### How the one-week forecast is produced

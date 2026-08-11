@@ -34,6 +34,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TARGETS = [
     os.path.join("_images", "energy_stats.html"),
     "i_7_energy_stats.markdown",
+    # The archive and the forecast log are the point of the whole exercise:
+    # they accumulate across runs, and the track record is only meaningful if
+    # past calls survive. Committing them keeps that history durable.
+    os.path.join("__datafile", "energy_panel.csv"),
+    os.path.join("__datafile", "forecast_log.csv"),
 ]
 KST = dt.timezone(dt.timedelta(hours=9))
 

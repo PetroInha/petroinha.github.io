@@ -3,28 +3,36 @@
 """
 gather_energy_stats.py — CURE Lab energy market dashboard builder.
 
-Pulls ~1 month of daily energy / macro indicators, renders an interactive
-Plotly dashboard, and appends a Random-Forest based P10/P50/P90 outlook for
-next week's WTI crude and Henry Hub natural gas prices.
+Maintains a local archive of daily energy / macro indicators, renders an
+interactive Plotly dashboard, and records a recursive Random-Forest
+P10/P50/P90 outlook for next week's WTI crude and Henry Hub gas.
 
 Output
 ------
-_images/energy_stats.html   (standalone, self-contained page; Plotly via CDN)
+_images/energy_stats.html    the dashboard
+__datafile/energy_panel.csv  aggregated price archive, grows every run
+__datafile/forecast_log.csv  every forecast ever made, for scoring
 
 Usage
 -----
     py -3.13 _script/gather_energy_stats.py
     py -3.13 _script/gather_energy_stats.py --display-days 45 --open
+    py -3.13 _script/gather_energy_stats.py --no-cache      # full refetch
 
 Notes
 -----
-* Every data source is fetched defensively. A source that fails is dropped
-  from the dashboard and reported in the coverage table rather than raising.
-* The dashboard *displays* ~1 month, but the forecast model *trains* on
-  several years of history (a month of daily bars is far too little to fit a
-  random forest on).
-* Set EIA_API_KEY in the environment to prefer the EIA v2 API over FRED for
-  the weekly inventory / utilisation series.
+* Runs are incremental. Each series resumes from its cached tail (minus a
+  short overlap so revisions land) rather than re-downloading years of
+  history; a missing or too-short archive triggers a full pull automatically.
+* Three windows, deliberately different: the archive keeps everything, the
+  figure is handed ~400 days so it can be panned, and the initial view is the
+  last 90 days plus the forecast horizon.
+* Every data source is fetched defensively. A source that fails falls back to
+  the archive rather than raising.
+* Each run logs its whole fan. Once a predicted day's close prints, the
+  previous run's next-day P50 is drawn as a yellow star on that candle — a
+  running scorecard of calls made before the fact, never refitted after it.
+* Set EIA_API_KEY in the environment to prefer the EIA v2 API over FRED.
 """
 
 from __future__ import annotations
@@ -1031,7 +1039,13 @@ def _add_hero_legends(fig, rows: int) -> None:
 
 
 def build_figure(series_list: list, forecasts: dict, window_start,
-                 display_days: int, log=None, view_end=None):
+                 display_days: int, log=None, view_start=None,
+                 view_end=None):
+    """
+    `window_start` bounds the data handed to the traces; `view_start`/
+    `view_end` bound only the initial camera. Loading more than is shown is
+    what makes panning back possible without regenerating the page.
+    """
     import plotly.graph_objects as go
     from plotly.subplots import make_subplots
 
@@ -1224,7 +1238,7 @@ def build_figure(series_list: list, forecasts: dict, window_start,
         font=dict(family="-apple-system,BlinkMacSystemFont,Segoe UI,"
                          "Helvetica,Arial,sans-serif", size=11.5,
                   color="#25313f"),
-        hovermode="x unified", showlegend=False,
+        hovermode="x unified",
         dragmode="pan",
         title=dict(
             text=(f"<b>CURE Energy Market Monitor</b><br>"
@@ -1240,8 +1254,18 @@ def build_figure(series_list: list, forecasts: dict, window_start,
             font=dict(size=19, color="#002F6C"),
         ),
     )
+    # Default view: the last `display_days` plus the forecast horizon. More
+    # history is loaded into the traces than this, so panning back works
+    # without a reload; the archive itself goes back further still.
+    if view_start is not None and view_end is not None:
+        fig.update_xaxes(range=[view_start, view_end], row=1, col=1)
+
+    _add_hero_legends(fig, rows)
     _add_outlook_header(fig, forecasts)
     _add_attribution(fig)
+    if n_scored:
+        print("  track record plotted: " + ", ".join(
+            f"{k} {v} scored call(s)" for k, v in n_scored.items()))
     return fig
 
 
@@ -1407,6 +1431,12 @@ def main(argv=None) -> int:
     ap.add_argument("--out", default=OUT_HTML, help="output html path")
     ap.add_argument("--no-forecast", action="store_true",
                     help="skip the random-forest outlook")
+    ap.add_argument("--plot-days", type=int, default=PLOT_DAYS,
+                    help="history loaded into the figure and pannable "
+                         "(default 400); the archive keeps everything")
+    ap.add_argument("--no-cache", action="store_true",
+                    help="ignore __datafile and refetch the full history "
+                         "without writing the archive or forecast log")
     ap.add_argument("--no-sync-page", action="store_true",
                     help="do not rewrite the iframe height in "
                          "i_7_energy_stats.markdown")
@@ -1418,16 +1448,44 @@ def main(argv=None) -> int:
     hist_start = today - dt.timedelta(days=int(365.25 * TRAIN_YEARS))
     end = today + dt.timedelta(days=1)
     window_start = pd.Timestamp(today - dt.timedelta(days=args.display_days))
+    plot_start = pd.Timestamp(today - dt.timedelta(days=args.plot_days))
 
     print(f"CURE energy stats — {today}")
     print(f"  history {hist_start} .. {today}  "
           f"(display last {args.display_days}d)")
+
+    cache = pd.DataFrame() if args.no_cache else load_panel_cache()
+    if not cache.empty:
+        print(f"  archive: {len(cache)} rows, "
+              f"{cache.index.min().date()} .. {cache.index.max().date()}, "
+              f"{len(cache.columns)} cols")
+    else:
+        print("  archive: empty — full history pull")
+
+    registry_list = registry()
+    starts = {s.key: fetch_start_for(s, cache, hist_start)
+              for s in registry_list}
+
     print("Fetching:")
-    series_list = gather(registry(), hist_start, end)
+    series_list = gather(registry_list, hist_start, end, starts=starts)
+
+    fresh = series_to_frame(series_list)
+    cache = merge_cache(cache, fresh)
+    if cache.empty:
+        print("FATAL: no data available from archive or network.",
+              file=sys.stderr)
+        return 1
+    if not args.no_cache:
+        save_panel_cache(cache)
+        print(f"  archive saved: {PANEL_CSV} "
+              f"({len(cache)} rows, {len(cache.columns)} cols)")
+
+    # Everything downstream works off the archive, not just today's delta.
+    hydrate_from_cache(series_list, cache)
+    mark_cadence(series_list)
 
     if not any(s.data is not None for s in series_list):
-        print("FATAL: no data source resolved; nothing to plot.",
-              file=sys.stderr)
+        print("FATAL: no series resolved; nothing to plot.", file=sys.stderr)
         return 1
 
     derive_daily_dubai(series_list)
@@ -1453,9 +1511,21 @@ def main(argv=None) -> int:
             else:
                 print(f"  - {key:4s} no forecast")
 
+    # Log this run's fan before drawing, so the newest call is on record even
+    # if rendering later fails.
+    log = load_forecast_log()
+    if forecasts and not args.no_cache:
+        log = record_forecasts(log, forecasts)
+        save_forecast_log(log)
+        print(f"  forecast log: {FORECAST_CSV} ({len(log)} rows)")
+
+    view_end = pd.Timestamp(today) + pd.tseries.offsets.BDay(
+        FORECAST_HORIZON + 1)
+
     print("Rendering...")
-    fig = build_figure(series_list, forecasts, window_start,
-                       args.display_days)
+    fig = build_figure(series_list, forecasts, plot_start,
+                       args.display_days, log=log,
+                       view_start=window_start, view_end=view_end)
     html = build_html(fig, series_list, forecasts, args.display_days)
 
     os.makedirs(os.path.dirname(args.out), exist_ok=True)
