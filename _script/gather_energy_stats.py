@@ -1100,8 +1100,16 @@ def build_figure(series_list: list, forecasts: dict, window_start,
     if gas and gas.data is not None:
         _hero(fig, go, gas, "Henry Hub", 2, 1, clip, "legend2")
 
+    # ---------------- track record: yesterday's call on today's bar --------
+    n_scored = {}
+    for key, hero_row, lg in (("wti", 1, "legend"), ("gas", 2, "legend2")):
+        s = by_key.get(key)
+        if s is not None:
+            n_scored[key] = _add_prediction_stars(
+                fig, go, key, hero_row, lg, s, log, clip)
+
     # ---------------- forecast fans on the hero panels ----------------
-    for key, hero_row in (("wti", 1), ("gas", 2)):
+    for key, hero_row, lg in (("wti", 1, "legend"), ("gas", 2, "legend2")):
         fc = forecasts.get(key)
         if not fc:
             continue
@@ -1118,13 +1126,13 @@ def build_figure(series_list: list, forecasts: dict, window_start,
             x=xs + xs[::-1], y=upper + lower[::-1],
             fill="toself", mode="lines", line=dict(width=0),
             fillcolor="rgba(91,60,196,0.15)", hoverinfo="skip",
-            name="P10–P90", showlegend=False,
+            name="Forecast P10–P90", legend=lg, showlegend=True,
         ), row=hero_row, col=1)
         fig.add_trace(go.Scatter(
             x=xs, y=mid, mode="lines+markers",
             line=dict(color="#5b3cc4", width=2, dash="dash"),
-            marker=dict(size=5, symbol="diamond"), name="P50",
-            showlegend=False,
+            marker=dict(size=5, symbol="diamond"), name="Forecast P50",
+            legend=lg, showlegend=True,
             hovertemplate="P50 %{y:,.2f}<extra></extra>",
         ), row=hero_row, col=1)
 
