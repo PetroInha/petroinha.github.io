@@ -994,7 +994,7 @@ def _add_outlook_header(fig, forecasts: dict):
     names = {"wti": "WTI Crude ($/bbl)", "gas": "Henry Hub ($/MMBtu)"}
     fig.add_annotation(
         text="<b>ONE-WEEK OUTLOOK &nbsp;·&nbsp; P10 / P50 / P90</b>",
-        xref="paper", yref="paper", x=0.0, y=1.118, xanchor="left",
+        xref="paper", yref="paper", x=0.0, y=1.052, xanchor="left",
         yanchor="bottom", showarrow=False,
         font=dict(size=11, color=PRIMARY),
     )
@@ -1016,7 +1016,7 @@ def _add_outlook_header(fig, forecasts: dict):
         )
         fig.add_annotation(
             text=txt, xref="paper", yref="paper",
-            x=card_gap * i, y=1.052, xanchor="left", yanchor="bottom",
+            x=card_gap * i, y=1.012, xanchor="left", yanchor="bottom",
             showarrow=False, align="left", font=dict(size=12, color="#25313f"),
             bgcolor="rgba(245,248,252,0.95)", bordercolor="#c9d6e6",
             borderwidth=1, borderpad=11,
