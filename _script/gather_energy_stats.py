@@ -1100,6 +1100,77 @@ def _apply_view_yranges(fig, by_key, placements, forecasts, view_start):
                                  secondary_y=secondary)
 
 
+def longshort_equity(scored: Optional[pd.DataFrame]) -> Optional[float]:
+    """
+    Equity multiple from trading the model's daily direction call.
+
+    Go long one unit when it says tomorrow closes higher, short one unit when
+    it says lower, hold exactly one day, compound. 1.10 means the stake grew
+    10%; 0.90 means it lost 10%. Frictionless — no spread, no financing, no
+    slippage — so treat it as an upper bound on what the signal is worth.
+    """
+    if scored is None or scored.empty:
+        return None
+    pos = np.where(scored["pred_up"].values, 1.0, -1.0)
+    ret = scored["act_ret"].values / 100.0
+    return float(np.prod(1.0 + pos * ret))
+
+
+BACKTEST_FILL = "rgba(214,48,49,0.10)"
+
+
+def _add_backtest_band(fig, by_key, log) -> dict:
+    """
+    Shade the replayed window and label what a daily long/short made there.
+
+    The band is a background shape rather than a trace, so it stays out of the
+    legend; the figure's y-ranges are already pinned by this point, so the
+    label can be placed a fixed fraction up the panel.
+    """
+    out = {}
+    if log is None or log.empty or "source" not in log.columns:
+        return out
+    for key, row, yname in (("wti", 1, "yaxis"), ("gas", 2, "yaxis2")):
+        s = by_key.get(key)
+        if s is None or s.data is None:
+            continue
+        sub = log[(log["target"] == key)
+                  & (log["source"].fillna("live") == "backtest")]
+        scored = score_predictions(sub, s.data["Close"])
+        if scored is None or scored.empty:
+            continue
+
+        x0, x1 = scored.index.min(), scored.index.max()
+        fig.add_vrect(x0=x0 - pd.Timedelta(hours=12),
+                      x1=x1 + pd.Timedelta(hours=12),
+                      row=row, col=1, layer="below",
+                      fillcolor=BACKTEST_FILL, line_width=0)
+
+        eq = longshort_equity(scored)
+        if eq is None:
+            continue
+        out[key] = eq
+
+        try:
+            lo, hi = fig.layout[yname].range
+        except Exception:                                  # noqa: BLE001
+            continue
+        if lo is None or hi is None:
+            continue
+        mid_x = x0 + (x1 - x0) / 2
+        fig.add_annotation(
+            x=mid_x, y=lo + 0.90 * (hi - lo), row=row, col=1,
+            showarrow=False, align="center",
+            text=(f"<b>{eq * 100:,.1f}%</b><br>"
+                  f"<span style='font-size:9.5px;color:#8a5a55'>"
+                  f"daily long/short over backtest "
+                  f"({len(scored)} days)</span>"),
+            font=dict(size=16, color="#c0392b"),
+            bgcolor="rgba(255,255,255,0.72)", borderpad=3,
+        )
+    return out
+
+
 def _add_hero_legends(fig, rows: int) -> None:
     """
     A legend box per hero panel. Plotly's multi-legend support lets each sit
@@ -1328,6 +1399,12 @@ def build_figure(series_list: list, forecasts: dict, window_start,
         fig.update_xaxes(range=[view_start, view_end], row=1, col=1)
         _apply_view_yranges(fig, by_key, placements, forecasts, view_start)
 
+    # After the y-ranges are pinned, so the label can sit at a known height.
+    equity = _add_backtest_band(fig, by_key, log)
+    if equity:
+        print("  long/short over backtest: " + ", ".join(
+            f"{k} {v*100:.1f}%" for k, v in equity.items()))
+
     _add_hero_legends(fig, rows)
     _add_outlook_header(fig, forecasts, stats)
     _add_attribution(fig)
@@ -1369,7 +1446,7 @@ def _add_outlook_header(fig, forecasts: dict, stats: Optional[dict] = None):
     names = {"wti": "WTI Crude ($/bbl)", "gas": "Henry Hub ($/MMBtu)"}
     fig.add_annotation(
         text="<b>ONE-WEEK OUTLOOK &nbsp;·&nbsp; P10 / P50 / P90</b>",
-        xref="paper", yref="paper", x=0.0, y=1.067, xanchor="left",
+        xref="paper", yref="paper", x=0.0, y=1.077, xanchor="left",
         yanchor="bottom", showarrow=False,
         font=dict(size=11, color=PRIMARY),
     )
