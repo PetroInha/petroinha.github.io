@@ -1,5 +1,6 @@
 ---
 layout: page
+title: EnergyInsight
 permalink: /EnergyInsight/
 ---
 
@@ -14,7 +15,7 @@ permalink: /EnergyInsight/
 
 .eng-frame-wrap{border:1px solid #e3e9f2;border-radius:14px;overflow:hidden;box-shadow:0 8px 26px rgba(0,0,0,0.07);background:#fff;}
 /* Fallback height only — the script below resizes the frame to its content. */
-.eng-frame-wrap iframe{display:block;width:100%;height:3000px;border:0;}
+.eng-frame-wrap iframe{display:block;width:100%;height:1260px;border:0;}
 
 .eng-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:14px 0 30px;font-size:12.5px;color:#77839a;}
 .eng-bar a{color:#005BAC;font-weight:600;text-decoration:none;}
@@ -35,12 +36,13 @@ permalink: /EnergyInsight/
 
 <div class="eng-hero">
   <h2>Energy Market Monitor</h2>
-  <p>A daily snapshot of the prices and macro drivers our CO₂ storage, hydrogen and unconventional-resource work depends on — crude and gas benchmarks alongside the dollar, rates, volatility and carbon — with a random-forest P10/P50/P90 outlook for the week ahead.</p>
+  <p>Three months of the prices and macro drivers our CO₂ storage, hydrogen and unconventional-resource work depends on — crude and gas benchmarks alongside the dollar, the Treasury and TIPS curves, volatility and carbon — with a random-forest P10/P50/P90 outlook for the week ahead pinned to the top of the chart.</p>
   <div class="eng-tags">
     <span class="eng-tag">WTI · Brent · Dubai</span>
     <span class="eng-tag">Henry Hub</span>
-    <span class="eng-tag">DXY · UST10Y · OVX</span>
-    <span class="eng-tag">EIA fundamentals</span>
+    <span class="eng-tag">OVX · RBOB</span>
+    <span class="eng-tag">UST &amp; TIPS curves</span>
+    <span class="eng-tag">DXY · Broad TW USD</span>
     <span class="eng-tag">Random Forest P10/P50/P90</span>
   </div>
 </div>
@@ -79,7 +81,7 @@ permalink: /EnergyInsight/
 </script>
 
 <div class="eng-bar">
-  <span>Interactive — hover for values, drag to zoom, double-click to reset.</span>
+  <span><b>All panels share one time axis</b> — drag to pan, scroll to zoom, double-click to reset, and every other chart follows.</span>
   <a href="{{ '/_images/energy_stats.html' | relative_url }}" target="_blank">Open full screen ↗</a>
 </div>
 
@@ -88,11 +90,11 @@ permalink: /EnergyInsight/
 <div class="eng-how">
   <div class="eng-step">
     <b>1 · Collect</b>
-    <span>Daily bars from Yahoo Finance for tradable contracts; rates, the trade-weighted dollar and EIA fundamentals from the St. Louis Fed's FRED. Each source is fetched independently, so one outage degrades the dashboard instead of breaking it.</span>
+    <span>Three months of daily bars from Yahoo Finance for tradable contracts; the Treasury and TIPS curves and the trade-weighted dollar from the St. Louis Fed's FRED. Each source is fetched independently, so one outage degrades the dashboard instead of breaking it.</span>
   </div>
   <div class="eng-step">
     <b>2 · Align</b>
-    <span>Everything is resampled onto a business-day grid. Weekly and monthly statistics are forward-filled — the last published print genuinely is the market's best information until the next release.</span>
+    <span>Everything is resampled onto a business-day grid. Lower-frequency series are forward-filled — the last published print genuinely is the market's best information until the next release.</span>
   </div>
   <div class="eng-step">
     <b>3 · Engineer</b>
@@ -100,7 +102,7 @@ permalink: /EnergyInsight/
   </div>
   <div class="eng-step">
     <b>4 · Fit</b>
-    <span>A 500-tree random forest maps today's full cross-market state onto the log price change five trading days ahead. It trains on four years of history — not the one month plotted, which is far too little to fit a forest on.</span>
+    <span>A 500-tree random forest maps today's full cross-market state onto the log price change five trading days ahead. It trains on four years of history — not the three months plotted, which is far too little to fit a forest on.</span>
   </div>
   <div class="eng-step">
     <b>5 · Quantify</b>
@@ -108,12 +110,14 @@ permalink: /EnergyInsight/
   </div>
   <div class="eng-step">
     <b>6 · Publish</b>
-    <span>Rendered to an interactive Plotly page with crude and gas given the top two rows, then committed and pushed. Re-run <code>_script/gather_energy_stats.py</code> to refresh.</span>
+    <span>Crude and gas take the top row side by side; related indicators are grouped three panels to a row, sharing a second y-axis where their levels differ too much to plot together. Every x-axis is matched, so the panels pan and zoom as one. Re-run <code>_script/gather_energy_stats.py</code> to refresh.</span>
   </div>
 </div>
 
 <div class="eng-note">
-  <b>Read the bands as uncertainty, not as a view.</b> The P10/P50/P90 range describes how wrong this one model has historically been over a one-week horizon. It assumes next week resembles the training period, and it will be wrong precisely when that assumption breaks — which is usually when it matters. Nothing here is investment advice. Full source list, per-indicator coverage and caveats are printed at the bottom of the dashboard itself.
+  <b>Read the bands as uncertainty, not as a view.</b> The P10/P50/P90 range describes how wrong this one model has historically been over a one-week horizon. It assumes next week resembles the training period, and it will be wrong precisely when that assumption breaks — which is usually when it matters. Nothing here is investment advice.
+  <br><br>
+  <b>Series caveats.</b> Dubai crude has no free daily feed, so the monthly FRED benchmark is forward-filled and drawn dotted for reference only. EUA carbon is proxied by the KRBN ETF, not the ICE EUA futures settlement. FRED publishes TIPS yields from 5 years out — there is no 2-year real rate — so the short leg of the real-yield panel is 5Y, labelled as such in the panel's colour key.
 </div>
 
 **References** — Yahoo Finance · [FRED, Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org/) · [U.S. Energy Information Administration](https://www.eia.gov/) · [Baker Hughes Rig Count](https://rigcount.bakerhughes.com/) · Breiman, L. (2001). Random Forests. *Machine Learning*, 45(1), 5–32.
