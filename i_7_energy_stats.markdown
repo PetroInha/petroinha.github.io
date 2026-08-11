@@ -15,7 +15,7 @@ permalink: /EnergyInsight/
 
 .eng-frame-wrap{border:1px solid #e3e9f2;border-radius:14px;overflow:hidden;box-shadow:0 8px 26px rgba(0,0,0,0.07);background:#fff;}
 /* Fallback height only — the script below resizes the frame to its content. */
-.eng-frame-wrap iframe{display:block;width:100%;height:1260px;border:0;}
+.eng-frame-wrap iframe{display:block;width:100%;height:1196px;border:0;}
 
 .eng-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:14px 0 30px;font-size:12.5px;color:#77839a;}
 .eng-bar a{color:#005BAC;font-weight:600;text-decoration:none;}
@@ -30,7 +30,7 @@ permalink: /EnergyInsight/
 
 @media(max-width:900px){
   .eng-hero{padding:26px 20px;}
-  .eng-frame-wrap iframe{height:1600px;}
+  .eng-frame-wrap iframe{height:1196px;}
 }
 </style>
 
@@ -55,19 +55,30 @@ permalink: /EnergyInsight/
 </div>
 
 <script>
-// The dashboard is served from this same origin, so its height can be read
-// directly and the frame sized to fit — avoids both an inner scrollbar and a
-// large blank gap. The CSS height stands as the fallback if this ever throws.
+// The frame sizes itself to its content two ways: the dashboard posts its
+// height on load (see SIZE_JS in gather_energy_stats.py), and as a backstop we
+// read it directly, which works because both are served from this origin. The
+// CSS height is written by the generator to match the figure exactly, so the
+// first paint is already correct and neither path causes a visible jump.
 (function () {
   var f = document.getElementById('eng-frame');
   if (!f) return;
 
+  function apply(h) {
+    if (h > 400) f.style.height = h + 'px';
+  }
+
+  window.addEventListener('message', function (ev) {
+    if (ev.data && typeof ev.data.cureEnergyHeight === 'number') {
+      apply(ev.data.cureEnergyHeight);
+    }
+  });
+
   function fit() {
     try {
       var d = f.contentDocument || f.contentWindow.document;
-      var h = Math.max(d.body.scrollHeight, d.documentElement.scrollHeight);
-      if (h > 400) f.style.height = (h + 40) + 'px';
-    } catch (e) { /* cross-origin or not ready — keep the CSS fallback */ }
+      apply(Math.max(d.body.scrollHeight, d.documentElement.scrollHeight));
+    } catch (e) { /* keep whatever height we already have */ }
   }
 
   f.addEventListener('load', function () {
@@ -98,15 +109,15 @@ permalink: /EnergyInsight/
   </div>
   <div class="eng-step">
     <b>3 · Engineer</b>
-    <span>Per indicator: 1/3/5/10-day changes normalised by 60-day realised volatility, plus a 60-day level z-score. Differences rather than log returns, so yields and real rates stay defined when they go negative.</span>
+    <span>The contract's own <b>last 14 trading days</b> of returns, volatility-scaled, plus momentum and level z-scores. For every other indicator: 1/3/5/10-day changes and a 60-day level z-score — differences rather than log returns, so yields and real rates stay defined when they go negative.</span>
   </div>
   <div class="eng-step">
     <b>4 · Fit</b>
-    <span>A 500-tree random forest maps today's full cross-market state onto the log price change five trading days ahead. It trains on four years of history — not the three months plotted, which is far too little to fit a forest on.</span>
+    <span>A 500-tree random forest maps that 14-day window plus the cross-market state onto <b>tomorrow's</b> log price change — a single one-day step, not a five-day jump. It trains on four years of history; the three months plotted would be far too little.</span>
   </div>
   <div class="eng-step">
-    <b>5 · Quantify</b>
-    <span>A five-fold walk-forward split produces out-of-sample residuals. P10/P50/P90 are percentiles of the point forecast plus that empirical residual distribution — wider and more honest than the spread of the trees alone.</span>
+    <b>5 · Roll forward</b>
+    <span>The one-day model is applied <b>recursively</b>: predict tomorrow, append that price, re-derive the 14-day window, predict again — five times. Each step adds a residual drawn from the model's own out-of-sample errors, and 2,000 such paths are simulated, so uncertainty compounds with horizon instead of being assumed.</span>
   </div>
   <div class="eng-step">
     <b>6 · Publish</b>
@@ -114,10 +125,20 @@ permalink: /EnergyInsight/
   </div>
 </div>
 
+### How the one-week forecast is produced
+
+The model never predicts a week directly. It learns a **single one-day step** — given the contract's last **14 trading days** of volatility-scaled returns plus the current state of every other indicator on this page, what is tomorrow's log price change? — and is then applied **recursively**: predict tomorrow, append that price to the history, re-derive the 14-day window from the extended series, and predict again, five times over to reach a week.
+
+Uncertainty is generated the same way. At each step a residual is drawn at random from the model's own walk-forward out-of-sample errors, and **2,000 independent paths** are simulated. The P10/P50/P90 fan on the crude and gas panels is the 10th/50th/90th percentile of those paths at each day, so the band widens with horizon because the errors genuinely compound — not because a widening was imposed on it.
+
+Two limits are worth stating plainly. The other indicators are **held fixed** through the rollout: the dollar, the curve and volatility are not themselves forecast, so the fan answers "where does this contract drift if the rest of the market stands still", not "what will happen". And because each step feeds on its own output, any bias in the one-day model accumulates rather than cancels.
+
 <div class="eng-note">
-  <b>Read the bands as uncertainty, not as a view.</b> The P10/P50/P90 range describes how wrong this one model has historically been over a one-week horizon. It assumes next week resembles the training period, and it will be wrong precisely when that assumption breaks — which is usually when it matters. Nothing here is investment advice.
+  <b>Read the bands as uncertainty, not as a view.</b> The P10/P50/P90 range describes how wrong this one model has historically been. It assumes next week resembles the training period, and it will be wrong precisely when that assumption breaks — which is usually when it matters.
   <br><br>
-  <b>Series caveats.</b> Dubai crude has no free daily feed, so the monthly FRED benchmark is forward-filled and drawn dotted for reference only. EUA carbon is proxied by the KRBN ETF, not the ICE EUA futures settlement. FRED publishes TIPS yields from 5 years out — there is no 2-year real rate — so the short leg of the real-yield panel is 5Y, labelled as such in the panel's colour key.
+  <b>Series caveats.</b> Dubai crude has no free daily feed — no public source publishes it daily — so the daily Dubai line is <b>reconstructed</b> as Brent plus the interpolated monthly Dubai−Brent spread. Its day-to-day shape is Brent's; only its level is Dubai's. The true monthly prints are overlaid as open circles, and the reconstruction is excluded from the forecast model. EUA carbon is proxied by the KRBN ETF, not the ICE EUA futures settlement. FRED publishes TIPS yields from 5 years out — there is no 2-year real rate — so the short leg of the real-yield panel is 5Y, labelled as such in the panel's colour key.
+  <br><br>
+  <b>No warranty and no responsibility.</b> This page is produced automatically from third-party data for internal research interest only. It is <b>not</b> investment, trading, financial or commercial advice, and it is not a recommendation to buy, sell or hold anything. The underlying data may be delayed, revised, incomplete or simply wrong, and the model output is a statistical extrapolation that carries no guarantee of accuracy. CURE, Inha University and the authors accept <b>no liability whatsoever</b> for any loss or damage arising from any use of, or reliance on, this page or its forecasts. Use it at your own risk, and verify anything that matters against the primary sources below.
 </div>
 
-**References** — Yahoo Finance · [FRED, Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org/) · [U.S. Energy Information Administration](https://www.eia.gov/) · [Baker Hughes Rig Count](https://rigcount.bakerhughes.com/) · Breiman, L. (2001). Random Forests. *Machine Learning*, 45(1), 5–32.
+**References** — Yahoo Finance · [FRED, Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org/) · [U.S. Energy Information Administration](https://www.eia.gov/) · Breiman, L. (2001). Random Forests. *Machine Learning*, 45(1), 5–32.
