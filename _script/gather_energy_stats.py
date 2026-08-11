@@ -144,7 +144,7 @@ def panels() -> list:
               ["tips2", "tips10", "tips30"], y_left="%"),
         Panel("달러 지수 · Broad TW USD & DXY",
               ["twdollar", "dxy"], y_left="index"),
-        Panel("EUA 탄소배출권 · Carbon (KRBN proxy)",
+        Panel("탄소배출권 ETF (KRBN)",
               ["eua"], y_left="$"),
     ]
 
@@ -680,15 +680,21 @@ def forecast_target(panel: pd.DataFrame, target: str,
 # Figure construction
 # --------------------------------------------------------------------------
 
-# A 6-column grid is the least common multiple of the two row shapes: the
-# hero row splits it 3+3 (oil | gas), every context row 2+2+2.
+# A 6-column grid: the two hero rows span all six, every context row 2+2+2.
 NCOLS = 6
+
+# Target drawn height per row, in pixels. The figure height is solved back
+# from these so panels keep a usable aspect ratio however many rows appear.
+OIL_ROW_PX = 380
+GAS_ROW_PX = 330
+CTX_ROW_PX = 250
+VSPACE = 0.045
 
 
 def _layout_plan(series_list: list, panel_list: list):
     """
-    Row 1: crude oil (left) and natural gas (right), both taller.
-    Rows 2+: three grouped context panels per row.
+    Row 1: crude oil, full width. Row 2: natural gas, full width.
+    Rows 3+: three grouped context panels per row.
 
     Panels whose members all failed to fetch are dropped entirely, so an
     unavailable indicator leaves no empty axes behind.
@@ -701,7 +707,8 @@ def _layout_plan(series_list: list, panel_list: list):
         if members:
             live.append((p, members))
 
-    specs = [[{"colspan": 3}, None, None, {"colspan": 3}, None, None]]
+    full = [{"colspan": NCOLS}] + [None] * (NCOLS - 1)
+    specs = [list(full), list(full)]
     titles = ["원유 가격 · Crude Oil (WTI candles · Brent / Dubai lines)",
               "천연가스 가격 · Natural Gas (Henry Hub)"]
 
@@ -726,10 +733,10 @@ def _layout_plan(series_list: list, panel_list: list):
                 titles.append("")
         specs.append(row_spec)
 
-    heights = [2.3] + [1.0] * n_rows
-    total = sum(heights)
-    heights = [h / total for h in heights]
-    return specs, titles, heights, placements
+    px = [OIL_ROW_PX, GAS_ROW_PX] + [CTX_ROW_PX] * n_rows
+    total = sum(px)
+    heights = [h / total for h in px]
+    return specs, titles, heights, placements, total
 
 
 def _hero(fig, go, s, name, row, col, clip, up="#c0392b", down="#1a6dcc"):
@@ -758,12 +765,13 @@ def build_figure(series_list: list, forecasts: dict, window_start,
 
     by_key = {s.key: s for s in series_list}
     panel_list = panels()
-    specs, titles, heights, placements = _layout_plan(series_list, panel_list)
+    specs, titles, heights, placements, rows_px = _layout_plan(
+        series_list, panel_list)
     rows = len(specs)
 
     fig = make_subplots(
         rows=rows, cols=NCOLS, specs=specs, subplot_titles=titles,
-        row_heights=heights, vertical_spacing=0.055,
+        row_heights=heights, vertical_spacing=VSPACE,
         horizontal_spacing=0.055,
     )
 
@@ -812,13 +820,13 @@ def build_figure(series_list: list, forecasts: dict, window_start,
             hovertemplate=f"<b>{label}</b> %{{y:,.2f}}<extra></extra>",
         ), row=1, col=1)
 
-    # ---------------- row 1, col 4 : natural gas ----------------
+    # ---------------- row 2 : natural gas ----------------
     gas = by_key.get("gas")
     if gas and gas.data is not None:
-        _hero(fig, go, gas, "Henry Hub", 1, 4, clip)
+        _hero(fig, go, gas, "Henry Hub", 2, 1, clip)
 
     # ---------------- forecast fans on the hero panels ----------------
-    for key, col in (("wti", 1), ("gas", 4)):
+    for key, hero_row in (("wti", 1), ("gas", 2)):
         fc = forecasts.get(key)
         if not fc:
             continue
@@ -836,14 +844,14 @@ def build_figure(series_list: list, forecasts: dict, window_start,
             fill="toself", mode="lines", line=dict(width=0),
             fillcolor="rgba(91,60,196,0.15)", hoverinfo="skip",
             name="P10–P90", showlegend=False,
-        ), row=1, col=col)
+        ), row=hero_row, col=1)
         fig.add_trace(go.Scatter(
             x=xs, y=mid, mode="lines+markers",
             line=dict(color="#5b3cc4", width=2, dash="dash"),
             marker=dict(size=5, symbol="diamond"), name="P50",
             showlegend=False,
             hovertemplate="P50 %{y:,.2f}<extra></extra>",
-        ), row=1, col=col)
+        ), row=hero_row, col=1)
 
     # ---------------- grouped context panels ----------------
     for panel, members, row, col in placements:
@@ -907,9 +915,16 @@ def build_figure(series_list: list, forecasts: dict, window_start,
     stamp = dt.datetime.now(KST).strftime("%Y-%m-%d %H:%M KST")
     n_ok = sum(1 for s in series_list if s.data is not None)
 
+    # Solve the figure height back from the per-row pixel targets. Plotly
+    # splits the plot area between rows and (rows-1) gaps of VSPACE each, so
+    # the drawable fraction is 1 - (rows-1)*VSPACE.
+    margin_t, margin_b = 205, 96
+    usable = max(1.0 - (rows - 1) * VSPACE, 0.35)
+    fig_height = int(round(rows_px / usable)) + margin_t + margin_b
+
     fig.update_layout(
-        height=560 + 300 * (rows - 1),
-        margin=dict(l=58, r=48, t=190, b=96),
+        height=fig_height,
+        margin=dict(l=58, r=48, t=margin_t, b=margin_b),
         paper_bgcolor="white", plot_bgcolor="white",
         font=dict(family="-apple-system,BlinkMacSystemFont,Segoe UI,"
                          "Helvetica,Arial,sans-serif", size=11.5,
@@ -918,12 +933,15 @@ def build_figure(series_list: list, forecasts: dict, window_start,
         dragmode="pan",
         title=dict(
             text=(f"<b>CURE Energy Market Monitor</b><br>"
+                  f"<span style='font-size:13px;color:#005BAC'>"
+                  f"<b>Prof. Honggeun Jo</b> · CURE, Inha University "
+                  f"— script &amp; methodology</span><br>"
                   f"<span style='font-size:12px;color:#6b7787'>"
                   f"Updated {stamp} &nbsp;·&nbsp; last {display_days} days "
                   f"&nbsp;·&nbsp; {n_ok} indicators &nbsp;·&nbsp; "
                   f"all panels share one time axis — pan or zoom any chart "
                   f"and the rest follow</span>"),
-            x=0.0, xanchor="left", y=0.985, yanchor="top",
+            x=0.0, xanchor="left", y=0.99, yanchor="top",
             font=dict(size=19, color="#002F6C"),
         ),
     )
@@ -933,22 +951,24 @@ def build_figure(series_list: list, forecasts: dict, window_start,
 
 
 def _add_attribution(fig) -> None:
-    """Authorship and the liability disclaimer, pinned under the figure."""
-    fig.add_annotation(
-        text=("Script &amp; methodology developed by "
-              "<b>Prof. Honggeun Jo</b> — CURE, Inha University"),
-        xref="paper", yref="paper", x=0.0, y=-0.052,
-        xanchor="left", yanchor="top", showarrow=False,
-        font=dict(size=11, color="#44546a"),
-    )
+    """
+    Liability disclaimer under the figure. Authorship itself now sits on the
+    second line of the title, so it is not repeated here.
+    """
     fig.add_annotation(
         text=("<b>예측 결과에 대해 어떠한 책임도 지지 않습니다.</b> &nbsp;"
-              "본 자료는 연구 참고용이며 투자 판단의 근거가 될 수 없습니다. &nbsp;·&nbsp; "
-              "No responsibility is accepted for any forecast outcome or for "
-              "any use of, or reliance on, this page."),
-        xref="paper", yref="paper", x=0.0, y=-0.078,
+              "본 자료는 연구 참고용이며 투자 판단의 근거가 될 수 없습니다."),
+        xref="paper", yref="paper", x=0.0, y=-0.045,
         xanchor="left", yanchor="top", showarrow=False,
-        font=dict(size=10.5, color="#8a6d00"),
+        font=dict(size=11, color="#8a6d00"),
+    )
+    fig.add_annotation(
+        text=("No responsibility is accepted for any forecast outcome or for "
+              "any use of, or reliance on, this page. &nbsp;·&nbsp; "
+              "Data: Yahoo Finance, FRED."),
+        xref="paper", yref="paper", x=0.0, y=-0.068,
+        xanchor="left", yanchor="top", showarrow=False,
+        font=dict(size=10, color="#8b97a8"),
     )
 
 
@@ -962,10 +982,13 @@ def _add_outlook_header(fig, forecasts: dict):
     names = {"wti": "WTI Crude ($/bbl)", "gas": "Henry Hub ($/MMBtu)"}
     fig.add_annotation(
         text="<b>ONE-WEEK OUTLOOK &nbsp;·&nbsp; P10 / P50 / P90</b>",
-        xref="paper", yref="paper", x=0.0, y=1.105, xanchor="left",
+        xref="paper", yref="paper", x=0.0, y=1.118, xanchor="left",
         yanchor="bottom", showarrow=False,
         font=dict(size=11, color=PRIMARY),
     )
+    # Wide enough apart that the two cards never crowd each other, and
+    # generous internal padding so the text is not tight against the border.
+    card_gap = 0.46
     for i, (key, fc) in enumerate(forecasts.items()):
         delta = (fc["p50"] / fc["spot"] - 1.0) * 100.0
         arrow = "▲" if delta >= 0 else "▼"
@@ -981,10 +1004,10 @@ def _add_outlook_header(fig, forecasts: dict):
         )
         fig.add_annotation(
             text=txt, xref="paper", yref="paper",
-            x=0.0 + 0.34 * i, y=1.055, xanchor="left", yanchor="bottom",
+            x=card_gap * i, y=1.052, xanchor="left", yanchor="bottom",
             showarrow=False, align="left", font=dict(size=12, color="#25313f"),
             bgcolor="rgba(245,248,252,0.95)", bordercolor="#c9d6e6",
-            borderwidth=1, borderpad=8,
+            borderwidth=1, borderpad=11,
         )
 
 
