@@ -1,10 +1,11 @@
 ---
 layout: page
 title: IsCUE Symposium
-permalink: /is-cue/
 ---
 
+
 <style>
+/* permalink: /is-cue/
 
 /* ================= GLOBAL ================= */
 
