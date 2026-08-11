@@ -1,4 +1,3 @@
-
 ---
 permalink: /404.html
 layout: default
@@ -27,34 +26,128 @@ layout: default
 }
 @media(max-width:620px){.dh-stamp{position:static;display:inline-block;margin-top:16px;transform:rotate(-4deg);}}
 
-/* ===== well log figure ===== */
+/* ===== well log figure =====
+   geometry: 5 layers x 62px = 310px of hole
+   bit top:  -21 -> 53 -> 115 -> 177 -> 239 -> 263   (centre = top + 9)
+   ball rest: 251 (sits on the bit)                              */
+.dh-figure{margin:30px 0 8px;box-shadow:0 6px 20px rgba(0,0,0,0.05);border-radius:14px;}
+
 .dh-log{
   display:grid;grid-template-columns:74px 1fr;gap:0;
-  margin:30px 0 8px;border:1px solid #e3e9f2;border-radius:14px;overflow:hidden;background:#fff;
-  box-shadow:0 6px 20px rgba(0,0,0,0.05);
+  border:1px solid #e3e9f2;border-radius:14px 14px 0 0;overflow:hidden;background:#fff;
 }
 .dh-depths{background:#f7f9fc;border-right:1px solid #e3e9f2;font-size:11px;color:#8b97a8;text-align:right;padding:0;font-variant-numeric:tabular-nums;}
 .dh-depths div{height:62px;line-height:62px;padding-right:9px;border-bottom:1px solid #eef2f7;}
 .dh-depths div:last-child{border-bottom:none;color:#c0392b;font-weight:700;}
 
-.dh-strata div{
+.dh-strata{position:relative;}
+.dh-strata .lay{
   height:62px;display:flex;align-items:center;padding:0 16px;
   font-size:13px;color:#2a3444;border-bottom:1px solid rgba(0,0,0,0.05);
-  position:relative;
 }
-.dh-strata div:last-child{border-bottom:none;}
+.dh-strata .lay.s4{border-bottom:none;}
 .dh-strata em{color:#6b7787;font-style:normal;font-size:12px;margin-left:auto;padding-left:12px;text-align:right;}
 .s1{background:#efe6d6;}
 .s2{background:#e3e9f2;}
 .s3{background:#cfd8e6;}
 .s4{background:#f3e3e3;}
 
-/* wellbore */
-.dh-strata{position:relative;}
-.dh-bore{position:absolute;left:38px;top:0;width:4px;background:#333;border-radius:2px;height:100%;}
-.dh-bit{position:absolute;left:32px;width:16px;height:16px;background:#c0392b;border-radius:50%;box-shadow:0 0 0 4px rgba(192,57,43,0.18);}
-.dh-bit{top:calc(100% - 40px);animation:dhDrill 3.2s ease-out 0.2s both;}
-@keyframes dhDrill{from{top:-8px;}to{top:calc(100% - 40px);}}
+/* drill string, bit, ball — all sit above the layer backgrounds */
+.dh-string{
+  position:absolute;left:37px;top:0;width:6px;height:276px;z-index:2;
+  background:repeating-linear-gradient(#454e5c 0 9px,#2b3138 9px 11px);
+  border-radius:0 0 2px 2px;
+}
+.dh-bit{position:absolute;left:31px;top:263px;width:18px;height:18px;z-index:4;}
+.dh-bit i{
+  display:block;width:100%;height:100%;border-radius:50%;
+  background:
+    conic-gradient(from 0deg,rgba(0,0,0,.30) 0 13deg,transparent 13deg 90deg,
+                   rgba(0,0,0,.30) 90deg 103deg,transparent 103deg 180deg,
+                   rgba(0,0,0,.30) 180deg 193deg,transparent 193deg 270deg,
+                   rgba(0,0,0,.30) 270deg 283deg,transparent 283deg 360deg),
+    radial-gradient(circle at 34% 30%,#e8695a,#a5301f);
+  box-shadow:0 0 0 5px rgba(192,57,43,0.15);
+}
+.dh-cut{position:absolute;left:7px;top:3px;width:4px;height:4px;border-radius:50%;background:rgba(122,94,64,.6);opacity:0;}
+.dh-cut.c1{--dx:-7px;}
+.dh-cut.c2{--dx:6px;}
+.dh-cut.c3{--dx:-2px;}
+
+.dh-ball{
+  position:absolute;left:34px;top:251px;width:12px;height:12px;border-radius:50%;z-index:5;
+  background:radial-gradient(circle at 33% 28%,#ffffff,#cbd4df 45%,#8794a6);
+  box-shadow:0 1px 3px rgba(0,0,0,.35);
+}
+.dh-seat{
+  position:absolute;left:28px;top:245px;width:24px;height:24px;border-radius:50%;z-index:3;
+  border:2px solid rgba(192,57,43,.75);opacity:0;
+}
+
+/* ===== readout strip ===== */
+.dh-readout{
+  display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+  padding:11px 16px;background:#fbfcfe;
+  border:1px solid #e3e9f2;border-top:none;border-radius:0 0 14px 14px;
+}
+.dh-ro{display:flex;align-items:baseline;gap:8px;}
+.dh-ro b{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#9aa5b5;font-weight:700;}
+.dh-ro span{font-size:13px;font-weight:600;color:#22303f;font-variant-numeric:tabular-nums;}
+.dh-respud{
+  margin-left:auto;background:none;border:1px solid #dbe4f0;color:#6b7787;
+  font-size:11.5px;padding:5px 13px;border-radius:16px;cursor:pointer;font-family:inherit;
+  transition:all .2s ease;
+}
+.dh-respud:hover{background:#005BAC;border-color:#005BAC;color:#fff;}
+
+/* ===== the sequence ===== */
+.dh-figure.run .dh-string{animation:dhString 5s ease-in-out both;}
+.dh-figure.run .dh-bit{animation:dhDrill 5s ease-in-out both,dhJitter .09s linear 0s 55 both;}
+.dh-figure.run .dh-bit i{animation:dhSpin .45s linear 0s 11 both;}
+.dh-figure.run .dh-cut{animation:dhCut .9s ease-out 5 both;}
+.dh-figure.run .dh-cut.c2{animation-delay:.3s;}
+.dh-figure.run .dh-cut.c3{animation-delay:.6s;}
+.dh-figure.run .dh-ball{animation:dhBall 1.25s 5.45s both;}
+.dh-figure.run .dh-seat{animation:dhSeat .7s ease-out 6.18s both;}
+
+@keyframes dhDrill{
+  0%{top:-21px}  14%{top:53px}  20%{top:53px}
+  34%{top:115px} 40%{top:115px}
+  64%{top:177px} 71%{top:177px}
+  88%{top:239px} 93%{top:239px}
+  100%{top:263px}
+}
+@keyframes dhString{
+  0%{height:0}   14%{height:66px}  20%{height:66px}
+  34%{height:128px} 40%{height:128px}
+  64%{height:190px} 71%{height:190px}
+  88%{height:252px} 93%{height:252px}
+  100%{height:276px}
+}
+@keyframes dhSpin{to{transform:rotate(360deg)}}
+@keyframes dhJitter{0%,100%{transform:translateX(0)}25%{transform:translateX(-.8px)}75%{transform:translateX(.8px)}}
+@keyframes dhCut{
+  0%{opacity:0;transform:translate(0,0) scale(.5)}
+  18%{opacity:.7}
+  100%{opacity:0;transform:translate(var(--dx),-25px) scale(1)}
+}
+@keyframes dhBall{
+  0%{top:-18px;opacity:0;animation-timing-function:ease-in}
+  6%{opacity:1}
+  60%{top:251px;animation-timing-function:ease-out}
+  72%{top:230px;animation-timing-function:ease-in}
+  84%{top:251px;animation-timing-function:ease-out}
+  91%{top:243px;animation-timing-function:ease-in}
+  100%{top:251px;opacity:1}
+}
+@keyframes dhSeat{
+  0%{opacity:.85;transform:scale(.35)}
+  100%{opacity:0;transform:scale(2.1)}
+}
+
+/* the un-run figure already sits at its final state, so a no-JS or
+   reduced-motion visitor still sees a finished well */
+.dh-figure.static .dh-respud{display:none;}
 
 /* ===== rotating report line ===== */
 .dh-report{
@@ -85,7 +178,6 @@ layout: default
 .dh-foot{margin-top:26px;font-size:12px;color:#9aa5b5;text-align:center;line-height:1.7;}
 
 @media(prefers-reduced-motion:reduce){
-  .dh-bit{animation:none;top:calc(100% - 40px);}
   #dh-joke{transition:none;}
   .dh-out:hover{transform:none;}
 }
@@ -94,6 +186,7 @@ layout: default
   .dh-code{font-size:48px;}
   .dh-log{grid-template-columns:58px 1fr;}
   .dh-strata em{display:none;}
+  .dh-readout{gap:14px;}
 }
 </style>
 
@@ -106,22 +199,37 @@ layout: default
     <p class="dh-sub">Our team spent two decades learning to find things underground. This page is not one of them. Total depth reached, no pay zone encountered, well plugged and abandoned.</p>
   </div>
 
-  <div class="dh-log">
-    <div class="dh-depths">
-      <div>0 m</div>
-      <div>101 m</div>
-      <div>202 m</div>
-      <div>303 m</div>
-      <div>404 m</div>
+  <div class="dh-figure" id="dh-figure">
+    <div class="dh-log" aria-hidden="true">
+      <div class="dh-depths">
+        <div>0 m</div>
+        <div>101 m</div>
+        <div>202 m</div>
+        <div>303 m</div>
+        <div>404 m</div>
+      </div>
+      <div class="dh-strata">
+        <div class="lay s1">Overburden — mostly typos <em>φ = 41%</em></div>
+        <div class="lay s2">Broken Link Sandstone <em>φ = 33%</em></div>
+        <div class="lay s3">Caprock — impermeable to this URL <em>k ≈ 0 mD</em></div>
+        <div class="lay s2">Target Interval <em>saturation: 0%</em></div>
+        <div class="lay s4">TD 404 — no page encountered <em>P&amp;A</em></div>
+
+        <div class="dh-string"></div>
+        <div class="dh-seat"></div>
+        <div class="dh-bit">
+          <i></i>
+          <span class="dh-cut c1"></span>
+          <span class="dh-cut c2"></span>
+          <span class="dh-cut c3"></span>
+        </div>
+        <div class="dh-ball"></div>
+      </div>
     </div>
-    <div class="dh-strata">
-      <div class="dh-bore"></div>
-      <div class="dh-bit"></div>
-      <div class="s1">Overburden — mostly typos <em>φ = 41%</em></div>
-      <div class="s2">Broken Link Sandstone <em>φ = 33%</em></div>
-      <div class="s3">Caprock — impermeable to this URL <em>k ≈ 0 mD</em></div>
-      <div class="s2">Target Interval <em>saturation: 0%</em></div>
-      <div class="s4">TD 404 — no page encountered <em>P&amp;A</em></div>
+    <div class="dh-readout">
+      <span class="dh-ro"><b>Bit depth</b><span id="dh-depth">0 m</span></span>
+      <span class="dh-ro"><b>Status</b><span id="dh-status">Rigging up</span></span>
+      <button class="dh-respud" id="dh-respud" type="button">Re-spud the well ⟲</button>
     </div>
   </div>
 
@@ -145,23 +253,27 @@ layout: default
 
 <script>
 (function(){
-  var jokes = [
-    "History matching converged successfully. It converged on nothing.",
-    "We generated 100 realizations of this page. All 100 were empty. The uncertainty is, at least, very low.",
-    "Digital rock analysis complete: porosity 38%, permeability 0 mD, content 0 bytes.",
-    "The seismic shows no bright spot at this URL. We do not recommend a follow-up well.",
-    "P10, P50 and P90 are in unusually strong agreement: there is no page here.",
-    "This page appears to have migrated updip and been trapped somewhere we cannot log.",
-    "Caprock integrity: excellent. Nothing is escaping this 404. Great news for CO₂, bad news for you.",
-    "Our neural network predicted this page with 97% confidence. Our neural network was wrong.",
-    "The page has been geologically sequestered. Estimated retention time: 10,000 years.",
-    "Core recovery: 0%. The sample fell out of the barrel on the way up. Allegedly.",
-    "We checked the well logs. The gamma ray is flat, the resistivity is flat, and frankly so are we.",
-    "Injectivity test failed — this URL will not take any content at current pressures.",
-    "A graduate student is currently writing a paper about why this page is missing. It will be excellent.",
-    "The plume migrated. The page did not. We are investigating the discrepancy.",
-    "Reviewer 2 asked us to remove this page. We complied."
-  ];
+  /* ---------- rotating report line ---------- */
+    var jokes = [
+    "History matching converged successfully. It converged on nothing.\n히스토리 매칭(History matching)이 성공적으로 수렴했습니다. '무(無)'로 수렴했다는 게 문제지만요.",
+    "We generated 100 realizations of this page. All 100 were empty. The uncertainty is, at least, very low.\n이 페이지에 대해 100개의 시나리오를 돌려봤습니다. 100개 다 텅 비었네요. 적어도 불확실성 하나만큼은 끝내주게 낮습니다.",
+    "Digital rock analysis complete: porosity 38%, permeability 0 mD, content 0 bytes.\n디지털 암석 분석 완료: 공극률 38%, 투과도 0 mD, 그리고 콘텐츠는 0 바이트입니다.",
+    "The seismic shows no bright spot at this URL. We do not recommend a follow-up well.\n탄성파 탐사 결과, 이 URL에는 어떤 '브라이트 스팟(Bright spot)'도 보이지 않습니다. 후속 시추는 절대 권장하지 않습니다.",
+    "P10, P50 and P90 are in unusually strong agreement: there is no page here.\nP10, P50, P90 매장량 평가가 이례적으로 완벽한 일치를 보입니다: 여긴 아무 페이지도 없습니다.",
+    "This page appears to have migrated updip and been trapped somewhere we cannot log.\n이 페이지는 상부로 이동(Migrated updip)하다가 우리가 검층할 수 없는 어딘가에 갇혀버린(Trapped) 것 같군요.",
+    "Caprock integrity: excellent. Nothing is escaping this 404. Great news for CO₂, bad news for you.\n덮개암(Caprock) 무결성: 매우 우수. 이 404 에러에서 빠져나갈 수 있는 건 아무것도 없습니다. 탄소 포집엔 희소식이지만, 당신에겐 비보네요.",
+    "Our neural network predicted this page with 97% confidence. Our neural network was wrong.\n우리 인공지능이 97%의 신뢰도로 이 페이지가 존재할 거라 예측했습니다만, 네, AI가 틀렸습니다.",
+    "The page has been geologically sequestered. Estimated retention time: 10,000 years.\n페이지가 지질학적으로 영구 격리(Sequestered)되었습니다. 예상 체류 시간은 대략 1만 년 정도 되겠네요.",
+    "Core recovery: 0%. The sample fell out of the barrel on the way up. Allegedly.\n코어(Core) 회수율: 0%. 끌어올리다가 배럴에서 샘플이 쏙 빠져버렸다네요. 뭐, '주장'에 따르면 그렇답니다.",
+    "We checked the well logs. The gamma ray is flat, the resistivity is flat, and frankly so are we.\n물리검층(Well log) 데이터를 확인했습니다. 감마선도 플랫, 비저항도 플랫, 솔직히 우리 기분도 플랫(Flat)하네요.",
+    "Injectivity test failed — this URL will not take any content at current pressures.\n주입성(Injectivity) 테스트 실패 — 현재 압력 조건에서는 이 URL에 그 어떤 콘텐츠도 주입할 수 없습니다.",
+    "A graduate student is currently writing a paper about why this page is missing. It will be excellent.\n지금 한 대학원생이 이 페이지가 왜 사라졌는지에 대한 논문을 갈아 넣고 있습니다. 아주 기가 막힌 논문이 나올 겁니다.",
+    "The plume migrated. The page did not. We are investigating the discrepancy.\n플룸(Plume)은 이동했는데, 페이지는 이동하지 않았습니다. 이 괘씸한 불일치의 원인은 현재 규명 중입니다.",
+    "Reviewer 2 asked us to remove this page. We complied.\n'리뷰어 2(Reviewer 2)'가 이 페이지를 삭제하라고 요구했습니다. 우린 굴복하고 말았죠.",
+    "The ball seated on the first try. The page did not turn up on any try.\n프랙 볼(Frac ball)은 단번에 안착했는데, 페이지는 백날 시도해도 안 뜨네요.",
+    "Ball dropped, sleeve shifted, zone opened. Zone contained one (1) error message.\n볼 투하, 슬리브 이동, 타겟 구간 개방 완료. 근데 그 구간에 에러 메시지만 딱 하나(1) 들어있네요.",
+    "Perfect ball seat at 404 m. Finally, something in this well went according to plan.\n심도 404m 지점에 프랙 볼 완벽 안착. 드디어 이 시추공에서 뭔가 하나쯤은 계획대로 흘러가는군요."
+];
   var el = document.getElementById('dh-joke');
   var btn = document.getElementById('dh-more');
   var i = Math.floor(Math.random() * jokes.length);
@@ -177,5 +289,78 @@ layout: default
 
   el.textContent = jokes[i];
   btn.addEventListener('click', show);
+
+  /* ---------- the well ---------- */
+  var fig     = document.getElementById('dh-figure');
+  var depthEl = document.getElementById('dh-depth');
+  var statEl  = document.getElementById('dh-status');
+  var respud  = document.getElementById('dh-respud');
+
+  var DRILL = 5000, BALL_DELAY = 450, BALL_DUR = 1250, IMPACT = 0.60 * BALL_DUR;
+
+  /* [fraction of drilling time, depth in m] — matches the @keyframes stops */
+  var SEQ = [[0,0],[.14,101],[.20,101],[.34,202],[.40,202],
+             [.64,303],[.71,303],[.88,384],[.93,384],[1,404]];
+
+  var PHASE = [[.14,'Drilling — overburden'],[.20,'Making a connection'],
+               [.34,'Drilling ahead'],[.40,'Circulating bottoms up'],
+               [.64,'Caprock — ROP 2 m/hr'],[.71,'Making a connection'],
+               [.88,'Drilling target interval'],[.93,'Wiper trip'],
+               [1,'Drilling to TD']];
+
+  var raf, t0;
+  function smooth(t){ return t * t * (3 - 2 * t); }          /* ≈ CSS ease-in-out */
+
+  function depthAt(p){
+    for(var k = 1; k < SEQ.length; k++){
+      if(p <= SEQ[k][0]){
+        var a = SEQ[k-1], b = SEQ[k];
+        var f = (b[0] - a[0]) ? (p - a[0]) / (b[0] - a[0]) : 1;
+        return a[1] + (b[1] - a[1]) * smooth(f);
+      }
+    }
+    return 404;
+  }
+  function phaseAt(p){
+    for(var k = 0; k < PHASE.length; k++){ if(p <= PHASE[k][0]) return PHASE[k][1]; }
+    return 'Drilling to TD';
+  }
+
+  function frame(now){
+    var t = now - t0;
+    if(t < DRILL){
+      var p = t / DRILL;
+      depthEl.textContent = Math.round(depthAt(p)) + ' m';
+      statEl.textContent  = phaseAt(p);
+    } else {
+      depthEl.textContent = '404 m';
+      var bt = t - DRILL - BALL_DELAY;
+      if(bt < 0){ statEl.textContent = 'TD reached — dropping ball'; }
+      else if(bt < IMPACT){ statEl.textContent = 'Ball in free fall…'; }
+      else { statEl.textContent = 'Ball seated — no page recovered'; return; }
+    }
+    raf = requestAnimationFrame(frame);
+  }
+
+  function run(){
+    cancelAnimationFrame(raf);
+    fig.classList.remove('run');
+    void fig.offsetWidth;                 /* restart the CSS keyframes */
+    fig.classList.add('run');
+    depthEl.textContent = '0 m';
+    statEl.textContent  = 'Spudding in';
+    t0 = performance.now();
+    raf = requestAnimationFrame(frame);
+  }
+
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce){
+    fig.classList.add('static');
+    depthEl.textContent = '404 m';
+    statEl.textContent  = 'Ball seated — no page recovered';
+  } else {
+    respud.addEventListener('click', run);
+    run();
+  }
 })();
 </script>
