@@ -38,7 +38,7 @@ permalink: /EnergyInsight/
   <h2>Energy Market Monitor</h2>
   <p>Three months of the prices and macro drivers our CO₂ storage, hydrogen and unconventional-resource work depends on — crude and gas benchmarks alongside the dollar, the Treasury and TIPS curves, volatility and carbon — with a random-forest P10/P50/P90 outlook for the week ahead pinned to the top of the chart, and every past call scored against what actually printed.</p>
   <div class="eng-tags">
-    <span class="eng-tag">WTI · Brent · Dubai</span>
+    <span class="eng-tag">WTI · Brent</span>
     <span class="eng-tag">Henry Hub</span>
     <span class="eng-tag">OVX · RBOB</span>
     <span class="eng-tag">UST &amp; TIPS curves</span>
@@ -102,8 +102,6 @@ Every run writes its full forecast to a log before anything is drawn. When a pre
 
 The point is that these are calls the model committed to **in advance**. Nothing here is refitted after the outcome is known, and no star can be added retroactively — if the log has no entry for a day, no star appears for it. The stars accumulate as the dashboard keeps running, so the crude and gas panels double as an unedited scorecard: a cluster of stars sitting consistently above or below the bars is the model telling on itself.
 
-Prices are archived to `__datafile/energy_panel.csv` and forecasts to `__datafile/forecast_log.csv`. Each run resumes from where the archive left off rather than re-downloading years of history, so the record only grows.
-
 
 ### How the one-week forecast is produced
 
@@ -116,7 +114,7 @@ Two limits are worth stating plainly. The other indicators are **held fixed** th
 <div class="eng-note">
   <b>Read the bands as uncertainty, not as a view.</b> The P10/P50/P90 range describes how wrong this one model has historically been. It assumes next week resembles the training period, and it will be wrong precisely when that assumption breaks — which is usually when it matters.
   <br><br>
-  <b>Series caveats.</b> Dubai crude has no free daily feed — no public source publishes it daily — so the daily Dubai line is <b>reconstructed</b> as Brent plus the interpolated monthly Dubai−Brent spread, with that spread held flat beyond the last monthly print (which itself lags by roughly two months). Its day-to-day shape is therefore Brent's; only its level is Dubai's. The true monthly prints are overlaid as open circles, and the reconstruction is excluded from the forecast model. EUA carbon is proxied by the KRBN ETF, not the ICE EUA futures settlement. FRED publishes TIPS yields from 5 years out — there is no 2-year real rate — so the short leg of the real-yield panel is 5Y, labelled as such in the panel's colour key.
+  <b>Series caveats.</b> EUA carbon is proxied by the KRBN ETF, not the ICE EUA futures settlement. FRED publishes TIPS yields from 5 years out — there is no 2-year real rate — so the short leg of the real-yield panel is 5Y, labelled as such in the panel's colour key.
   <br><br>
   <b>No warranty and no responsibility.</b> This page is produced automatically from third-party data for internal research interest only. It is <b>not</b> investment, trading, financial or commercial advice, and it is not a recommendation to buy, sell or hold anything. The underlying data may be delayed, revised, incomplete or simply wrong, and the model output is a statistical extrapolation that carries no guarantee of accuracy. CURE, Inha University and the authors accept <b>no liability whatsoever</b> for any loss or damage arising from any use of, or reliance on, this page or its forecasts. Use it at your own risk, and verify anything that matters against the primary sources below.
 </div>

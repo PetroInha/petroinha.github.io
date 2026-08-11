@@ -118,7 +118,6 @@ class Series:
     secondary: bool = False      # draw against the right-hand y-axis
     dash: str = "solid"
     data: Optional[pd.DataFrame] = field(default=None, repr=False)
-    derived: Optional[pd.Series] = field(default=None, repr=False)
     status: str = "pending"
     resolved: str = ""           # "source:id" that actually returned data
 
@@ -175,12 +174,6 @@ def registry() -> list:
                kind="candle", tier=1, unit="$/bbl"),
         Series("brent", "Brent 원유 (Brent)", "yahoo", ["BZ=F"],
                kind="line", tier=1, unit="$/bbl", color="#1a7a4a"),
-        # Daily Dubai first; POILDUBUSDM is monthly and only a last resort.
-        # `note`/dash are corrected after the fetch so the panel never claims
-        # daily resolution it does not have.
-        Series("dubai", "Dubai 원유 (Dubai)", "fred",
-               ["DCOILDUBAI", "DPOILDUB", "POILDUBUSDD", "POILDUBUSDM"],
-               kind="line", tier=1, unit="$/bbl", color="#8a6d00"),
         Series("gas", "천연가스 (Henry Hub, $/MMBtu)", "yahoo", ["NG=F"],
                kind="candle", tier=1, unit="$/MMBtu"),
 
@@ -616,47 +609,6 @@ def score_predictions(log: pd.DataFrame, actual: pd.Series):
     return p.index, p.values, a.values, ((p / a - 1.0) * 100.0).values
 
 
-def derive_daily_dubai(series_list: list) -> None:
-    """
-    Build a daily Dubai line when only the monthly benchmark is available.
-
-    No free source publishes Dubai spot daily — FRED carries only the monthly
-    POILDUBUSDM. Dubai does, however, trade at a slowly-moving spread to
-    Brent (the Brent–Dubai EFS), so the daily path is reconstructed as
-
-        Dubai_daily = Brent_daily + interp(monthly Dubai − monthly Brent)
-
-    The day-to-day *shape* is therefore Brent's; only the level is Dubai's.
-    It is labelled "Brent-implied" wherever it appears, the true monthly
-    prints are overlaid as markers, and it is deliberately kept out of the
-    forecast panel — feeding a Brent-derived series to the model would add a
-    collinear predictor carrying no independent information.
-    """
-    by = {s.key: s for s in series_list}
-    dub, brent = by.get("dubai"), by.get("brent")
-    if dub is None or dub.data is None or brent is None or brent.data is None:
-        return
-    if not (dub.cadence_days() > 4):        # already daily — nothing to do
-        return
-
-    b = brent.data["Close"].astype(float).dropna()
-    d = dub.data["Close"].astype(float).dropna()
-    bm = b.resample("MS").mean()
-    common = d.index.intersection(bm.index)
-    if len(common) < 6:
-        print("      dubai: too few overlapping months to imply a daily line")
-        return
-
-    spread = d.loc[common] - bm.loc[common]
-    idx = b.index.union(spread.index)
-    sp_daily = (spread.reindex(idx).interpolate("time")
-                .ffill().bfill().reindex(b.index))
-    dub.derived = (b + sp_daily).dropna()
-    print(f"      dubai: implied daily line from Brent + spread "
-          f"(last spread {spread.iloc[-1]:+.2f} $/bbl, "
-          f"{len(dub.derived)} pts)")
-
-
 # --------------------------------------------------------------------------
 # Forecasting — multivariate random forest with residual-bootstrap quantiles
 # --------------------------------------------------------------------------
@@ -923,7 +875,7 @@ def _layout_plan(series_list: list, panel_list: list):
 
     full = [{"colspan": NCOLS}] + [None] * (NCOLS - 1)
     specs = [list(full), list(full)]
-    titles = ["원유 가격 · Crude Oil (WTI candles · Brent / Dubai lines)",
+    titles = ["원유 가격 · Crude Oil (WTI candles · Brent line)",
               "천연가스 가격 · Natural Gas (Henry Hub)"]
 
     placements = []
@@ -1009,6 +961,71 @@ def _add_prediction_stars(fig, go, key, row, legend, s, log, clip) -> int:
     return len(idx)
 
 
+def _y_range(chunks: list, pad: float = 0.07):
+    """Padded [lo, hi] over the given arrays, or None if there is nothing."""
+    arrays = [np.asarray(c, dtype=float).ravel() for c in chunks
+              if c is not None and len(c)]
+    if not arrays:
+        return None
+    vals = np.concatenate(arrays)
+    vals = vals[np.isfinite(vals)]
+    if vals.size == 0:
+        return None
+    lo, hi = float(vals.min()), float(vals.max())
+    margin = (hi - lo) * pad if hi > lo else (abs(hi) * 0.05 or 1.0)
+    return [lo - margin, hi + margin]
+
+
+def _in_view(s, view_start, cols=("Close",)) -> list:
+    """Values of `s` inside the opening view, per requested column."""
+    if s is None or s.data is None:
+        return []
+    d = s.data[s.data.index >= view_start]
+    out = []
+    for c in cols:
+        if c in d.columns:
+            out.append(pd.to_numeric(d[c], errors="coerce").dropna().values)
+    return out
+
+
+def _apply_view_yranges(fig, by_key, placements, forecasts, view_start):
+    """
+    Scale each panel's y-axis to what is actually on screen.
+
+    The traces carry far more history than the opening view, so Plotly's
+    autorange would fit the y-axis to years of data and squash the last three
+    months into a sliver. Ranges are therefore pinned to the visible window —
+    including the forecast fan, so it is never clipped.
+    """
+    # Hero panels: candle extremes plus the forecast band.
+    for key, row, extra in (("wti", 1, ("brent",)), ("gas", 2, ())):
+        s = by_key.get(key)
+        chunks = _in_view(s, view_start, ("Low", "High", "Close"))
+        for k in extra:
+            chunks += _in_view(by_key.get(k), view_start)
+        fc = forecasts.get(key)
+        if fc:
+            chunks += [fc["path_p10"], fc["path_p90"], [fc["spot"]]]
+        rng = _y_range(chunks)
+        if rng:
+            fig.update_yaxes(range=rng, row=row, col=1)
+
+    # Context panels, primary and secondary axes scaled independently.
+    for panel, members, row, col in placements:
+        for secondary in (False, True):
+            if secondary and not panel.dual:
+                continue
+            group = [m for m in members
+                     if bool(panel.dual and m.secondary) == secondary]
+            chunks = []
+            for m in group:
+                chunks += _in_view(m, view_start)
+            rng = _y_range(chunks)
+            if rng:
+                fig.update_yaxes(range=rng, row=row, col=col,
+                                 secondary_y=secondary)
+
+
 def _add_hero_legends(fig, rows: int) -> None:
     """
     A legend box per hero panel. Plotly's multi-legend support lets each sit
@@ -1069,45 +1086,17 @@ def build_figure(series_list: list, forecasts: dict, window_start,
     if wti and wti.data is not None:
         _hero(fig, go, wti, "WTI", 1, 1, clip, "legend")
 
-    for key in ("brent", "dubai"):
-        s = by_key.get(key)
-        if s is None or s.data is None:
-            continue
-
-        if s.derived is not None:
-            # Daily reconstruction as the main line, true prints as markers.
-            dd = s.derived[s.derived.index >= window_start]
-            if not dd.empty:
-                fig.add_trace(go.Scatter(
-                    x=dd.index, y=dd.values, name="Dubai (Brent-implied)",
-                    opacity=0.9, line=dict(color=s.color, width=1.8),
-                    legend="legend", showlegend=True,
-                    hovertemplate="<b>Dubai</b> %{y:,.2f} "
-                                  "<i>Brent-implied</i><extra></extra>",
-                ), row=1, col=1)
-            raw = clip(s.data)
-            if not raw.empty:
-                fig.add_trace(go.Scatter(
-                    x=raw.index, y=raw["Close"], mode="markers",
-                    name="Dubai (monthly actual)",
-                    legend="legend", showlegend=True,
-                    marker=dict(color=s.color, size=7, symbol="circle-open",
-                                line=dict(width=2)),
-                    hovertemplate="<b>Dubai</b> %{y:,.2f} "
-                                  "<i>monthly actual</i><extra></extra>",
-                ), row=1, col=1)
-            continue
-
-        d = clip(s.data)
-        if d.empty:
-            continue
-        label = key.title() + (f" ({s.note})" if s.note else "")
-        fig.add_trace(go.Scatter(
-            x=d.index, y=d["Close"], name=label, opacity=0.9,
-            legend="legend", showlegend=True,
-            line=dict(color=s.color, width=1.8, dash=s.dash),
-            hovertemplate=f"<b>{label}</b> %{{y:,.2f}}<extra></extra>",
-        ), row=1, col=1)
+    brent = by_key.get("brent")
+    if brent is not None and brent.data is not None:
+        d = clip(brent.data)
+        if not d.empty:
+            label = "Brent" + (f" ({brent.note})" if brent.note else "")
+            fig.add_trace(go.Scatter(
+                x=d.index, y=d["Close"], name=label, opacity=0.9,
+                legend="legend", showlegend=True,
+                line=dict(color=brent.color, width=1.8, dash=brent.dash),
+                hovertemplate=f"<b>{label}</b> %{{y:,.2f}}<extra></extra>",
+            ), row=1, col=1)
 
     # ---------------- row 2 : natural gas ----------------
     gas = by_key.get("gas")
@@ -1259,6 +1248,7 @@ def build_figure(series_list: list, forecasts: dict, window_start,
     # without a reload; the archive itself goes back further still.
     if view_start is not None and view_end is not None:
         fig.update_xaxes(range=[view_start, view_end], row=1, col=1)
+        _apply_view_yranges(fig, by_key, placements, forecasts, view_start)
 
     _add_hero_legends(fig, rows)
     _add_outlook_header(fig, forecasts)
@@ -1487,8 +1477,6 @@ def main(argv=None) -> int:
     if not any(s.data is not None for s in series_list):
         print("FATAL: no series resolved; nothing to plot.", file=sys.stderr)
         return 1
-
-    derive_daily_dubai(series_list)
 
     forecasts = {}
     if not args.no_forecast:
