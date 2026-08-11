@@ -912,6 +912,18 @@ def build_figure(series_list: list, forecasts: dict, window_start,
     fig.update_yaxes(showgrid=True, gridcolor=GRID, zeroline=False,
                      tickfont=dict(size=9.5))
 
+    # make_subplots leaves a few percent of unused width on the right when
+    # columns are spanned (it charges the inter-column gap to the last cell of
+    # each span). Rescale every x domain so the grid actually reaches the
+    # right edge; relative widths and gaps are preserved.
+    x_axes = [k for k in fig.layout if k.startswith("xaxis")]
+    right = max(fig.layout[k].domain[1] for k in x_axes)
+    if right < 0.999:
+        scale = 1.0 / right
+        for k in x_axes:
+            d0, d1 = fig.layout[k].domain
+            fig.layout[k].domain = (d0 * scale, min(d1 * scale, 1.0))
+
     stamp = dt.datetime.now(KST).strftime("%Y-%m-%d %H:%M KST")
     n_ok = sum(1 for s in series_list if s.data is not None)
 
