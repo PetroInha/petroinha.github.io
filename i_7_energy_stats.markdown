@@ -44,6 +44,7 @@ permalink: /EnergyInsight/
     <span class="eng-tag">UST &amp; TIPS curves</span>
     <span class="eng-tag">DXY · Broad TW USD</span>
     <span class="eng-tag">Random Forest P10/P50/P90</span>
+    <span class="eng-tag">Direction F1 scorecard</span>
   </div>
 </div>
 
@@ -96,11 +97,18 @@ permalink: /EnergyInsight/
   <a href="{{ '/_images/energy_stats.html' | relative_url }}" target="_blank">Open full screen ↗</a>
 </div>
 
-### Track record — the yellow stars
+### Track record — the stars
 
-Every run writes its full forecast to a log before anything is drawn. When a predicted day's close finally prints, that run's **next-day P50** is plotted as a <b style="color:#b38600">yellow star ★</b> on top of the candle it was predicting, with the actual and the percentage error on hover.
+Every run logs its full forecast before anything is drawn. Once a predicted day's close prints, that run's **next-day P50** appears as a star on the candle it was predicting — hover for the predicted and actual moves, the price error, and whether that star is a live call or a backtested one.
 
-The point is that these are calls the model committed to **in advance**. Nothing here is refitted after the outcome is known, and no star can be added retroactively — if the log has no entry for a day, no star appears for it. The stars accumulate as the dashboard keeps running, so the crude and gas panels double as an unedited scorecard: a cluster of stars sitting consistently above or below the bars is the model telling on itself.
+The colour scores the **direction**, not the price. Read each call as a daily long/short: go long if the model says tomorrow closes above today, short if below.
+
+- <b style="color:#b38600">★ gold</b> — the direction was right. The trade made money.
+- <b style="color:#123a6b">★ navy</b> — the direction was wrong. The trade lost.
+
+Next to each P10/P50/P90 line at the top of the chart is that contract's **direction F1**, with the hit rate, the number of scored calls, and the mean absolute price error. F1 is used rather than raw accuracy on purpose: "up" is the positive class, so a model that simply calls up every day can post a flattering hit rate in a rising market while F1 exposes it. Roughly 0.5 is a coin flip.
+
+**Where the stars come from.** The chart is seeded with a **walk-forward backtest** over the preceding 30 trading days. For each of those days the panel is truncated to that date before the model is fitted, validated and simulated, so it never sees the bar it is predicting — there is no lookahead in the training. But those rows were still generated after the fact, so they are tagged `backtest` and are not the same thing as a call made in advance. Every subsequent run appends genuine live predictions on top, which are tagged `live` and can never be overwritten by a later replay. Over time the record becomes predominantly live.
 
 
 ### How the one-week forecast is produced

@@ -30,8 +30,11 @@ Notes
 * Every data source is fetched defensively. A source that fails falls back to
   the archive rather than raising.
 * Each run logs its whole fan. Once a predicted day's close prints, the
-  previous run's next-day P50 is drawn as a yellow star on that candle — a
-  running scorecard of calls made before the fact, never refitted after it.
+  previous run's next-day P50 is drawn as a star on that candle — gold if the
+  up/down call was right, navy if it was wrong, i.e. whether a daily
+  long/short on the model would have made money. The header carries the
+  resulting direction F1. Rows written by run_backtest_last_30days.py are
+  tagged `source=backtest`; live runs are tagged `live` and always win.
 * Set EIA_API_KEY in the environment to prefer the EIA v2 API over FRED.
 """
 
@@ -529,7 +532,7 @@ def hydrate_from_cache(series_list: list, cache: pd.DataFrame) -> None:
 # --------------------------------------------------------------------------
 
 FORECAST_COLS = ["run_date", "target", "step", "horizon_date",
-                 "p10", "p50", "p90", "spot"]
+                 "p10", "p50", "p90", "spot", "source"]
 
 
 def load_forecast_log() -> pd.DataFrame:
@@ -547,7 +550,8 @@ def load_forecast_log() -> pd.DataFrame:
         return pd.DataFrame(columns=FORECAST_COLS)
 
 
-def record_forecasts(log: pd.DataFrame, forecasts: dict) -> pd.DataFrame:
+def record_forecasts(log: pd.DataFrame, forecasts: dict,
+                     source: str = "live") -> pd.DataFrame:
     """
     Append this run's whole fan to the log, keyed by the date it was made.
 
@@ -565,11 +569,14 @@ def record_forecasts(log: pd.DataFrame, forecasts: dict) -> pd.DataFrame:
                 "run_date": t0, "target": key, "step": i,
                 "horizon_date": (t0 + pd.tseries.offsets.BDay(i)).normalize(),
                 "p10": p10, "p50": p50, "p90": p90, "spot": fc["spot"],
+                "source": source,
             })
     if not rows:
         return log
     new = pd.DataFrame(rows)
     combined = pd.concat([log, new], ignore_index=True)
+    # New rows are appended last, so a live run supersedes a backtested row
+    # for the same day rather than the other way round.
     combined = combined.drop_duplicates(subset=["run_date", "target", "step"],
                                         keep="last")
     return combined.sort_values(["target", "run_date", "step"])
@@ -580,33 +587,83 @@ def save_forecast_log(log: pd.DataFrame) -> None:
     out = log.copy()
     for c in ("run_date", "horizon_date"):
         out[c] = pd.to_datetime(out[c]).dt.strftime("%Y-%m-%d")
+    if "source" not in out.columns:
+        out["source"] = "live"
+    out["source"] = out["source"].fillna("live")
     out[FORECAST_COLS].to_csv(FORECAST_CSV, index=False, float_format="%.6g")
 
 
 def score_predictions(log: pd.DataFrame, actual: pd.Series):
     """
     Line up next-day (step 1) calls against the closes that have since
-    printed. Returns (dates, predicted, actual, pct error) for the hits.
+    printed.
+
+    Returns a frame indexed by the predicted date with the price call, the
+    close that arrived, and the *direction* verdict — did the model say up or
+    down relative to the last known close, and did the market agree. The
+    direction is what a daily long/short would have traded on, so it is
+    scored separately from the price error.
     """
-    if log.empty or actual is None or actual.empty:
+    if log is None or log.empty or actual is None or actual.empty:
         return None
-    sub = log[(log["step"] == 1)].copy()
+    sub = log[log["step"] == 1].copy()
     if sub.empty:
         return None
     sub["horizon_date"] = pd.to_datetime(sub["horizon_date"]).dt.normalize()
-    sub = sub.drop_duplicates(subset=["horizon_date"], keep="last")
-    pred = sub.set_index("horizon_date")["p50"].sort_index()
+    sub = sub.sort_values("run_date").drop_duplicates(
+        subset=["horizon_date"], keep="last")
+    sub = sub.set_index("horizon_date").sort_index()
 
-    idx = pred.index.intersection(actual.dropna().index)
+    idx = sub.index.intersection(actual.dropna().index)
     if len(idx) == 0:
         return None
-    p = pd.to_numeric(pred.reindex(idx), errors="coerce")
-    a = pd.to_numeric(actual.reindex(idx), errors="coerce")
-    ok = p.notna() & a.notna()
-    if not ok.any():
+
+    out = pd.DataFrame(index=idx)
+    out["pred"] = pd.to_numeric(sub["p50"].reindex(idx), errors="coerce")
+    out["spot"] = pd.to_numeric(sub["spot"].reindex(idx), errors="coerce")
+    out["actual"] = pd.to_numeric(actual.reindex(idx), errors="coerce")
+    if "source" in sub.columns:
+        out["source"] = sub["source"].reindex(idx).fillna("live")
+    else:
+        out["source"] = "live"
+    out = out.dropna(subset=["pred", "spot", "actual"])
+    if out.empty:
         return None
-    p, a = p[ok], a[ok]
-    return p.index, p.values, a.values, ((p / a - 1.0) * 100.0).values
+
+    out["err_pct"] = (out["pred"] / out["actual"] - 1.0) * 100.0
+    out["pred_ret"] = (out["pred"] / out["spot"] - 1.0) * 100.0
+    out["act_ret"] = (out["actual"] / out["spot"] - 1.0) * 100.0
+    out["pred_up"] = out["pred"] > out["spot"]
+    out["act_up"] = out["actual"] > out["spot"]
+    out["correct"] = out["pred_up"] == out["act_up"]
+    return out
+
+
+def directional_stats(scored: Optional[pd.DataFrame]) -> Optional[dict]:
+    """
+    Treat each next-day call as a long/short decision and score it.
+
+    "Up" is the positive class, so precision is how often a long was right
+    and recall is how many of the up days were caught. F1 balances the two,
+    which matters because a model that simply always predicts up can post a
+    respectable hit rate in a rising market while being useless.
+    """
+    if scored is None or scored.empty:
+        return None
+    tp = int((scored["pred_up"] & scored["act_up"]).sum())
+    fp = int((scored["pred_up"] & ~scored["act_up"]).sum())
+    fn = int((~scored["pred_up"] & scored["act_up"]).sum())
+    tn = int((~scored["pred_up"] & ~scored["act_up"]).sum())
+    prec = tp / (tp + fp) if (tp + fp) else 0.0
+    rec = tp / (tp + fn) if (tp + fn) else 0.0
+    f1 = 2 * prec * rec / (prec + rec) if (prec + rec) else 0.0
+    n = len(scored)
+    return {
+        "n": n, "hits": tp + tn, "hit_rate": (tp + tn) / n if n else 0.0,
+        "precision": prec, "recall": rec, "f1": f1,
+        "tp": tp, "fp": fp, "fn": fn, "tn": tn,
+        "mae_pct": float(scored["err_pct"].abs().mean()),
+    }
 
 
 # --------------------------------------------------------------------------
@@ -925,40 +982,57 @@ def _hero(fig, go, s, name, row, col, clip, legend, up="#c0392b",
         ), row=row, col=col)
 
 
-STAR_COLOR = "#ffc400"
+# Direction called right / wrong — i.e. a daily long-short on the model's
+# next-day sign would have made money / lost it.
+STAR_HIT = "#ffc400"
+STAR_MISS = "#123a6b"
 
 
-def _add_prediction_stars(fig, go, key, row, legend, s, log, clip) -> int:
+def _add_prediction_stars(fig, go, key, row, legend, s, scored, clip) -> int:
     """
-    Overlay the previous run's next-day P50 on the candle it was predicting.
+    Overlay the previous run's next-day P50 on the candle it was predicting,
+    coloured by whether the *direction* was right.
 
-    Each star is a call the model already committed to, sitting on the bar
-    that later printed — a running, unedited scorecard rather than a
-    backtest fitted after the fact.
+    Read as a daily long/short: gold means the model's up/down call matched
+    what the close did, navy means it was on the wrong side.
     """
-    if log is None or log.empty or s.data is None:
+    if scored is None or scored.empty or s.data is None:
         return 0
-    scored = score_predictions(log[log["target"] == key], s.data["Close"])
-    if scored is None:
-        return 0
-    idx, pred, act, err = scored
-    keep = idx >= clip(s.data).index.min() if len(clip(s.data)) else None
-    if keep is not None:
-        idx, pred, act, err = idx[keep], pred[keep], act[keep], err[keep]
-    if len(idx) == 0:
+    visible = clip(s.data)
+    if len(visible):
+        scored = scored[scored.index >= visible.index.min()]
+    if scored.empty:
         return 0
 
-    fig.add_trace(go.Scatter(
-        x=idx, y=pred, mode="markers", name="Prev. day P50 call",
-        legend=legend, showlegend=True,
-        marker=dict(symbol="star", size=11, color=STAR_COLOR,
-                    line=dict(width=1, color="#7a5c00")),
-        customdata=np.column_stack([act, err]),
-        hovertemplate=("<b>Predicted</b> %{y:,.2f}<br>"
-                       "Actual %{customdata[0]:,.2f}<br>"
-                       "Error %{customdata[1]:+.2f}%<extra></extra>"),
-    ), row=row, col=1)
-    return len(idx)
+    for correct, colour, edge, label in (
+            (True, STAR_HIT, "#7a5c00", "Direction called right"),
+            (False, STAR_MISS, "#06203f", "Direction called wrong")):
+        part = scored[scored["correct"] == correct]
+        if part.empty:
+            continue
+        fig.add_trace(go.Scatter(
+            x=part.index, y=part["pred"], mode="markers", name=label,
+            legend=legend, showlegend=True,
+            marker=dict(symbol="star", size=11, color=colour,
+                        line=dict(width=1, color=edge)),
+            # A list of tuples, not np.column_stack: stacking a string column
+            # with floats upcasts the whole array to strings and the numeric
+            # hover formats below would silently stop working.
+            customdata=list(zip(
+                part["actual"].astype(float),
+                part["err_pct"].astype(float),
+                part["pred_ret"].astype(float),
+                part["act_ret"].astype(float),
+                part["source"].astype(str))),
+            hovertemplate=(
+                "<b>Predicted</b> %{y:,.2f} "
+                "(%{customdata[2]:+.2f}%)<br>"
+                "Actual %{customdata[0]:,.2f} "
+                "(%{customdata[3]:+.2f}%)<br>"
+                "Price error %{customdata[1]:+.2f}%<br>"
+                "<i>%{customdata[4]}</i><extra></extra>"),
+        ), row=row, col=1)
+    return len(scored)
 
 
 def _y_range(chunks: list, pad: float = 0.07):
@@ -1104,12 +1178,16 @@ def build_figure(series_list: list, forecasts: dict, window_start,
         _hero(fig, go, gas, "Henry Hub", 2, 1, clip, "legend2")
 
     # ---------------- track record: yesterday's call on today's bar --------
-    n_scored = {}
+    n_scored, stats = {}, {}
     for key, hero_row, lg in (("wti", 1, "legend"), ("gas", 2, "legend2")):
         s = by_key.get(key)
-        if s is not None:
-            n_scored[key] = _add_prediction_stars(
-                fig, go, key, hero_row, lg, s, log, clip)
+        if s is None or s.data is None or log is None or log.empty:
+            continue
+        scored = score_predictions(log[log["target"] == key],
+                                   s.data["Close"])
+        stats[key] = directional_stats(scored)
+        n_scored[key] = _add_prediction_stars(
+            fig, go, key, hero_row, lg, s, scored, clip)
 
     # ---------------- forecast fans on the hero panels ----------------
     for key, hero_row, lg in (("wti", 1, "legend"), ("gas", 2, "legend2")):
@@ -1251,7 +1329,7 @@ def build_figure(series_list: list, forecasts: dict, window_start,
         _apply_view_yranges(fig, by_key, placements, forecasts, view_start)
 
     _add_hero_legends(fig, rows)
-    _add_outlook_header(fig, forecasts)
+    _add_outlook_header(fig, forecasts, stats)
     _add_attribution(fig)
     if n_scored:
         print("  track record plotted: " + ", ".join(
@@ -1281,7 +1359,7 @@ def _add_attribution(fig) -> None:
     )
 
 
-def _add_outlook_header(fig, forecasts: dict):
+def _add_outlook_header(fig, forecasts: dict, stats: Optional[dict] = None):
     """
     Put the one-week P10/P50/P90 outlook at the very top of the figure, in
     the header margin above the hero row.
@@ -1302,6 +1380,21 @@ def _add_outlook_header(fig, forecasts: dict):
         delta = (fc["p50"] / fc["spot"] - 1.0) * 100.0
         arrow = "▲" if delta >= 0 else "▼"
         dcol = "#1a7a4a" if delta >= 0 else "#c0392b"
+        st = (stats or {}).get(key)
+        if st and st["n"]:
+            # Colour the F1 against the coin-flip a direction model must beat.
+            f1col = "#1a7a4a" if st["f1"] >= 0.55 else (
+                "#8a6d00" if st["f1"] >= 0.45 else "#c0392b")
+            score = (f"<br><span style='font-size:10.5px;color:#6b7787'>"
+                     f"direction F1 "
+                     f"<b style='color:{f1col}'>{st['f1']:.2f}</b>"
+                     f"&nbsp;·&nbsp;hit {st['hit_rate']*100:.0f}%"
+                     f"&nbsp;·&nbsp;{st['hits']}/{st['n']} calls"
+                     f"&nbsp;·&nbsp;MAE {st['mae_pct']:.2f}%</span>")
+        else:
+            score = ("<br><span style='font-size:10.5px;color:#9aa5b5'>"
+                     "direction F1 — no scored calls yet</span>")
+
         txt = (
             f"<b>{names.get(key, key)}</b>&nbsp;&nbsp;"
             f"spot <b>{fc['spot']:,.2f}</b>&nbsp;&nbsp;"
@@ -1310,6 +1403,7 @@ def _add_outlook_header(fig, forecasts: dict):
             f"P10 <b>{fc['p10']:,.2f}</b>&nbsp;·&nbsp;"
             f"P50 <b>{fc['p50']:,.2f}</b>&nbsp;·&nbsp;"
             f"P90 <b>{fc['p90']:,.2f}</b></span>"
+            f"{score}"
         )
         fig.add_annotation(
             text=txt, xref="paper", yref="paper",

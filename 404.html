@@ -84,6 +84,30 @@ layout: default
   border:2px solid rgba(192,57,43,.75);opacity:0;
 }
 
+/* ===== perforation — fires once the ball has seated =====
+   four shots into the bottom formation, both sides of the hole.
+   Resting state is the *finished* tunnel so a no-JS or reduced-motion
+   visitor sees a perforated well; the keyframes grow it from zero.   */
+.dh-perf{
+  position:absolute;left:40px;width:26px;height:3px;z-index:3;opacity:.9;
+  border-radius:0 2px 2px 0;transform-origin:left center;
+  background:linear-gradient(90deg,rgba(150,60,30,.92),rgba(122,94,64,.55));
+}
+.dh-perf.l{transform:scaleX(-1);}
+.dh-perf.d1{top:256px}
+.dh-perf.d2{top:270px}
+.dh-perf.d3{top:284px}
+.dh-perf.d4{top:298px}
+
+.dh-blast{
+  position:absolute;left:33px;width:16px;height:16px;border-radius:50%;z-index:4;opacity:0;
+  background:radial-gradient(circle,#fff8d0 0%,rgba(255,170,40,.75) 45%,rgba(255,120,30,0) 72%);
+}
+.dh-blast.d1{top:249px}
+.dh-blast.d2{top:263px}
+.dh-blast.d3{top:277px}
+.dh-blast.d4{top:291px}
+
 /* ===== readout strip ===== */
 .dh-readout{
   display:flex;align-items:center;gap:20px;flex-wrap:wrap;
@@ -109,6 +133,20 @@ layout: default
 .dh-figure.run .dh-cut.c3{animation-delay:.6s;}
 .dh-figure.run .dh-ball{animation:dhBall 1.25s 5.45s both;}
 .dh-figure.run .dh-seat{animation:dhSeat .7s ease-out 6.18s both;}
+
+/* guns fire top-down once the ball is seated (6.70s) */
+.dh-figure.run .dh-perf{animation:dhPerf .42s cubic-bezier(.16,.9,.3,1) both;}
+.dh-figure.run .dh-blast{animation:dhBlast .34s ease-out both;}
+.dh-figure.run .dh-perf.d1,.dh-figure.run .dh-blast.d1{animation-delay:7.00s;}
+.dh-figure.run .dh-perf.d2,.dh-figure.run .dh-blast.d2{animation-delay:7.20s;}
+.dh-figure.run .dh-perf.d3,.dh-figure.run .dh-blast.d3{animation-delay:7.40s;}
+.dh-figure.run .dh-perf.d4,.dh-figure.run .dh-blast.d4{animation-delay:7.60s;}
+/* the mirrored side fires a hair later so each shot reads as a pair */
+.dh-figure.run .dh-perf.l{animation-name:dhPerfL;}
+.dh-figure.run .dh-perf.d1.l{animation-delay:7.06s;}
+.dh-figure.run .dh-perf.d2.l{animation-delay:7.26s;}
+.dh-figure.run .dh-perf.d3.l{animation-delay:7.46s;}
+.dh-figure.run .dh-perf.d4.l{animation-delay:7.66s;}
 
 @keyframes dhDrill{
   0%{top:-21px}  14%{top:53px}  20%{top:53px}
@@ -143,6 +181,22 @@ layout: default
 @keyframes dhSeat{
   0%{opacity:.85;transform:scale(.35)}
   100%{opacity:0;transform:scale(2.1)}
+}
+/* jet punches out fast and hot, then cools into an open tunnel */
+@keyframes dhPerf{
+  0%{width:0;opacity:0;background:linear-gradient(90deg,#fff6cc,rgba(255,170,40,.9))}
+  22%{opacity:1;background:linear-gradient(90deg,#ffd76a,rgba(230,120,40,.9))}
+  100%{width:26px;opacity:.9;background:linear-gradient(90deg,rgba(150,60,30,.92),rgba(122,94,64,.55))}
+}
+@keyframes dhPerfL{
+  0%{width:0;opacity:0;transform:scaleX(-1);background:linear-gradient(90deg,#fff6cc,rgba(255,170,40,.9))}
+  22%{opacity:1;transform:scaleX(-1);background:linear-gradient(90deg,#ffd76a,rgba(230,120,40,.9))}
+  100%{width:26px;opacity:.9;transform:scaleX(-1);background:linear-gradient(90deg,rgba(150,60,30,.92),rgba(122,94,64,.55))}
+}
+@keyframes dhBlast{
+  0%{opacity:0;transform:scale(.3)}
+  25%{opacity:.95;transform:scale(1)}
+  100%{opacity:0;transform:scale(2.2)}
 }
 
 /* the un-run figure already sits at its final state, so a no-JS or
@@ -215,6 +269,15 @@ layout: default
         <div class="lay s2">Target Interval <em>saturation: 0%</em></div>
         <div class="lay s4">TD 404 — no page encountered <em>P&amp;A</em></div>
 
+        <span class="dh-perf d1 r"></span><span class="dh-perf d1 l"></span>
+        <span class="dh-perf d2 r"></span><span class="dh-perf d2 l"></span>
+        <span class="dh-perf d3 r"></span><span class="dh-perf d3 l"></span>
+        <span class="dh-perf d4 r"></span><span class="dh-perf d4 l"></span>
+        <span class="dh-blast d1"></span>
+        <span class="dh-blast d2"></span>
+        <span class="dh-blast d3"></span>
+        <span class="dh-blast d4"></span>
+
         <div class="dh-string"></div>
         <div class="dh-seat"></div>
         <div class="dh-bit">
@@ -272,7 +335,10 @@ layout: default
     "Reviewer 2 asked us to remove this page. We complied.<br>'리뷰어 2(Reviewer 2)'가 이 페이지를 삭제하라고 요구했습니다. 우린 굴복하고 말았죠.",
     "The ball seated on the first try. The page did not turn up on any try.<br>프랙 볼(Frac ball)은 단번에 안착했는데, 페이지는 백날 시도해도 안 뜨네요.",
     "Ball dropped, sleeve shifted, zone opened. Zone contained one (1) error message.<br>볼 투하, 슬리브 이동, 타겟 구간 개방 완료. 근데 그 구간에 에러 메시지만 딱 하나(1) 들어있네요.",
-    "Perfect ball seat at 404 m. Finally, something in this well went according to plan.<br>심도 404m 지점에 프랙 볼 완벽 안착. 드디어 이 시추공에서 뭔가 하나쯤은 계획대로 흘러가는군요."
+    "Perfect ball seat at 404 m. Finally, something in this well went according to plan.<br>심도 404m 지점에 프랙 볼 완벽 안착. 드디어 이 시추공에서 뭔가 하나쯤은 계획대로 흘러가는군요.",
+    "Four shots into the target zone. Total recovery: one (1) error message.<br>타겟 구간에 4발 천공(Perforation) 완료. 총 회수량: 에러 메시지 딱 한 개(1)입니다.",
+    "The perforating guns fired flawlessly. The formation simply had nothing to give.<br>천공총(Perforating gun)은 완벽하게 격발됐습니다. 그저 지층이 내어줄 게 아무것도 없었을 뿐이죠.",
+    "Perforated, and the tunnels flowed pure 404. At least the completion was textbook.<br>천공 후 유입된 건 순도 100% 404 에러뿐. 그래도 완결(Completion) 작업 하나는 교과서적이었습니다."
 ];
   var el = document.getElementById('dh-joke');
   var btn = document.getElementById('dh-more');
@@ -297,6 +363,9 @@ layout: default
   var respud  = document.getElementById('dh-respud');
 
   var DRILL = 5000, BALL_DELAY = 450, BALL_DUR = 1250, IMPACT = 0.60 * BALL_DUR;
+  /* perforation: first charge at 7.00s, last tunnel finished by ~8.08s —
+     keep these in step with the .dh-perf / .dh-blast animation-delays */
+  var PERF_START = 7000, PERF_END = 8100;
 
   /* [fraction of drilling time, depth in m] — matches the @keyframes stops */
   var SEQ = [[0,0],[.14,101],[.20,101],[.34,202],[.40,202],
@@ -337,7 +406,12 @@ layout: default
       var bt = t - DRILL - BALL_DELAY;
       if(bt < 0){ statEl.textContent = 'TD reached — dropping ball'; }
       else if(bt < IMPACT){ statEl.textContent = 'Ball in free fall…'; }
-      else { statEl.textContent = 'Ball seated — no page recovered'; return; }
+      else if(t < PERF_START){ statEl.textContent = 'Ball seated — arming perf guns'; }
+      else if(t < PERF_END){
+        var shot = Math.min(4, Math.floor((t - PERF_START) / 200) + 1);
+        statEl.textContent = 'Perforating — shot ' + shot + ' of 4';
+      }
+      else { statEl.textContent = 'Zone perforated — still no page'; return; }
     }
     raf = requestAnimationFrame(frame);
   }
@@ -357,7 +431,7 @@ layout: default
   if(reduce){
     fig.classList.add('static');
     depthEl.textContent = '404 m';
-    statEl.textContent  = 'Ball seated — no page recovered';
+    statEl.textContent  = 'Zone perforated — still no page';
   } else {
     respud.addEventListener('click', run);
     run();
