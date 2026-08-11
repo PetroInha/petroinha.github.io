@@ -39,6 +39,7 @@ import pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import gather_energy_stats as G                              # noqa: E402
+import energy_predictor as P                                 # noqa: E402
 
 for _stream in (sys.stdout, sys.stderr):
     try:
@@ -62,7 +63,7 @@ def build_panel() -> pd.DataFrame:
 
 
 def backtest(panel: pd.DataFrame, targets: list, days: int,
-             horizon: int = G.FORECAST_HORIZON) -> pd.DataFrame:
+             horizon: int = P.FORECAST_HORIZON) -> pd.DataFrame:
     """
     Walk the last `days` trading days, refitting at each one.
 
@@ -87,7 +88,10 @@ def backtest(panel: pd.DataFrame, targets: list, days: int,
             sub = panel.loc[:asof]
             done += 1
             try:
-                fc = G.forecast_target(sub, target, horizon=horizon)
+                # verbose=False: the tuning cache is consulted once per
+                # target, and 30 identical cache-hit lines are just noise.
+                fc = P.forecast_target(sub, target, horizon=horizon,
+                                       verbose=(done == 1))
             except Exception as exc:                          # noqa: BLE001
                 print(f"  ! {asof.date()}: {type(exc).__name__}: {exc}")
                 continue
@@ -141,7 +145,7 @@ def main(argv=None) -> int:
     ap.add_argument("--days", type=int, default=30,
                     help="trading days to replay (default 30)")
     ap.add_argument("--targets", nargs="+", default=["wti", "gas"])
-    ap.add_argument("--horizon", type=int, default=G.FORECAST_HORIZON)
+    ap.add_argument("--horizon", type=int, default=P.FORECAST_HORIZON)
     ap.add_argument("--dry-run", action="store_true",
                     help="compute and summarise without writing the log")
     args = ap.parse_args(argv)

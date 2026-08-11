@@ -36,14 +36,14 @@ permalink: /EnergyInsight/
 
 <div class="eng-hero">
   <h2>Energy Market Monitor</h2>
-  <p>Three months of the prices and macro drivers our CO₂ storage, hydrogen and unconventional-resource work depends on — crude and gas benchmarks alongside the dollar, the Treasury and TIPS curves, volatility and carbon — with a random-forest P10/P50/P90 outlook for the week ahead pinned to the top of the chart, and every past call scored against what actually printed.</p>
+  <p>Three months of the prices and macro drivers our CO₂ storage, hydrogen and unconventional-resource work depends on — crude and gas benchmarks alongside the dollar, the Treasury and TIPS curves, volatility and carbon — with a gradient-boosted P10/P50/P90 outlook for the week ahead pinned to the top of the chart, and every past call scored against what actually printed.</p>
   <div class="eng-tags">
     <span class="eng-tag">WTI · Brent</span>
     <span class="eng-tag">Henry Hub</span>
     <span class="eng-tag">OVX · RBOB</span>
     <span class="eng-tag">UST &amp; TIPS curves</span>
     <span class="eng-tag">DXY · Broad TW USD</span>
-    <span class="eng-tag">Random Forest P10/P50/P90</span>
+    <span class="eng-tag">LightGBM P10/P50/P90</span>
     <span class="eng-tag">Direction F1 scorecard</span>
   </div>
 </div>
@@ -115,7 +115,9 @@ The <b style="color:#c0392b">red band</b> marks the backtested window, and the b
 
 ### How the one-week forecast is produced
 
-The model never predicts a week directly. It learns a **single one-day step** — given the contract's last **14 trading days** of volatility-scaled returns plus the current state of every other indicator on this page, what is tomorrow's log price change? — and is then applied **recursively**: predict tomorrow, append that price to the history, re-derive the 14-day window from the extended series, and predict again, five times over to reach a week.
+The model is a **LightGBM** gradient-boosted tree ensemble. It never predicts a week directly: it learns a **single one-day step** — given the contract's last **14 trading days** of volatility-scaled returns plus the current state of every other indicator on this page, what is tomorrow's log price change? — and is then applied **recursively**: predict tomorrow, append that price to the history, re-derive the 14-day window from the extended series, and predict again, five times over to reach a week.
+
+Hyperparameters are found by randomised search over a **forward-chaining, gapped** time-series split: every validation fold sits strictly later than the data it was trained on, with a 14-day gap between them so a validation row's trailing window cannot overlap rows the model has already seen. The search is scored on **directional accuracy** rather than R², because daily-return R² hovers near zero and barely separates candidates, while direction is what the scorecard measures. The winning settings are cached with the date they were found and reused for a week before the search runs again, so the model tracks a drifting market without paying for a search on every run.
 
 Uncertainty is generated the same way. At each step a residual is drawn at random from the model's own walk-forward out-of-sample errors, and **2,000 independent paths** are simulated. The P10/P50/P90 fan on the crude and gas panels is the 10th/50th/90th percentile of those paths at each day, so the band widens with horizon because the errors genuinely compound — not because a widening was imposed on it.
 
@@ -129,4 +131,4 @@ Two limits are worth stating plainly. The other indicators are **held fixed** th
   <b>No warranty and no responsibility.</b> This page is produced automatically from third-party data for internal research interest only. It is <b>not</b> investment, trading, financial or commercial advice, and it is not a recommendation to buy, sell or hold anything. The underlying data may be delayed, revised, incomplete or simply wrong, and the model output is a statistical extrapolation that carries no guarantee of accuracy. CURE, Inha University and the authors accept <b>no liability whatsoever</b> for any loss or damage arising from any use of, or reliance on, this page or its forecasts. Use it at your own risk, and verify anything that matters against the primary sources below.
 </div>
 
-**References** — Yahoo Finance · [FRED, Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org/) · [U.S. Energy Information Administration](https://www.eia.gov/) · Breiman, L. (2001). Random Forests. *Machine Learning*, 45(1), 5–32.
+**References** — Yahoo Finance · [FRED, Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org/) · [U.S. Energy Information Administration](https://www.eia.gov/) · Ke, G., et al. (2017). LightGBM: A Highly Efficient Gradient Boosting Decision Tree. *NeurIPS 30*.

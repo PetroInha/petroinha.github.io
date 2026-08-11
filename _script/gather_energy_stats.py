@@ -4,8 +4,12 @@
 gather_energy_stats.py — CURE Lab energy market dashboard builder.
 
 Maintains a local archive of daily energy / macro indicators, renders an
-interactive Plotly dashboard, and records a recursive Random-Forest
-P10/P50/P90 outlook for next week's WTI crude and Henry Hub gas.
+interactive Plotly dashboard, and records a recursive P10/P50/P90 outlook for
+next week's WTI crude and Henry Hub gas.
+
+The forecasting engine itself lives in `energy_predictor.py` — features,
+hyperparameter tuning, fitting and the Monte-Carlo rollout. This file fetches,
+archives and draws.
 
 Output
 ------
@@ -55,6 +59,11 @@ import numpy as np
 import pandas as pd
 import requests
 
+# The forecasting engine lives in its own module so this file stays about
+# fetching, archiving and drawing. Swapping the model means editing that one.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import energy_predictor as P                                 # noqa: E402
+
 warnings.filterwarnings("ignore")
 
 # Korean console code pages (cp949) choke on em-dashes and Hangul in the
@@ -88,11 +97,14 @@ WRAP_PAD = 14 + 22
 DISPLAY_DAYS = 90       # window actually plotted (~3 months)
 PLOT_DAYS = 400         # history handed to the figure (pannable beyond view)
 TRAIN_YEARS = 4         # history pulled for model fitting
-LOOKBACK = 14           # trading days of own history feeding one prediction
-FORECAST_HORIZON = 5    # recursive one-day steps (~1 week)
-N_PATHS = 2000          # Monte-Carlo paths for the recursive fan
-RF_TREES = 500
-RANDOM_STATE = 42
+
+# Modelling constants belong to the predictor; re-exported here so the rest of
+# this file and the backtest script keep reading them from one place.
+LOOKBACK = P.LOOKBACK
+FORECAST_HORIZON = P.FORECAST_HORIZON
+N_PATHS = P.N_PATHS
+METHOD = P.METHOD
+RANDOM_STATE = P.RANDOM_STATE
 
 KST = dt.timezone(dt.timedelta(hours=9))
 
@@ -689,214 +701,6 @@ def daily_panel(series_list: list) -> pd.DataFrame:
     panel = pd.DataFrame(cols).sort_index()
     panel = panel.resample("B").last().ffill()
     return panel.dropna(how="all")
-
-
-def exog_features(panel: pd.DataFrame, exclude: str) -> pd.DataFrame:
-    """
-    Cross-market state: short/medium momentum and a level z-score for every
-    series other than the forecast target. Differences (not log returns) keep
-    yield and real-rate series — which can be zero or negative — well defined.
-
-    These are held frozen through the recursion (see `simulate_paths`).
-    """
-    feats = {}
-    for col in panel.columns:
-        if col == exclude:
-            continue
-        s = panel[col].astype(float)
-        vol = s.diff().rolling(60, min_periods=20).std().replace(0, np.nan)
-        for lag in (1, 3, 5, 10):
-            feats[f"{col}_d{lag}"] = s.diff(lag) / (vol * math.sqrt(lag))
-        mu = s.rolling(60, min_periods=20).mean()
-        sd = s.rolling(60, min_periods=20).std().replace(0, np.nan)
-        feats[f"{col}_z"] = (s - mu) / sd
-    out = pd.DataFrame(feats, index=panel.index)
-    return out.replace([np.inf, -np.inf], np.nan)
-
-
-# Own-history feature block. Two implementations must stay in lockstep: the
-# pandas one builds the training matrix over all dates, the numpy one runs
-# inside the recursion on simulated paths. `_assert_blocks_agree` checks them
-# against each other at run time — if they ever drift, the model would be
-# predicting from features it was never trained on, silently.
-TARGET_FEAT_NAMES = ([f"r_lag{i}" for i in range(LOOKBACK)]
-                     + ["r_sum5", "r_sum14", "lvl_z", "vol_z"])
-
-
-def target_block_pandas(price: pd.Series) -> pd.DataFrame:
-    """Own-history features for every date, from a price series."""
-    p = price.astype(float)
-    r = np.log(p).diff()
-    vol = r.rolling(60, min_periods=60).std().replace(0, np.nan)
-    feats = {f"r_lag{i}": r.shift(i) / vol for i in range(LOOKBACK)}
-    feats["r_sum5"] = r.rolling(5).sum() / (vol * math.sqrt(5))
-    feats["r_sum14"] = r.rolling(14).sum() / (vol * math.sqrt(14))
-    feats["lvl_z"] = ((p - p.rolling(60, min_periods=60).mean())
-                      / p.rolling(60, min_periods=60).std().replace(0, np.nan))
-    feats["vol_z"] = (r.rolling(20, min_periods=20).std()
-                      / r.rolling(120, min_periods=120).std()
-                      .replace(0, np.nan))
-    out = pd.DataFrame(feats, index=p.index)[TARGET_FEAT_NAMES]
-    return out.replace([np.inf, -np.inf], np.nan)
-
-
-def target_block_numpy(paths: np.ndarray) -> np.ndarray:
-    """
-    Same features as `target_block_pandas`, evaluated at the final column of
-    each row. `paths` is (n_paths, T) of prices; returns (n_paths, n_feats).
-    """
-    lp = np.log(paths)
-    r = np.diff(lp, axis=1)                       # (n, T-1)
-    vol = r[:, -60:].std(axis=1, ddof=1)
-    vol = np.where(vol == 0, np.nan, vol)[:, None]
-
-    cols = [r[:, -1 - i][:, None] / vol for i in range(LOOKBACK)]
-    cols.append(r[:, -5:].sum(axis=1)[:, None] / (vol * math.sqrt(5)))
-    cols.append(r[:, -14:].sum(axis=1)[:, None] / (vol * math.sqrt(14)))
-
-    win = paths[:, -60:]
-    lvl_z = ((paths[:, -1] - win.mean(axis=1))
-             / np.where(win.std(axis=1, ddof=1) == 0, np.nan,
-                        win.std(axis=1, ddof=1)))
-    cols.append(lvl_z[:, None])
-
-    short = r[:, -20:].std(axis=1, ddof=1)
-    long = r[:, -120:].std(axis=1, ddof=1)
-    cols.append((short / np.where(long == 0, np.nan, long))[:, None])
-    return np.hstack(cols)
-
-
-def _assert_blocks_agree(price: pd.Series) -> None:
-    """Guard against the two feature implementations drifting apart."""
-    pdf = target_block_pandas(price).dropna()
-    if pdf.empty:
-        return
-    last_date = pdf.index[-1]
-    hist = price.loc[:last_date].values[None, :]
-    npy = target_block_numpy(hist)[0]
-    ref = pdf.iloc[-1].values
-    bad = ~np.isclose(npy, ref, rtol=1e-8, atol=1e-10, equal_nan=True)
-    if bad.any():
-        names = np.array(TARGET_FEAT_NAMES)[bad]
-        raise RuntimeError(
-            "target feature implementations disagree on "
-            f"{list(names)}: numpy={npy[bad]} vs pandas={ref[bad]}")
-
-
-def simulate_paths(model, price: pd.Series, exog_last: np.ndarray,
-                   resid: np.ndarray, horizon: int, n_paths: int,
-                   seed: int = RANDOM_STATE) -> np.ndarray:
-    """
-    Roll the one-day model forward `horizon` times.
-
-    Each step predicts tomorrow's log return from the trailing 14 days, adds a
-    residual drawn from the model's own out-of-sample error distribution, and
-    appends the resulting price so the next step sees it. Uncertainty
-    therefore compounds through the horizon instead of being assumed.
-
-    The exogenous block is held at its last observed value: the dollar, the
-    curve and volatility are not themselves forecast, so the fan answers
-    "where does this contract drift if the rest of the market stands still".
-    """
-    rng = np.random.default_rng(seed)
-    hist = price.dropna().values.astype(float)
-    tail = hist[-260:]                            # enough for the 120d window
-    paths = np.repeat(tail[None, :], n_paths, axis=0)
-    exog = np.tile(exog_last, (n_paths, 1))
-
-    out = np.empty((n_paths, horizon))
-    for h in range(horizon):
-        feats = target_block_numpy(paths)
-        X = np.nan_to_num(np.hstack([feats, exog]), nan=0.0,
-                          posinf=0.0, neginf=0.0)
-        mu = model.predict(X)
-        eps = rng.choice(resid, size=n_paths, replace=True)
-        nxt = paths[:, -1] * np.exp(mu + eps)
-        paths = np.hstack([paths, nxt[:, None]])
-        out[:, h] = nxt
-    return out
-
-
-def forecast_target(panel: pd.DataFrame, target: str,
-                    horizon: int = FORECAST_HORIZON) -> Optional[dict]:
-    """
-    Fit a one-day-ahead random forest on the trailing 14 days of the target
-    plus the current cross-market state, then roll it forward recursively to
-    build a P10/P50/P90 fan over the horizon.
-    """
-    from sklearn.ensemble import RandomForestRegressor
-    from sklearn.model_selection import TimeSeriesSplit
-
-    if target not in panel.columns:
-        return None
-
-    price = panel[target].astype(float).dropna()
-    if len(price) < 400:
-        return None
-    _assert_blocks_agree(price)
-
-    tgt_feats = target_block_pandas(price)
-    exo_feats = exog_features(panel, exclude=target).reindex(price.index)
-
-    # One-day-ahead log return.
-    y = np.log(price.shift(-1) / price)
-
-    # Drop predictors that are still mostly empty (a series whose history
-    # starts late, say) before row-wise dropna, so one sparse column cannot
-    # take the whole training set with it.
-    exo_ok = [c for c in exo_feats.columns
-              if exo_feats[c].notna().mean() >= 0.70]
-    feats = tgt_feats.join(exo_feats[exo_ok])
-    data = feats.join(y.rename("__y__")).dropna()
-    if len(data) < 250:
-        print(f"  ! {target}: only {len(data)} usable training rows")
-        return None
-
-    X = data.drop(columns="__y__")
-    yv = data["__y__"]
-
-    # Walk-forward residuals of the one-day model. These are what the
-    # recursion resamples, so the fan widens with horizon on its own.
-    resid = []
-    for tr, te in TimeSeriesSplit(n_splits=5).split(X):
-        m = RandomForestRegressor(
-            n_estimators=200, min_samples_leaf=5, max_features="sqrt",
-            random_state=RANDOM_STATE, n_jobs=-1)
-        m.fit(X.iloc[tr], yv.iloc[tr])
-        resid.append(yv.iloc[te].values - m.predict(X.iloc[te]))
-    resid = np.concatenate(resid)
-
-    model = RandomForestRegressor(
-        n_estimators=RF_TREES, min_samples_leaf=5, max_features="sqrt",
-        random_state=RANDOM_STATE, n_jobs=-1)
-    model.fit(X, yv)
-
-    exog_last = (exo_feats[exo_ok].reindex(columns=X.columns[len(
-        TARGET_FEAT_NAMES):]).ffill().iloc[-1].fillna(0.0).values)
-
-    sims = simulate_paths(model, price, exog_last, resid, horizon, N_PATHS)
-    q10, q50, q90 = np.percentile(sims, [10, 50, 90], axis=0)
-
-    spot = float(price.iloc[-1])
-    imp = pd.Series(model.feature_importances_, index=X.columns)
-    by_series = {}
-    for name, val in imp.items():
-        base = "own history" if name in TARGET_FEAT_NAMES \
-            else name.rsplit("_", 1)[0]
-        by_series[base] = by_series.get(base, 0.0) + float(val)
-    top = sorted(by_series.items(), key=lambda kv: -kv[1])[:5]
-
-    return {
-        "spot": spot,
-        "p10": float(q10[-1]), "p50": float(q50[-1]), "p90": float(q90[-1]),
-        "path_p10": q10.tolist(),
-        "path_p50": q50.tolist(),
-        "path_p90": q90.tolist(),
-        "n_train": int(len(data)),
-        "resid_sd": float(np.std(resid)),
-        "top_drivers": top,
-        "asof": price.index[-1],
-    }
 
 
 # --------------------------------------------------------------------------
@@ -1591,7 +1395,10 @@ def main(argv=None) -> int:
                     help="length of the plotted window (default 30)")
     ap.add_argument("--out", default=OUT_HTML, help="output html path")
     ap.add_argument("--no-forecast", action="store_true",
-                    help="skip the random-forest outlook")
+                    help="skip the model outlook")
+    ap.add_argument("--retune", action="store_true",
+                    help="force a hyperparameter search even if the cached "
+                         "one in __datafile is still fresh")
     ap.add_argument("--plot-days", type=int, default=PLOT_DAYS,
                     help="history loaded into the figure and pannable "
                          "(default 400); the archive keeps everything")
@@ -1651,12 +1458,12 @@ def main(argv=None) -> int:
 
     forecasts = {}
     if not args.no_forecast:
-        print(f"Forecasting (recursive, {LOOKBACK}d lookback -> 1d step, "
-              f"x{FORECAST_HORIZON}, {N_PATHS} paths):")
+        print(f"Forecasting ({METHOD}, recursive, {LOOKBACK}d lookback "
+              f"-> 1d step, x{FORECAST_HORIZON}, {N_PATHS} paths):")
         panel = daily_panel(series_list)
         for key in ("wti", "gas"):
             try:
-                fc = forecast_target(panel, key)
+                fc = P.forecast_target(panel, key, retune=args.retune)
             except Exception as exc:                       # noqa: BLE001
                 print(f"  ! {key}: {type(exc).__name__}: {exc}")
                 fc = None
@@ -1664,7 +1471,8 @@ def main(argv=None) -> int:
                 forecasts[key] = fc
                 print(f"  + {key:4s} spot {fc['spot']:.2f} -> "
                       f"P10 {fc['p10']:.2f} / P50 {fc['p50']:.2f} / "
-                      f"P90 {fc['p90']:.2f}  (n={fc['n_train']})")
+                      f"P90 {fc['p90']:.2f}  (n={fc['n_train']}, "
+                      f"oos direction {fc['oos_direction']:.3f})")
                 print(f"       drivers: " + ", ".join(
                     f"{n} {v*100:.0f}%" for n, v in fc["top_drivers"][:3]))
             else:

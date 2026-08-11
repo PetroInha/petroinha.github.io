@@ -39,6 +39,9 @@ TARGETS = [
     # past calls survive. Committing them keeps that history durable.
     os.path.join("__datafile", "energy_panel.csv"),
     os.path.join("__datafile", "forecast_log.csv"),
+    # Tuned hyperparameters, so a fresh checkout does not have to re-search
+    # and every machine forecasts with the same settings.
+    os.path.join("__datafile", "__lightgbm__.yaml"),
 ]
 KST = dt.timezone(dt.timedelta(hours=9))
 
