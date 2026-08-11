@@ -96,34 +96,6 @@ permalink: /EnergyInsight/
   <a href="{{ '/_images/energy_stats.html' | relative_url }}" target="_blank">Open full screen ↗</a>
 </div>
 
-### How this dashboard is built
-
-<div class="eng-how">
-  <div class="eng-step">
-    <b>1 · Collect</b>
-    <span>Three months of daily bars from Yahoo Finance for tradable contracts; the Treasury and TIPS curves and the trade-weighted dollar from the St. Louis Fed's FRED. Each source is fetched independently, so one outage degrades the dashboard instead of breaking it.</span>
-  </div>
-  <div class="eng-step">
-    <b>2 · Align</b>
-    <span>Everything is resampled onto a business-day grid. Lower-frequency series are forward-filled — the last published print genuinely is the market's best information until the next release.</span>
-  </div>
-  <div class="eng-step">
-    <b>3 · Engineer</b>
-    <span>The contract's own <b>last 14 trading days</b> of returns, volatility-scaled, plus momentum and level z-scores. For every other indicator: 1/3/5/10-day changes and a 60-day level z-score — differences rather than log returns, so yields and real rates stay defined when they go negative.</span>
-  </div>
-  <div class="eng-step">
-    <b>4 · Fit</b>
-    <span>A 500-tree random forest maps that 14-day window plus the cross-market state onto <b>tomorrow's</b> log price change — a single one-day step, not a five-day jump. It trains on four years of history; the three months plotted would be far too little.</span>
-  </div>
-  <div class="eng-step">
-    <b>5 · Roll forward</b>
-    <span>The one-day model is applied <b>recursively</b>: predict tomorrow, append that price, re-derive the 14-day window, predict again — five times. Each step adds a residual drawn from the model's own out-of-sample errors, and 2,000 such paths are simulated, so uncertainty compounds with horizon instead of being assumed.</span>
-  </div>
-  <div class="eng-step">
-    <b>6 · Publish</b>
-    <span>Crude takes the first full-width row and gas the second; related indicators are grouped three panels to a row below, sharing a second y-axis where their levels differ too much to plot together. Every x-axis is matched, so the panels pan and zoom as one. Re-run <code>_script/gather_energy_stats.py</code> to refresh.</span>
-  </div>
-</div>
 
 ### How the one-week forecast is produced
 
