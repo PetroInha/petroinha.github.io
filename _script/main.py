@@ -33,7 +33,7 @@ def get_seconds_until_230_pm_texas():
 if __name__ == "__main__":
     print("Starting scheduler...")
     while True:
-        wait_seconds = get_seconds_until_230_pm_texas()
+        wait_seconds = get_seconds_until_230_pm_texas() + 60  # Add an extra minute to ensure we are past 2:30 PM
         print(f"Sleeping for {wait_seconds / 3600:.2f} hours until 2:30 PM Texas time.")
         time.sleep(wait_seconds)
         

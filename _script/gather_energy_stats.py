@@ -62,10 +62,20 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_HTML = os.path.join(ROOT, "_images", "energy_stats.html")
 PAGE_MD = os.path.join(ROOT, "i_7_energy_stats.markdown")
 
+DATA_DIR = os.path.join(ROOT, "__datafile")
+PANEL_CSV = os.path.join(DATA_DIR, "energy_panel.csv")
+FORECAST_CSV = os.path.join(DATA_DIR, "forecast_log.csv")
+
+# Re-pull this many days past the cached tail on every run. Yahoo settles its
+# last bars and FRED revises, so the newest cached rows cannot be trusted as
+# final — refetching a short overlap lets corrections land.
+REFETCH_OVERLAP_DAYS = 10
+
 # Vertical padding the wrapper adds around the figure (see PAGE_CSS).
 WRAP_PAD = 14 + 22
 
 DISPLAY_DAYS = 90       # window actually plotted (~3 months)
+PLOT_DAYS = 400         # history handed to the figure (pannable beyond view)
 TRAIN_YEARS = 4         # history pulled for model fitting
 LOOKBACK = 14           # trading days of own history feeding one prediction
 FORECAST_HORIZON = 5    # recursive one-day steps (~1 week)
@@ -355,7 +365,8 @@ FETCHERS: dict = {
 }
 
 
-def gather(series_list: list, start: dt.date, end: dt.date) -> list:
+def gather(series_list: list, start: dt.date, end: dt.date,
+           starts: Optional[dict] = None) -> list:
     """
     Populate `.data` / `.status` on every Series, never raising.
 
@@ -363,15 +374,21 @@ def gather(series_list: list, start: dt.date, end: dt.date) -> list:
     prefix; bare identifiers use the Series' default source. Candidates are
     tried in order and the first that returns rows wins, so an indicator can
     prefer the EIA API and quietly fall back to FRED.
+
+    `starts` gives a per-series resume date from the archive, so a routine run
+    downloads a few days rather than several years.
     """
+    starts = starts or {}
     for s in series_list:
+        s_start = starts.get(s.key, start)
+        span = (end - s_start).days
         for ident in s.ids:
             source, sep, real_id = ident.partition("@")
             if not sep:
                 source, real_id = s.source, ident
             fetcher: Callable = FETCHERS[source]
             try:
-                df = fetcher(real_id, start, end)
+                df = fetcher(real_id, s_start, end)
             except Exception as exc:                      # noqa: BLE001
                 msg = str(exc).split("\n")[0][:110]
                 print(f"  ! {s.key:9s} [{source}:{real_id}] "
@@ -384,22 +401,211 @@ def gather(series_list: list, start: dt.date, end: dt.date) -> list:
                 if real_id in LEGEND_BY_ID:
                     s.label = LEGEND_BY_ID[real_id]
                 print(f"  + {s.key:9s} {s.status} via {s.resolved} "
-                      f"[{s.label}]")
+                      f"[{s.label}]  (+{span}d)")
                 break
         if s.data is None:
-            s.status = "unavailable"
-            print(f"  - {s.key:9s} unavailable")
-            continue
+            s.status = "no new rows"
+            print(f"  - {s.key:9s} no new rows this run")
+    return series_list
 
-        # Draw a series solid only if it really is daily; anything coarser is
-        # dashed and says so, so a forward-filled monthly benchmark is never
-        # mistaken for a daily quote.
+
+def mark_cadence(series_list: list) -> None:
+    """
+    Draw a series solid only if it really is daily; anything coarser is dashed
+    and says so, so a forward-filled monthly benchmark is never mistaken for a
+    daily quote. Run after hydration, when `data` spans the whole archive — a
+    single incremental pull is too short to measure cadence from.
+    """
+    for s in series_list:
         cadence = s.cadence_days()
         if cadence == cadence and cadence > 4:
             s.dash = "dot"
             s.note = "monthly, held" if cadence > 20 else "weekly, held"
             print(f"      {s.key}: ~{cadence:.0f}d cadence -> {s.note}")
-    return series_list
+
+
+# --------------------------------------------------------------------------
+# Local archive — __datafile/energy_panel.csv
+# --------------------------------------------------------------------------
+
+def _cache_cols(s: "Series") -> list:
+    """OHLC is only kept for the two candle contracts; the rest need Close."""
+    return ["Open", "High", "Low", "Close"] if s.kind == "candle" \
+        else ["Close"]
+
+
+def load_panel_cache() -> pd.DataFrame:
+    """Read the aggregated archive, or an empty frame on first run."""
+    if not os.path.exists(PANEL_CSV):
+        return pd.DataFrame()
+    try:
+        df = pd.read_csv(PANEL_CSV, index_col=0, parse_dates=[0])
+        df.index = pd.to_datetime(df.index).normalize()
+        return df[~df.index.duplicated(keep="last")].sort_index()
+    except Exception as exc:                                   # noqa: BLE001
+        print(f"  ! cache unreadable ({type(exc).__name__}); starting fresh")
+        return pd.DataFrame()
+
+
+def save_panel_cache(df: pd.DataFrame) -> None:
+    os.makedirs(DATA_DIR, exist_ok=True)
+    df.sort_index().to_csv(PANEL_CSV, index_label="date",
+                           float_format="%.6g")
+
+
+def fetch_start_for(s: "Series", cache: pd.DataFrame, full_start: dt.date,
+                    ) -> dt.date:
+    """
+    Where to resume fetching this series.
+
+    Normally just past the cached tail, minus an overlap. Two cases force a
+    full pull: no cached column at all, and a cache that does not reach far
+    enough back to train on (otherwise a short first cache would permanently
+    cap the training window).
+    """
+    col = f"{s.key}_Close"
+    if cache.empty or col not in cache.columns:
+        return full_start
+    valid = cache[col].dropna()
+    if valid.empty:
+        return full_start
+    if valid.index.min().date() > full_start + dt.timedelta(days=45):
+        return full_start
+    return max(full_start,
+               valid.index.max().date()
+               - dt.timedelta(days=REFETCH_OVERLAP_DAYS))
+
+
+def series_to_frame(series_list: list) -> pd.DataFrame:
+    """Flatten freshly-fetched series into one wide `key_Field` frame."""
+    frames = []
+    for s in series_list:
+        if s.data is None or s.data.empty:
+            continue
+        cols = [c for c in _cache_cols(s) if c in s.data.columns]
+        if not cols:
+            continue
+        sub = s.data[cols].copy()
+        sub.columns = [f"{s.key}_{c}" for c in cols]
+        frames.append(sub)
+    if not frames:
+        return pd.DataFrame()
+    out = pd.concat(frames, axis=1).sort_index()
+    return out[~out.index.duplicated(keep="last")]
+
+
+def merge_cache(old: pd.DataFrame, new: pd.DataFrame) -> pd.DataFrame:
+    """Union of both, with freshly-fetched values winning on any overlap."""
+    if old.empty:
+        return new
+    if new.empty:
+        return old
+    merged = new.combine_first(old)
+    return merged[~merged.index.duplicated(keep="last")].sort_index()
+
+
+def hydrate_from_cache(series_list: list, cache: pd.DataFrame) -> None:
+    """Rebuild every `Series.data` from the archive, not just today's pull."""
+    if cache.empty:
+        return
+    for s in series_list:
+        prefix = f"{s.key}_"
+        cols = [c for c in cache.columns if c.startswith(prefix)]
+        if not cols:
+            continue
+        sub = cache[cols].copy()
+        sub.columns = [c[len(prefix):] for c in cols]
+        sub = sub.apply(pd.to_numeric, errors="coerce").dropna(how="all")
+        if sub.empty:
+            continue
+        s.data = sub
+        if s.status.startswith("ok") or s.status == "unavailable":
+            s.status = f"{s.status} | archive {len(sub)} obs"
+
+
+# --------------------------------------------------------------------------
+# Forecast track record — __datafile/forecast_log.csv
+# --------------------------------------------------------------------------
+
+FORECAST_COLS = ["run_date", "target", "step", "horizon_date",
+                 "p10", "p50", "p90", "spot"]
+
+
+def load_forecast_log() -> pd.DataFrame:
+    if not os.path.exists(FORECAST_CSV):
+        return pd.DataFrame(columns=FORECAST_COLS)
+    try:
+        df = pd.read_csv(FORECAST_CSV,
+                         parse_dates=["run_date", "horizon_date"])
+        for c in FORECAST_COLS:
+            if c not in df.columns:
+                df[c] = np.nan
+        return df
+    except Exception as exc:                                   # noqa: BLE001
+        print(f"  ! forecast log unreadable ({type(exc).__name__})")
+        return pd.DataFrame(columns=FORECAST_COLS)
+
+
+def record_forecasts(log: pd.DataFrame, forecasts: dict) -> pd.DataFrame:
+    """
+    Append this run's whole fan to the log, keyed by the date it was made.
+
+    Step 1 is the next-day call that later gets scored against the actual
+    close; the remaining steps are kept so longer-horizon accuracy can be
+    checked too. Re-running on the same data overwrites rather than
+    duplicating, so the log stays one row per (run date, target, step).
+    """
+    rows = []
+    for key, fc in forecasts.items():
+        t0 = pd.Timestamp(fc["asof"]).normalize()
+        for i, (p10, p50, p90) in enumerate(
+                zip(fc["path_p10"], fc["path_p50"], fc["path_p90"]), start=1):
+            rows.append({
+                "run_date": t0, "target": key, "step": i,
+                "horizon_date": (t0 + pd.tseries.offsets.BDay(i)).normalize(),
+                "p10": p10, "p50": p50, "p90": p90, "spot": fc["spot"],
+            })
+    if not rows:
+        return log
+    new = pd.DataFrame(rows)
+    combined = pd.concat([log, new], ignore_index=True)
+    combined = combined.drop_duplicates(subset=["run_date", "target", "step"],
+                                        keep="last")
+    return combined.sort_values(["target", "run_date", "step"])
+
+
+def save_forecast_log(log: pd.DataFrame) -> None:
+    os.makedirs(DATA_DIR, exist_ok=True)
+    out = log.copy()
+    for c in ("run_date", "horizon_date"):
+        out[c] = pd.to_datetime(out[c]).dt.strftime("%Y-%m-%d")
+    out[FORECAST_COLS].to_csv(FORECAST_CSV, index=False, float_format="%.6g")
+
+
+def score_predictions(log: pd.DataFrame, actual: pd.Series):
+    """
+    Line up next-day (step 1) calls against the closes that have since
+    printed. Returns (dates, predicted, actual, pct error) for the hits.
+    """
+    if log.empty or actual is None or actual.empty:
+        return None
+    sub = log[(log["step"] == 1)].copy()
+    if sub.empty:
+        return None
+    sub["horizon_date"] = pd.to_datetime(sub["horizon_date"]).dt.normalize()
+    sub = sub.drop_duplicates(subset=["horizon_date"], keep="last")
+    pred = sub.set_index("horizon_date")["p50"].sort_index()
+
+    idx = pred.index.intersection(actual.dropna().index)
+    if len(idx) == 0:
+        return None
+    p = pd.to_numeric(pred.reindex(idx), errors="coerce")
+    a = pd.to_numeric(actual.reindex(idx), errors="coerce")
+    ok = p.notna() & a.notna()
+    if not ok.any():
+        return None
+    p, a = p[ok], a[ok]
+    return p.index, p.values, a.values, ((p / a - 1.0) * 100.0).values
 
 
 def derive_daily_dubai(series_list: list) -> None:
@@ -739,7 +945,8 @@ def _layout_plan(series_list: list, panel_list: list):
     return specs, titles, heights, placements, total
 
 
-def _hero(fig, go, s, name, row, col, clip, up="#c0392b", down="#1a6dcc"):
+def _hero(fig, go, s, name, row, col, clip, legend, up="#c0392b",
+          down="#1a6dcc"):
     """Draw one hero contract as candles, falling back to a line."""
     d = clip(s.data)
     if d.empty:
@@ -749,17 +956,82 @@ def _hero(fig, go, s, name, row, col, clip, up="#c0392b", down="#1a6dcc"):
             x=d.index, open=d["Open"], high=d["High"], low=d["Low"],
             close=d["Close"], name=name, whiskerwidth=0.4,
             increasing_line_color=up, decreasing_line_color=down,
-            showlegend=False,
+            showlegend=True, legend=legend,
         ), row=row, col=col)
     else:
         fig.add_trace(go.Scatter(
-            x=d.index, y=d["Close"], name=name, showlegend=False,
-            line=dict(color=s.color, width=2),
+            x=d.index, y=d["Close"], name=name, showlegend=True,
+            legend=legend, line=dict(color=s.color, width=2),
         ), row=row, col=col)
 
 
+STAR_COLOR = "#ffc400"
+
+
+def _add_prediction_stars(fig, go, key, row, legend, s, log, clip) -> int:
+    """
+    Overlay the previous run's next-day P50 on the candle it was predicting.
+
+    Each star is a call the model already committed to, sitting on the bar
+    that later printed — a running, unedited scorecard rather than a
+    backtest fitted after the fact.
+    """
+    if log is None or log.empty or s.data is None:
+        return 0
+    scored = score_predictions(log[log["target"] == key], s.data["Close"])
+    if scored is None:
+        return 0
+    idx, pred, act, err = scored
+    keep = idx >= clip(s.data).index.min() if len(clip(s.data)) else None
+    if keep is not None:
+        idx, pred, act, err = idx[keep], pred[keep], act[keep], err[keep]
+    if len(idx) == 0:
+        return 0
+
+    fig.add_trace(go.Scatter(
+        x=idx, y=pred, mode="markers", name="Prev. day P50 call",
+        legend=legend, showlegend=True,
+        marker=dict(symbol="star", size=11, color=STAR_COLOR,
+                    line=dict(width=1, color="#7a5c00")),
+        customdata=np.column_stack([act, err]),
+        hovertemplate=("<b>Predicted</b> %{y:,.2f}<br>"
+                       "Actual %{customdata[0]:,.2f}<br>"
+                       "Error %{customdata[1]:+.2f}%<extra></extra>"),
+    ), row=row, col=1)
+    return len(idx)
+
+
+def _add_hero_legends(fig, rows: int) -> None:
+    """
+    A legend box per hero panel. Plotly's multi-legend support lets each sit
+    inside its own subplot instead of one shared key far from the data; the
+    context panels keep their inline colour swatches.
+    """
+    try:
+        r1 = tuple(fig.get_subplot(1, 1).yaxis.domain)
+        r2 = tuple(fig.get_subplot(2, 1).yaxis.domain)
+    except Exception:                                          # noqa: BLE001
+        r1, r2 = (0.78, 1.0), (0.55, 0.75)
+
+    common = dict(
+        xanchor="left", yanchor="top", x=0.006, orientation="v",
+        bgcolor="rgba(255,255,255,0.88)", bordercolor="#c9d6e6",
+        borderwidth=1, font=dict(size=10), itemsizing="constant",
+        tracegroupgap=2,
+    )
+    fig.update_layout(
+        showlegend=True,
+        legend=dict(title=dict(text="<b>Crude oil</b>",
+                               font=dict(size=10, color=PRIMARY)),
+                    y=r1[1] - 0.004, **common),
+        legend2=dict(title=dict(text="<b>Natural gas</b>",
+                                font=dict(size=10, color=PRIMARY)),
+                     y=r2[1] - 0.004, **common),
+    )
+
+
 def build_figure(series_list: list, forecasts: dict, window_start,
-                 display_days: int):
+                 display_days: int, log=None, view_end=None):
     import plotly.graph_objects as go
     from plotly.subplots import make_subplots
 
@@ -778,10 +1050,10 @@ def build_figure(series_list: list, forecasts: dict, window_start,
     def clip(df):
         return df[df.index >= window_start]
 
-    # ---------------- row 1, col 1 : crude oil ----------------
+    # ---------------- row 1 : crude oil ----------------
     wti = by_key.get("wti")
     if wti and wti.data is not None:
-        _hero(fig, go, wti, "WTI", 1, 1, clip)
+        _hero(fig, go, wti, "WTI", 1, 1, clip, "legend")
 
     for key in ("brent", "dubai"):
         s = by_key.get(key)
@@ -795,6 +1067,7 @@ def build_figure(series_list: list, forecasts: dict, window_start,
                 fig.add_trace(go.Scatter(
                     x=dd.index, y=dd.values, name="Dubai (Brent-implied)",
                     opacity=0.9, line=dict(color=s.color, width=1.8),
+                    legend="legend", showlegend=True,
                     hovertemplate="<b>Dubai</b> %{y:,.2f} "
                                   "<i>Brent-implied</i><extra></extra>",
                 ), row=1, col=1)
@@ -803,6 +1076,7 @@ def build_figure(series_list: list, forecasts: dict, window_start,
                 fig.add_trace(go.Scatter(
                     x=raw.index, y=raw["Close"], mode="markers",
                     name="Dubai (monthly actual)",
+                    legend="legend", showlegend=True,
                     marker=dict(color=s.color, size=7, symbol="circle-open",
                                 line=dict(width=2)),
                     hovertemplate="<b>Dubai</b> %{y:,.2f} "
@@ -816,6 +1090,7 @@ def build_figure(series_list: list, forecasts: dict, window_start,
         label = key.title() + (f" ({s.note})" if s.note else "")
         fig.add_trace(go.Scatter(
             x=d.index, y=d["Close"], name=label, opacity=0.9,
+            legend="legend", showlegend=True,
             line=dict(color=s.color, width=1.8, dash=s.dash),
             hovertemplate=f"<b>{label}</b> %{{y:,.2f}}<extra></extra>",
         ), row=1, col=1)
@@ -823,7 +1098,7 @@ def build_figure(series_list: list, forecasts: dict, window_start,
     # ---------------- row 2 : natural gas ----------------
     gas = by_key.get("gas")
     if gas and gas.data is not None:
-        _hero(fig, go, gas, "Henry Hub", 2, 1, clip)
+        _hero(fig, go, gas, "Henry Hub", 2, 1, clip, "legend2")
 
     # ---------------- forecast fans on the hero panels ----------------
     for key, hero_row in (("wti", 1), ("gas", 2)):
@@ -994,7 +1269,7 @@ def _add_outlook_header(fig, forecasts: dict):
     names = {"wti": "WTI Crude ($/bbl)", "gas": "Henry Hub ($/MMBtu)"}
     fig.add_annotation(
         text="<b>ONE-WEEK OUTLOOK &nbsp;·&nbsp; P10 / P50 / P90</b>",
-        xref="paper", yref="paper", x=0.0, y=1.052, xanchor="left",
+        xref="paper", yref="paper", x=0.0, y=1.067, xanchor="left",
         yanchor="bottom", showarrow=False,
         font=dict(size=11, color=PRIMARY),
     )
@@ -1016,7 +1291,7 @@ def _add_outlook_header(fig, forecasts: dict):
         )
         fig.add_annotation(
             text=txt, xref="paper", yref="paper",
-            x=card_gap * i, y=1.012, xanchor="left", yanchor="bottom",
+            x=card_gap * i, y=1.026, xanchor="left", yanchor="bottom",
             showarrow=False, align="left", font=dict(size=12, color="#25313f"),
             bgcolor="rgba(245,248,252,0.95)", bordercolor="#c9d6e6",
             borderwidth=1, borderpad=11,
