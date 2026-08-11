@@ -1,6 +1,6 @@
 ---
 layout: page
-title: IsCUE Symposium
+permalink: /is-cue/
 ---
 
 
