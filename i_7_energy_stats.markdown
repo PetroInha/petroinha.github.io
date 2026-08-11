@@ -121,7 +121,7 @@ permalink: /EnergyInsight/
   </div>
   <div class="eng-step">
     <b>6 · Publish</b>
-    <span>Crude and gas take the top row side by side; related indicators are grouped three panels to a row, sharing a second y-axis where their levels differ too much to plot together. Every x-axis is matched, so the panels pan and zoom as one. Re-run <code>_script/gather_energy_stats.py</code> to refresh.</span>
+    <span>Crude takes the first full-width row and gas the second; related indicators are grouped three panels to a row below, sharing a second y-axis where their levels differ too much to plot together. Every x-axis is matched, so the panels pan and zoom as one. Re-run <code>_script/gather_energy_stats.py</code> to refresh.</span>
   </div>
 </div>
 
