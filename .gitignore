@@ -30,3 +30,4 @@ __datafile*
 _depreciated/
 .vscode*
 plotly*
+*.ipynb
