@@ -1,15 +1,28 @@
-_site
-.sass-cache
-.jekyll-cache
+# Jekyll & Site builds
+_site/
+.sass-cache/
+.jekyll-cache/
 .jekyll-metadata
-vendor
-*.ppt*
-*.doc*
+
+# Dependencies & Environments
+vendor/
+__pycache__/
+
+# Document formats
+*.ppt
+*.doc
 *.pdf
+
+# Python files
 *.py
+
+# Claude & VS Code settings
 .claude*
 CLAUDE.md
-_*
-_script/*
+.vscode/
+
+# Script and Data folders
+_*/
+_script/
 _script*
 __datafile*
