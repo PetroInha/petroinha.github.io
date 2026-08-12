@@ -10,3 +10,6 @@ vendor
 .claude*
 CLAUDE.md
 _*
+_script/*
+_script*
+__datafile*
