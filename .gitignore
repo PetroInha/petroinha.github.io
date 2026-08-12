@@ -24,7 +24,7 @@ CLAUDE.md
 # Script and Data folders
 _*/
 _script/
-_script*
+_script/*.py
 __datafile*
 
 _depreciated/
