@@ -15,7 +15,7 @@ permalink: /EnergyInsight/
 
 .eng-frame-wrap{border:1px solid #e3e9f2;border-radius:14px;overflow:hidden;box-shadow:0 8px 26px rgba(0,0,0,0.07);background:#fff;}
 /* Fallback height only — the script below resizes the frame to its content. */
-.eng-frame-wrap iframe{display:block;width:100%;height:1736px;border:0;}
+.eng-frame-wrap iframe{display:block;width:100%;height:1762px;border:0;}
 
 .eng-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:14px 0 30px;font-size:12.5px;color:#77839a;}
 .eng-bar a{color:#005BAC;font-weight:600;text-decoration:none;}
@@ -30,7 +30,7 @@ permalink: /EnergyInsight/
 
 @media(max-width:900px){
   .eng-hero{padding:26px 20px;}
-  .eng-frame-wrap iframe{height:1736px;}
+  .eng-frame-wrap iframe{height:1762px;}
 }
 </style>
 
