@@ -64,6 +64,11 @@ OUT_HTML = os.path.join(ROOT, "_images", "energy_stats_hourly.html")
 DATA_DIR = os.path.join(ROOT, "__datafile")
 PANEL_CSV = os.path.join(DATA_DIR, "energy_panel_hourly.csv")
 FORECAST_CSV = os.path.join(DATA_DIR, "forecast_log_hourly.csv")
+TRADES_CSV = os.path.join(DATA_DIR, "backtest_trades_hourly.csv")
+
+# Overnight trade shading: blue when the model went long, red when short.
+LONG_FILL = "rgba(0,91,172,0.10)"
+SHORT_FILL = "rgba(214,48,49,0.10)"
 
 DISPLAY_DAYS = 7          # hourly window actually plotted
 PLOT_DAYS = 30            # history handed to the figure (pannable)
@@ -306,7 +311,8 @@ def save_forecast_log(log: pd.DataFrame) -> None:
 # --------------------------------------------------------------------------
 
 def build_figure(cache: pd.DataFrame, panel: pd.DataFrame, forecasts: dict,
-                 plot_start, view_start, view_end, log=None):
+                 plot_start, view_start, view_end, log=None,
+                 trades: Optional[pd.DataFrame] = None):
     import plotly.graph_objects as go
     from plotly.subplots import make_subplots
 
@@ -440,6 +446,12 @@ def build_figure(cache: pd.DataFrame, panel: pd.DataFrame, forecasts: dict,
             fig.layout[k].domain = (d0 / right, min(d1 / right, 1.0))
 
     _apply_view_yranges(fig, panel, placements, forecasts, view_start)
+    # After the y-ranges are pinned, so band labels sit at a known height.
+    equity = _add_trade_bands(fig, trades if trades is not None
+                              else pd.DataFrame(), panel, view_start, to_kst)
+    for k, r in equity.items():
+        print(f"  overnight backtest — {k}: {r['equity']*100:.2f}% "
+              f"over {r['n']} trades ({r['wins']} up)")
     _add_hero_legends(fig)
 
     stamp = dt.datetime.now(KST).strftime("%Y-%m-%d %H:%M KST")
@@ -472,6 +484,82 @@ def build_figure(cache: pd.DataFrame, panel: pd.DataFrame, forecasts: dict,
         yanchor="top", showarrow=False,
         font=dict(size=10.5, color="#8a6d00"))
     return fig
+
+
+def load_trades() -> pd.DataFrame:
+    """Backtested overnight trades, if run_backtest_hourly.py has produced any."""
+    if not os.path.exists(TRADES_CSV):
+        return pd.DataFrame()
+    try:
+        df = pd.read_csv(TRADES_CSV)
+        for c in ("entry_ts", "exit_ts"):
+            df[c] = pd.to_datetime(df[c], utc=True)
+        return df.sort_values("entry_ts")
+    except Exception as exc:                                 # noqa: BLE001
+        print(f"  ! trades file unreadable ({type(exc).__name__})")
+        return pd.DataFrame()
+
+
+def _add_trade_bands(fig, trades: pd.DataFrame, panel: pd.DataFrame,
+                     view_start, to_kst) -> dict:
+    """
+    Shade each backtested overnight hold on its contract's panel.
+
+    Blue where the model went long, red where it went short, spanning exactly
+    the position: 15:00 KST entry to the 09:00 KST unwind. The realised return
+    is printed in the band, so a red block showing +2% reads immediately as a
+    short that worked.
+    """
+    out = {}
+    if trades.empty:
+        return out
+    for key, row, yname in (("wti", 1, "yaxis"), ("gas", 2, "yaxis2")):
+        grp = trades[trades["target"] == key]
+        grp = grp[grp["exit_ts"] >= view_start]
+        if grp.empty or key not in panel.columns:
+            continue
+        try:
+            lo, hi = fig.layout[yname].range
+        except Exception:                                    # noqa: BLE001
+            continue
+        if lo is None or hi is None:
+            continue
+
+        for _, tr in grp.iterrows():
+            long_side = str(tr["side"]).lower() == "long"
+            fig.add_vrect(
+                x0=to_kst(pd.DatetimeIndex([tr["entry_ts"]]))[0],
+                x1=to_kst(pd.DatetimeIndex([tr["exit_ts"]]))[0],
+                row=row, col=1, layer="below", line_width=0,
+                fillcolor=LONG_FILL if long_side else SHORT_FILL)
+
+            ret = float(tr["ret"]) * 100.0
+            colour = "#1a7a4a" if ret >= 0 else "#c0392b"
+            mid = tr["entry_ts"] + (tr["exit_ts"] - tr["entry_ts"]) / 2
+            fig.add_annotation(
+                x=to_kst(pd.DatetimeIndex([mid]))[0],
+                y=lo + 0.93 * (hi - lo), row=row, col=1,
+                showarrow=False, align="center",
+                text=(f"<b>{'L' if long_side else 'S'}</b> "
+                      f"<b style='color:{colour}'>{ret:+.2f}%</b>"),
+                font=dict(size=10,
+                          color=PRIMARY if long_side else "#c0392b"),
+                bgcolor="rgba(255,255,255,0.78)", borderpad=2)
+
+        eq = float(np.prod(1.0 + grp["ret"].values))
+        out[key] = {"n": len(grp), "equity": eq,
+                    "wins": int((grp["ret"] > 0).sum())}
+        fig.add_annotation(
+            x=to_kst(pd.DatetimeIndex([grp["entry_ts"].min()]))[0],
+            y=lo + 0.06 * (hi - lo), row=row, col=1,
+            xanchor="left", showarrow=False, align="left",
+            text=(f"<b style='color:#c0392b'>{eq * 100:,.1f}%</b> "
+                  f"<span style='font-size:9.5px;color:#8a5a55'>"
+                  f"overnight 15:00→09:00 KST · {len(grp)} trades · "
+                  f"{out[key]['wins']} up · no stop (market shut)</span>"),
+            font=dict(size=13), bgcolor="rgba(255,255,255,0.80)",
+            bordercolor="#e3c9c9", borderwidth=1, borderpad=4)
+    return out
 
 
 def _y_range(chunks, pad=0.07):
@@ -650,8 +738,11 @@ def main(argv=None) -> int:
     plot_start = last - pd.Timedelta(days=args.plot_days)
 
     print("Rendering...")
+    trades = load_trades()
+    if not trades.empty:
+        print(f"  trades: {len(trades)} backtested overnight positions")
     fig = build_figure(cache, panel, forecasts, plot_start, view_start,
-                       view_end, log=log)
+                       view_end, log=log, trades=trades)
     os.makedirs(os.path.dirname(args.out), exist_ok=True)
     with open(args.out, "w", encoding="utf-8") as fh:
         fh.write(build_html(fig))

@@ -11,10 +11,13 @@ up to that bar and rolled forward one hour at a time. Whether its forecast for
 15:00 price decides long or short. The position is entered at the 15:00 close
 and unwound at the 09:00 close.
 
-Two variants are scored: held to the unwind regardless, and with a **2%
-intraday stop** checked against every hourly bar in between — a gap straight
-through the level fills at that bar's open, worse than the stop, rather than
-pretending the exit was free.
+No stop-loss
+------------
+The position is held to the unwind, full stop. An intraday stop is not
+modelled because it could not be acted on: the Korean market is shut from
+15:30 KST until 09:00 the next morning, which is precisely the holding
+window. Anything that happens to the price in between cannot be traded out
+of, so scoring a 2% stop here would be scoring an exit that never existed.
 
 No lookahead
 ------------
@@ -55,7 +58,6 @@ for _stream in (sys.stdout, sys.stderr):
 KST = PH.KST
 ENTRY_HOUR_UTC = PH.ENTRY_HOUR_UTC      # 06:00 UTC = 15:00 KST
 EXIT_HOUR_UTC = PH.EXIT_HOUR_UTC        # 00:00 UTC = 09:00 KST
-STOP_LOSS = 0.02
 
 
 def decision_bars(panel: pd.DataFrame, target: str, days: int) -> list:
@@ -75,43 +77,19 @@ def exit_bar(index: pd.DatetimeIndex, entry_ts: pd.Timestamp):
 
 
 def trade_return(cache: pd.DataFrame, target: str, long_side: bool,
-                 entry_ts, exit_ts, entry_px: float, stop: float):
+                 entry_ts, exit_ts, entry_px: float) -> float:
     """
-    Realised return of one overnight position, with and without the stop.
+    Realised return of one overnight position, held to the unwind.
 
-    The stop is checked bar by bar across the holding window using each hour's
-    own high and low, so it can only trigger on a move that actually happened.
+    No intraday stop is applied: the Korean market is closed from 15:30 KST
+    until 09:00 the next morning, so there is no point in the holding window
+    at which the position could actually be exited. Whatever the price does
+    overnight is simply worn.
     """
-    close = pd.to_numeric(cache.get(f"{target}_Close"), errors="coerce")
+    close = pd.to_numeric(cache[f"{target}_Close"], errors="coerce")
     exit_px = float(close.loc[exit_ts])
     raw = exit_px / entry_px - 1.0
-    plain = raw if long_side else -raw
-
-    hi = pd.to_numeric(cache.get(f"{target}_High"), errors="coerce")
-    lo = pd.to_numeric(cache.get(f"{target}_Low"), errors="coerce")
-    op = pd.to_numeric(cache.get(f"{target}_Open"), errors="coerce")
-    if hi is None or lo is None or op is None:
-        return plain, plain, False
-
-    window = (cache.index > entry_ts) & (cache.index <= exit_ts)
-    bars = cache.index[window]
-    trigger = entry_px * (1.0 - stop) if long_side else entry_px * (1.0 + stop)
-
-    for ts in bars:
-        o, h, l = op.get(ts), hi.get(ts), lo.get(ts)
-        if not np.isfinite(o) or not np.isfinite(h) or not np.isfinite(l):
-            continue
-        if long_side:
-            if o <= trigger:
-                return plain, o / entry_px - 1.0, True
-            if l <= trigger:
-                return plain, -stop, True
-        else:
-            if o >= trigger:
-                return plain, -(o / entry_px - 1.0), True
-            if h >= trigger:
-                return plain, -stop, True
-    return plain, plain, False
+    return raw if long_side else -raw
 
 
 def backtest(cache: pd.DataFrame, panel: pd.DataFrame, targets: list,
@@ -150,9 +128,8 @@ def backtest(cache: pd.DataFrame, panel: pd.DataFrame, targets: list,
             pred_px = fc["path_p50"][hours_out - 1]
             long_side = pred_px > entry_px
 
-            plain, stopped_ret, was_stopped = trade_return(
-                cache, target, long_side, entry_ts, ex_ts, entry_px,
-                STOP_LOSS)
+            ret = trade_return(cache, target, long_side, entry_ts, ex_ts,
+                               entry_px)
 
             t0 = pd.Timestamp(fc["asof"]).tz_convert("UTC")
             for i, (p10, p50, p90) in enumerate(
@@ -170,8 +147,7 @@ def backtest(cache: pd.DataFrame, panel: pd.DataFrame, targets: list,
                 "entry_px": entry_px, "pred_px": pred_px,
                 "exit_px": float(pd.to_numeric(
                     cache[f"{target}_Close"], errors="coerce").loc[ex_ts]),
-                "ret_plain": plain, "ret_stop": stopped_ret,
-                "stopped": was_stopped})
+                "ret": ret})
 
             if done % 5 == 0 or done == len(entries):
                 rate = (time.time() - t_start) / done
@@ -179,7 +155,7 @@ def backtest(cache: pd.DataFrame, panel: pd.DataFrame, targets: list,
                       f"{entry_ts.tz_convert(KST):%m-%d %H:%M} KST  "
                       f"{'LONG ' if long_side else 'SHORT'} "
                       f"{entry_px:8.3f} -> {trades[-1]['exit_px']:8.3f}  "
-                      f"{plain*100:+6.2f}%  ({rate:.1f}s/trade)")
+                      f"{ret*100:+6.2f}%  ({rate:.1f}s/trade)")
         print(f"  {target}: {(time.time()-t_start)/60:.1f} min")
     return pd.DataFrame(rows), pd.DataFrame(trades)
 
@@ -190,21 +166,18 @@ def summarise(trades: pd.DataFrame) -> None:
         return
     print("\nOvernight long/short — enter 15:00 KST, exit 09:00 KST next day")
     for target, grp in trades.groupby("target"):
-        eq_plain = float(np.prod(1.0 + grp["ret_plain"].values))
-        eq_stop = float(np.prod(1.0 + grp["ret_stop"].values))
-        wins = int((grp["ret_plain"] > 0).sum())
+        eq = float(np.prod(1.0 + grp["ret"].values))
+        wins = int((grp["ret"] > 0).sum())
         n = len(grp)
         print(f"\n  {target}  {n} trades  "
               f"({grp['entry_ts'].min().tz_convert(KST):%Y-%m-%d} .. "
               f"{grp['entry_ts'].max().tz_convert(KST):%Y-%m-%d} KST)")
         print(f"     hit rate      {wins}/{n} = {wins/n*100:.1f}%")
-        print(f"     no stop       {eq_plain*100:.2f}%  "
-              f"(best {grp['ret_plain'].max()*100:+.2f}%, "
-              f"worst {grp['ret_plain'].min()*100:+.2f}%)")
-        print(f"     2% stop       {eq_stop*100:.2f}%  "
-              f"({int(grp['stopped'].sum())} stopped)")
-        print(f"     mean per trade {grp['ret_plain'].mean()*100:+.3f}% "
-              f"(sd {grp['ret_plain'].std()*100:.3f}%)")
+        print(f"     equity        {eq*100:.2f}%  "
+              f"(best {grp['ret'].max()*100:+.2f}%, "
+              f"worst {grp['ret'].min()*100:+.2f}%)")
+        print(f"     mean per trade {grp['ret'].mean()*100:+.3f}% "
+              f"(sd {grp['ret'].std()*100:.3f}%)")
         print(f"     sides         {int((grp['side']=='long').sum())} long, "
               f"{int((grp['side']=='short').sum())} short")
 
@@ -242,10 +215,17 @@ def main(argv=None) -> int:
     if not trades.empty:
         os.makedirs(GH.DATA_DIR, exist_ok=True)
         out = trades.copy()
+        # ISO-8601 UTC so the dashboard can parse these back unambiguously,
+        # plus a KST rendering for anyone reading the file directly.
         for c in ("entry_ts", "exit_ts"):
-            out[c] = pd.to_datetime(out[c], utc=True).dt.tz_convert(
-                KST).dt.strftime("%Y-%m-%d %H:%M KST")
-        out.to_csv(args.trades_csv, index=False, float_format="%.6g")
+            ts = pd.to_datetime(out[c], utc=True)
+            out[f"{c}_kst"] = ts.dt.tz_convert(KST).dt.strftime(
+                "%Y-%m-%d %H:%M")
+            out[c] = ts.dt.strftime("%Y-%m-%dT%H:%M:%S%z")
+        cols = ["target", "entry_ts", "exit_ts", "entry_ts_kst",
+                "exit_ts_kst", "hours", "side", "entry_px", "pred_px",
+                "exit_px", "ret"]
+        out[cols].to_csv(args.trades_csv, index=False, float_format="%.6g")
         print(f"\ntrades: {args.trades_csv} ({len(out)} rows)")
 
     if not new.empty:
