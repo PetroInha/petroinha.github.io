@@ -6,8 +6,8 @@ from zoneinfo import ZoneInfo
 def run_tasks():
     while True:
         try:
-            subprocess.run(["python", "_script/gather_energy_stats.py"], check=True)
-            subprocess.run(["python", "_script/git_push_energy_stats.py"], check=True)
+            subprocess.run(["python", "gather_energy_stats.py"], check=True)
+            subprocess.run(["python", "git_push_energy_stats.py"], check=True)
         except subprocess.CalledProcessError as e:
             print(f"Script failed with exit code {e.returncode}. Retrying in 5 seconds...")
             time.sleep(5)

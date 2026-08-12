@@ -1242,9 +1242,7 @@ def build_figure(series_list: list, forecasts: dict, window_start,
                   f"— script &amp; methodology</span><br>"
                   f"<span style='font-size:12px;color:#6b7787'>"
                   f"Updated {stamp} &nbsp;·&nbsp; last {display_days} days "
-                  f"&nbsp;·&nbsp; {n_ok} indicators &nbsp;·&nbsp; "
-                  f"all panels share one time axis — pan or zoom any chart "
-                  f"and the rest follow</span>"),
+                  f"&nbsp;·&nbsp; {n_ok} indicators</span>"),
             x=0.0, xanchor="left", y=0.99, yanchor="top",
             font=dict(size=19, color="#002F6C"),
         ),
