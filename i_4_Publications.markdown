@@ -80,7 +80,7 @@ em{color:#444;}
 <div class="year-header">
   <span class="year-badge new">2026</span>
   <div class="year-line"></div>
-  <span class="year-count">10 journal · 2 conference</span>
+  <span class="year-count">13 journal · 2 conference</span>
 </div>
 
 <div class="section-label">Journal Articles</div>
@@ -88,10 +88,13 @@ em{color:#444;}
   <li><pi>Jo, H.</pi>, Park, E., &amp; Ahn, S. (2026). From a Single Geological Interpretation to History Matching: A SinGAN–ES-MDA Framework for CO₂ Storage in Channelized Aquifers. <em>Geoenergy Science and Engineering</em>, 214709.</li>
   <li>Park, E., Kim, H., <pi>Jo, H.</pi>, &amp; Pyrcz, M. J. (2026). Multi-Scale Joint Deformation–BHP Data Assimilation for CO₂ Storage Reservoir Characterization Using ES-MDA. <em>IEEE Transactions on Geoscience and Remote Sensing</em>.</li>
   <li>Merzoug, A., <pi>Jo, H.</pi>, &amp; Pyrcz, M. J. (2026). Generalized Conditioning of Generative Artificial Intelligence for History Matching Subsurface Models. <em>Mathematical Geosciences</em>, 58(2), 313–346.</li>
+  <li>Chacon-Buitrago, N., Laugier, F. J., <pi>Jo, H.</pi>, &amp; Pyrcz, M. J. (2026). GeoRulesLobePy: A Markov chain-based approach for rule-based deepwater lobe training images in subsurface modeling. <em>AAPG Bulletin</em>.</li>
   <li>Choi, S., Chae, M., Yoon, S., Kim, T. W., Jo, S., Choi, B. I., <pi>Jo, H.</pi>, &amp; Min, B. (2026). Integrated design and optimization for a unified carbon capture and storage system using a machine-learning-assisted multi-objective optimization framework. <em>Journal of CO₂ Utilization</em>, 106, 103402.</li>
   <li>Kim, N., &amp; <pi>Shin, H.</pi> (2026). Optimization of SAGD well elevation utilizing characteristics of vertical permeability distribution in multi-realized 3-D reservoir models. <em>Fuel</em>, 420, 139018.</li>
   <li>Cho, S., Kim, H., Park, E., Kim, J., <pi>Jo, H.</pi>, Byun, J., &amp; Pyun, S. (2026). Assessment of Facies and Porosity Uncertainty in a West Sea CO₂ Storage Reservoir Using 3D Seismic-Driven Geostatistical Ensemble Modeling Techniques. <em>Geophysics and Geophysical Exploration</em>, 29(1), 76–86.</li>
+  <li>Gong, H. J., Liu, Z. S., Gao, F., Bao, Q. Z., <pi>Jo, H.</pi>, &amp; Zhang, J. H. (2026). AVO impedance three-parameter non-linear inversion method based on gradient calculation of the adjoint state equation. <em>Chinese Journal of Geophysics</em>, 69(2), 857–872.</li>
   <li>Seol, J., Kim, N., Afrireksa, B. D., <pi>Jo, H.</pi>, &amp; <pi>Shin, H.</pi> (2026). Effect of Permeability on CO₂ Storage and Injectivity in Low-Permeability Saline Aquifers. <em>Journal of the Korean Society of Mineral and Energy Resources Engineers</em>, 63.</li>
+  <li>Kim, D., &amp; <pi>Jo, H.</pi> (2026). Sensitivity Analysis of Maximum Choke Pressure and Maximum Kick Volume under Drilling Operation Conditions. <em>Journal of the Korean Society of Mineral and Energy Resources Engineers</em>, 63.</li>
   <li>Kim, D., Eo, J., Park, E., Lee, M., Keehm, Y., Lee, K., &amp; <pi>Jo, H.</pi> (2026). Generative Artificial Intelligence-Based Carbon Capture and Storage Caprock Shale Digital Rock Data Augmentation. <em>Journal of the Korean Society of Mineral and Energy Resources Engineers</em>, 63.</li>
   <li>Kim, S., Kim, N., <pi>Shin, H.</pi>, Luo, X., &amp; Lee, K. (2026). Impact of Non-Condensable Gas Selection on CO₂ Mitigation and Economic Viability in Steam and Gas Push. <em>International Journal of Energy Research</em>, 2026, 9930010.</li>
   <li>Kim, S., Kim, N., <pi>Shin, H.</pi>, Kim, K., Park, C., &amp; Lee, K. (2026). Economic Evaluation of CO₂-using Steam and Gas Push for Eco-friendly Oil Sands Production. <em>Journal of the Korean Society of Mineral and Energy Resources Engineers</em>, 63.</li>
@@ -248,6 +251,8 @@ em{color:#444;}
 
 <div class="section-label">Conference Proceedings (Selected)</div>
 <ul class="pub-bullet">
+  <li>Santos, J. E., Prodanović, M., Landry, C. J., &amp; <pi>Jo, H.</pi> (2018). Determining the impact of mineralogy composition for multiphase flow through hydraulically induced fractures. <em>SPE/AAPG/SEG Unconventional Resources Technology Conference</em>, D023S038R009.</li>
+  <li><pi>Jo, H.</pi>, An, J., Lee, K., &amp; Choe, J. (2015). Crossover use of ensemble Kalman filter and ensemble smoother for efficient history matching. <em>77th EAGE Conference and Exhibition</em>, 2015(1), 1–5.</li>
   <li><pi>Shin, H.</pi>, Hwang, T., &amp; Chon, B. H. (2012). Optimal grid system design for SAGD simulation. <em>SPE Canada Heavy Oil Conference</em>, SPE-157900-MS.</li>
   <li><pi>Shin, H.</pi> &amp; Choe, J. (2009). Shale barrier effects on the SAGD performance. <em>SPE/EAGE Reservoir Characterization &amp; Simulation Conference</em>. (101 citations)</li>
   <li><pi>Shin, H.</pi> &amp; Polikar, M. (2007). Evaluation of SAGD projects using a dynamic economic indicator. <em>PETSOC Canadian International Petroleum Conference</em>, PETSOC-2007-173.</li>
