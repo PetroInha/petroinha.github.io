@@ -594,10 +594,10 @@ See Event Recap →
     <p class="hl-sub">Daqing, China · 12+ countries · IsCUE 2027 next in Vietnam</p>
   </a>
 
-  <a class="hl-card" href="/jekyll/update/2026/08/21/Eunsil-Park-Graduation.html">
+  <a class="hl-card" href="/jekyll/update/2026/08/21/Summer-2026-Graduation.html">
     <div class="hl-tag">🎓 Graduation · August 2026</div>
-    <p class="hl-title">Eunsil Park Earns Her M.S., Joins SLB</p>
-    <p class="hl-sub">InSAR · THM simulation for CCS monitoring · Congratulations!</p>
+    <p class="hl-title">Two M.S. Graduates: Eunsil Park &amp; Yongjin Lee</p>
+    <p class="hl-sub">Eunsil joins SLB · Yongjin continues to his Ph.D. · Congratulations!</p>
   </a>
 
 </div>
