@@ -594,10 +594,10 @@ See Event Recap →
     <p class="hl-sub">Daqing, China · 12+ countries · IsCUE 2027 next in Vietnam</p>
   </a>
 
-  <a class="hl-card" href="/jekyll/update/2026/05/03/EGU26.html">
-    <div class="hl-tag">🎤 Conference · May 2026</div>
-    <p class="hl-title">Two Presentations at EGU 2026</p>
-    <p class="hl-sub">Austria Center Vienna · ML-CCS & SinFusion geological modeling</p>
+  <a class="hl-card" href="/jekyll/update/2026/08/21/Eunsil-Park-Graduation.html">
+    <div class="hl-tag">🎓 Graduation · August 2026</div>
+    <p class="hl-title">Eunsil Park Earns Her M.S., Joins SLB</p>
+    <p class="hl-sub">InSAR · THM simulation for CCS monitoring · Congratulations!</p>
   </a>
 
 </div>
