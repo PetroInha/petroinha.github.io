@@ -1,5 +1,10 @@
 ---
-layout: page
+layout: post
+title: "IsCUE 2026 — 4th International Symposium on CCS & Unconventional Energy"
+date: 2026-05-27 18:00:00 +0900
+categories: jekyll update
+# Kept from the old standalone page so the existing /is-cue/ links
+# (index.markdown IsCUE button and any outside links) keep resolving.
 permalink: /is-cue/
 ---
 
@@ -513,7 +518,7 @@ grid-column:1;
 
 /* ================= SECTION TITLE HOVER ================= */
 
-h1:not(.hero-title){
+h1:not(.hero-title):not(.post-title){
 position:relative;
 display:inline-block;
 padding-bottom:6px;
@@ -521,7 +526,7 @@ transition:all .25s ease;
 cursor:pointer;
 }
 
-h1:not(.hero-title)::after{
+h1:not(.hero-title):not(.post-title)::after{
 content:"";
 position:absolute;
 left:0;
@@ -532,12 +537,12 @@ background:linear-gradient(90deg,#005BAC,#0A6ED1);
 transition:width .35s ease;
 }
 
-h1:not(.hero-title):hover{
+h1:not(.hero-title):not(.post-title):hover{
 transform:translateY(-2px);
 color:#005BAC;
 }
 
-h1:not(.hero-title):hover::after{
+h1:not(.hero-title):not(.post-title):hover::after{
 width:100%;
 }
 

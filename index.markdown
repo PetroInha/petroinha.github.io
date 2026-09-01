@@ -588,10 +588,10 @@ See Event Recap →
 
 <div class="highlights-grid">
 
-  <a class="hl-card" href="/is-cue/">
-    <div class="hl-tag">✅ Symposium · May 2026</div>
-    <p class="hl-title">IsCUE 2026 Successfully Completed</p>
-    <p class="hl-sub">Daqing, China · 12+ countries · IsCUE 2027 next in Vietnam</p>
+  <a class="hl-card" href="/jekyll/update/2025/09/11/Inha-Waseda-Workshop.html">
+    <div class="hl-tag">🌏 Workshop · September 2025</div>
+    <p class="hl-title">Inha × Waseda International Workshop</p>
+    <p class="hl-sub">Seoul · CCS, hydrogen storage &amp; AI subsurface modeling · Guests from Canada, China &amp; Japan</p>
   </a>
 
   <a class="hl-card" href="/jekyll/update/2026/08/21/Summer-2026-Graduation.html">
