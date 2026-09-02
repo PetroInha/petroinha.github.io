@@ -85,7 +85,7 @@ things out.
 </div>
 
 <div class="photo-featured">
-  <img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/20260209_Thailand-Korea_CCUS_Joint_Research_Workshop.jpg" alt="Korean and Thai researchers at the Thailand-Korea CCUS Joint Research Workshop, Bangkok, February 2026">
+  <img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/20260209_Thailand.jpg" alt="Korean and Thai researchers at the Thailand-Korea CCUS Joint Research Workshop, Bangkok, February 2026">
   <div class="photo-caption">Korean and Thai researchers at the Thailand–Korea CCUS Joint Research Workshop — February 2026, Bangkok</div>
 </div>
 

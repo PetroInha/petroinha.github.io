@@ -76,7 +76,7 @@ research program more than a memorandum.
 </div>
 
 <div class="photo-featured">
-  <img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/20260827-28_2nd_Inha-Waseda_University_Joint_Research_Workshop.jpg" alt="Participants of the 2nd Inha-Waseda Joint Research Workshop at Waseda University, August 2026">
+  <img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/20260827_Waseda.jpg" alt="Participants of the 2nd Inha-Waseda Joint Research Workshop at Waseda University, August 2026">
   <div class="photo-caption">Faculty and graduate students from Inha and Waseda — the 2nd Joint Research Workshop, August 2026, Tokyo</div>
 </div>
 

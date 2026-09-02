@@ -95,7 +95,7 @@ Sleipner and Norne.
 </div>
 
 <div class="photo-featured">
-  <img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/20260616-18_CCS_%EB%B6%84%EC%95%BC_%ED%95%B4%EC%99%B8%EC%A0%84%EB%AC%B8%EA%B0%80_%EC%B4%88%EC%B2%AD_%EB%8B%A8%EA%B8%B0%EA%B5%90%EC%9C%A1.jpg" alt="Participants of the Open Porous Media short course with Prof. Carl Fredrik Berg, June 2026">
+  <img src="https://raw.githubusercontent.com/PetroInha/petroinha.github.io/main/_images/20260616_NTNU.jpg" alt="Participants of the Open Porous Media short course with Prof. Carl Fredrik Berg, June 2026">
   <div class="photo-caption">Prof. Carl Fredrik Berg with course participants — the opening lecture on the Sleipner and Norne field cases, June 16, 2026</div>
 </div>
 
