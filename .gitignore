@@ -22,7 +22,7 @@ CLAUDE.md
 .vscode/
 
 # Script and Data folders
-_*/
+# _*/
 _script/
 _script/*.py
 __datafile*
