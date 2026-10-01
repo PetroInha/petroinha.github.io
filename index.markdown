@@ -513,7 +513,7 @@ from <strong>CO₂ storage</strong> to <strong>underground hydrogen storage</str
 </p>
 
 <p style="font-size:13px; line-height:1.55; opacity:0.93; margin:0;">
-An afternoon of CCS research exchange in Songdo — an invited lecture and nine presentations from Ho Chi Minh City University of Technology, KIGAM, and Korean universities.
+An afternoon of CCS research exchange in Songdo — an invited lecture and eight research talks from HCMUT, KIGAM, and Korean universities. <strong>Registration open.</strong>
 </p>
 
 <div>
