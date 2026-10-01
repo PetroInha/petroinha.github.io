@@ -90,6 +90,18 @@ animation:blinkDot 2s ease infinite;
 flex-shrink:0;
 }
 
+/* amber variant: an event still ahead of us, rather than one completed */
+.iscue-success-badge.upcoming{
+background:rgba(251,191,36,0.20);
+border-color:rgba(251,191,36,0.45);
+color:#fdebc3;
+}
+
+.iscue-success-badge.upcoming .iscue-success-dot{
+background:#fbbf24;
+box-shadow:0 0 6px #fbbf24;
+}
+
 @keyframes blinkDot{
 0%,100%{opacity:1;}
 50%{opacity:0.25;}
@@ -489,28 +501,28 @@ from <strong>CO₂ storage</strong> to <strong>underground hydrogen storage</str
 
 <div class="iscue-card">
 
-<div class="iscue-success-badge">
+<div class="iscue-success-badge upcoming">
   <div class="iscue-success-dot"></div>
-  Successfully Completed
+  Upcoming Event
 </div>
 
-<h3>🌍 IsCUE 2026</h3>
+<h3>🇻🇳 Vietnam–Korea CCUS Workshop</h3>
 
 <p style="margin:0 0 8px 0;">
-<strong>The 4th International Symposium on CCS & Unconventional Energy</strong>
+<strong>Joint CCUS Research Workshop · Vietnam &amp; Korea</strong>
 </p>
 
 <p style="font-size:13px; line-height:1.55; opacity:0.93; margin:0;">
-Three inspiring days in Daqing, China — researchers from 12+ countries advancing CCS, hydrogen, geothermal, and unconventional resources. Next stop: <strong>Vietnam 2027</strong>.
+An afternoon of CCS research exchange in Songdo — an invited lecture and nine presentations from Ho Chi Minh City University of Technology, KIGAM, and Korean universities.
 </p>
 
 <div>
-<span class="iscue-chip">✅ May 27–29, 2026 · Daqing, China</span>
-<span class="iscue-chip">🇻🇳 IsCUE 2027 · Quy Nhon, Vietnam</span>
+<span class="iscue-chip">📅 October 20, 2026</span>
+<span class="iscue-chip">📍 Orakai Songdo Park Hotel</span>
 </div>
 
-<a class="iscue-btn" href="/is-cue/">
-See Event Recap →
+<a class="iscue-btn" href="/jekyll/update/2026/10/01/Vietnam-Korea-CCUS-Workshop.html">
+See the Program →
 </a>
 
 </div>

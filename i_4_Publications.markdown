@@ -80,7 +80,7 @@ em{color:#444;}
 <div class="year-header">
   <span class="year-badge new">2026</span>
   <div class="year-line"></div>
-  <span class="year-count">13 journal · 2 conference</span>
+  <span class="year-count">14 journal · 5 conference</span>
 </div>
 
 <div class="section-label">Journal Articles</div>
@@ -90,6 +90,7 @@ em{color:#444;}
   <li>Merzoug, A., <pi>Jo, H.</pi>, &amp; Pyrcz, M. J. (2026). Generalized Conditioning of Generative Artificial Intelligence for History Matching Subsurface Models. <em>Mathematical Geosciences</em>, 58(2), 313–346.</li>
   <li>Chacon-Buitrago, N., Laugier, F. J., <pi>Jo, H.</pi>, &amp; Pyrcz, M. J. (2026). GeoRulesLobePy: A Markov chain-based approach for rule-based deepwater lobe training images in subsurface modeling. <em>AAPG Bulletin</em>.</li>
   <li>Choi, S., Chae, M., Yoon, S., Kim, T. W., Jo, S., Choi, B. I., <pi>Jo, H.</pi>, &amp; Min, B. (2026). Integrated design and optimization for a unified carbon capture and storage system using a machine-learning-assisted multi-objective optimization framework. <em>Journal of CO₂ Utilization</em>, 106, 103402.</li>
+  <li>Yingsirisit, N., Ramadhan, R., Hosseini, S. A., <pi>Jo, H.</pi>, Vo Thanh, H., Tippayawong, N., &amp; Tangparitkul, S. (2026). Seasonal and Long-Term Underground Hydrogen Storage in Tight Reservoir: Hysteresis Effects and Scaling Assessment for Energy Transition at the Mae Moh Coal-Fired Power Plant. <em>ACS Omega</em>, 11(36), 54322–54331.</li>
   <li>Kim, N., &amp; <pi>Shin, H.</pi> (2026). Optimization of SAGD well elevation utilizing characteristics of vertical permeability distribution in multi-realized 3-D reservoir models. <em>Fuel</em>, 420, 139018.</li>
   <li>Cho, S., Kim, H., Park, E., Kim, J., <pi>Jo, H.</pi>, Byun, J., &amp; Pyun, S. (2026). Assessment of Facies and Porosity Uncertainty in a West Sea CO₂ Storage Reservoir Using 3D Seismic-Driven Geostatistical Ensemble Modeling Techniques. <em>Geophysics and Geophysical Exploration</em>, 29(1), 76–86.</li>
   <li>Gong, H. J., Liu, Z. S., Gao, F., Bao, Q. Z., <pi>Jo, H.</pi>, &amp; Zhang, J. H. (2026). AVO impedance three-parameter non-linear inversion method based on gradient calculation of the adjoint state equation. <em>Chinese Journal of Geophysics</em>, 69(2), 857–872.</li>
@@ -104,6 +105,9 @@ em{color:#444;}
 <ul class="pub-bullet">
   <li>Ismodes, A. V. S., Afrireksa, B. D., <pi>Shin, H.</pi>, &amp; <pi>Jo, H.</pi> (2026). Machine-learning assisted assessment of CO₂ leakage through adjacent wells in geological carbon storage. <em>EGU General Assembly 2026</em>, Vienna, Austria. <span class="conf-note">Oral</span></li>
   <li>Park, E., Lee, H., Yoon, J., &amp; <pi>Jo, H.</pi> (2026). SinFusion-based Geological Model Augmentation and Well Data Integration. <em>EGU General Assembly 2026</em>, Vienna, Austria. <span class="conf-note">Poster</span></li>
+  <li>Choi, S., Hernandez-Mejia, J. L., <pi>Jo, H.</pi>, &amp; Pyrcz, M. J. (2026). Spatiotemporal Shapley Values: A New Diagnostic Method for Quantifying Geological Uncertainty in Dynamic Reservoir Responses. <em>IAMG 2026 Annual Conference</em>, Montreal, Canada.</li>
+  <li>Park, E., <pi>Jo, H.</pi>, Yoon, J., Min, B., &amp; Pyrcz, M. J. (2026). Scalable 3D Patch-Based Diffusion Modeling for Field-Scale Channelized Reservoirs. <em>IAMG 2026 Annual Conference</em>, Montreal, Canada.</li>
+  <li>Min, B., Kim, T., Choi, S., Jo, S., <pi>Jo, H.</pi>, &amp; Chae, M. (2026). Machine-Learning-Assisted Multi-Objective Design of Integrated CO₂ Transport–Injection–Storage Systems for Geological Carbon Storage. <em>IAMG 2026 Annual Conference</em>, Montreal, Canada.</li>
 </ul>
 </div>
 
