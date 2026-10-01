@@ -31,3 +31,6 @@ _depreciated/
 .vscode*
 plotly*
 *.ipynb
+AGENTS.md
+_confidential/*
+_confidential
