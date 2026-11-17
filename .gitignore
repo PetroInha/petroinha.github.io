@@ -34,3 +34,7 @@ plotly*
 AGENTS.md
 _confidential/*
 _confidential
+# OS junk
+desktop.ini
+Thumbs.db
+.DS_Store

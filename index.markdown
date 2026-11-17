@@ -501,9 +501,9 @@ from <strong>CO₂ storage</strong> to <strong>underground hydrogen storage</str
 
 <div class="iscue-card">
 
-<div class="iscue-success-badge upcoming">
+<div class="iscue-success-badge">
   <div class="iscue-success-dot"></div>
-  Upcoming Event
+  Successfully Completed
 </div>
 
 <h3>🇻🇳 Vietnam–Korea CCUS Workshop</h3>
@@ -513,11 +513,11 @@ from <strong>CO₂ storage</strong> to <strong>underground hydrogen storage</str
 </p>
 
 <p style="font-size:13px; line-height:1.55; opacity:0.93; margin:0;">
-An afternoon of CCS research exchange in Songdo — an invited lecture and eight research talks from HCMUT, KIGAM, and Korean universities. <strong>Registration open.</strong>
+An afternoon of CCS research exchange in Songdo — an invited lecture from the Geological Survey of Canada and eight research talks from HCMUT, KIGAM, and Korean universities.
 </p>
 
 <div>
-<span class="iscue-chip">📅 October 20, 2026</span>
+<span class="iscue-chip">✅ October 20, 2026</span>
 <span class="iscue-chip">📍 Orakai Songdo Park Hotel</span>
 </div>
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Upcoming: Vietnam–Korea Joint CCUS Research Workshop"
+title: "Vietnam–Korea Joint CCUS Research Workshop"
 date: 2026-10-01 10:00:00 +0900
 categories: jekyll update
 ---
@@ -78,13 +78,13 @@ categories: jekyll update
 
 
 <div class="post-hero">
-<div class="upcoming-badge"><span class="upcoming-dot"></span>Upcoming Event</div>
+<div class="upcoming-badge">✅ Held October 20, 2026</div>
 <h2>Vietnam–Korea CCUS Research Workshop 🌏</h2>
 <p>
-On October 20, researchers from Vietnam and Korea gather in Songdo for an afternoon of
+On October 20, researchers from Vietnam and Korea met in Songdo for an afternoon of
 CCS research exchange — an invited lecture from the Geological Survey of Canada, eight
 research presentations spanning basalt mineral trapping to underground hydrogen storage,
-and an open discussion on where the collaboration goes next. Registration is open.
+and an open discussion on where the collaboration goes next.
 </p>
 <div class="post-chips">
   <span class="post-chip">📅 October 20, 2026 · 13:00–18:00</span>
@@ -94,22 +94,11 @@ and an open discussion on where the collaboration goes next. Registration is ope
 </div>
 </div>
 
-<div class="signup">
-<h4>🎟️ Registration is open</h4>
-<p>
-The workshop is open to researchers and students interested in CCS and underground
-storage. Sign up through the form below to join us in Songdo on October 20.
-</p>
-<a class="signup-btn" href="https://forms.gle/H365CVnF6Dg9ZTNM8" target="_blank" rel="noopener">
-Sign up for the workshop →
-</a>
-</div>
-
 <div class="data-flow"></div>
 
 Carbon storage is a problem that rewards comparing notes across borders, and Vietnam and
-Korea are approaching it from usefully different starting points. This October, CURE Lab
-hosts a one-day workshop bringing the two research communities into the same room.
+Korea are approaching it from usefully different starting points. On October 20, CURE Lab
+hosted a one-day workshop that brought the two research communities into the same room.
 
 <div class="glance">
   <div class="glance-item">
@@ -168,7 +157,7 @@ under opposite constraints tend to have a great deal to say to each other.
 
 <div class="sec-head">
   <div class="sec-num">02</div>
-  <h3>Who is coming</h3>
+  <h3>Who took part</h3>
 </div>
 
 <div class="delegation">
@@ -194,11 +183,11 @@ under opposite constraints tend to have a great deal to say to each other.
   </div>
 </div>
 
-The Korean side deliberately spans more than universities. KIGAM brings the national
+The Korean side deliberately spanned more than universities. KIGAM brought the national
 geoscience institute's view of how integrated CCS design turns into actual R&amp;D
-programs, which is a different vantage point from an academic lab — and the talks range
+programs, which is a different vantage point from an academic lab — and the talks ranged
 from shale characterization and pipeline flow assurance through to underground hydrogen
-storage, so the afternoon is not narrowly about one reservoir problem.
+storage, so the afternoon was not narrowly about one reservoir problem.
 
 <div class="data-flow"></div>
 
@@ -310,15 +299,15 @@ Inha–Waseda joint workshop</a> in Tokyo in August.
 There is a Vietnamese thread already running through the lab's calendar, too. At the
 closing ceremony of <a href="/is-cue/">IsCUE 2026</a> in Daqing it was
 <strong>Prof. Mai Cao Lan</strong> — who opens the research programme here — who announced
-that IsCUE 2027 will be held in Quy Nhon, Vietnam. October's workshop is a welcome chance
+that IsCUE 2027 will be held in Quy Nhon, Vietnam. October's workshop was a welcome chance
 to strengthen those ties ahead of it.
 </p>
 </div>
 
 <div class="closing">
 <p>
-We look forward to welcoming our Vietnamese colleagues to Songdo on October 20.
-If you would like to join us,
-<a href="https://forms.gle/H365CVnF6Dg9ZTNM8" target="_blank" rel="noopener">sign up here</a>. 🇻🇳 🤝 🇰🇷
+Our thanks to our colleagues from HCMUT for making the trip to Songdo, to every speaker,
+and to everyone who joined the discussion. We look forward to continuing the conversation
+in Quy Nhon. 🇻🇳 🤝 🇰🇷
 </p>
 </div>

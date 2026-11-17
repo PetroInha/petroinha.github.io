@@ -20,19 +20,29 @@
 
 title: Center for Unconventional Resources and Energy
 email: hyundon.shin@inha.ac.kr
-description: >- # this means to ignore newlines until "baseurl:"
-  If you would like to learn more about our research or explore 
-  opportunities for collaboration, please don't hesitate to 
-  contact me through any of the channels listed on the left.
+description: >- # shown in the site footer and in search-engine / social previews
+  CURE Lab at Inha University combines physics, data and AI for subsurface
+  energy: CO2 geological storage, underground hydrogen storage, digital rock
+  physics and AI-driven reservoir modeling.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: N/A
+url: "https://petroinha.github.io" # needed for absolute links in the feed, sitemap and social previews
+# twitter_username is deliberately unset: minima renders a footer link to
+# twitter.com/<value> for any non-empty value, and "N/A" produced a dead link.
 github_username:  PetroInha
+lang: en
 
 # Build settings
 theme: minima
+# All three are on GitHub Pages' plugin whitelist, so they run on the default
+# Pages builder without a custom Actions workflow.
+#   jekyll-feed     -> /feed.xml
+#   jekyll-seo-tag  -> <title>, meta description, Open Graph and Twitter cards
+#                      (minima's head.html already calls {% seo %})
+#   jekyll-sitemap  -> /sitemap.xml for search engines
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Jekyll skips any directory whose name starts with "_", so _images/ is not
 # copied into _site by default — which is why most pages link their images
